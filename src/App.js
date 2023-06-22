@@ -1,11 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from "react";
-
 import './App.css';
+import LoginPage from "./pages/LoginPage";
 
-const App = () => {
+function App() {
     return (
-        <h1>App</h1>
+      <div className="container">
+        <BrowserRouter>
+        <Routes>
+        <Route index element={<LoginPage />} />
+        </Routes>
+        </BrowserRouter>
+      </div>
     );
-}
-
-export default App;
+  }
+  
+  export default App;
