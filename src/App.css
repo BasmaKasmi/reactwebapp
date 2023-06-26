@@ -1,77 +1,70 @@
+/* Polices Googles Fonts 'Roboto' et 'Mochiy Pop P One' */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
+/* Réinitialisation des marges, paddings et boite de modèles pour tous les éléments */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Style global pour le corps de la page */
 body {
+  /* Couleur de fond blanche*/
   background-color: #fff;
+  /* Couleur du texte principale */
   color: #2b2b2b;
+  /* Hauteur à 100% */
   height: 100%;
+  /* Utilisation de la police 'Roboto' */
   font-family: 'Roboto', sans-serif;
 }
 
+/*Style global pour les liens */
 a {
+  /* Suppression du soulignement des liens */
   text-decoration: none;
+  /* Utilisation de la couleur par défaut du texte*/
   color: unset;
 }
-
+/* Style pour 'container' principal de l'application */
 .container {
+  /* Utilisation de la disposition flexible pour controler l'alignement des éléments */
   display: flex;
+  /* Masquage du contenu dépassant du conteneur */
   overflow: hidden;
+  /* Disposition vertical des éléments */
   flex-direction: column;
+  /* Définir une hauteur minimale de 100% de la hauteur de la fenêtre */
   min-height: 100vh;
+  /* Permet au 'container' de s'étendre pour remplir l'espace disponible */
   flex-grow: 1;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  min-height: 100vh;
-  flex-grow: 1;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #f1f1f1;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
+/* Style pour le contenu principal de l'application */
 .main-content {
+  /* Permet au contenu de remplir l'espace disponible */
   flex: 1;
+  /* Marge intérieure de 20 pixels */
   padding: 20px;
+  /* Suppression de la marge inférieure */
   margin-bottom: 0;
+  /* Activation de la barre de défilement verticale si le contenu dépasse */
   overflow-y: auto;
 }
 
+/* Style pour le contenu principal de l'application sur les écrans de largeur supérieure ou égale à 769 pixels */
 @media (min-width: 769px) {
-  .wrapper {
-    flex-direction: row;
-  }
-  .sidebar {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
+
   .main-content {
+    /* Permet au contenu de s'étendre pour remplir l'espace disponible */
     flex: 1;
+    /* Marge intérieure de 20 pixels */
     padding: 20px;
+    /* Suppression de la marge inférieure */
     margin-bottom: 0;
   }
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: static;
-  }
-}
+
