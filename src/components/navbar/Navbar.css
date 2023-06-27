@@ -1,0 +1,168 @@
+/* Style for the app container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Style for the navigation bar */
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 139px;
+    height: 20%;
+    background-color: #FD9340;
+    padding: 0 20px;
+  }
+  
+  /* Style for the left section of the navigation bar */
+  .navbar-left {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 50px 20px;
+  }
+  
+  .navbar-left h1 {
+    border: 0px none;
+    height: 48px;
+    width: 419px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+  }
+  
+  .navbar-left p {
+    border: 0px none;
+    height: 18px;
+    width: 701px;
+    color: #ffffff;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+    white-space: nowrap;
+    left: 0;
+    letter-spacing: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for the right section of the navigation bar */
+  .navbar-right {
+    margin: 10px 50px 20px;
+  }
+  
+  .navbar-right a {
+    background-color: #ffffff;
+    border-radius: 50px;
+    height: 42px;
+    width: 194px;
+    color: #FD9340;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar-right a:hover {
+    background-color: #FD9340;
+    color: #ffffff;
+  }
+  
+  /* Responsive styles for small screens */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+    }
+  
+    .navbar-left {
+      margin: 10px 0 20px;
+      text-align: center;
+    }
+  
+    .navbar-right {
+      margin: 10px 0 20px;
+    }
+
+    .navbar {
+      display: none;
+    }
+  }
+  
+  /* Style for the content */
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the rows in the content */
+  .content .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Style for the columns in the content */
+  .content .row .column {
+    flex: 1;
+    height: 200px;
+    margin: 10px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  /* Style for the small navbar */
+.navbar-small {
+    display: none; /* Hide the small navbar by default */
+  }
+  
+  /* Style for the title in the small navbar */
+  .navbar-small-title {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+    
+
+  }
+  
+  .navbar-small-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #FD9340;
+    padding: 0.5em 2.5em; /* Ajoute une marge de 0.5 fois la taille de la police à l'intérieur de la bordure */
+    border-radius: 20px 0 50px ;
+
+  }
+  
+  /* Responsive styles for small screens */
+  @media screen and (max-width: 768px) {
+    /* Show the small navbar and hide the full-size navbar */
+    .navbar {
+      display: none;
+    }
+  
+    .navbar-small {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      height: 30px;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }  

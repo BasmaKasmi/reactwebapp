@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import { FaUserCircle } from 'react-icons/fa';
+import { BiLock } from 'react-icons/bi';
 
 // Déclaration du composant fonctionnel Login
 const Login = () => {
@@ -14,15 +16,14 @@ const Login = () => {
         <p className="subtitle">Connectez-vous et notez l'assiduité de vos groupes</p>
         {/* Champ d'entrée pour l'identifiant */}
         <div className="input-container">
-          <i className="icon alternate-email-icon"></i>
+          <FaUserCircle className="icon alternate-email-icon"/>
           <input className="input-field" type="text" placeholder="Identifiant" />
         </div>
         {/* Champ d'entrée pour le mot de passe */}
         <div className="input-container">
-          <i className="icon lock-icon"></i>
+          <BiLock className="icon lock-icon"/>
           <input className="input-field" type="password" placeholder="Password" />
           {/* Bouton pour mot de passe oublié */}
-          <button className="forgot-password">Forgot?</button>
         </div>
         {/* Lien vers la page de tableau de bord */}
         <Link to="/dashboard" className="login-button">Se connecter</Link>

@@ -1,129 +1,134 @@
+/* Style for the safe area */
 .safe-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style for the login container */
+.login-container {
+  max-width: 400px;
+  margin: 0 24px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Style for the title */
+.title {
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 39px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  text-align:left;
+}
+
+/* Style for the subtitle */
+.subtitle {
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Style for the input container */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input {
+  flex: 1;
+  font-size: 16px;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.input-container:hover {
+  border-color: #666;
+}
+
+/* Style for the icon */
+.icon {
+  margin-right: 5px;
+}
+
+/* Style for the input field */
+.input-field {
+  flex: 1;
+  font-size: 16px;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+}
+
+
+/* Style for the login button */
+.login-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 80px;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FD9340;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #e66c00;
+}
+
+/* Style for the image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+/* Style for the image */
+.image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 786px) {
   .login-container {
-    max-width: 400px;
-    margin: 0 24px;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 12px;
+    padding: 20px;
   }
-  
+
   .title {
-    font-family: 'Roboto-Medium';
-    font-size: 36px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 24px;
   }
-  
+
   .subtitle {
-    font-family: 'Roboto-Regular';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px;
-    text-align: center;
+    font-size: 12px;
   }
-  
-  .input-container {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 25px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .input-container:hover {
-    border-color: #666;
-  }
-  
-  .icon {
-    margin-right: 5px;
-  }
-  
-  .alternate-email-icon:before,
-  .lock-icon:before {
-    font-family: 'Boxicons';
-    font-size: 20px;
-    color: #666;
-    margin-right: 5px;
-  }
-  
+
   .input-field {
-    flex: 1;
-    font-size: 16px;
-    padding: 8px 0;
-    border: none;
-    outline: none;
+    font-size: 14px;
   }
-  
-  .forgot-password {
-    color: #000;
-    font-weight: 700;
-  }
-  
+
   .login-button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border-radius: 80px;
-    margin: 30px auto;
-    text-align: center;
-    font-weight: 700;
-    font-size: 18px;
-    color: #fff;
-    background-color: #f08000;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    padding: 10px;
   }
-  
-  .login-button:hover {
-    background-color: #e66c00;
-  }
-  
+
   .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  @media screen and (max-width: 786px) {
-    .login-container {
-      margin: 0 12px;
-      padding: 20px;
-    }
-  
-    .title {
-      font-size: 24px;
-    }
-  
-    .subtitle {
-      font-size: 12px;
-    }
-  
-    .input-field {
-      font-size: 14px;
-    }
-  
-    .login-button {
-      font-size: 16px;
-      padding: 10px;
-    }
-  
-    .image-container {
-      margin-top: 20px;
-    }
-  }
+}

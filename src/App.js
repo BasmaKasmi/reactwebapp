@@ -5,6 +5,7 @@ import React from "react";
 import './App.css';
 // Importation de la page LoginPage
 import LoginPage from "./pages/LoginPage";
+import DashboardPage from './pages/DashboardPage';
 
 // Définir la fonction App
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
         {/* Définition de la route par défaut qui affiche la page LoginPage*/}
         <Route index element={<LoginPage />} />
+        <Route path='/dashboard' element={<DashboardPage />} />
         </Routes>
         </BrowserRouter>
       </div>
