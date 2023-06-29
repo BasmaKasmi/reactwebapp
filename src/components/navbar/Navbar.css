@@ -138,17 +138,17 @@
   .navbar-small-title {
     color: #ffffff;
     font-weight: bold;
-    margin-top: 80px;
+    margin-top: 72px;
     text-align: left;
     
 
   }
   
   .navbar-small-title h1 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     background-color: #FD9340;
-    padding: 0.5em 2em; /* Add a margin of 0.5 times the font size inside the border */
+    padding: 0.25em 1.9em; /* Add a margin of 0.5 times the font size inside the border */
     border-radius: 2px 0 50px ;
 
   }

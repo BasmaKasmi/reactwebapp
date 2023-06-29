@@ -15,11 +15,15 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={`sidebar ${isActive ? "active" : ""}`}>
+    <div>
       <button className="sidebar-toggle" onClick={handleToggle}>
         {isActive ? "<" : ">"}
       </button>
-      <h2 className="sidebar-title">Espace professeur</h2>
+      <div className={`sidebar ${isActive ? "active" : ""}`}>
+      <h2 className="sidebar-title desktop">Espace professeur</h2>
+      <div className="sidebar-small-title mobile">
+        <h1>Menu</h1>
+      </div>
       <ul className="sidebar-menu">
         <li>
           <Link to="/dashboard">
@@ -51,8 +55,12 @@ const Sidebar = () => {
             <span>Mes évaluations</span>
           </Link>
         </li>
+        <div className="sidebar-button-mobile">
+          <Link to="/">Se déconnecter</Link>
+        </div>
       </ul>
       <button className="declare-button">Déclarer AP</button>
+      </div>
     </div>
   );
 };

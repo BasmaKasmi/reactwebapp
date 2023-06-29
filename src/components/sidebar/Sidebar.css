@@ -13,14 +13,42 @@
   left: 0;
   transition: transform 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  @media (max-width: 768px) {
+    transform: translateX(100%);
+    width: 70px;
+    padding-margin: 20px;
+    top: 30px;
+    height: calc(100% - 450px); /* Adjust the height as needed */
+    right: 0;
+    border-radius: 50px 0px 0px 50px ;
+    left: auto;
+  }
 }
 
 .sidebar.active {
-  transform: translateX(-100%);
+  transform: translateX(0%);
 }
 
+
 .sidebar-toggle {
-  display: none;
+  display: block;
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: #FD9340;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sidebar-content {
+  margin-top: 82px;
+  @media (max-width: 768px) {
+    margin-top: 0;
+    display: none;
+  }
 }
 
 .sidebar-title {
@@ -29,18 +57,38 @@
   margin-left: 14px;
   margin-top: 28px;
   font-weight: bold;
+  display: block; /* Show the title by default */
+}
+
+.sidebar-small-title {
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  display: none; /* Hide the small title by default */
+}
+
+@media (max-width: 768px) {
+  .sidebar-title {
+    display: none; /* Hide the title in mobile view */
+  }
+
+  .sidebar-small-title {
+    display: block; /* Show the small title in mobile view */
+  }
 }
 
 .sidebar-menu {
   list-style: none;
-  padding: 16px;
+  padding: 10px;
 }
 
 .sidebar-menu li {
-  padding: 10px 20px;
+  padding: 10px 30px;
   display: flex;
   padding: 16.5px;
   align-items: center;
+
 }
 
 .sidebar-menu li a {
@@ -78,8 +126,33 @@
   font-weight: bold;
   border: none;
   cursor: pointer;
+  @media (max-width: 768px) {
+    display: none;
+  }
   
 }
-.declare-button:hover {
-  background-color: #f16e0a;
+.sidebar-button-mobile {
+  display: none; /* Caché par défaut */
+}
+
+@media (max-width: 768px) {
+  .declare-button.desktop {
+    display: none;
+  }
+
+  .sidebar-button-mobile {
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    border-radius: 50px;
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+  }
 }
