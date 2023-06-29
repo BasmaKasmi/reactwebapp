@@ -54,7 +54,7 @@
   margin-top: 82px;
   @media (max-width: 768px) {
     margin-top: 0;
-    display: none;
+    display: block;
   }
 }
 
