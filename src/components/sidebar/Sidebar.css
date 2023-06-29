@@ -18,23 +18,16 @@
     width: 70px;
     padding-margin: 20px;
     top: 30px;
-    height: calc(100% - 390px); /* Adjust the height as needed */
+    height: calc(100% - 450px); /* Adjust the height as needed */
     right: 0;
     border-radius: 50px 0px 0px 50px ;
     left: auto;
   }
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 2rem;
-    height: 100%;
-    transform: translateX(-100%);
-    &.active {
-      transform: translateX(0%);
-    }
-  }
 }
 
-
+.sidebar.active {
+  transform: translateX(0%);  
+}
 
 
 .sidebar-toggle {
