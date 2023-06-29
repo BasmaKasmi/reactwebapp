@@ -36,9 +36,7 @@
 
 .sidebar.active {
   transform: translateX(0%);
-  @media (max-width: 768px) {
-    transform: translateX(100%);
-  }
+  
 }
 
 
