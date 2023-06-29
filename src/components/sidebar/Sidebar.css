@@ -135,6 +135,10 @@
   }
   
 }
+.declare-button:hover {
+  background-color: #562a06;
+}
+
 .sidebar-button-mobile {
   display: none; /* Caché par défaut */
 }
