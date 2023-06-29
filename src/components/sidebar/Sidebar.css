@@ -31,16 +31,20 @@
 
 
 .sidebar-toggle {
-  display: block;
   position: fixed;
   top: 40px;
   right: 20px;
   background-color: transparent;
   border: none;
-  color: #FD9340;
+  color: #000000;
   font-size: 24px;
   cursor: pointer;
   z-index: 1;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+
 }
 
 .sidebar-content {
@@ -151,7 +155,7 @@
     color: #ffffff;
     margin-top: 10px;
     padding: 10px 30px;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
     font-weight: bold;
   }
