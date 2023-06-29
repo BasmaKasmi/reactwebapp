@@ -23,16 +23,18 @@
     border-radius: 50px 0px 0px 50px ;
     left: auto;
   }
-}
-
-.sidebar.active {
-  transform: translateX(0%);
-  display: none;
   @media (max-width: 768px) {
-    display: block;
+    width: 100%;
+    padding: 2rem;
+    height: 100%;
+    transform: translateX(-100%);
+    &.active {
+      transform: translateX(0%);
+    }
   }
-
 }
+
+
 
 
 .sidebar-toggle {
