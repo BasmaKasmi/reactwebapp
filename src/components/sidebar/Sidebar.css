@@ -1,3 +1,9 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -7,8 +13,8 @@
   background-color: #FD9340;
   padding: 0 20px;
 }
+
 .sidebar {
-  height: calc(100% - 139px);
   min-width: 290px;
   background-color: #FFFFFF;
   position: fixed;
@@ -16,29 +22,11 @@
   left: 0;
   transition: transform 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  @media (max-width: 768px) {
-    transform: translateX(100%);
-    width: 70px;
-    padding-margin: 20px;
-    top: 30px;
-    height: calc(100% - 450px); /* Adjust the height as needed */
-    right: 0;
-    border-radius: 50px 0px 0px 50px ;
-    left: auto;
-  }
-
-  .sidebar-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
 }
 
 .sidebar.active {
   transform: translateX(0%);
-  
 }
-
 
 .sidebar-toggle {
   position: fixed;
@@ -51,18 +39,10 @@
   cursor: pointer;
   z-index: 1;
   display: none;
-  @media (max-width: 768px) {
-    display: block;
-  }
-
 }
 
 .sidebar-content {
   margin-top: 82px;
-  @media (max-width: 768px) {
-    margin-top: 0;
-    display: none;
-  }
 }
 
 .sidebar-title {
@@ -71,7 +51,7 @@
   margin-left: 14px;
   margin-top: 28px;
   font-weight: bold;
-  display: block; /* Show the title by default */
+  display: block;
 }
 
 .sidebar-small-title {
@@ -79,17 +59,7 @@
   padding: 10px;
   margin-top: 10px;
   text-align: center;
-  display: none; /* Hide the small title by default */
-}
-
-@media (max-width: 768px) {
-  .sidebar-title {
-    display: none; /* Hide the title in mobile view */
-  }
-
-  .sidebar-small-title {
-    display: block; /* Show the small title in mobile view */
-  }
+  display: none;
 }
 
 .sidebar-menu {
@@ -100,9 +70,7 @@
 .sidebar-menu li {
   padding: 10px 30px;
   display: flex;
-  padding: 16.5px;
   align-items: center;
-
 }
 
 .sidebar-menu li a {
@@ -115,10 +83,11 @@
 }
 
 .sidebar-menu li a .image {
-  width: 24px; /* Adjust the width as needed */
-  height: 24px; /* Adjust the height as needed */
-  margin-right: 8px; /* Adjust the spacing between the image and text as needed */
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
+
 .sidebar-menu li a:hover {
   color: #FD9340;
 }
@@ -140,21 +109,50 @@
   font-weight: bold;
   border: none;
   cursor: pointer;
-  @media (max-width: 768px) {
-    display: none;
-  }
-  
 }
+
 .declare-button:hover {
   background-color: #562a06;
 }
 
 .sidebar-button-mobile {
-  display: none; /* Caché par défaut */
+  display: none;
 }
 
 @media (max-width: 768px) {
-  .declare-button.desktop {
+  .sidebar {
+    transform: translateX(100%);
+    width: 70px;
+    padding: 20px;
+    top: 30px;
+    height: calc(100% - 450px);
+    right: 0;
+    border-radius: 50px 0px 0px 50px;
+    left: auto;
+  }
+
+  .sidebar.active {
+    transform: translateX(0%);
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .sidebar-content {
+    margin-top: 0;
+    display: none;
+  }
+
+  .sidebar-title {
+    display: none;
+  }
+
+  .sidebar-small-title {
+    display: block;
+  }
+
+  .declare-button {
     display: none;
   }
 
