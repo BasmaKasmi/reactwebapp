@@ -4,12 +4,21 @@
   height: 100vh;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 139px;
+  background-color: #FD9340;
+  padding: 0 20px;
+}
 .sidebar {
   height: calc(100% - 139px);
   min-width: 290px;
   background-color: #FFFFFF;
   position: fixed;
-  top: 148px;
+  top: 139px;
   left: 0;
   transition: transform 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
