@@ -1,9 +1,3 @@
-.sidebar-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -31,6 +25,12 @@
     right: 0;
     border-radius: 50px 0px 0px 50px ;
     left: auto;
+  }
+
+  .sidebar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
 }
 
