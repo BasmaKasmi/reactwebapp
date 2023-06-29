@@ -15,7 +15,7 @@ function Navbar() {
       {/* Full-size navbar for desktop screens */}
       <nav className="navbar">
         <div className="navbar-left">
-          <h1>Bonjour, Pr.Jamel</h1>
+          <h1> Bonjour, Pr. Jamel </h1>
           <p>Bienvenue dans votre espace personnel</p>
         </div>
         <div className="navbar-right">

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
 /* Style for the safe area */
 .safe-area {
   display: flex;
@@ -16,7 +18,7 @@
 
 /* Style for the title */
 .title {
-  font-family: "Poppins-Bold", Helvetica;
+  font-family: "Poppins", Helvetica;
   font-size: 39px;
   font-weight: 700;
   color: #000;
@@ -26,7 +28,7 @@
 
 /* Style for the subtitle */
 .subtitle {
-  font-family: "Poppins-Regular", Helvetica;
+  font-family: "Poppins", Helvetica;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;

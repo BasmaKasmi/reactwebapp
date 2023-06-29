@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
 /* Style for the app container */
+
 .app-container {
     display: flex;
     flex-direction: column;
@@ -11,8 +14,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 139px;
-    height: 20%;
+    height: 139px; /* Height of the navigation bar */
+    height: 20%; /* Height of the navigation bar as a percentage */
     background-color: #FD9340;
     padding: 0 20px;
   }
@@ -21,7 +24,7 @@
   .navbar-left {
     color: #ffffff;
     font-weight: bold;
-    margin: 10px 50px 20px;
+    margin: 10px 50px 20px; /* Margin for the left section of the navigation bar */
   }
   
   .navbar-left h1 {
@@ -30,8 +33,8 @@
     width: 419px;
     color: #ffffff;
     font-weight: bold;
-    font-family: "Poppins-Bold", Helvetica;
-    font-size: 36px;
+    font-family: "Poppins", Helvetica;
+    font-size: 32px;
     font-weight: 700;
     left: 0;
     letter-spacing: 0;
@@ -42,7 +45,7 @@
     height: 18px;
     width: 701px;
     color: #ffffff;
-    font-family: "Poppins-Regular", Helvetica;
+    font-family: "Poppins", Helvetica;
     font-size: 14px;
     font-weight: 400;
     text-align: justify;
@@ -54,7 +57,7 @@
   
   /* Style for the right section of the navigation bar */
   .navbar-right {
-    margin: 10px 50px 20px;
+    margin: 10px 50px 20px; /* Margin for the right section of the navigation bar */
   }
   
   .navbar-right a {
@@ -93,7 +96,7 @@
     }
 
     .navbar {
-      display: none;
+      display: none; /* Hide the full-size navbar on small screens */
     }
   }
   
@@ -135,7 +138,7 @@
   .navbar-small-title {
     color: #ffffff;
     font-weight: bold;
-    margin-top: 0;
+    margin-top: 80px;
     text-align: left;
     
 
@@ -145,8 +148,8 @@
     font-size: 24px;
     font-weight: bold;
     background-color: #FD9340;
-    padding: 0.5em 2em; /* Ajoute une marge de 0.5 fois la taille de la police à l'intérieur de la bordure */
-    border-radius: 20px 0 50px ;
+    padding: 0.5em 2em; /* Add a margin of 0.5 times the font size inside the border */
+    border-radius: 2px 0 50px ;
 
   }
   

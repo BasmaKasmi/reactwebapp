@@ -1,0 +1,85 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar {
+  height: calc(100% - 139px);
+  min-width: 290px;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 142px;
+  left: 0;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.active {
+  transform: translateX(-100%);
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-title {
+  padding: 20px;
+  font-size: 1.5rem;
+  margin-left: 14px;
+  margin-top: 28px;
+  font-weight: bold;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 16px;
+}
+
+.sidebar-menu li {
+  padding: 10px 20px;
+  display: flex;
+  padding: 16.5px;
+  align-items: center;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.sidebar-menu li a .image {
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  margin-right: 8px; /* Adjust the spacing between the image and text as needed */
+}
+.sidebar-menu li a:hover {
+  color: #FD9340;
+}
+
+.sidebar-menu li a span {
+  margin-left: 10px;
+}
+
+.declare-button {
+  background-color: #FD9340;
+  border-radius: 50px;
+  font-family: "Poppins", Helvetica;
+  height: 42px;
+  width: 194px;
+  margin-left: 50px;
+  color: #ffffff;
+  margin-top: 33.5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  
+}
+.declare-button:hover {
+  background-color: #f16e0a;
+}
