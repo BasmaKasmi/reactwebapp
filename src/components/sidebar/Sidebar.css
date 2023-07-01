@@ -6,7 +6,7 @@
 
 .sidebar {
   height: calc(100% - 139px);
-  min-width: 290px;
+  min-width: 300px;
   background-color: #FFFFFF;
   position: fixed;
   top: 142px;

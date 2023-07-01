@@ -1,0 +1,106 @@
+/* Dashboard.css */
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100% - 139px);
+  min-width: 290px;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 142px;
+  right: 0;
+  gap: 22px;
+  margin-right: 2px;
+  padding: 0 42px;
+}
+
+.column {
+  flex: 5 ;
+  width: 365px;
+  margin-top: 22px;
+  margin-left: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Rest of the existing styles */
+
+.column-header {
+  background-image: url("../../assets/ractangle\ orange.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  font-size: 12px;
+  height: 30px;
+  width: 269px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 39px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.date {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 28px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  margin: auto;
+  width: 315px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  color: #000000;
+  font-size: 14px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  margin-top: 6px;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.day {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-top: 4px;
+  padding-bottom: 16px;
+}
+
+.session{
+  color: #898989;
+  font-family: "Poppins", Helvetica;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  padding-right: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Rest of the CSS styles */
+
+
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+      margin-top: 0;
+    }
+    
+    .column {
+      margin: 10px 0;
+    }
+  }
