@@ -23,7 +23,7 @@ const Sidebar = () => {
   return (
     <div>
       <button className="sidebar-toggle" onClick={handleToggle}>
-        {isActive ? "<" : ">"}
+        {isActive ? ">" : "<"}
       </button>
       {isActive && <div className="sidebar-overlay" onClick={handleToggle} />}
       <div
@@ -33,7 +33,7 @@ const Sidebar = () => {
       >
       <h2 className="sidebar-title desktop">Espace professeur</h2>
       <div className="sidebar-small-title mobile">
-        <h1>Menu</h1>
+        <p>Menu</p>
       </div>
       <ul className="sidebar-menu">
         <li>
