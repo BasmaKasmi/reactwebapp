@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import D from "../../assets/dashboard.svg";
@@ -9,9 +9,15 @@ import Ev from "../../assets/evaluations.svg";
 
 const Sidebar = () => {
   const [isActive, setActive] = useState(false);
+  const sidebarRef = useRef(null);
 
   const handleToggle = () => {
     setActive(!isActive);
+
+    // Mettre le focus sur la barre latérale lorsqu'elle est ouverte
+    if (!isActive) {
+      sidebarRef.current.focus();
+    }
   };
 
   return (
@@ -19,7 +25,12 @@ const Sidebar = () => {
       <button className="sidebar-toggle" onClick={handleToggle}>
         {isActive ? "<" : ">"}
       </button>
-      <div className={`sidebar ${isActive ? "active" : ""}`}>
+      {isActive && <div className="sidebar-overlay" onClick={handleToggle} />}
+      <div
+        className={`sidebar ${isActive ? "active" : ""}`}
+        tabIndex={isActive ? 0 : -1}
+        ref={sidebarRef}
+      >
       <h2 className="sidebar-title desktop">Espace professeur</h2>
       <div className="sidebar-small-title mobile">
         <h1>Menu</h1>
@@ -61,6 +72,7 @@ const Sidebar = () => {
       </ul>
       <button className="declare-button">Déclarer AP</button>
       </div>
+      {isActive && <div className="dashboard-overlay" />}
     </div>
   );
 };

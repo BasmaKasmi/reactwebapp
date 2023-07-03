@@ -13,28 +13,42 @@
   position: fixed;
   top: 142px;
   left: 0;
-  transition: transform 0.3s ease;
+  transition: transform 0.02s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   @media (max-width: 768px) {
     transform: translateX(100%);
     width: 70px;
     padding-margin: 20px;
     top: 30px;
-    height: calc(100% - 350px); /* Adjust the height as needed */
+    height: calc(100% - 350px);
     right: 0;
     border-radius: 50px 0px 0px 50px ;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
     left: auto;
   }
 }
-
-.sidebar.active {
-  transform: translateX(0%);  
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.dashboard-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
 }
 
 .sidebar-toggle {
   position: fixed;
-  top: 40px; /* Modifier la valeur top selon vos préférences */
-  margin-left: 380px; /* Modifier la valeur right selon vos préférences */
+  top: 40px;
+  margin-left: 380px;
   background-color: transparent;
   border: none;
   color: #000000;
@@ -188,8 +202,9 @@
   
   
   .sidebar.active {
-    transform: translateX(0);
+    transform: translateX(0%);
     z-index: 2;
+    background-color: #ffffff; /* Couleur de fond de la barre latérale active */
   }
   
   .sidebar-toggle {
