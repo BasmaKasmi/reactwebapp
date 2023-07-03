@@ -18,6 +18,10 @@ const Sidebar = () => {
     if (!isActive) {
       sidebarRef.current.focus();
     }
+    if (window.innerWidth <= 768) {
+      const sidebar = sidebarRef.current;
+      sidebar.classList.toggle("small-screen-sidebar");
+    }
   };
 
   return (

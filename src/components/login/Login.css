@@ -107,7 +107,7 @@
 }
 
 /* Responsive styles for small screens */
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 360px) {
   .login-container {
     margin: 0 12px;
     padding: 20px;
