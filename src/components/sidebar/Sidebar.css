@@ -17,10 +17,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   @media (max-width: 768px) {
     transform: translateX(100%);
-    width: 70px;
+    min-width: 336px;
     padding-margin: 20px;
     top: 30px;
-    height: calc(100% - 350px);
+    height: calc(100% - 380px);
     right: 0;
     border-radius: 40px 0px 0px 40px ;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
@@ -98,6 +98,7 @@
   .sidebar-small-title {
     display: block; /* Show the small title in mobile view */
     font-size: 28px;
+    font-weight: bold;
     font-family: "Poppins", Helvetica;
   }
 
@@ -127,7 +128,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Poppins", Helvetica;
     font-weight: bold;
   }
@@ -183,7 +184,7 @@
     background-color: #000000;
     border-radius: 50px;
     color: #ffffff;
-    margin-top: 36px;
+    margin-top: 40px;
     padding: 10px 30px;
     font-size: 12px;
     text-align: center;

@@ -15,8 +15,9 @@
 }
 
 .column {
-  flex: 5 ;
+  flex: 1 ;
   width: 365px;
+  height: 100vh;
   margin-top: 22px;
   margin-left: 2px;
   border-radius: 22px;
