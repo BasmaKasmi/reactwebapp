@@ -3,20 +3,6 @@ import './TdbMobile.css';
 const TdbMobile = () => {
   return (
     <div className="container">
-      <div className="pink-box">
-        <div className="title">
-          <h2>Emargement(s) non fait(s)</h2>
-        </div>
-        <div className="content">
-          <div className="entry">
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className="details">
-              <p className="date">Samedi 10 décembre 2022</p>
-              <p className="count">11/32</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="date-section">
         <h2>Samedi 17 Décembre 2022</h2>
       </div>

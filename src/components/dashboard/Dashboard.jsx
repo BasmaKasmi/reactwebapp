@@ -74,6 +74,40 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <div className="column-r">
+      <div className="date-section">
+        <h2>Samedi 17 Déc 2022</h2>
+      </div>
+      <div className="dashboard-entry">
+        <div className="time">
+          <p>10h15</p>
+          <p>13h15</p>
+        </div>
+        <div className="divider"></div>
+        <div className="details">
+          <p>Sciences islamiques 2ème année</p>
+          <div className="extra-info">
+            <p className="room">Salle n°2</p>
+            <p className="count">11/32</p>
+          </div>
+        </div>
+      </div>
+      <div className="dashboard-entry">
+        <div className="time">
+          <p>10h15</p>
+          <p>13h15</p>
+        </div>
+        <div className="divider"></div>
+        <div className="details">
+          <p>Sciences islamiques 2ème année</p>
+          <div className="extra-info">
+            <p className="room">Salle n°2</p>
+            <p className="count">11/32</p>
+          </div>
+        </div>
+      </div>
+        <button className="ap-button">Déclarer une AP</button>
+    </div>
     </div>
   );
 };

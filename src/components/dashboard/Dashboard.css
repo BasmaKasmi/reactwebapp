@@ -40,7 +40,6 @@
   .pink-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-color: #FF25254D;
     width: 390px;
@@ -114,7 +113,113 @@
   margin-left: 2px;
   border-radius: 22px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  @media (max-width: 783px) {
+    display: none;
+  }
 }
+.column-r{
+  display: none;
+}
+@media screen and (max-width: 783px) {
+  .column-r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+  }
+  .date-section {
+    margin-right: 168px;
+  }
+  .date-section h2 {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Poppins", Helvetica;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-entry {
+    background-color: #FFFFFF;
+    width: 440px;
+    height: 94px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex; 
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .dashboard-entry .time p {
+    font-size: 16px;
+    margin: 4px 0 8px 20px;
+  }
+  
+  .dashboard-entry .divider {
+    background-color:#FD9340;
+    border-radius: 10px;
+    width: 8px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 16px;
+  }
+
+  .dashboard-entry .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  
+  .dashboard-entry .details p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  .dashboard-entry .details .extra-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dashboard-entry .details .extra-info .room {
+    color: #FD9340;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    padding-left: 2px;
+    padding-bottom: 10px;
+  }
+  
+  .dashboard-entry .details .extra-info .count {
+    color: #898989;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: lighter;
+    padding-left: 210px;
+    padding-top: 10px;
+  }
+  
+  
+  .ap-button {
+    background-color: #FFA82526;
+    border-radius: 50px;
+    font-family: "Poppins", Helvetica;
+    padding: 20px;
+    height: 50px;
+    width: 220px;
+    margin-left: auto; /* Centre le bouton horizontalement */
+    margin-right: auto; /* Centre le bouton horizontalement */
+    color: #FFA825;
+    margin-top: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
 
 .column-header {
   background-image: url("../../assets/ractangle\ orange.svg");
