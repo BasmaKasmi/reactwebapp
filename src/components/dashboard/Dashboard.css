@@ -45,8 +45,8 @@
     width: 390px;
     min-height: 186px;
     border-radius: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .title h2 {
