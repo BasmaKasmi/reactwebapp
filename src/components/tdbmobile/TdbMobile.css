@@ -1,0 +1,178 @@
+.container {
+  display: none; /* Masquer par défaut */
+}
+
+/* Affichage pour la version mobile */
+@media (max-width: 767px) {
+  .container {
+    display: block; /* Afficher uniquement pour les appareils mobiles */
+    padding: 20px;
+    background-color: #FFFFFF;
+    margin-top: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* Ajoutez le code suivant pour fixer le contenu du tableau de bord */
+  .container > * {
+    position: absolute;
+    width: 100%;
+  }
+
+  /* Ajoutez le code suivant pour faire défiler le contenu du tableau de bord */
+  .container {
+    overflow-y: auto;
+  }
+
+  .pink-box {
+    background-color: pink;
+    padding: 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .title h2 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .content {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .entry {
+    background-color: white;
+    padding: 16px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    align-self: center;
+  }
+
+  .entry h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .details .date {
+    color: grey;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .details .count {
+    color: grey;
+    font-size: 18px;
+  }
+
+  .date-section {
+    padding: 28px;
+  }
+
+  .date-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 101px;
+  }
+
+  .dashboard-entry {
+    background-color: white;
+    margin: 14px;
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .dashboard-entry .time {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard-entry .time p {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .dashboard-entry .divider {
+    border-left-width: 8px;
+    border-radius: 10px;
+    border-left-color: #f08000;
+    height: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .dashboard-entry .details {
+    flex: 1;
+  }
+
+  .dashboard-entry .details h3 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .dashboard-entry .extra-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dashboard-entry .extra-info .room {
+    color: #f08000;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .dashboard-entry .extra-info .count {
+    color: grey;
+    font-size: 16px;
+    margin-left: 8px;
+  }
+
+  .footer {
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin-bottom: 30px;
+    position: fixed; /* Modifier la position en fixed */
+  }
+
+  .ap-button {
+    background-color: #fff5ee;
+    padding: 15px;
+    border-radius: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FD9340;
+  }
+}
+
+/* Affichage pour la version desktop */
+@media (min-width: 768px) {
+  .container {
+    display: none; /* Masquer pour la version desktop */
+  }
+}
