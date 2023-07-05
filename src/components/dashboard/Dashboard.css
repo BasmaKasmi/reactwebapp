@@ -45,6 +45,9 @@
     width: 390px;
     min-height: 186px;
     border-radius: 20px;
+    position: relative;
+    bottom: 30px;
+
   }
 
   .title h2 {
@@ -126,11 +129,13 @@
     margin-bottom: 150px;
   }
   .date-section {
+    position: relative;
     margin-right: 168px;
+    bottom: 20px;
   }
   .date-section h2 {
     color: #000000;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     font-family: "Poppins", Helvetica;
     margin-bottom: 20px;
@@ -145,6 +150,8 @@
     display: flex; 
     align-items: center;
     margin-bottom: 16px;
+    position: relative;
+    bottom: 20px;
   }
 
   .dashboard-entry .time p {
@@ -202,7 +209,6 @@
     background-color: #FFA82526;
     border-radius: 50px;
     font-family: "Poppins", Helvetica;
-    padding: 20px;
     height: 50px;
     width: 220px;
     margin-left: auto; /* Centre le bouton horizontalement */
@@ -303,7 +309,6 @@ h3 {
 }
 
 
-/* Ajoutez ce code CSS à la fin de votre fichier */
 
 @media screen and (max-width: 360px) {
   .dashboard {
