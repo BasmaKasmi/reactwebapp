@@ -29,7 +29,7 @@ const Login = () => {
         <Link to="/dashboard" className="login-button">Se connecter</Link>
         <div className="image-container">
         {/* Image affiché*/}
-          <img className="image" src={require('../../assets/ShatibiPic.png')} alt="ShatibiPic" />
+          <img className="image" src={require('../../assets/logo shatibi.png')} alt="ShatibiPic" />
         </div>
       </div>
     </div>
