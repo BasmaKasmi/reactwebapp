@@ -5,7 +5,7 @@ import './Dashboard.css'; // Importe les styles pour le composant Dashboard
 const Dashboard = () => {
   // Retourne du JSX qui va être rendu dans l'application
   return (
-    <div className="dashboard">
+    <center className="dashboard">
       <div className="column-Enf">
         <div className="column-header">
           <h2>Emargements non faits</h2> 
@@ -74,7 +74,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="column-r">
+      <center className="column-r">
       <div className="date-section">
         <h2>Samedi 17 Déc 2022</h2>
       </div>
@@ -107,8 +107,8 @@ const Dashboard = () => {
         </div>
       </div>
         <button className="ap-button">Déclarer une AP</button>
-    </div>
-    </div>
+    </center>
+    </center>
   );
 };
 

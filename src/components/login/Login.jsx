@@ -8,7 +8,7 @@ import { BiLock } from 'react-icons/bi';
 // Déclaration du composant fonctionnel Login
 const Login = () => {
   return (
-    <div className="safe-area">
+    <center className="safe-area">
       <div className="login-container">
       {/* Titre de la page */}
         <h1 className="title">Espace Professeur</h1>
@@ -32,7 +32,7 @@ const Login = () => {
           <img className="image" src={require('../../assets/logo shatibi.png')} alt="ShatibiPic" />
         </div>
       </div>
-    </div>
+    </center>
   );
 };
 
