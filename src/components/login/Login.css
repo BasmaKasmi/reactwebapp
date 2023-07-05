@@ -19,70 +19,62 @@
 /* Style for the title */
 .title {
   font-family: "Poppins", Helvetica;
-  font-size: 39px;
+  font-size: 48px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 20px;
+  margin-top: 124px;
   text-align:left;
 }
 
 /* Style for the subtitle */
 .subtitle {
   font-family: "Poppins", Helvetica;
+  color: #898989;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
-  text-align: center;
+  width: 325px;
+  word-spacing: 5px;
 }
 
 /* Style for the input container */
 .input-container {
   display: flex;
   align-items: center;
+  border-radius: 50px;
+  border: #b3b1b0;
   margin-bottom: 25px;
-  transition: border-color 0.3s ease;
+  position: relative;
+  top: 10px;
+  margin-bottom: 14px;
 }
 
 .input-container input {
   flex: 1;
   font-size: 16px;
-  padding: 8px 0;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #ccc;
-}
-
-.input-container:hover {
-  border-color: #666;
-}
-
-/* Style for the icon */
-.icon {
-  margin-right: 5px;
-}
-
-/* Style for the input field */
-.input-field {
-  flex: 1;
-  font-size: 16px;
-  padding: 8px 0;
-  border: none;
-  outline: none;
+  font-family: "Poppins", Helvetica;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #b3b1b0;
+  height: 60px;
+  width: 327px;
+  padding-left: 24px;
 }
 
 
 /* Style for the login button */
 .login-button {
   display: block;
-  width: 100%;
-  padding: 15px;
+  width: 293px;
+  height: 46px;
+  padding: 10px;
   border-radius: 80px;
   margin: 30px auto;
+  font-family: "Poppins", Helvetica;
   text-align: center;
   font-weight: 700;
   font-size: 18px;
-  color: #fff;
-  background-color: #FD9340;
+  color: #FFFFFF;
+  background-color: #fd9340;
   transition: background-color 0.3s ease;
 }
 
@@ -101,9 +93,10 @@
 
 /* Style for the image */
 .image {
-  max-width: 100%;
-  height: auto;
   object-fit: contain;
+  height: 100px;
+  width: 140px;
+  align-items: center;
 }
 
 /* Responsive styles for small screens */
