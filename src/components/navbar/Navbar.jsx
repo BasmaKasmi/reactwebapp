@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <center className="app-container">
+    <div className="app-container">
       {/* Small navbar for small screens */}
       <nav className="navbar-small">
         <div className="navbar-small-title">
@@ -22,7 +22,7 @@ function Navbar() {
           <Link to="/">Se déconnecter</Link>
         </div>
       </nav>
-    </center>
+    </div>
   );
 }
 

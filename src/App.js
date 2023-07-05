@@ -11,7 +11,7 @@ import DashboardPage from './pages/DashboardPage';
 function App() {
     return (
       // 'container' principal de l'application
-      <center className="container">
+      <div className="container">
       {/* Initialisation du BrowserRouter */}
         <BrowserRouter>
         {/* Déclaration des routes */}
@@ -21,7 +21,7 @@ function App() {
         <Route path='/dashboard' element={<DashboardPage />} />
         </Routes>
         </BrowserRouter>
-      </center>
+      </div>
     );
   }
   

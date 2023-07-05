@@ -45,8 +45,6 @@
     width: 390px;
     min-height: 186px;
     border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .title h2 {
@@ -187,7 +185,7 @@
     font-family: "Poppins", Helvetica;
     font-size: 14px;
     font-style: italic;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
   }
   
   .dashboard-entry .details .extra-info .count {
