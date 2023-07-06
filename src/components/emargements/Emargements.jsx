@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import './Emargements.css';
 import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
 import Em from '../em/Em';
+import './Emargements.css';
+
 
 const Emargements = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -74,7 +75,7 @@ const Emargements = () => {
             <input type="text" placeholder="01/01/2023" />
             <input type="text" placeholder="28/01/2023" />
             <img src={st} alt=''/>
-          </div> 
+        </div> 
         <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
           <div className='row'>
             <h3>Emargement : 12/12/2022(n-1)</h3>
@@ -90,12 +91,6 @@ const Emargements = () => {
         <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
           <div className='row'>
             <h3>Emargement : 12/12/2022(n+1)</h3>
-            <span className="status-n">NON FAIT</span>
-          </div>
-        </div>
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-          <div className='row'>
-            <h3>Emargement : 12/12/2022(n+2)</h3>
             <span className="status-n">NON FAIT</span>
           </div>
         </div>
