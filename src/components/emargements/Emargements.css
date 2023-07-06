@@ -179,7 +179,7 @@ color: #FFFFFF;
   border-radius: 30px;
   border: 1px solid #e5e4e3;
   height: 38px;
-  margin: 2px 2px 8px 46px; /* Définir les marges individuellement */
+  margin: 2px 2px 8px 46px;
   width: 210px;
   margin-top: 10px;
 }
@@ -190,7 +190,6 @@ color: #FFFFFF;
   margin-left: 18px;
   margin-top: 12px;
 }
-
 
 
 .c {

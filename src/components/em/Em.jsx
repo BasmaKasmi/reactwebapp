@@ -60,7 +60,10 @@ const Em = () => {
         <div className='card-container'>
         <div className="std">
           <div className='row'>
-            <h3>Nom de l'étudiant</h3>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
             <div className="student-buttons">
               <button>AP</button>
               <button>AI</button>
@@ -69,27 +72,10 @@ const Em = () => {
         </div>
         <div className="std">
           <div className='row'>
-            <h3>Nom de l'étudiant</h3>
-            <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
-            </div>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
           </div>
-        </div>
-        </div>
-        <div className='card-container'>
-        <div className="std">
-          <div className='row'>
-            <h3>Nom de l'étudiant</h3>
-            <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
-            </div>
-          </div>
-        </div>
-        <div className="std">
-          <div className='row'>
-            <h3>Nom de l'étudiant</h3>
             <div className="student-buttons">
               <button>AP</button>
               <button>AI</button>
@@ -100,7 +86,10 @@ const Em = () => {
         <div className='card-container'>
         <div className="std">
           <div className='row'>
-            <h3>Nom de l'étudiant</h3>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
             <div className="student-buttons">
               <button>AP</button>
               <button>AI</button>
@@ -109,7 +98,10 @@ const Em = () => {
         </div>
         <div className="std">
           <div className='row'>
-            <h3>Nom de l'étudiant</h3>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
             <div className="student-buttons">
               <button>AP</button>
               <button>AI</button>
@@ -120,7 +112,10 @@ const Em = () => {
         <div className='card-container'>
         <div className="std">
           <div className='row'>
-            <h3>Nom de l'étudiant</h3>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
             <div className="student-buttons">
               <button>AP</button>
               <button>AI</button>
@@ -129,7 +124,36 @@ const Em = () => {
         </div>
         <div className="std">
           <div className='row'>
-            <h3>Nom de l'étudiant</h3>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
+            <div className="student-buttons">
+              <button>AP</button>
+              <button>AI</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className='card-container'>
+        <div className="std">
+          <div className='row'>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
+            <div className="student-buttons">
+              <button>AP</button>
+              <button>AI</button>
+            </div>
+          </div>
+        </div>
+        <div className="std">
+          <div className='row'>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
             <div className="student-buttons">
               <button>AP</button>
               <button>AI</button>

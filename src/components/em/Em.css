@@ -58,8 +58,8 @@
     background-size: cover;
     background-position: center top;
     font-size: 12px;
-    border-radius: 0 0 50px 50px;
-    height: 70px;
+    border-radius: 0 0 30px 30px;
+    height: 54.88px;
     width: 369px;
     margin-left: auto;
     margin-right: auto;
@@ -72,12 +72,14 @@
   }
   
   .column-head h3 {
+    /* Styles pour le h3 à l'intérieur de .column-head */
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Poppins", Helvetica;
     font-weight: bold;
-    margin: 0;
-    margin-bottom: 10px;
+    margin: 12px;
+    margin-bottom: 0;
+    text-align: center;
   }
   
   .column-head p.day {
@@ -85,7 +87,9 @@
     font-family: "Poppins", Helvetica;
     font-size: 14px;
     margin: 10px;
-    margin-top: 0;
+    margin-top: 0; 
+    text-align: center;
+    
   }
   
   .card {
@@ -166,8 +170,8 @@
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    height: 60px;
-    width: 268px;
+    height: 70px;
+    width: 100px;
     margin: auto;
     margin-top: 20px;
     cursor: pointer;
@@ -179,7 +183,16 @@
     font-family: "Poppins", Helvetica;
     font-weight: 600;
     margin: 0;
-    padding: 10px;
+    padding: 0;
+    margin-left: 24px;
+    margin-top: 12px;
+  }
+  
+  .std span {
+    color: #000000; /* Couleur du texte pour le span */
+    font-size: 10px; /* Taille de police pour le span */
+    margin-left: 24px; /* Marge à droite pour le span */
+    margin-bottom: 10px;
   }
   
   .row {
@@ -193,15 +206,19 @@
   }
   
   .student-buttons button {
-    background-color: #FFF5EE;
-    border-radius: 100px;
-    padding: 8px 16px;
+    background-color: #FF252526;
+    border-radius: 30px; /* Ajustez le rayon de bordure pour obtenir la forme souhaitée */
+    padding: 4px 8px; /* Ajustez les valeurs de padding pour réduire l'espace intérieur du bouton */
     margin-right: 8px;
     border: none;
-    color: red;
-    font-size: 16px;
+    height: 35px;
+    width:35px;
+    color: #FF2525;
+    font-size: 16px; /* Réduisez la taille de la police pour diminuer la taille du texte */
     font-weight: bold;
-  }
+    margin-top: 10px;
+}
+
   
   .groupes .card-container {
     display: flex;
