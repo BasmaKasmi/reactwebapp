@@ -42,7 +42,7 @@ const Em = () => {
           </div>
           <div
             className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
-            onClick={() => handleCardClick('card-3', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
+            onClick={() => handleCardClick('card-3', 'Sciences islamiques 3èmee année', 'Sam 14h30 à 17h30')}
           >
             <h3>Sciences islamiques 3ème année</h3>
             <div className='row'>

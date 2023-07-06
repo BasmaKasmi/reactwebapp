@@ -1,6 +1,5 @@
 import React from 'react';
-import './Dashboard.css'; // Importe les styles pour le composant Dashboard
-
+import './Dashboard.css';
 // Définition d'un composant fonctionnel Dashboard
 const Dashboard = () => {
   // Retourne du JSX qui va être rendu dans l'application
