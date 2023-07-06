@@ -1,0 +1,222 @@
+.Emargements {
+    display: flex;
+    height: calc(100% - 139px);
+    min-width: 290px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 142px;
+    right: 0;
+    gap: 26px;
+    margin-right: 2px;
+    padding: 0 42px;
+  }
+  
+  .co {
+    flex: 1;
+    width: 365px;
+    height: 100vh;
+    margin-top: 22px;
+    margin-left: 2px;
+    border-radius: 22px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 142px;
+    left: 360px;
+  }
+  
+  .groupes {
+    flex: 1;
+    width: 702px;
+    height: 100vh;
+    margin-top: 22px;
+    margin-left: 2px;
+    border-radius: 22px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 142px;
+    right: 60px;
+  }
+  
+  .column-header {
+    background-image: url("../../assets/ractangle\ orange.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    font-size: 12px;
+    height: 30px;
+    width: 269px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 39px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .column-head {
+    background-image: url("../../assets/ractangle\ orange.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    font-size: 12px;
+    border-radius: 0 0 50px 50px;
+    height: 70px;
+    width: 369px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column-head h3 {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .column-head p.day {
+    color: #FFFFFF;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    margin: 10px;
+    margin-top: 0;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-bottom: 16px;
+    width: 315px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  .card h3 {
+    color: #000000;
+    font-size: 14px;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    margin-top: 6px;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+  
+  .card .day {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 16px;
+  }
+  
+  .card .session {
+    color: #898989;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    font-size: 12px;
+    font-style: italic;
+    padding-right: 20px;
+  }
+  
+  .card.clicked {
+    background-color: #FD9340;
+  }
+  
+  .card.clicked h3,
+  .card.clicked .day,
+  .card.clicked .session {
+    color: #FFFFFF;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .agenda-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .agenda-section i {
+    margin-right: 10px;
+  }
+  
+  .agenda-section span {
+    margin-right: 10px;
+  }
+  
+  .agenda-section input {
+    margin-right: 10px;
+  }
+  
+  .std {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 60px;
+    width: 268px;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .std h3 {
+    color: #000000;
+    font-size: 14px;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .student-buttons {
+    display: flex;
+  }
+  
+  .student-buttons button {
+    background-color: #FFF5EE;
+    border-radius: 100px;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border: none;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .groupes .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .groupes .std {
+    width: calc(50% - 16px); /* Ajustez la largeur des cartes en fonction de vos préférences */
+    margin-bottom: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .groupes .std {
+      width: 100%;
+    }
+  }
+  
