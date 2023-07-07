@@ -58,56 +58,6 @@ const Em = () => {
           <p className='day'>{selectedDay}</p>
         </div>
         <div className='card-container'>
-        <div className="std">
-          <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-            <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
-            </div>
-          </div>
-        </div>
-        <div className="std">
-          <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-            <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div className='card-container'>
-        <div className="std">
-          <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-            <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
-            </div>
-          </div>
-        </div>
-        <div className="std">
-          <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-            <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
-            </div>
-          </div>
-        </div>
         </div>
         <div className='card-container'>
         <div className="std">

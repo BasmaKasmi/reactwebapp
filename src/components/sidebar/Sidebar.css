@@ -182,7 +182,7 @@
   .sidebar-button-mobile {
     display: block;
     position: relative;
-    left: 66%;
+    left: 50%;
     width: 60%;
     transform: translateX(-50%);
     background-color: #000000;
