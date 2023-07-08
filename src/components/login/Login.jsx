@@ -19,10 +19,10 @@ const Login = () => {
         {/* Champ d'entrée pour le mot de passe */}
         <div className="input-container">
           <input className="input-field" type="password" placeholder="Password" />
-          {/* Bouton pour mot de passe oublié */}
         </div>
         {/* Lien vers la page de tableau de bord */}
         <Link to="/dashboard" className="login-button">Se connecter</Link>
+        <Link to="/password" className="forgot-button">Mot de passe oublié ?!</Link>
         <div className="image-container">
         {/* Image affiché*/}
           <img className="image" src={require('../../assets/logo shatibi.png')} alt="ShatibiPic" />

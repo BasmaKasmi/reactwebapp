@@ -7,6 +7,8 @@ import './App.css';
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from './pages/DashboardPage';
 import MesemargementsPage from './pages/MesemargementsPage';
+import PasswordPage from './pages/PasswordPage';
+import NewPasswordPage from './pages/NewPasswordPage';
 
 // Définir la fonction App
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route index element={<LoginPage />} />
         <Route path='/dashboard' element={<DashboardPage />} />
         <Route path='/émargements' element={<MesemargementsPage/>} />
+        <Route path='/password' element={<PasswordPage/>} />
+        <Route path='/newpassword' element={<NewPasswordPage/>} />
         </Routes>
         </BrowserRouter>
       </div>
