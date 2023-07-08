@@ -14,7 +14,7 @@
   top: 142px;
   left: 0;
   transition: transform 0.02s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   @media (max-width: 768px) {
     transform: translateX(100%);
     min-width: 336px;
@@ -67,7 +67,6 @@
   }
 
 }
-
 
 .sidebar-content {
   margin-top: 82px;
