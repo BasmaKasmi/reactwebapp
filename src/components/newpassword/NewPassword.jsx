@@ -14,11 +14,11 @@ const NewPassword = () => {
         <p className="subtitle">Créer votre nouveau mot de passe afin de pouvoir se connecter</p>
         {/* Champ d'entrée pour nouveau mot de passe */}
         <div className="input-container">
-          <input className="input-field" type="password" placeholder=" Entrer nouveau mot de passe " />
+          <input className="input-field" type="password" placeholder=" Entrer le nouveau mot de passe " />
         </div>
         {/* Champ d'entrée pour confirmer nouveau mot de passe */}
         <div className="input-container">
-          <input className="input-field" type="password" placeholder=" Confirmer nouveau mot de passe " />
+          <input className="input-field" type="password" placeholder=" Confirmer le mot de passe " />
         </div>
         {/* Lien vers la page de tableau de bord */}
         <Link to="/" className="newpassword-button">Changer</Link>

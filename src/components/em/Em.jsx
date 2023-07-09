@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './Em.css';
+import classNames from 'classnames';
 
 const Em = () => {
   const [activeCard, setActiveCard] = useState(null);
+  const [activeButtonId, setActiveButtonId] = useState(null);
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
 
@@ -10,6 +12,15 @@ const Em = () => {
     setActiveCard(cardId);
     setSelectedTitle(cardTitle);
     setSelectedDay(cardDay);
+  };
+  const handleButtonClick = (buttonId) => {
+    setActiveButtonId(buttonId);
+    
+    if (buttonId === 'ap') {
+      setActiveButtonId('ai');
+    } else if (buttonId === 'ai') {
+      setActiveButtonId('ap');
+    }
   };
 
   return (
@@ -60,56 +71,100 @@ const Em = () => {
         <div className='card-container'>
         </div>
         <div className='card-container'>
-        <div className="std">
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
             <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
+            <button
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
+            >
+            AP 
+            </button>
+            <button
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
+            >
+            AI
+            </button>
             </div>
           </div>
         </div>
-        <div className="std">
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
             <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
+            <button
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
+            >
+            AP 
+            </button>
+            <button
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
+            >
+            AI
+            </button>
             </div>
           </div>
         </div>
         </div>
         <div className='card-container'>
-        <div className="std">
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
             <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
+            <button
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
+            >
+            AP 
+            </button>
+            <button
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
+            >
+            AI
+            </button>
             </div>
           </div>
         </div>
-        <div className="std">
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
             <div className="student-buttons">
-              <button>AP</button>
-              <button>AI</button>
+            <button
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
+            >
+            AP 
+            </button>
+            <button
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
+            >
+            AI
+            </button>
             </div>
           </div>
         </div>
+        </div>
+        <div className='button-container'>
+        <button className="fem-button">Valider la feuille d'émargement</button>
+        <button className="an-button">Annuler</button>
         </div>
       </div>
     </div>

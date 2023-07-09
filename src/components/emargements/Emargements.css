@@ -21,7 +21,7 @@
   margin-left: 2px;
   margin-right: 10px; /* Réduire la valeur de la marge droite */
   border-radius: 22px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   top: 142px;
   left: 360px;
 }
@@ -34,7 +34,7 @@
   margin-left: 2px; /* Réduire la valeur de la marge gauche */
   margin-right: 6px;
   border-radius: 22px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   top: 142px;
   right: 60px;
 }
@@ -99,7 +99,7 @@
   margin-bottom: 16px;
   width: 315px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 
 }

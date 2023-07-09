@@ -9,12 +9,12 @@ const Password = () => {
     <div className="safe-area">
       <div className="password-container">
       {/* Titre de la page */}
-        <h1 className="title">Mot de passe oublié</h1>
+        <h1 className="title">Réinitialiser mot de passe</h1>
         {/* Sous-titre de la page */}
-        <p className="subtitle">Entrez votre addresse mail</p>
+        <p className="subtitle">Entrez votre addresse e-mail</p>
         {/* Champ d'entrée pour l'identifiant */}
         <div className="input-container">
-          <input className="input-field" type="text" placeholder="Adresse mail" />
+          <input className="input-field" type="text" placeholder="Adresse e-mail" />
         </div>
         {/* Lien vers la page de tableau de bord */}
         <Link to="/newpassword" className="password-button">Continue</Link>

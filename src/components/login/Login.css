@@ -23,7 +23,7 @@
   font-weight: 700;
   color: #000;
   margin-top: 124px;
-  text-align:left;
+  text-align: left;
 }
 
 /* Style for the subtitle */
@@ -41,14 +41,15 @@
   font-family: "Poppins", Helvetica;
   color: #898989;
   font-size: 14px;
-  margin-bottom: 30px;
   width: 325px;
   align-items: center;
   word-spacing: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
+
 /* Style for the input container */
 .input-container {
   display: flex;
@@ -87,7 +88,7 @@
   font-weight: 700;
   font-size: 18px;
   color: #FFFFFF;
-  margin-top: 20px;
+  margin-top: 24px;
   background-color: #fd9340;
   transition: background-color 0.3s ease;
 }
@@ -108,9 +109,11 @@
 /* Style for the image */
 .image {
   object-fit: contain;
-  height: 100px;
-  width: 140px;
-  align-items: center;
+  max-height: 100px; /* la valeur selon vos besoins */
+  max-width: 118px; /* la valeur selon vos besoins */
+  display: block; /* gérer la marge automatique verticale */
+  margin-top: auto; /* centrer verticalement */
+  margin-bottom: auto; /* centrer verticalement */
 }
 
 /* Responsive styles for small screens */

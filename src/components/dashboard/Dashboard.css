@@ -42,26 +42,23 @@
     align-items: center;
     background-color: #FF25254D;
     min-width: 10rem; /*% pour largeur*/
-    min-height: 186px;
-    border-radius: 20px;
+    min-height: 11.625em;
+    border-radius: 1.25em;
     position: relative;
-    bottom: 30px;
+    bottom: 1.875em;
   }
   
   .title {
-    margin-top: 24px;
+    margin-top: 1em;
   }
   
   .title h2 {
     color: #000000;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 0.75em;
     text-align: center;
   }
-  
-  .content {
-    margin-top: 12px;
-  }
+
   
   .entry {
     background-color: #FFFFFF;
@@ -75,10 +72,10 @@
   
   .entry h3 {
     color: #000000;
-    font-size: 14px;
+    font-size: 0.875em;
     font-family: "Poppins", Helvetica;
     font-weight: 600;
-    margin-top: 2px;
+    margin-top: 0.125em;
     margin-right: 4.7%; /* % pour la marge right */
   }
   
@@ -92,19 +89,19 @@
   .details .date {
     color: #898989;
     font-family: "Poppins", Helvetica;
-    font-size: 14px;
+    font-size: 0.875em;
     font-style: italic;
-    padding-left: 2px;
-    padding-bottom: 16px;
+    padding-left: 0.125em;
+    padding-bottom: 1em;
   }
 
   .details .count {
     color: #898989;
     font-family: "Poppins", Helvetica;
-    font-size: 12px;
+    font-size: 0.75em;
     font-style: italic;
     padding-right: 3%; /* % pour l'espace intérieur */
-    margin-bottom: 7%;
+    margin-bottom: 0.4375em;
   }
 }
 
@@ -128,59 +125,59 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 9.375em;
   }
   .date-section {
     position: relative;
     margin-right: 20.7%; /* % pour le margin right */
-    bottom: 20px;
+    bottom: 1.25em;
   }
   .date-section h2 {
     color: #000000;
     font-size: 24px;
     font-weight: 600;
     font-family: "Poppins", Helvetica;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
   }
   
   .dashboard-entry {
     background-color: #FFFFFF;
     width: 93.1%; /* % pour la largeur */
-    height: 94px;
-    border-radius: 20px;
+    height: 5.875em;
+    border-radius: 1.25em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    display: flex; 
+    display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 1em;
     position: relative;
-    bottom: 20px;
+    bottom: 1.25em;
   }
 
   .dashboard-entry .time p {
-    font-size: 16px;
-    margin: 4px 0 8px 4.7%; /* % pour la marge*/
+    font-size: 1em;
+    margin: 0.25em 0 0.5em 4.7%; /* % pour la marge*/
   }
   
   .dashboard-entry .divider {
     background-color:#FD9340;
-    border-radius: 10px;
-    width: 8px;
+    border-radius: 0.625em;
+    width: 0.5em;
     height: 60px;
-    margin-left: 4.7%; /* % pour le margin gauche */
-    margin-right: 3.7%; /* % pour le margin droit */
+    margin-left: 0.4688em; /* le margin gauche */
+    margin-right: 0.3704em; /* le margin droit */
   }
 
   .dashboard-entry .details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 10px;
+    margin-top: 0.625em;
   }
   
   .dashboard-entry .details p {
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: bold;
-    margin-bottom: 6px;
+    margin-bottom: 0.375em;
   }
   
   .dashboard-entry .details .extra-info {
@@ -192,32 +189,32 @@
   .dashboard-entry .details .extra-info .room {
     color: #FD9340;
     font-family: "Poppins", Helvetica;
-    font-size: 14px;
+    font-size: 0.875em;
     font-style: italic;
-    padding-bottom: 4px;
+    padding-bottom: 0.25em;
   }
   
   .dashboard-entry .details .extra-info .count {
     color: #898989;
-    font-size: 12px;
+    font-size: 0.75em;
     font-style: italic;
     font-weight: lighter;
-    padding-left: 20.7%; /*% pour l'espace intérieur gauche */
-    padding-top: 10px;
+    padding-left: 2.1em; /*% pour l'espace intérieur gauche */
+    padding-top: 0.625em;
   }
   
   
   .ap-button {
     background-color: #FFA82526;
-    border-radius: 50px;
+    border-radius: 3.125em;
     font-family: "Poppins", Helvetica;
-    height: 50px; /*  hauteur adaptable */
-    width: 220px; /* largeur adaptable */
+    height: 3.125em; /*  hauteur adaptable */
+    width: 13.75em; /* largeur adaptable */
     margin-left: auto; /* Centre le bouton horizontalement */
     margin-right: auto; /* Centre le bouton horizontalement */
     color: #FFA825;
-    margin-top: 56px; /* marge adaptable */
-    font-size: 16px; /* taille de police adaptable */
+    margin-top: 3.5em; /* marge adaptable */
+    font-size: 1em; /* taille de police adaptable */
     font-weight: bold;
     border: none;
     text-align: center;
@@ -231,12 +228,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  font-size: 12px; /*taille de police adaptable */
-  height: 30px; /*hauteur adaptable */
-  width: 269px; /*largeur adaptable */
+  font-size: 0.75em; /*taille de police adaptable */
+  height: 1.875em; /*hauteur adaptable */
+  width: 16.8125; /*largeur adaptable */
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 39px; /*marge adaptable */
+  margin-bottom: 2.4375em; /*marge adaptable */
   color: #FFFFFF;
   text-align: center;
 }
@@ -244,46 +241,46 @@
 .date {
   color: #000000;
   font-family: "Poppins", Helvetica;
-  font-size: 18px; /*taille de police adaptable */
+  font-size: 1.125em; /*taille de police adaptable */
   font-weight: 600;
-  margin-left: 28px; /*marge adaptable */
+  margin-left: 1.75em; /*marge adaptable */
 }
 
 .card {
   background-color: #FFFFFF;
   margin: auto;
-  margin-bottom: 16px; /*marge adaptable*/
-  width: 315px; /*marge adaptable */
-  border-radius: 20px; /*bordure adaptable */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.625em; /*marge adaptable*/
+  width: 19.6875em; /*marge adaptable */
+  border-radius: 1.25em; /*bordure adaptable */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
   color: #000000;
-  font-size: 14px; /*taille de police adaptable */
+  font-size: 0.875em; /*taille de police adaptable */
   font-family: "Poppins", Helvetica;
   font-weight: 600;
-  margin-top: 6px;
-  padding-left: 20px;
-  padding-top: 15px;
+  margin-top: 0.375em;
+  padding-left: 1.25em;
+  padding-top: 0.9375em;
 }
 
 .day {
   color: #000000;
   font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  padding-left: 20px;
-  padding-top: 4px;
-  padding-bottom: 16px;
+  font-size: 0.875em;
+  padding-left: 1.25em;
+  padding-top: 0.25em;
+  padding-bottom: 1em;
 }
 
 .session {
   color: #898989;
   font-family: "Poppins", Helvetica;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 0.75em;
   font-style: italic;
-  padding-right: 20px;
+  padding-right: 1.25em;
 }
 
 .row {

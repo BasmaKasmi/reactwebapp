@@ -22,7 +22,6 @@ const Dashboard = () => {
         <div className="title">
           <h2>Emargement(s) non fait(s)</h2>
         </div>
-        <div className="content">
           <div className="entry">
             <h3>Sciences islamiques 2ème année</h3>
             <div className="details">
@@ -30,7 +29,6 @@ const Dashboard = () => {
               <p className="count">11/32</p>
             </div>
           </div>
-        </div>
       </div>
       <div className="column">
         <div className="column-header orange-bg">
