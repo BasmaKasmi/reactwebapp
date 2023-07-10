@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
 import Em from '../em/Em';
@@ -27,6 +28,33 @@ const Emargements = () => {
 
   return (
     <div className='Emargements'>
+    <div className='groupes-res'>
+    <h3> Mes groupes :</h3>
+    <Link to='/emnavigation1'>
+    <div className="card">
+      <h3>Sciences islamiques 1ére année</h3>
+        <div>
+          <p className='day'>Jeu 18h00 à 12h00</p>
+        </div>
+    </div>
+    </Link>
+    <Link to='/emnavigation1'>
+    <div className="card">
+      <h3>Sciences islamiques 1ére année</h3>
+        <div>
+          <p className='day'>Jeu 18h00 à 12h00</p>
+        </div>
+    </div>
+    </Link>
+    <Link to='/emnavigation1'>
+    <div className="card">
+      <h3>Sciences islamiques 1ére année</h3>
+        <div>
+          <p className='day'>Jeu 18h00 à 12h00</p>
+        </div>
+    </div>
+    </Link>
+    </div>
       <div className="co">
         <div className="column-header">
           <h2>Mes emargements</h2>

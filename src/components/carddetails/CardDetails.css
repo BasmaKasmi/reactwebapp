@@ -1,0 +1,102 @@
+.Details {
+    display: none;
+  }
+  
+  @media screen and (max-width: 783px) {
+    .Details {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        position: fixed;
+        align-items: center;
+        bottom: 300px;
+        left: 5%; /* Réglez cette valeur en fonction de la position horizontale souhaitée */
+        right: 5%; /* Réglez cette valeur en fonction de la position horizontale souhaitée */
+        background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
+      }
+
+      .agenda-row {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 0.1rem;
+      }
+      
+      .agenda-row h3 {
+        margin-right: 14rem; /* Ajouter de l'espace entre l'image et le titre */
+        color: #000000;
+        font-family: "Poppins", Helvetica;
+        font-size: 14px;
+        margin-bottom: 1rem;
+      }
+      
+      .agenda-row img {
+        margin-left: 0.1rem;
+      }
+
+      .date-inputs {
+        display: flex;
+        align-items: center;
+        margin-right: 4rem; /* Ajuster la valeur de la marge droite */
+        margin-bottom: 1rem;
+        margin-left: 1.9rem;
+      }
+      
+      .date-inputs input {
+        text-align: center;
+        font-family: "Poppins", Helvetica;
+        border-radius: 3rem;
+        border: 0.1rem solid #e5e4e3;
+        height: 2.3rem;
+        width: 8.7rem; /* la largeur des inputs */
+        margin-left: 0.4rem; /* l'espace entre les inputs */
+      }
+      
+      .date-inputs img {
+        margin-left: 0.4rem; /* l'espace entre input et l'image */
+      }
+        
+        .c {
+          margin-bottom: 1rem;
+          max-width: 20rem;
+          border-radius: 16px;
+          height: 8%;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        
+        .c h3 {
+          font-size: 14px;
+          margin-right: 5px;
+        }
+        
+        .status-f {
+            color: #4CAF50;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 8px;
+            margin-right: 20px;
+            margin-top: 6px;
+            text-transform: uppercase;
+          }
+          
+          .status-n {
+            color: #FF2525;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 8px;
+            margin-top: 6px;
+            margin-right: 20px;
+            text-transform: uppercase;
+          }
+};

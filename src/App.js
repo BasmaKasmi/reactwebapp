@@ -9,6 +9,7 @@ import DashboardPage from './pages/DashboardPage';
 import MesemargementsPage from './pages/MesemargementsPage';
 import PasswordPage from './pages/PasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage';
+import EmNavigation1 from './pages/EmNavigation1';
 
 // Définir la fonction App
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/émargements' element={<MesemargementsPage/>} />
         <Route path='/password' element={<PasswordPage/>} />
         <Route path='/newpassword' element={<NewPasswordPage/>} />
+        <Route path='/emnavigation1' element={<EmNavigation1/>} />
         </Routes>
         </BrowserRouter>
       </div>
