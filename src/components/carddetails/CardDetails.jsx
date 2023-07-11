@@ -1,6 +1,7 @@
 import React from 'react';
 import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
+import { Link } from 'react-router-dom';
 import './CardDetails.css';
 
 const CardDetails = () => {
@@ -15,24 +16,24 @@ const CardDetails = () => {
         <input type="text" placeholder="28/01/2023" />
         <img src={st} alt='' />
       </div>
-      <div className="c">
+      <Link to="/recap" className="c">
         <div className='row'>
           <h3>semaine 1</h3>
           <span className="status-f">FAIT</span>
         </div>
-      </div>
-      <div className="c">
+      </Link>
+      <Link to="/recap" className="c">
         <div className='row'>
           <h3>semaine 2</h3>
           <span className="status-f">FAIT</span>
         </div>
-      </div>
-      <div className="c">
+      </Link>
+      <Link to="/recap" className="c">
         <div className='row'>
           <h3>semaine 3</h3>
           <span className="status-n">NON FAIT</span>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

@@ -1,16 +1,16 @@
 import React from 'react';
-import CardDetails from '../components/carddetails/CardDetails';
 import NavEmarg from '../components/navEm/NavEmarg';
 import RetourButton from '../components/retourbutton/RetourButton';
+import Recap from '../components/recap/Recap';
 
-const EmNavigation1 = () => {
+const RecapPage = () => {
   return (
     <div>
     <NavEmarg />
     <RetourButton />
-    <CardDetails />
+    <Recap />
     </div>
-);
-};
+  )
+}
 
-export default EmNavigation1;
+export default RecapPage;

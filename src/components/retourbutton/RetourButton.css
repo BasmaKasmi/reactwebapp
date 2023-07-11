@@ -1,0 +1,21 @@
+.retour-button {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    width: 6rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: "Poppins", Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #FF252526;
+    color: #FF2525;
+    text-align: center;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+  }
+  
+  .retour-button:hover {
+    background-color: #FF2525;
+  }

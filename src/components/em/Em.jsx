@@ -7,6 +7,8 @@ const Em = () => {
   const [activeButtonId, setActiveButtonId] = useState(null);
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
 
   const handleCardClick = (cardId, cardTitle, cardDay) => {
     setActiveCard(cardId);
@@ -14,14 +16,19 @@ const Em = () => {
     setSelectedDay(cardDay);
   };
   const handleButtonClick = (buttonId) => {
-    setActiveButtonId(buttonId);
-    
-    if (buttonId === 'ap') {
-      setActiveButtonId('ai');
-    } else if (buttonId === 'ai') {
-      setActiveButtonId('ap');
-    }
+    setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
   };
+  const handleConfirmationClick = () => {
+    setShowConfirmation(true);
+    document.body.classList.add('modal-open');
+  };
+  
+
+  const handleOverlayClick = () => {
+    setShowConfirmation(false);
+    document.body.classList.remove('modal-open');
+  };
+  
 
   return (
     <div className='Emargements'>
@@ -163,8 +170,30 @@ const Em = () => {
         </div>
         </div>
         <div className='button-container'>
-        <button className="fem-button">Valider la feuille d'émargement</button>
+        <button className="fem-button" onClick={handleConfirmationClick}>
+          Valider la feuille d'émargement
+        </button>
         <button className="an-button">Annuler</button>
+        {showConfirmation && (
+      <div className="modal-overlay" onClick={handleOverlayClick}>
+        <div className="confirmation-card">
+          <div className="confirmation-content">
+            <div className="icon-container">
+              <i className="fas fa-check-circle"></i>
+            </div>
+            <h3>Vous déclarez avoir :</h3>
+            <div className="confirmation-details">
+              <p>Nb Présents</p>
+              <p>Nb Absents</p>
+            </div>
+            <div className="confirmation-buttons">
+              <button className="valider-button">Valider</button>
+              <button className="annuler-button">Annuler</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
         </div>
       </div>
     </div>

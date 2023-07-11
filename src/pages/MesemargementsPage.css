@@ -1,0 +1,16 @@
+/* MesemargementsPage.css */
+
+.nav-emarg-container {
+    display: none;
+  }
+  
+  @media screen and (max-width: 783px) {
+    .desktop-container {
+      display: none;
+    }
+  
+    .nav-emarg-container {
+      display: block;
+    }
+  }
+  
