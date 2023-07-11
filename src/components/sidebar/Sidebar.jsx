@@ -25,7 +25,7 @@ const Sidebar = () => {
   };
 
   return (
-    <center>
+    <div>
       <button className="sidebar-toggle" onClick={handleToggle}>
         {isActive ? ">" : "<"}
       </button>
@@ -77,7 +77,7 @@ const Sidebar = () => {
       <button className="declare-button">Déclarer AP</button>
       </div>
       {isActive && <div className="dashboard-overlay" />}
-    </center>
+    </div>
   );
 };
 

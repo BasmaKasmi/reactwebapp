@@ -221,7 +221,6 @@
     backdrop-filter: none;
   }
   
-  
   .sidebar.active {
     transform: translateX(0%);
     z-index: 2;

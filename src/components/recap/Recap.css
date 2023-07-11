@@ -109,4 +109,89 @@
         padding-top: 4px;
         padding-bottom: 16px;
       }
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+      }
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border-radius: 2.6rem;
+        width: 80%;
+        padding: 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+      }
+      .modal h2 {
+        text-align: center;
+      }
+      
+      .modal-content {
+        text-align: center;
+      }
+      .modal 
+      .recap-row {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 0.1rem;
+      }
+      
+      .modal 
+      .recap-row h3 {
+        margin-right: 10rem; /* Ajouter de l'espace entre l'image et le titre */
+        color: #000000;
+        font-family: "Poppins", Helvetica;
+        font-size: 14px;
+        margin-bottom: 1rem;
+      }
+      .modal
+      .recap-row img {
+        margin-left: 0.1rem;
+      }
+      
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .ap-button {
+        background-color: #FFA82526;
+        color: #FFA825;
+        height: 42px;
+        width: 11rem;
+        border: none;
+        font-family: "Poppins", Helvetica;
+        font-weight: bold;
+        border-radius: 3.125em;
+        padding: 8px 16px;
+        margin-right: 8px;
+      }
+      
+      .an-button {
+        background-color: #FF252526;
+        color: #FF2525;
+        height: 42px;
+        width: 5rem;
+        border: none;
+        font-family: "Poppins", Helvetica;
+        font-weight: bold;
+        border-radius: 3.125em;
+        padding: 8px 16px;
+        margin-right: 8px;
+      }
 }
