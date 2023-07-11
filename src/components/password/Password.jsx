@@ -9,15 +9,15 @@ const Password = () => {
     <div className="safe-area">
       <div className="password-container">
       {/* Titre de la page */}
-        <h1 className="title">Réinitialiser mot de passe</h1>
+        <h1 className="title">J'ai oublié mon mot de passe</h1>
         {/* Sous-titre de la page */}
         <p className="subtitle">Entrez votre addresse e-mail</p>
         {/* Champ d'entrée pour l'identifiant */}
         <div className="input-container">
-          <input className="input-field" type="text" placeholder="Adresse e-mail" />
+          <input className="input-field" type="text" placeholder="Identifiant ou e-mail " />
         </div>
         {/* Lien vers la page de tableau de bord */}
-        <Link to="/newpassword" className="password-button">Continue</Link>
+        <Link to="/" className="password-button">Réinitialiser le mot de passe</Link>
         <div className="image-container">
         {/* Image affiché*/}
           <img className="image" src={require('../../assets/logo shatibi.png')} alt="ShatibiPic" />

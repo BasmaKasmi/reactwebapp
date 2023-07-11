@@ -72,11 +72,7 @@
     border: none;
     cursor: pointer;
   }
-  
-  .navbar-right a:hover {
-    background-color: #FD9340;
-    color: #ffffff;
-  }
+
   
   /* Responsive styles for small screens */
   @media screen and (max-width: 768px) {

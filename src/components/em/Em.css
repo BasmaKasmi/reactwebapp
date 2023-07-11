@@ -25,9 +25,12 @@
 }
 
 .groupes {
+  display: inline-flex;
+  height: 580px;
+  flex-direction: column;
+  flex-shrink: 1;
   flex: 1;
-  width: 702px;
-  height: 100vh;
+  width: 700px;
   margin-top: 22px;
   margin-left: 2px;
   border-radius: 22px;
@@ -61,6 +64,7 @@
   border-radius: 0 0 30px 30px;
   height: 54.88px;
   width: 369px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   color: #FFFFFF;
@@ -169,11 +173,11 @@
 .std {
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
   height: 70px;
   width: 100px;
   margin: auto;
-  margin-top: 20px;
+  margin-left: 15px;
   cursor: pointer;
 }
 
@@ -190,7 +194,9 @@
 
 .std span {
   color: #000000; /* Couleur du texte pour le span */
-  font-size: 10px; /* Taille de police pour le span */
+  font-family: "Poppins", Helvetica;
+  font-weight: lighter;
+  font-size: 12px; /* Taille de police pour le span */
   margin-left: 24px; /* Marge à droite pour le span */
   margin-bottom: 10px;
 }
