@@ -9,7 +9,7 @@ const Password = () => {
     <div className="safe-area">
       <div className="password-container">
       {/* Titre de la page */}
-        <h1 className="title">J'ai oublié mon mot de passe</h1>
+      <h1 className="password-container-title">Mot de passe Oublié ?</h1>
         {/* Sous-titre de la page */}
         <p className="subtitle">Entrez votre addresse e-mail</p>
         {/* Champ d'entrée pour l'identifiant */}
@@ -18,9 +18,9 @@ const Password = () => {
         </div>
         {/* Lien vers la page de tableau de bord */}
         <Link to="/" className="password-button">Réinitialiser le mot de passe</Link>
-        <div className="image-container">
+        <div className="logo-container">
         {/* Image affiché*/}
-          <img className="image" src={require('../../assets/logo shatibi.png')} alt="ShatibiPic" />
+          <img className="logo" src={require('../../assets/logo shatibi.png')} alt="ShatibiPic" />
         </div>
       </div>
     </div>

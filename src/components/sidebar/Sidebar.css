@@ -3,15 +3,14 @@
   flex-direction: column;
   height: 100vh;
   position: relative;
-  overflow: hidden; 
 }
 
 .sidebar {
   height: calc(100% - 139px);
-  min-width: 300px;
+  width: 300px;
   background-color: #FFFFFF;
   position: fixed;
-  top: 144px;
+  top: 139px;
   left: 0;
   transition: transform 0.02s ease;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
@@ -23,7 +22,7 @@
     height: calc(100% - 232px);
     right: 0;
     border-radius: 40px 0px 0px 40px ;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
     left: auto;
   }
 }
@@ -157,10 +156,14 @@
   border-radius: 50px;
   font-family: "Poppins", Helvetica;
   height: 42px;
-  width: 194px;
-  margin: 30px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 202px;
   color: #ffffff;
-  margin-top: 33.5px;
+  margin-top: 57px;
+  margin-left: 49px;
+  margin-right: 49px;
   font-size: 14px;
   font-weight: bold;
   border: none;
@@ -168,7 +171,6 @@
   @media (max-width: 768px) {
     display: none;
   }
-  
 }
 .sidebar-button-mobile {
   display: none; /* Caché par défaut */

@@ -14,8 +14,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 9.65%; /* Height of the navigation bar */
-    height: 20%; /* Height of the navigation bar as a percentage */
+    height: 139px; /* Height of the navigation bar */
     background-color: #FD9340;
     padding: 0 20px;
   }

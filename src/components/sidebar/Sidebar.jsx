@@ -66,6 +66,9 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
+        <div className="declare-button ">
+          <Link to="">Déclarer une AP</Link>
+        </div>
         <div className="sidebar-button-mobile">
           <Link to="/">Se déconnecter</Link>
         </div>
