@@ -31,7 +31,6 @@
 .groupes {
   flex: 1;
   width: 702px;
-  margin-top: 22px;
   border-radius: 22px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
   top: 142px;
@@ -62,7 +61,7 @@
   border-radius: 0 0 30px 30px;
   height: 54.88px;
   width: 368.55px;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
   margin-left: auto;
   margin-right: auto;
   color: #FFFFFF;
@@ -170,22 +169,29 @@
 }
 
 .groupes .card-container {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 
 .std {
+  position: relative;
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 4px 4px 20px #00000012;
   height: 60px;
   width: 332px;
   margin-bottom: 1rem;
-  margin-left: 15.5px; /*15.5px*/
-  margin-right: 16.5px; /*16.5px*/
+  margin-left: 15.5px;
+  margin-right: 16.5px;
   cursor: pointer;
 }
+
+.std + .std {
+  margin-left: 4px; /* spacing value */
+  margin-bottom: 10px;
+}
+
 
 .std h3 {
   color: #000000;
@@ -324,6 +330,7 @@
 
 .student-buttons {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -336,6 +343,7 @@
   height: 35px;
   width:35px;
   color: #FF2525;
+  text-align: center;
   font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
   font-weight: bold;
   margin-top: 10px;
@@ -355,12 +363,6 @@ background-color: #FF2525;
 background-color: #FF252526;
 }
 
-
-
-.groupes .std {
-  width: calc(50% - 16px); /* Ajustez la largeur des cartes en fonction de vos préférences */
-  margin-bottom: 16px;
-}
 
 @media (max-width: 768px) {
   .groupes .std {
