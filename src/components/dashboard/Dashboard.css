@@ -43,44 +43,41 @@
 
   .pink-box {
     display: flex;
-    align-self: center;
     flex-direction: column;
     align-items: center;
     background-color: #FF25254D;
-    max-width: 100%; /* la largeur pour remplir l'écran */
-    min-height: 11em;
-    border-radius: 1.25em;
-    position: relative;
-    bottom: 1.875em;
-    margin-top: 1.4em; /* le contenu vers le bas */
-  
+    width: 390px;
+    min-height: 186px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .pink-box h2 {
     color: #000000;
-    font-size: 1em; /* la taille du titre */
-    margin-top: 1.6em;
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
   }
 
   
   .pink-box .entry {
-    display: flex;
-    flex-direction: column;
-    position: relative;
     background-color: #FFFFFF;
-    margin-top: 1.7rem;
-    width: 99%;
-    height: 62%;
+    margin-bottom: 12px;
+    width: 340px;
+    height: 76px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 20px #00000012;
   }
   
   .entry h3 {
     color: #000000;
-    font-size: 0.741em;
+    font-size: 14px;
     font-family: "Poppins", Helvetica;
     font-weight: 600;
-    margin-top: 0.125em;
-    margin-right: 0.2rem; /* % pour la marge right */
+    margin-top: 6px;
+    padding-left: 29px;
+    padding-top: 15px;
   }
   
   .details {
@@ -93,20 +90,20 @@
   .details .date {
     color: #898989;
     font-family: "Poppins", Helvetica;
-    font-size: 0.6em;
+    font-size: 14px;
     font-style: italic;
-    padding-left: 0.125em;
-    padding-bottom: 1em;
+    padding-left: 2px;
+    padding-bottom: 16px;
   }
 
   .details .count {
     color: #898989;
     font-family: "Poppins", Helvetica;
-    font-size: 0.5em;
+    font-size: 12px;
     font-style: italic;
-    padding-right: 3%; /* % pour l'espace intérieur */
-    margin-bottom: 0.4375em;
+    padding-right: 20px;
   }
+
 }
 
 .column {
@@ -129,59 +126,57 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 9.375em;
+    margin-bottom: 150px;
   }
   .date-section {
-    position: relative;
-    margin-right: 20.7%; /* % pour le margin right */
-    bottom: 1.25em;
+    margin-right: 168px;
   }
-  .date-section h2 {
+
+   .date-section h2 {
     color: #000000;
-    font-size: 1.2rem;
+    font-size: 22px;
     font-weight: 600;
     font-family: "Poppins", Helvetica;
-    margin-bottom: 1.25em;
-    margin-right: 0.8rem;
+    margin-bottom: 20px;
   }
+  
   
   .dashboard-entry {
     background-color: #FFFFFF;
-    width: 100%; /* % pour la largeur */
-    height: 5.875em;
-    border-radius: 1.4rem;
-    display: flex;
+    width: 390px;
+    height: 94px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px #00000012;
+    display: flex; 
     align-items: center;
-    margin-bottom: 1em;
-    position: relative;
-    bottom: 1.25em;
+    margin-bottom: 10px;
   }
 
   .dashboard-entry .time p {
-    font-size: 0.8em;
-    margin: 0.25em 0 0.5em 4.7%; /* % pour la marge*/
-  }
-  
-  .dashboard-entry .divider {
-    background-color:#FD9340;
-    border-radius: 0.625em;
-    width: 0.4em;
-    height: 60px;
-    margin-left: 0.4688em; /* le margin gauche */
-    margin-right: 0.3704em; /* le margin droit */
+    font-size: 16px;
+    margin: 4px 0 8px 20px;
   }
 
-  .dashboard-entry .details {
+  .dashboard-entry .divider {
+    background-color:#FD9340;
+    border-radius: 10px;
+    width: 8px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 16px;
+  }
+
+   .dashboard-entry .details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 0.625em;
+    margin-top: 10px;
   }
   
   .dashboard-entry .details p {
-    font-size: 0.76rem;
+    font-size: 14px;
     font-weight: bold;
-    margin-bottom: 0.375em;
+    margin-bottom: 6px;
   }
   
   .dashboard-entry .details .extra-info {
@@ -193,32 +188,31 @@
   .dashboard-entry .details .extra-info .room {
     color: #FD9340;
     font-family: "Poppins", Helvetica;
-    font-size: 0.7em;
+    font-size: 14px;
     font-style: italic;
-    padding-bottom: 0.25em;
+    padding-bottom: 2px;
   }
   
   .dashboard-entry .details .extra-info .count {
     color: #898989;
-    font-size: 0.75em;
+    font-size: 12px;
     font-style: italic;
     font-weight: lighter;
-    padding-left: 2.1em; /*% pour l'espace intérieur gauche */
-    padding-top: 0.625em;
+    padding-left: 168px;
+    padding-top: 10px;
   }
   
   
   .ap-button {
     background-color: #FFA82526;
-    border-radius: 3.125em;
+    border-radius: 50px;
     font-family: "Poppins", Helvetica;
-    height: 3.125em; /*  hauteur adaptable */
-    width: 13.75em; /* largeur adaptable */
-    margin-left: auto; /* Centre le bouton horizontalement */
-    margin-right: auto; /* Centre le bouton horizontalement */
+    padding: 20px;
+    height: 50px;
+    width: 220px;
     color: #FFA825;
-    margin-top: 3.5em; /* marge adaptable */
-    font-size: 1em; /* taille de police adaptable */
+    margin-top: 56px;
+    font-size: 16px;
     font-weight: bold;
     border: none;
     text-align: center;
@@ -303,16 +297,16 @@ h3 {
   .dashboard {
     flex-direction: column;
     margin-top: 0;
-    padding: 0 1rem; /* rem pour une marge intérieure plus petite */
+    padding: 0 10px; /* Ajout d'une marge intérieure plus petite */
   }
 
   .column {
     flex: 1;
-    margin: 1rem 0;
+    margin: 10px 0;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 100%;
+    width: 100%; /* Ajustement de la largeur pour occuper tout l'espace */
+    max-width: 100%; /* Empêcher le dépassement de la largeur */
   }
 }
 
@@ -323,8 +317,8 @@ h3 {
     flex-direction: column;
     align-items: center; /* Centrer horizontalement le contenu */
     margin-top: 0;
-    padding: 0 3rem;
-    gap: 0.5556rem; /*rem pour réduire l'espace entre les colonnes */
+    padding: 0 10px;
+    gap: 10px; /* Réduire l'espace entre les colonnes */
   }
 
   .column {
