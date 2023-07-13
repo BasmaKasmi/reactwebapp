@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './Em.css';
 import classNames from 'classnames';
+import './Em.css';
+
 
 const Em = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -74,8 +75,6 @@ const Em = () => {
         <div className="column-head">
           <h3>{selectedTitle}</h3>
           <p className='day'>{selectedDay}</p>
-        </div>
-        <div className='card-container'>
         </div>
         <div className='card-container'>
         <div className={classNames('std', { 'active': activeButtonId })}>

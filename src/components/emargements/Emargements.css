@@ -5,12 +5,14 @@
   min-width: 290px;
   background-color: #FFFFFF;
   position: fixed;
-  top: 142px;
+  top: 144px;
   right: 0;
-  gap: 22px;
+  gap: 26px;
   margin-right: 2px;
-  padding: 0 42px;
+  padding: 0 27px; /* espace intérieur */
+  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 }
+
 
 .groupes-res {
   display: none;
@@ -29,9 +31,10 @@
   .card {
     background-color: #FFFFFF;
     margin-bottom: 0; /*marge adaptable*/
-    width: 19.6875em; /*marge adaptable */
+    width: 299.5px;
+    height: 72px;
     border-radius: 1.25em; /*bordure adaptable */
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 20px #00000012;
   }
   
   h3 {
@@ -53,15 +56,14 @@
 
 .co {
   flex: 1;
-  width: 365px;
+  width: 345px;
   height: 100vh;
   margin-top: 22px;
   margin-left: 2px;
-  margin-right: 10px; /* Réduire la valeur de la marge droite */
   border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
   top: 142px;
-  left: 360px;
+  overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
   @media (max-width: 783px) {
     display: none;
   }
@@ -73,11 +75,9 @@
   height: 100vh;
   margin-top: 22px;
   margin-left: 2px; /* Réduire la valeur de la marge gauche */
-  margin-right: 6px;
   border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
   top: 142px;
-  right: 60px;
   @media (max-width: 783px) {
     display: none;
   }
@@ -141,9 +141,10 @@
   background-color: #FFFFFF;
   margin: auto;
   margin-bottom: 16px;
-  width: 315px;
+  width: 299.5px;
+  height: 72px;
   border-radius: 20px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 20px #00000012;
   cursor: pointer;
 
 }
@@ -239,9 +240,9 @@ color: #FFFFFF;
 .c {
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 4px 4px 20px #00000012;
+  width: 568px;
   height: 60px;
-  width: 610px;
   margin: auto;
   margin-top: 10px;
   cursor: pointer;

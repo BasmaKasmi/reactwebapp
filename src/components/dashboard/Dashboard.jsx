@@ -9,6 +9,7 @@ const Dashboard = () => {
         <div className="column-header">
           <h2>Emargements non faits</h2> 
         </div>
+        <div className='int-block'>
         <h1 className='date'>Jeudi 15 Dec 2022</h1> 
         <div className="card">
           <h3>Sciences islamiques 2ème année</h3>
@@ -16,6 +17,7 @@ const Dashboard = () => {
           <p className='day'>Jeu 18h00 à 12h00</p>
           <p className='session'>11/32</p>
           </div> 
+        </div>
         </div>
       </div>
       <div className="pink-box">
@@ -34,6 +36,7 @@ const Dashboard = () => {
         <div className="column-header orange-bg">
           <h2>Mes emargements</h2>
         </div>
+        <div className='int-block'>
         <h1 className='date'>Samedi 17 Dec 2022</h1>
         <div className="card">
           <h3>Sciences islamiques 2ème année</h3>
@@ -42,11 +45,13 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
+        </div>
       </div>
       <div className="column">
         <div className="column-header orange-bg">
           <h2>Mon agenda</h2>
         </div>
+        <div className='int-block'>
         <h1 className='date'>Samedi 17 Dec 2022</h1>
         <div className="card">
           <h3>Sciences islamiques 2ème année</h3>
@@ -62,13 +67,16 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
+        </div>
+        <div className='int-block'>
         <h1 className='date'>Samedi 19 Dec 2022</h1>
-        <div className="card white-bg">
+        <div className="card">
           <h3>Sciences islamiques 2ème année</h3>
           <div className='row'>
           <p className='day'>Jeu 18h00 à 12h00</p>
           <p className='session'>11/32</p>
           </div>
+        </div>
         </div>
       </div>
       <div className="column-r">

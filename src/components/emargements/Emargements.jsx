@@ -5,7 +5,6 @@ import st from '../../assets/student.svg';
 import Em from '../em/Em';
 import './Emargements.css';
 
-
 const Emargements = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [selectedTitle, setSelectedTitle] = useState('');

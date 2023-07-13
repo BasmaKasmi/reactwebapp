@@ -10,12 +10,14 @@
   right: 0;
   gap: 22px;
   margin-right: 2px;
-  padding: 0 42px;/* espace intérieur */
+  padding: 0 27px; /* espace intérieur */
+  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+
 }
 
 .column-Enf {
   flex: 1;
-  width: 365px; /* la largeur*/
+  width: 345px; /* la largeur*/
   height: 100vh;
   margin-top: 22px;
   margin-left: 2px;
@@ -109,7 +111,7 @@
 
 .column {
   flex: 1;
-  width: 365px;
+  width: 345px;
   height: 100vh;
   margin-top: 22px;
   margin-left: 2px;
@@ -148,7 +150,6 @@
     width: 100%; /* % pour la largeur */
     height: 5.875em;
     border-radius: 1.4rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     margin-bottom: 1em;
@@ -240,22 +241,26 @@
   color: #FFFFFF;
   text-align: center;
 }
-
-.date {
+.int-block h1 {
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 1.125em; /*taille de police adaptable */
   font-weight: 600;
   margin-left: 1.75em; /*marge adaptable */
+  margin-bottom: 11px;
+}
+.int-block{
+  display: block;
+  margin-bottom: 44px;
 }
 
 .card {
   background-color: #FFFFFF;
   margin: auto;
-  margin-bottom: 0.625em; /*marge adaptable*/
+  margin-bottom: 10px; /*marge adaptable*/
   width: 19.6875em; /*marge adaptable */
   border-radius: 1.25em; /*bordure adaptable */
-  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07);
 }
 
 h3 {
@@ -271,7 +276,8 @@ h3 {
 .day {
   color: #000000;
   font-family: "Poppins", Helvetica;
-  font-size: 0.875em;
+  font-weight: lighter;
+  font-size: 0,75em;
   padding-left: 1.25em;
   padding-top: 0.25em;
   padding-bottom: 1em;
