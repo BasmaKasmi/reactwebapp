@@ -10,9 +10,11 @@
         position: fixed;
         align-items: center;
         bottom: 16rem;
-        left: 5%; /* Réglez cette valeur en fonction de la position horizontale souhaitée */
-        right: 5%; /* Réglez cette valeur en fonction de la position horizontale souhaitée */
+        left: 5%; /* en fonction de la position horizontale souhaitée */
+        right: 5%; /*valeur en fonction de la position horizontale souhaitée */
         background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
+        overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+
       }
 
       .agenda-row {
@@ -22,7 +24,7 @@
       }
       
       .agenda-row h3 {
-        margin-right: 14rem; /* Ajouter de l'espace entre l'image et le titre */
+        margin-right: 8rem; /* Ajouter de l'espace entre l'image et le titre */
         color: #000000;
         font-family: "Poppins", Helvetica;
         font-size: 14px;

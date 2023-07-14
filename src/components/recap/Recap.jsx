@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import status from '../../assets/statusup.svg';
 import stu from '../../assets/2 User.png';
+import cldr from '../../assets/calendar.svg';
+import st from '../../assets/student.svg';
+import user from '../../assets/useredit.svg';
 import './Recap.css';
 
 const Recap = () => {
   const [showModal, setShowModal] = useState(false);
+  const[showAp, setshowAp] = useState(false)
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
 
   const handleClick = () => {
     setShowModal(true);
@@ -12,6 +18,21 @@ const Recap = () => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  const handleShowAp = () => {
+    setshowAp(true)
+  }
+  const handleCloseShowAp = () => {
+    setshowAp(false);
+  };
+  const handleConfirmationClick = () => {
+    setShowConfirmation(true);
+  };
+  const handleOverlayClick = () => {
+    setShowConfirmation(false);
+    document.body.classList.remove('modal-open');
+  };
+
 
   return (
     <div className='Recap'>
@@ -82,12 +103,62 @@ const Recap = () => {
               </div>
             </div>
             <div className="buttons-row">
-              <button className="ap-button">Déclarer une AP</button>
+              <button className="ap-button" onClick={handleShowAp}>Déclarer AP</button>
               <button className="an-button">Annuler</button>
             </div>
           </div>
         </div>
       )}
+      {showAp && (
+        <div className="modal-overlay" onClick={handleCloseShowAp}>
+          <div className="modal">
+            <h2>Nom de l'étudiant</h2>
+            <div className="agenda-row">
+              <img src={cldr} alt='' />
+                <h3>Choisir dates :</h3>
+            </div>
+            <div className="date-inputs">
+              <input type="text" placeholder="01/01/2023" />
+              <input type="text" placeholder="28/01/2023" />
+              <img src={st} alt='' />
+            </div>
+            <div className="ap-row">
+              <img src={user} alt='' />
+                <h3>Sélectionner les AP :</h3>
+            </div>
+            <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>14/07/2023</h3>
+            </div>
+              <div className="buttons-row">
+                <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>
+                <button className="cancel-button">Annuler</button>
+              </div>
+          </div>
+        </div>
+)}
+{showConfirmation && (
+      <div className="modal-overlay" onClick={handleOverlayClick}>
+        <div className="confirmation-card">
+          <div className="confirmation-content">
+            <div className="icon-container">
+              <i className="fas fa-check-circle"></i>
+            </div>
+            <h3>Vous déclarez avoir :</h3>
+            <div className="confirmation-details">
+              <p>Nb Présents</p>
+              <p>Nb Absents</p>
+            </div>
+            <div className="confirmation-buttons">
+              <button className="valider-button">Valider</button>
+              <button className="annuler-button">Annuler</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
     </div>
   )
 }
