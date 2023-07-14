@@ -176,10 +176,10 @@ const Em = () => {
         {showConfirmation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
-          <div className="confirmation-content">
-            <div className="icon-container">
+        <div className="icon-container">
               <i className="fas fa-check-circle"></i>
             </div>
+          <div className="confirmation-content">
             <h3>Vous déclarez avoir :</h3>
             <div className="confirmation-details">
               <p>Nb Présents</p>

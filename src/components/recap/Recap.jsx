@@ -38,7 +38,7 @@ const Recap = () => {
     <div className='Recap'>
         <div className='header'>
         <h2>Sciences islamiques</h2>
-        <h3>10h15 à 13h15</h3>
+        <h3>Date du cours</h3>
         </div>
         <div className="recap-row">
         <img src={status} alt='' />
@@ -142,14 +142,14 @@ const Recap = () => {
 {showConfirmation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
-          <div className="confirmation-content">
             <div className="icon-container">
               <i className="fas fa-check-circle"></i>
             </div>
-            <h3>Vous déclarez avoir :</h3>
+          <div className="confirmation-content">
+            <h3>Absence(s) prévue(s) le :</h3>
             <div className="confirmation-details">
-              <p>Nb Présents</p>
-              <p>Nb Absents</p>
+              <p>14/01/2023</p>
+              <p>21/01/2023</p>
             </div>
             <div className="confirmation-buttons">
               <button className="valider-button">Valider</button>

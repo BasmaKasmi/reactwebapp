@@ -23,9 +23,9 @@
   .groupes-res {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: stretch;
-    margin-bottom: 17.375em;
+    margin-right: 1.4rem;
+    margin-bottom: 2rem;
   }
   
   .card {

@@ -2,14 +2,14 @@
     display: none;
   }
   
-  @media screen and (max-width: 783px) {
+  @media only screen and (max-width: 783px) {
     .Details {
         display: block;
         width: 90%;
         margin: 0 auto;
         position: fixed;
         align-items: center;
-        bottom: 16rem;
+        bottom: 20rem;
         left: 5%; /* en fonction de la position horizontale souhaitée */
         right: 5%; /*valeur en fonction de la position horizontale souhaitée */
         background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
