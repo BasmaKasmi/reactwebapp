@@ -1,7 +1,7 @@
 import React from 'react';
-import CardDetails from '../components/carddetails/CardDetails';
 import NavEmarg from '../components/navEm/NavEmarg';
 import RetourButton from '../components/retourbutton/RetourButton';
+import CardDetails from '../components/carddetails/CardDetails';
 
 const EmNavigation1 = () => {
   return (

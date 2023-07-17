@@ -1,5 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
+import { Link } from 'react-router-dom';
 // Définition d'un composant fonctionnel Dashboard
 const Dashboard = () => {
   // Retourne du JSX qui va être rendu dans l'application
@@ -9,6 +10,7 @@ const Dashboard = () => {
         <div className="column-header">
           <h2>Emargements non faits</h2> 
         </div>
+        <Link to={{pathname: '/Nomdetudiant', state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00'}}}>
         <div className='int-block'>
         <h1 className='date'>Jeudi 15 Dec 2022</h1> 
         <div className="card">
@@ -19,6 +21,7 @@ const Dashboard = () => {
           </div> 
         </div>
         </div>
+        </Link>
       </div>
       <div className="pink-box">
           <h2>Emargement(s) non fait(s)</h2>
@@ -36,6 +39,7 @@ const Dashboard = () => {
         <div className="column-header orange-bg">
           <h2>Mes emargements</h2>
         </div>
+          <Link to={{pathname: '/Nomdetudiant', state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00'}}}>
         <div className='int-block'>
         <h1 className='date'>Samedi 17 Dec 2022</h1>
         <div className="card">
@@ -46,6 +50,7 @@ const Dashboard = () => {
           </div>
         </div>
         </div>
+        </Link>
       </div>
       <div className="column">
         <div className="column-header orange-bg">

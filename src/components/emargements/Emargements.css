@@ -23,7 +23,6 @@
   .groupes-res {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     margin-right: 1.4rem;
     margin-bottom: 2rem;
   }

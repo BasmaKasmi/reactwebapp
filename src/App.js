@@ -11,6 +11,10 @@ import PasswordPage from './pages/PasswordPage';
 import NewPasswordPage from './pages/NewPasswordPage';
 import EmNavigation1 from './pages/EmNavigation1';
 import RecapPage from './pages/RecapPage';
+import GroupesPage from './pages/GroupesPage';
+import StudentPage from './pages/StudentPage';
+import GrpNavigation1 from './pages/GrpNavigation1';
+import RecapGpPage from './pages/RecapGpPage';
 
 // Définir la fonction App
 function App() {
@@ -21,14 +25,18 @@ function App() {
         <BrowserRouter>
         {/* Déclaration des routes */}
         <Routes>
-        {/* Définition de la route par défaut qui affiche la page LoginPage*/}
+        {/* Définition de les routes par défaut qui affiche les pages*/}
         <Route index element={<LoginPage />} />
         <Route path='/dashboard' element={<DashboardPage />} />
         <Route path='/émargements' element={<MesemargementsPage/>} />
         <Route path='/password' element={<PasswordPage/>} />
         <Route path='/newpassword' element={<NewPasswordPage/>} />
         <Route path='/emnavigation1' element={<EmNavigation1/>} />
+        <Route path='/grpnavigation1' element={<GrpNavigation1/>} />
         <Route path='/recap' element={<RecapPage/>} />
+        <Route path='/recapgp' element={<RecapGpPage/>} />
+        <Route path='/groupes' element={<GroupesPage/>} />
+        <Route path='/Nomdetudiant' element={<StudentPage/>} />
         </Routes>
         </BrowserRouter>
       </div>
