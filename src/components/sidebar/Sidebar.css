@@ -172,9 +172,151 @@
     display: none;
   }
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 4px 4px 20px #00000012;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 2.6rem;
+  width: 450px;
+  height: 639px;
+  padding: 2rem;
+  box-shadow: 4px 4px 20px #00000012;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.modal h2 {
+  text-align: center;
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.modal-content {
+  text-align: center;
+}
+.ap-row {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.1rem;
+  }
+  .ap-row h3 {
+  margin-right: 8rem; /* Ajouter de l'espace entre l'image et le titre */
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  }
+  .date-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 20px #00000012;
+  height: 3.25rem;
+  width: 18.25rem;
+  cursor: pointer;
+  }
+  .agenda-row {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.1rem;
+  }
+  
+  .agenda-row h3 {
+    margin-right: 8rem; /* l'espace entre l'image et le titre */
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .date-input {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem; /* Ajuster la valeur de la marge droite */
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+  }
+  
+  .date-input input {
+    text-align: center;
+    font-family: "Poppins", Helvetica;
+    border-radius: 3rem;
+    border: 0.1rem solid #e5e4e3;
+    height: 3rem;
+    width: 20rem; /* la largeur des inputs */
+    margin-left: 1rem; /* l'espace entre les inputs */
+  }
+  
+  .date-input img {
+    margin-left: 1rem; /* l'espace entre input et l'image */
+  }
+
+  .g {
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 19.6875em; /*marge adaptable */
+    border-radius: 1.25em; /*bordure adaptable */
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07);
+  }
+  
+  h3 {
+    color: #000000;
+    font-size: 0.875em; /*taille de police adaptable */
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    margin-top: 0.375em;
+    padding-left: 1.25em;
+    padding-top: 0.9375em;
+  }
+  
+  .d {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-weight: lighter;
+    font-size: 0,75em;
+    padding-left: 1.25em;
+    padding-top: 0.25em;
+    padding-bottom: 1em;
+  }
+
+  .cancel-button {
+    background-color: #FF252526;
+    color: #FF2525;
+    font-size: 12px;
+    text-align: center;
+    height: 2.34rem;
+    width: 6rem;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    border-radius: 3.125em;
+    padding: 8px 16px;
+    margin-left: 18rem;
+    }
+
 .sidebar-button-mobile {
   display: none; /* Caché par défaut */
 }
+
+
 
 @media (max-width: 768px) {
   .declare-button.desktop {

@@ -8,7 +8,7 @@ import './RecapGp.css';
 
 const RecapGp = () => {
   const [showModal, setShowModal] = useState(false);
-  const[showAp, setshowAp] = useState(false)
+  const[showAp, setshowAp] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
 
