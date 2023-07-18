@@ -16,9 +16,11 @@ const Student = () => {
     setSelectedTitle(cardTitle);
     setSelectedDay(cardDay);
   };
+
   const handleButtonClick = (buttonId) => {
     setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
   };
+  
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
     document.body.classList.add('modal-open');
