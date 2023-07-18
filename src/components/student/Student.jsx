@@ -2,43 +2,32 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import './Student.css';
 
-
-const Student = () => {
-  const [activeCard, setActiveCard] = useState(null);
+const Student = ({ title, day }) => {
   const [activeButtonId, setActiveButtonId] = useState(null);
-  const [selectedTitle, setSelectedTitle] = useState('');
-  const [selectedDay, setSelectedDay] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
-
-
-  const handleCardClick = (cardId, cardTitle, cardDay) => {
-    setActiveCard(cardId);
-    setSelectedTitle(cardTitle);
-    setSelectedDay(cardDay);
-  };
 
   const handleButtonClick = (buttonId) => {
     setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
   };
-  
+
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
     document.body.classList.add('modal-open');
   };
-  
 
   const handleOverlayClick = () => {
     setShowConfirmation(false);
     document.body.classList.remove('modal-open');
   };
+
   
 
   return (
     <div className='Emargements'>
       <div className="groupes">
         <div className="column-head">
-          <h3>{selectedTitle}</h3>
-          <p className='day'>{selectedDay}</p>
+        <h3>{title}</h3>
+        <p className="day">{day}</p>
         </div>
         <div className='card-container'>
         <div className={classNames('std', { 'active': activeButtonId })}>
