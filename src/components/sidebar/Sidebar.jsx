@@ -15,7 +15,19 @@ const Sidebar = () => {
   const [isActive, setActive] = useState(false);
   const sidebarRef = useRef(null);
   const[showAp, setshowAp] = useState(false);
+  const[selectStudent, setselectStudent] = useState(false);
+  const[declareAp, setdeclareAp] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
+  const handleConfirmationClick = () => {
+    setShowConfirmation(true);
+    document.body.classList.add('modal-open');
+  };
+
+  const handleOverlayClick = () => {
+    setShowConfirmation(false);
+    document.body.classList.remove('modal-open');
+  };
 
   const handleToggle = () => {
     setActive(!isActive);
@@ -30,6 +42,19 @@ const Sidebar = () => {
   }
   const handleCloseShowAp = () => {
     setshowAp(false);
+  };
+  const handleSelectStudent = () => {
+    setselectStudent(true)
+  }
+  const handleCloseSelectStudent = () => {
+    setselectStudent(false);
+  };
+
+  const handleDeclareAp = () => {
+    setdeclareAp(true)
+  }
+  const handleCloseDeclareAp = () => {
+    setdeclareAp(false);
   };
 
 
@@ -103,19 +128,19 @@ const Sidebar = () => {
               <img src={user} alt='' />
                 <h3>Rechercher par groupe :</h3>
             </div>
-            <div className="g">
+            <div className="g" onClick={handleSelectStudent}>
             <h3>Sciences islamiques 1ére année</h3>
             <div>
             <p className='d'>Jeu 18h00 à 12h00</p>
             </div>
           </div>
-          <div className="g">
+          <div className="g" onClick={handleSelectStudent}>
             <h3>Sciences islamiques 1ére année</h3>
             <div>
             <p className='d'>Jeu 18h00 à 12h00</p>
             </div>
           </div>
-          <div className="g">
+          <div className="g" onClick={handleSelectStudent}>
             <h3>Sciences islamiques 1ére année</h3>
             <div>
             <p className='d'>Jeu 18h00 à 12h00</p>
@@ -125,6 +150,95 @@ const Sidebar = () => {
           </div>
         </div>
 )}
+{selectStudent && (
+        <div className="modal-overlay" onClick={handleCloseSelectStudent}>
+          <div className="modal">
+          <div className="pop-up-title">
+          <h2> Sciences islamiques </h2>
+          <h3>Date et heure du cours</h3>
+          </div>
+            <div className="ap-row">
+              <img src={user} alt='' />
+                <h3>Rechercher par groupe :</h3>
+            </div>
+          <div className="nom-stu" onClick={handleDeclareAp}>
+              <h3>Nom de l’étudiant</h3>
+            <div>
+              <p className='abs'>Absence(s) : 3</p>
+            </div>
+          </div>
+          <div className="nom-stu" onClick={handleDeclareAp}>
+              <h3>Nom de l’étudiant</h3>
+            <div>
+              <p className='abs'>Absence(s) : 3</p>
+            </div>
+          </div>
+          <div className="nom-stu" onClick={handleDeclareAp}>
+              <h3>Nom de l’étudiant</h3>
+            <div>
+              <p className='abs'>Absence(s) : 3</p>
+            </div>
+          </div>
+          <div className="nom-stu" onClick={handleDeclareAp}>
+              <h3>Nom de l’étudiant</h3>
+            <div>
+              <p className='abs'>Absence(s) : 3</p>
+            </div>
+          </div>
+          <button className="cancel-button">Annuler</button>
+          </div>
+        </div>
+)}
+{declareAp && (
+        <div className="modal-overlay" onClick={handleCloseDeclareAp}>
+          <div className="modal">
+            <h2>Nom de l'étudiant</h2>
+            <div className="agenda-row">
+              <img src={cldr} alt='' />
+                <h3>Choisir dates :</h3>
+            </div>
+            <div className="date-inputs">
+              <input type="text" placeholder="01/01/2023" />
+              <input type="text" placeholder="28/01/2023" />
+              <img src={st} alt='' />
+            </div>
+            <div className="ap-row">
+              <img src={user} alt='' />
+                <h3>Sélectionner les AP :</h3>
+            </div>
+            <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>14/07/2023</h3>
+            </div>
+              <div className="buttons-row">
+                <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>
+                <button className="cancel-button">Annuler</button>
+              </div>
+          </div>
+        </div>
+)}
+{showConfirmation && (
+      <div className="modal-overlay" onClick={handleOverlayClick}>
+        <div className="confirmation-card">
+        <div className="icon-container">
+              <i className="fas fa-check-circle"></i>
+            </div>
+          <div className="confirmation-content">
+            <h3>Vous déclarez avoir :</h3>
+            <div className="confirmation-details">
+              <p>Nb Présents</p>
+              <p>Nb Absents</p>
+            </div>
+            <div className="confirmation-buttons">
+              <button className="valider-button">Valider</button>
+              <button className="annuler-button">Annuler</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
     </div>
   );
 };
