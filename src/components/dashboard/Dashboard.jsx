@@ -276,6 +276,12 @@ const Dashboard = () => {
             <h3>01/02/2023</h3>
             </div>
             <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>14/07/2023</h3>
+            </div>
+            <div className="date-card">
             <h3>14/07/2023</h3>
             </div>
               <div className="buttons-row">
