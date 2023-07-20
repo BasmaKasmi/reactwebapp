@@ -12,10 +12,10 @@ import NewPasswordPage from './pages/NewPasswordPage';
 import EmNavigation1 from './pages/EmNavigation1';
 import RecapPage from './pages/RecapPage';
 import GroupesPage from './pages/GroupesPage';
-import StudentPage from './pages/StudentPage';
 import GrpNavigation1 from './pages/GrpNavigation1';
 import RecapGpPage from './pages/RecapGpPage';
 import AgendaPage from './pages/AgendaPage';
+import StudentPage from './pages/StudentPage';
 
 // Définir la fonction App
 function App() {
@@ -38,7 +38,7 @@ function App() {
         <Route path='/recapgp' element={<RecapGpPage/>} />
         <Route path='/groupes' element={<GroupesPage/>} />
         <Route path='/agenda' element={<AgendaPage/>} />
-        <Route path='/Nomdetudiant' element={<StudentPage/>} />
+        <Route path='/nomdetudiant' element={<StudentPage/>} />
         </Routes>
         </BrowserRouter>
       </div>

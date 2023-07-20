@@ -10,11 +10,22 @@ const Emargements = () => {
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
   const [showEmContent, setShowEmContent] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showGroupesContent, setShowGroupesContent] = useState(false); // Contrôler l'affichage du contenu dans la colonne "groupes"
+
 
   const handleCardClick = (cardId, cardTitle, cardDay) => {
     setActiveCard(cardId);
     setSelectedTitle(cardTitle);
     setSelectedDay(cardDay);
+    setShowGroupesContent(true); // Affiche le contenu de la colonne "groupes" après avoir cliqué sur une carte
+
+    const handleConfirmationClick = () => {
+      setShowConfirmation(true);
+      document.body.classList.add('modal-open');
+      setShowGroupesContent(true); // Affiche le contenu de la colonne "groupes" après avoir cliqué sur "Valider la feuille d'émargement"
+    };
+
 
     if (cardId === 'card-1' || cardId === 'card-2' || cardId === 'card-3') {
       setShowEmContent(false);
@@ -89,6 +100,7 @@ const Emargements = () => {
           </div>
         </div>
       </div>
+      { showGroupesContent && (
       <div className={`groupes ${showEmContent ? 'hide' : ''}`}>
         <div className="column-head">
           <h3>{selectedTitle}</h3>
@@ -128,6 +140,7 @@ const Emargements = () => {
           </div>
         </div>
       </div>
+      )}
       {showEmContent && <Em />}
     </div>
   );

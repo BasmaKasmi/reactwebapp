@@ -1,0 +1,271 @@
+.Emargements {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100% - 139px);
+    min-width: 290px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 144px;
+    right: 0;
+    gap: 26px;
+    margin-right: 2px;
+    padding: 0 27px; /* espace intérieur */
+    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+  }
+  .groups {
+    flex: 1;
+    width: 1080px;
+    border-radius: 22px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+    top: 142px;
+    right: 1.86rem;
+    overflow-y: auto;
+  }
+
+  
+  .column-head {
+    background-image: url("../../assets/ractangle\ orange.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    font-size: 12px;
+    border-radius: 0 0 30px 30px;
+    height: 54.88px;
+    width: 368.55px;
+    margin-bottom: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column-head h3 {
+    /* Styles pour le h3 à l'intérieur de .column-head */
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    margin: 12px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .column-head p.day {
+    color: #FFFFFF;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    margin: 10px;
+    margin-top: 0; 
+    text-align: center;
+    
+  }
+  
+
+  .groups .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+  
+  .std {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px #00000012;
+    height: 60px;
+    width: 332px;
+    margin-bottom: 1rem;
+    margin-left: 15.5px;
+    margin-right: 16.5px;
+    cursor: pointer;
+  }
+  
+  .std + .std {
+    margin-left: 4px; /* spacing value */
+    margin-bottom: 10px;
+  }
+  
+  
+  .std h3 {
+    color: #000000;
+    font-size: 14px;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+    margin-top: 12px;
+  }
+  
+  .std span {
+    color: #000000; /* Couleur du texte pour le span */
+    font-family: "Poppins", Helvetica;
+    font-weight: lighter;
+    font-size: 12px; /* Taille de police pour le span */
+    margin-left: 24px; /* Marge à droite pour le span */
+    margin-bottom: 10px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10rem;
+    margin: 2rem;
+  }
+  .fem-button {
+    background-color: #19CE1526;
+    color: #19CE15;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    height: 42px;
+    width: 291px;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-right: 1.25rem;
+  }
+  
+  .an-button {
+    background-color: #FF252526;
+    color: #FF2525;
+    height: 42px;
+    width: 122px;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-right: 1rem;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+  }
+  
+  .confirmation-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .confirmation-content {
+    text-align: center;
+  }
+  
+  .icon-container {
+    font-size: 40px;
+    color: #19CE15;
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .annuler-button {
+    background-color: #FF252526;
+    color: #FF2525;
+    height: 42px;
+    width: 100px;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-right: 8px;
+  }
+  
+  .valider-button {
+    background-color: #19CE1526;
+    color: #19CE15;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    height: 42px;
+    width: 100px;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-left: 8px;
+  }
+  
+  .student-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .student-buttons button {
+    background-color: #FF252526;
+    border-radius: 30px; /* le rayon de bordure pour obtenir la forme souhaitée */
+    padding: 4px 8px; /* les valeurs de padding pour réduire l'espace intérieur du bouton */
+    margin-right: 8px;
+    border: none;
+    height: 35px;
+    width:35px;
+    color: #FF2525;
+    text-align: center;
+    font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .ap-button.active {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #FF2525;
+  }
+  
+  .ai-button.active {
+  color: #FFFFFF;
+  background-color: #FF2525;
+  }
+  
+  .std.active {
+  background-color: #FF252526;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .groupes .std {
+      width: 100%;
+    }
+  }

@@ -53,7 +53,7 @@ const Dashboard = () => {
           <h2>Emargements non faits</h2> 
         </div>
         <Link to={{
-          pathname: '/Nomdetudiant',
+          pathname: '/nomdetudiant',
           state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00' }
         }}
         onClick={() => {
@@ -91,7 +91,7 @@ const Dashboard = () => {
           <h2>Mes emargements</h2>
         </div>
           <Link to={{
-            pathname: '/Nomdetudiant',
+            pathname: '/nomdetudiant',
             state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00' }
           }}
           onClick={() => {
