@@ -27,7 +27,18 @@
     margin-right: 1.4rem;
     margin-bottom: 2rem;
   }
-  
+
+  h3 {
+    color: #000000;
+    font-size: 0.875em; /*taille de police adaptable */
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    margin-top: 0.20em;
+    padding-left: 1.25em;
+    padding-top: 0.9375em;
+    margin-right: 10rem;
+  }
+
   .card {
     background-color: #FFFFFF;
     margin-bottom: 0; /*marge adaptable*/
@@ -37,7 +48,7 @@
     box-shadow: 4px 4px 20px #00000012;
   }
   
-  h3 {
+  .card h3 {
     color: #000000;
     font-size: 0.875em; /*taille de police adaptable */
     font-family: "Poppins", Helvetica;
@@ -47,9 +58,10 @@
     padding-top: 0.9375em;
   }
   
-  .day {
+  .card .day {
     font-size: 0.9rem;
     margin-bottom: 0; /* Suppression de la marge inférieure */
+    margin-right: 8.8rem;
   }
 }
 

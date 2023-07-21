@@ -95,6 +95,7 @@ const Agenda = () => {
   };
 
   return (
+    <div className='Agenda'>
     <div className='Emargements'>
       <div className="co">
         <div className="column-header orange-bg">
@@ -138,26 +139,27 @@ const Agenda = () => {
         </div>
       </div>
       {showGroupesContent && (
-        <div className="groupes">
-          <div className="column-head">
-            <h3>Vue calendrier</h3>
-          </div>
-          <div className="month-year">
-            <img src={left} alt='' onClick={handlePrevMonthClick} />
-            <h3> {months[month]} {year} </h3>
-            <img src={right} alt='' onClick={handleNextMonthClick} />
-          </div>
-          <div className="days-of-week">
-            {daysOfWeek.map((day) => (
-              <div key={day} className="day-of-week">
-                {day}
-              </div>
-            ))}
+          <div className="groupes">
+            <div className="column-head">
+              <h3>Vue calendrier</h3>
+            </div>
+            <div className="month-year">
+              <img src={left} alt='' onClick={handlePrevMonthClick} />
+              <h3> {months[month]} {year} </h3>
+              <img src={right} alt='' onClick={handleNextMonthClick} />
+            </div>
+            <div className="days-of-week">
+              {daysOfWeek.map((day) => (
+                <div key={day} className="day-of-week">
+                  {day}
+                </div>
+              ))}
           </div>
           <div className="days-of-month">{renderDaysOfMonth()}</div>
         </div>
       )}
     </div>
+  </div>
   );
 }
 

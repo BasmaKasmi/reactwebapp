@@ -54,7 +54,6 @@
     color: #FFFFFF;
     text-align: center;
   }
-
   .int-block h1 {
     color: #000000;
     font-family: "Poppins", Helvetica;
@@ -163,18 +162,17 @@
     justify-content: space-between;
     width: 100%;
     padding: 5px 0;
-    align-items: center; /* Ajouter cette ligne pour centrer verticalement les jours de la semaine */
+    align-items: center;
+    margin-bottom: 10px;
   }
   
   .day-of-week {
-    width: calc(100% / 7);
+    flex: 1;
     text-align: center;
-    gap: 5px;
     color: #5f5f5f;
     font-family: "Poppins", Helvetica;
     font-weight: bold;
     font-size: 16px;
-    
   }
   
   .days-of-month {
@@ -187,36 +185,40 @@
     font-weight: 400;
   }
   
-  .day.saturday {
-    background-color: #7A12FF;
-    color: #FFFFFF;
-    border-radius: 17.5px;; /* le rayon de bordure pour obtenir la forme souhaitée */
-    padding: 4px 8px; /* les valeurs de padding pour réduire l'espace intérieur du bouton */
-    border: none;
-    height: 35px;
-    width:35px;
+  .day {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-weight: lighter;
+    font-size: 0.75em;
+    padding: 8px 4px;
+    border-radius: 20px; /* Utiliser 50% pour rendre le bouton rond */
     text-align: center;
-    font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
-    font-weight: bold;
-    margin-top: 10px;
   }
+
+  .day.saturday {
+    background-image: url("../../assets/V.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+   }
   
   .day.monday {
-    background-color: #FF1276;
+    background-image: url("../../assets/Pink.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     color: #FFFFFF;
-    border-radius: 17.5px;; /* le rayon de bordure pour obtenir la forme souhaitée */
-    padding: 4px 8px; /* les valeurs de padding pour réduire l'espace intérieur du bouton */
     border: none;
-    height: 35px;
-    width:35px;
     text-align: center;
-    font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
+    font-size: 16px;
     font-weight: bold;
-    margin-top: 10px;
   }
   
-
   
+
   .card {
     background-color: #FFFFFF;
     margin: auto;

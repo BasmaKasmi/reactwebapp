@@ -262,7 +262,116 @@
   .std.active {
   background-color: #FF252526;
   }
-  
+  .ap-row {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.1rem;
+    }
+    .ap-row h3 {
+    margin-right: 8rem; /* Ajouter de l'espace entre l'image et le titre */
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    }
+    .date-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 20px #00000012;
+    height: 3.25rem;
+    width: 18.25rem;
+    cursor: pointer;
+    }
+    
+    
+    .confirmation-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20rem;
+    height: 15rem;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    
+    .confirmation-content {
+    text-align: center;
+    margin-top: -2rem;
+    }
+    .confirmation-content h3 {
+    color: #000000;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    }
+    
+    .icon-container {
+    font-size: 40px;
+    color: #19CE15;
+    }
+    
+    .confirmation-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    .confirmation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    
+    .annuler-button {
+    background-color: #FF252526;
+    color: #FF2525;
+    height: 42px;
+    width: 100px;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-left: 1rem;
+    }
+    
+    .valider-button {
+    background-color: #19CE1526;
+    color: #19CE15;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    height: 42px;
+    width: 100px;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-left: 8px;
+    }
+
+    .ap-button {
+      background-color: #FFA82526;
+      color: #FFA825;
+      font-size: 12px;
+      text-align: center;
+      height: 2.34rem;
+      width: 11rem;
+      border: none;
+      font-family: "Poppins", Helvetica;
+      font-weight: bold;
+      border-radius: 3.125em;
+      padding: 8px 16px;
+      margin-right: 10px;
+    }
   
   @media (max-width: 768px) {
     .groupes .std {
