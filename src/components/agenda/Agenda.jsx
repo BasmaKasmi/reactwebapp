@@ -140,7 +140,7 @@ const Agenda = () => {
       </div>
       {showGroupesContent && (
           <div className="groupes">
-            <div className="column-head">
+            <div className="h">
               <h3>Vue calendrier</h3>
             </div>
             <div className="month-year">
