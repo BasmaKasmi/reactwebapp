@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classnames from 'classnames'; // <--- Assurez-vous d'importer la bibliothèque 'classnames'
+import classnames from 'classnames'; // importer la bibliothèque 'classnames'
 import './Agenda.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
