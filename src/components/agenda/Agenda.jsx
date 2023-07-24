@@ -97,6 +97,21 @@ const Agenda = () => {
   return (
     <div className='Agenda'>
     <div className='Emargements'>
+          <div className="groupesRes">
+            <div className="month-year">
+              <img src={left} alt='' onClick={handlePrevMonthClick} />
+              <h3> {months[month]} {year} </h3>
+              <img src={right} alt='' onClick={handleNextMonthClick} />
+            </div>
+            <div className="days-of-week">
+              {daysOfWeek.map((day) => (
+                <div key={day} className="day-of-week">
+                  {day}
+                </div>
+              ))}
+          </div>
+          <div className="days-of-month">{renderDaysOfMonth()}</div>
+        </div>
       <div className="co">
         <div className="column-header orange-bg">
           <h2>Mon agenda</h2>
@@ -158,6 +173,7 @@ const Agenda = () => {
           <div className="days-of-month">{renderDaysOfMonth()}</div>
         </div>
       )}
+     
     </div>
   </div>
   );
