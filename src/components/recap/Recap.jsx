@@ -68,18 +68,23 @@ const Recap = () => {
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
       </div>
-      <div className="nom-stu" onClick={handleClick}>
+      <div className='card-container'>
+      <div className="card" onClick={handleClick}>
       <h3>Nom de l’étudiant</h3>
         <div>
           <p className='abs'>Absence(s) : 3</p>
         </div>
-    </div>
-    <div className="nom-stu" onClick={handleClick}>
+      </div>
+      <div className="card" onClick={handleClick}>
       <h3>Nom de l’étudiant</h3>
         <div>
           <p className='abs'>Absence(s) : 3</p>
         </div>
-    </div>
+      </div>
+      </div>
+      
+      
+    
     {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="modal">

@@ -80,7 +80,7 @@
       display: flex;
       justify-content: space-between;
   }
-    .nom-stu {
+    .card{
       background-color: #FFFFFF;
       margin: auto;
       margin-bottom: 1rem;
@@ -90,7 +90,7 @@
       box-shadow: 4px 4px 20px #00000012;
       cursor: pointer;
     }
-    .nom-stu h3 {
+    .cardh3 {
       color: #000000;
       font-size: 14px;
       font-family: "Poppins", Helvetica;
@@ -100,7 +100,7 @@
       padding-top: 0,9375rem;
     }
     
-    .nom-stu .abs {
+    .card.abs {
       color: #000000;
       font-family: "Poppins", Helvetica;
       font-size: 14px;

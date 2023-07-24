@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames'; // importer la bibliothèque 'classnames'
+import { Link } from 'react-router-dom';
 import './Agenda.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
@@ -111,6 +112,30 @@ const Agenda = () => {
               ))}
           </div>
           <div className="days-of-month">{renderDaysOfMonth()}</div>
+          <Link to='/grpnavigation1'>
+            <div className="card">
+              <h3>Sciences islamiques 1ére année</h3>
+              <div>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+              </div>
+            </div>
+          </Link>
+          <Link to='/grpnavigation1'>
+            <div className="card">
+              <h3>Sciences islamiques 1ére année</h3>
+              <div>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+              </div>
+            </div>
+          </Link>
+          <Link to='/grpnavigation1'>
+            <div className="card">
+              <h3>Sciences islamiques 1ére année</h3>
+              <div>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+              </div>
+            </div>
+          </Link>
         </div>
       <div className="co">
         <div className="column-header orange-bg">
