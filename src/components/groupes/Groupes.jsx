@@ -32,6 +32,7 @@ const Groupes = () => {
     <div className='Emargements'>
     <div className='groupes-res'>
     <h3> Mes groupes :</h3>
+    <div className='card-container'>
     <Link to='/grpnavigation1'>
     <div className="card">
       <h3>Sciences islamiques 1ére année</h3>
@@ -56,6 +57,7 @@ const Groupes = () => {
         </div>
     </div>
     </Link>
+    </div>
     </div>
       <div className="co">
         <div className="column-header">

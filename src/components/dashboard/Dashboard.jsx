@@ -10,7 +10,6 @@ import user from '../../assets/2 User.png'
 const Dashboard = () => {
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
-  const [selectedDateCard, setSelectedDateCard] = useState(null);
   const[showAp, setshowAp] = useState(false);
   const[selectStudent, setselectStudent] = useState(false);
   const[declareAp, setdeclareAp] = useState(false);
@@ -52,15 +51,16 @@ const Dashboard = () => {
         <div className="column-header">
           <h2>Emargements non faits</h2> 
         </div>
-        <Link to={{
+        <Link
+        to={{
           pathname: '/nomdetudiant',
           state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00' }
-        }}
-        onClick={() => {
-          setSelectedTitle('Sciences islamiques 2ème année');
-          setSelectedDay('Jeu 18h00 à 12h00');
-        }}
-        >
+          }}
+          onClick={() => {
+            setSelectedTitle('Sciences islamiques 2ème année');
+            setSelectedDay('Jeu 18h00 à 12h00');
+            }}
+            >
         <div className='int-block'>
         <h1 className='date'>Jeudi 15 Dec 2022</h1> 
         <div className="card">
@@ -90,15 +90,16 @@ const Dashboard = () => {
         <div className="column-header orange-bg">
           <h2>Mes emargements</h2>
         </div>
-          <Link to={{
-            pathname: '/nomdetudiant',
-            state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00' }
+        <Link
+        to={{
+          pathname: '/nomdetudiant',
+          state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00' }
           }}
           onClick={() => {
             setSelectedTitle('Sciences islamiques 2ème année');
             setSelectedDay('Jeu 18h00 à 12h00');
-          }}
-          >
+            }}
+            >
         <div className='int-block'>
         <h1 className='date'>Samedi 17 Dec 2022</h1>
         <div className="card">

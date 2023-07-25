@@ -181,7 +181,7 @@ const Agenda = () => {
       {showGroupesContent && (
           <div className="groupes">
             <div className="h">
-              <h3>Vue calendrier</h3>
+              <h3> Calendrier </h3>
             </div>
             <div className="month-year">
               <img src={left} alt='' onClick={handlePrevMonthClick} />
