@@ -7,7 +7,6 @@ import right from '../../assets/right.svg';
 
 const Agenda = () => {
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
-  const [showConfirmation, setShowConfirmation] = useState(false);
   const [showGroupesContent, setShowGroupesContent] = useState(false);
 
   const months = [
@@ -58,17 +57,6 @@ const Agenda = () => {
     }
   
     setShowGroupesContent(true); // Affichons le contenu de la colonne "groupes" après avoir cliqué sur une carte
-  };
-
-  const handleConfirmationClick = () => {
-    setShowConfirmation(true);
-    document.body.classList.add('modal-open');
-    setShowGroupesContent(true);
-  };
-
-  const handleOverlayClick = () => {
-    setShowConfirmation(false);
-    document.body.classList.remove('modal-open');
   };
 
   const handleNextMonthClick = () => {
@@ -180,9 +168,10 @@ const Agenda = () => {
       </div>
       {showGroupesContent && (
           <div className="groupes">
-            <div className="h">
+          <div className="h">
               <h3> Calendrier </h3>
-            </div>
+          </div>
+          <div className="agenda">
             <div className="month-year">
               <img src={left} alt='' onClick={handlePrevMonthClick} />
               <h3> {months[month]} {year} </h3>
@@ -195,7 +184,10 @@ const Agenda = () => {
                 </div>
               ))}
           </div>
-          <div className="days-of-month">{renderDaysOfMonth()}</div>
+          <div className="days-of-month">
+          {renderDaysOfMonth()}
+          </div>
+          </div>
         </div>
       )}
      
