@@ -27,6 +27,10 @@
       display: none;
     }
 }
+.int-block .date {
+  text-align: left;
+}
+
 
 .groupesRes{
   display: none;
@@ -168,7 +172,7 @@
   font-family: "Poppins", Helvetica;
   font-weight: bold;
   margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   align-items: center;
   margin-top: 3rem;
   margin-bottom: 4rem;
