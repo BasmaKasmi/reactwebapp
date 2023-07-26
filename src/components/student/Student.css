@@ -248,16 +248,7 @@
     font-weight: bold;
     margin-top: 10px;
   }
-  .ap-button.active {
-    display: inline-block;
-    color: #FFFFFF;
-    background-color: #FF2525;
-  }
-  
-  .ai-button.active {
-  color: #FFFFFF;
-  background-color: #FF2525;
-  }
+ 
   
   .std.active {
   background-color: #FF252526;

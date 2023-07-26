@@ -103,28 +103,19 @@
   background-size: cover;
   background-position: center top;
   font-size: 12px;
-  border-radius: 0 0 30px 30px;
   height: 54.88px;
   width: 369px;
-  margin-left: auto;
-  margin-right: auto;
   color: #FFFFFF;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .column-head h3 {
-  /* Styles pour le h3 à l'intérieur de .column-head */
+  /* css pour le h3 à l'intérieur de .column-head */
   color: #FFFFFF;
   font-size: 18px;
   font-family: "Poppins", Helvetica;
   font-weight: bold;
   margin: 12px;
   margin-bottom: 0;
-  text-align: center;
 }
 
 .column-head p.day {
@@ -133,9 +124,8 @@
   font-size: 14px;
   margin: 10px;
   margin-top: 0; /* Réduire l'espace entre h3 et p */
-  text-align: center;
-  
 }
+
 
 .card {
   background-color: #FFFFFF;

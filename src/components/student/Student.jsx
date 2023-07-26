@@ -13,7 +13,6 @@ const Student = () => {
   const location = useLocation();
   const { title, day } = location.state || {}; // Utilisons la déstructuration avec une valeur par défaut {}
   const [activeCard, setActiveCard] = useState(null);
-  const [activeButtonId, setActiveButtonId] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false);
@@ -38,9 +37,7 @@ const Student = () => {
     setActiveCard(cardId);
 
   };
-  const handleButtonClick = (buttonId) => {
-    setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
-  };
+
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
     document.body.classList.add('modal-open');
@@ -61,7 +58,7 @@ const Student = () => {
           <p className='day'>Jeu 18h00 à 12h00</p>
         </div>
         <div className='card-container'>
-        <div className={classNames('std', { 'active': activeButtonId })} onClick={handleClick}>
+        <div className={classNames('std')} onClick={handleClick}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
@@ -69,58 +66,52 @@ const Student = () => {
           </div>
             <div className="student-buttons">
             <button
-            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ap')}
+            className="ap-button"
             >
             AP 
             </button>
             <button
-            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ai')}
+            className="ai-button"
             >
             AI
             </button>
             </div>
           </div>
         </div>
-        <div className={classNames('std', { 'active': activeButtonId })} onClick={handleClick}>
+        <div className={classNames('std')} onClick={handleClick}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-            <div className="student-buttons">
+          <div className="student-buttons">
             <button
-            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ap')}
+            className="ap-button"
             >
             AP 
             </button>
             <button
-            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ai')}
+            className="ai-button"
             >
             AI
             </button>
             </div>
           </div>
         </div>
-        <div className={classNames('std', { 'active': activeButtonId })} onClick={handleClick}>
+        <div className={classNames('std')} onClick={handleClick}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-            <div className="student-buttons">
+          <div className="student-buttons">
             <button
-            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ap')}
+            className="ap-button"
             >
             AP 
             </button>
             <button
-            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ai')}
+            className="ai-button"
             >
             AI
             </button>
@@ -129,66 +120,60 @@ const Student = () => {
         </div>
         </div>
         <div className='card-container'>
-        <div className={classNames('std', { 'active': activeButtonId })} onClick={handleClick}>
+        <div className={classNames('std')} onClick={handleClick}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-            <div className="student-buttons">
+          <div className="student-buttons">
             <button
-            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ap')}
+            className="ap-button"
             >
             AP 
             </button>
             <button
-            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ai')}
+            className="ai-button"
             >
             AI
             </button>
             </div>
           </div>
         </div>
-        <div className={classNames('std', { 'active': activeButtonId })} onClick={handleClick}>
+        <div className={classNames('std')} onClick={handleClick}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-            <div className="student-buttons">
+          <div className="student-buttons">
             <button
-            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ap')}
+            className="ap-button"
             >
             AP 
             </button>
             <button
-            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ai')}
+            className="ai-button"
             >
             AI
             </button>
             </div>
           </div>
         </div>
-        <div className={classNames('std', { 'active': activeButtonId })} onClick={handleClick}>
+        <div className={classNames('std')} onClick={handleClick}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-            <div className="student-buttons">
+          <div className="student-buttons">
             <button
-            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ap')}
+            className="ap-button"
             >
             AP 
             </button>
             <button
-            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
-            onClick={() => handleButtonClick('ai')}
+            className="ai-button"
             >
             AI
             </button>
