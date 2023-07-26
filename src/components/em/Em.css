@@ -160,7 +160,7 @@
   margin: 0;
   padding: 0;
   margin-left: 24px;
-  margin-top: 12px;
+  margin-top: 0.5rem;
 }
 
 .std span {
@@ -168,8 +168,8 @@
   font-family: "Poppins", Helvetica;
   font-weight: lighter;
   font-size: 12px; /* Taille de police pour le span */
-  margin-left: 24px; /* Marge à droite pour le span */
-  margin-bottom: 10px;
+  margin-left: -0.9rem;
+
 }
 
 .row {

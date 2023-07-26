@@ -71,46 +71,6 @@
     flex-wrap: wrap;
     justify-content: space-between; 
 }
-
-  
-  .std {
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 4px 4px 20px #00000012;
-    height: 60px;
-    width: 332px;
-    margin-bottom: 1rem;
-    margin-left: 15.5px;
-    margin-right: 16.5px;
-    cursor: pointer;
-  }
-  
-  .std + .std {
-    margin-left: 4px; /* spacing value */
-    margin-bottom: 10px;
-  }
-  
-  
-  .std h3 {
-    color: #000000;
-    font-size: 14px;
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    margin-left: 24px;
-    margin-top: 12px;
-  }
-  
-  .std span {
-    color: #000000; /* Couleur du texte pour le span */
-    font-family: "Poppins", Helvetica;
-    font-weight: lighter;
-    font-size: 12px; /* Taille de police pour le span */
-    margin-left: 24px; /* Marge à droite pour le span */
-    margin-bottom: 10px;
-  }
   
   .row {
     display: flex;
