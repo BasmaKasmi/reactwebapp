@@ -204,7 +204,7 @@ color: #FFFFFF;
 .d-inputs{
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    margin-top: 10px;
 
 }
 .d-inputs input {
@@ -213,21 +213,19 @@ color: #FFFFFF;
   border-radius: 30px;
   border: 1px solid #e5e4e3;
   height: 36px;
-  margin: 2px 2px 8px 4px;
+  margin: 2px 2px 8px 46px;
   width: 200px;
-  margin-left: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 10px;
 }
 .d-inputs input + input {
-  margin-left: 2rem; /* Réglons la valeur de marge selon vos préférences */
+  margin-left: 2rem; /* la valeur de marge selon vos préférences */
 }
-
 
 .d-inputs img {
   width: 30px;
   height: 30px;
   margin-left: 20px;
-  margin-top: 0.4rem;
+  margin-top: 12px;
 }
 
 
@@ -241,6 +239,7 @@ color: #FFFFFF;
   margin-top: 10px;
   cursor: pointer;
 }
+
 
 .c h3 {
   color: #000000;
