@@ -110,7 +110,7 @@ const Emargements = () => {
           <img src={cldr} alt=''/>
           <span>Choisir dates :</span>
         </div>
-        <div className="date-inputs">
+        <div className="d-inputs">
             <input type="text" placeholder="01/01/2023" />
             <input type="text" placeholder="28/01/2023" />
             <img src={st} alt=''/>
