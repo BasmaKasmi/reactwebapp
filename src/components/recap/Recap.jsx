@@ -82,9 +82,7 @@ const Recap = () => {
         </div>
       </div>
       </div>
-      
-      
-    
+
     {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="modal">

@@ -229,8 +229,15 @@
   margin-bottom: 1rem;
   box-shadow: 4px 4px 20px #00000012;
   height: 3.25rem;
-  width: 18.25rem;
+  width: 24.6rem;
   cursor: pointer;
+  }
+  .date-card h3 {
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-top: -0.1rem;
   }
   .agenda-row {
     display: inline-flex;

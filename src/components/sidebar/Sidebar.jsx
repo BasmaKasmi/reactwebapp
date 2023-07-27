@@ -161,7 +161,8 @@ const Sidebar = () => {
               <img src={user} alt='' />
                 <h3>Rechercher par groupe :</h3>
             </div>
-          <div className="nom-stu" onClick={handleDeclareAp}>
+            <div className="card-container">
+            <div className="nom-stu" onClick={handleDeclareAp}>
               <h3>Nom de l’étudiant</h3>
             <div>
               <p className='abs'>Absence(s) : 3</p>
@@ -185,6 +186,7 @@ const Sidebar = () => {
               <p className='abs'>Absence(s) : 3</p>
             </div>
           </div>
+            </div>
           <button className="cancel-button">Annuler</button>
           </div>
         </div>

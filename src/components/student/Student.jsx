@@ -15,7 +15,7 @@ const Student = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const[showAp, setshowAp] = useState(false);
+  const[declareAp, setdeclareAp] = useState(false);
 
 
   const handleClick = () => {
@@ -25,12 +25,13 @@ const Student = () => {
     setShowModal(false);
   };
 
-  const handleShowAp = () => {
-    setshowAp(true)
+  const handleDeclareAp = () => {
+    setdeclareAp(true)
   }
-  const handleCloseShowAp = () => {
-    setshowAp(false);
+  const handleCloseDeclareAp = () => {
+    setdeclareAp(false);
   };
+
 
 
   const handleCardClick = (cardId) => {
@@ -210,35 +211,35 @@ const Student = () => {
       </div>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="modal">
+          <div className="mdl">
             <h2>Nom de l'étudiant</h2>
             <div className="recap-row">
               <img src={status} alt='' />
               <h3> Récapitulatif du groupe : </h3>
             </div>
             <div className='row'>
-              <div className='col'>
+              <div className='colon'>
                 <h3>17</h3>
-                <p className="description">Inscrits</p>
+                <p className="des">Inscrits</p>
               </div>
-              <div className='col'>
+              <div className='colon'>
                 <h3>2</h3>
-                <p className="description">Abandon(s)</p>
+                <p className="des">Abandon(s)</p>
               </div>
-              <div className='col'>
+              <div className='colon'>
                 <h3>65%</h3>
-                <p className="description">Présence</p>
+                <p className="des">Présence</p>
               </div>
             </div>
             <div className="buttons-row">
-              <button className="ap-button" onClick={handleShowAp}>Déclarer AP</button>
-              <button className="an-button">Annuler</button>
+              <button className="ap" onClick={handleDeclareAp}>Déclarer AP</button>
+              <button className="an">Annuler</button>
             </div>
           </div>
         </div>
       )}
-      {showAp && (
-        <div className="modal-overlay" onClick={handleCloseShowAp}>
+      {declareAp && (
+        <div className="modal-overlay" onClick={handleCloseDeclareAp}>
           <div className="modal">
             <h2>Nom de l'étudiant</h2>
             <div className="agenda-row">
@@ -258,6 +259,12 @@ const Student = () => {
             <h3>01/02/2023</h3>
             </div>
             <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>14/07/2023</h3>
+            </div>
+            <div className="date-card">
             <h3>14/07/2023</h3>
             </div>
               <div className="buttons-row">
@@ -267,6 +274,7 @@ const Student = () => {
           </div>
         </div>
 )}
+
     </div>
   );
 }
