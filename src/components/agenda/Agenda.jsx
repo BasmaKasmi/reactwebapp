@@ -6,7 +6,7 @@ import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
 const Agenda = () => {
-  const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
+  const [activeCard, setActiveCard] = useState(null);
   const [showGroupesContent, setShowGroupesContent] = useState(false);
 
   const months = [
@@ -20,7 +20,6 @@ const Agenda = () => {
   const daysOfWeek = ['D', 'L', 'M', 'M', 'J', 'V', 'S']; // Jours de la semaine
 
   // Fonction pour afficher les jours du mois (exemple ici, on montre les jours de janvier)
-
   const renderDaysOfMonth = () => {
     const days = [];
     const numDays = 31; // Nombre de jours dans le mois (à adapter selon le mois)
@@ -47,15 +46,7 @@ const Agenda = () => {
   
 
   const handleCardClick = (cardId) => {
-    // Vérifions si la carte est déjà sélectionnée
-    if (activeCards.includes(cardId)) {
-      // Si la carte est déjà sélectionnée, la retirer de la liste des cartes actives
-      setActiveCards((prevActiveCards) => prevActiveCards.filter((id) => id !== cardId));
-    } else {
-      // Sinon, ajoutons la carte à la liste des cartes actives
-      setActiveCards((prevActiveCards) => [...prevActiveCards, cardId]);
-    }
-  
+    setActiveCard(cardId);
     setShowGroupesContent(true); // Affichons le contenu de la colonne "groupes" après avoir cliqué sur une carte
   };
 
@@ -85,19 +76,19 @@ const Agenda = () => {
 
   return (
     <div className='Agenda'>
-    <div className='Emargements'>
-          <div className="groupesRes">
-            <div className="month-year">
-              <img src={left} alt='' onClick={handlePrevMonthClick} />
-              <h3> {months[month]} {year} </h3>
-              <img src={right} alt='' onClick={handleNextMonthClick} />
-            </div>
-            <div className="days-of-week">
-              {daysOfWeek.map((day) => (
-                <div key={day} className="day-of-week">
-                  {day}
-                </div>
-              ))}
+      <div className='Emargements'>
+        <div className="groupesRes">
+          <div className="month-year">
+            <img src={left} alt='' onClick={handlePrevMonthClick} />
+            <h3> {months[month]} {year} </h3>
+            <img src={right} alt='' onClick={handleNextMonthClick} />
+          </div>
+          <div className="days-of-week">
+            {daysOfWeek.map((day) => (
+              <div key={day} className="day-of-week">
+                {day}
+              </div>
+            ))}
           </div>
           <div className="days-of-month">{renderDaysOfMonth()}</div>
           <Link to='/grpnavigation1'>
@@ -125,73 +116,73 @@ const Agenda = () => {
             </div>
           </Link>
         </div>
-      <div className="co">
-        <div className="column-header orange-bg">
-          <h2>Mon agenda</h2>
-        </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 17 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-1') })}
-            onClick={() => handleCardClick('card-1')}
-          >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
+        <div className="co">
+          <div className="column-header orange-bg">
+            <h2>Mon agenda</h2>
+          </div>
+          <div className='int-block'>
+            <h1 className='date'>Samedi 17 Dec 2022</h1>
+            <div
+              className={classnames('card', { 'clicked': activeCard === 'card-1' })}
+              onClick={() => handleCardClick('card-1')}
+            >
+              <h3>Sciences islamiques 2ème année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
+            </div>
+            <div
+              className={classnames('card', { 'clicked': activeCard === 'card-2' })}
+              onClick={() => handleCardClick('card-2')}
+            >
+              <h3>Sciences islamiques 1ère année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
             </div>
           </div>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-2') })}
-            onClick={() => handleCardClick('card-2')}
-          >
-            <h3>Sciences islamiques 1ère année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
+          <div className='int-block'>
+            <h1 className='date'>Samedi 19 Dec 2022</h1>
+            <div
+              className={classnames('card', { 'clicked': activeCard === 'card-3' })}
+              onClick={() => handleCardClick('card-3')}
+            >
+              <h3>Sciences islamiques 2ème année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
             </div>
           </div>
         </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 19 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-3') })}
-            onClick={() => handleCardClick('card-3')}
-          >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {showGroupesContent && (
+        {showGroupesContent && (
           <div className="groupes">
-          <div className="h">
+            <div className="h">
               <h3> Calendrier </h3>
-          </div>
-          <div className="agenda">
-            <div className="month-year">
-              <img src={left} alt='' onClick={handlePrevMonthClick} />
-              <h3> {months[month]} {year} </h3>
-              <img src={right} alt='' onClick={handleNextMonthClick} />
             </div>
-            <div className="days-of-week">
-              {daysOfWeek.map((day) => (
-                <div key={day} className="day-of-week">
-                  {day}
-                </div>
-              ))}
+            <div className="agenda">
+              <div className="month-year">
+                <img src={left} alt='' onClick={handlePrevMonthClick} />
+                <h3> {months[month]} {year} </h3>
+                <img src={right} alt='' onClick={handleNextMonthClick} />
+              </div>
+              <div className="days-of-week">
+                {daysOfWeek.map((day) => (
+                  <div key={day} className="day-of-week">
+                    {day}
+                  </div>
+                ))}
+              </div>
+              <div className="days-of-month">
+                {renderDaysOfMonth()}
+              </div>
+            </div>
           </div>
-          <div className="days-of-month">
-          {renderDaysOfMonth()}
-          </div>
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
-  </div>
   );
 }
 

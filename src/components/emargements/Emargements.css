@@ -97,6 +97,7 @@
   color: #FFFFFF;
   text-align: center;
 }
+
 .column-head {
   background-image: url("../../assets/ractangle\ orange.svg");
   background-repeat: no-repeat;
@@ -105,7 +106,6 @@
   font-size: 12px;
   height: 54.88px;
   width: 369px;
-  color: #FFFFFF;
 }
 
 .column-head h3 {
@@ -114,7 +114,6 @@
   font-size: 18px;
   font-family: "Poppins", Helvetica;
   font-weight: bold;
-  margin: 12px;
   margin-bottom: 0;
 }
 
