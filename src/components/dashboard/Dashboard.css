@@ -1,310 +1,321 @@
-
+/* Styles pour .dashboard */
 .dashboard {
-  display: flex;
-  justify-content: space-between;
-  height: calc(100% - 139px);
-  min-width: 290px;
-  background-color: #FFFFFF;
-  position: fixed;
-  top: 144px;
-  right: 0;
-  gap: 22px;
-  margin-right: 2px;
+  display: flex; /* Affichage des éléments en ligne dans un conteneur flexible */
+  justify-content: space-between; /* Espace uniformément les éléments enfants sur l'axe horizontal */
+  height: calc(100% - 139px); /* Hauteur égale à 100% de la hauteur de son parent moins 139px */
+  min-width: 290px; /* Largeur minimale */
+  background-color: #FFFFFF; /* Couleur de fond blanche */
+  position: fixed; /* Position fixe */
+  top: 144px; /* Distance de 144px depuis le haut de la fenêtre */
+  right: 0; /* Aligne l'élément à droite */
+  gap: 22px; /* Espacement horizontal */
+  margin-right: 2px; /* Marge à droite */
   padding: 0 27px; /* espace intérieur */
   overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 
 }
 
+/* Css pour .column-Enf */
 .column-Enf {
-  flex: 1;
+  flex: 1; /* Utilisation de flexbox */
   width: 345px; /* la largeur*/
-  height: 100vh;
-  margin-top: 22px;
-  margin-left: 2px;
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-
+  height: 100vh; /* la hauteur */
+  margin-top: 22px; /* Marge supérieure */
+  margin-left: 2px; /* Marge gauche */
+  border-radius: 22px; /* Bordure arrondie */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte pour donner une profondeur visuelle */
+  
+  /* css appliqué pour les écrands inférieures à 783px*/
   @media (max-width: 783px) {
-    display: none;
+    display: none; /* Masquer complètement l'élément en dessous de 783 pixels de large */
   }
 }
 
 .pink-box {
-  display: none;
+  display: none; /* Masquer complètement l'élément */
 }
 
+  /* css appliqué pour les écrands inférieures à 783px*/
 @media screen and (max-width: 783px) {
+
+  /* Cacher les éléments ayant la classe .column-Enf */
   .column-Enf {
     display: none;
   }
+
+  /* Afficher les éléments ayant la classe .pink-box */
   .pink-box{
     display: block;
   }
 
   .pink-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FF25254D;
-    width: 24rem;
-    height: 11.7rem;
-    border-radius: 1.25rem;
-  }
-  .pink-box h2 {
-    color: #000000;
-    margin-top: 1.5rem;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
+    display: flex; /* Affichage en mode flexible */
+    flex-direction: column; /* Disposition en colonne */
+    align-items: center; /* Disposition en colonne */
+    background-color: #FF25254D; /* Couleur de fond */
+    width: 24rem; /* Largeur */
+    height: 11.7rem; /* Hauteur */
+    border-radius: 1.25rem; /* Bordure arrondie */
   }
 
-  
+  /* css pour le titre h2 à l'intérieur de .pink-box */
+  .pink-box h2 {
+    color: #000000; /* Couleur du texte */
+    margin-top: 1.5rem; /* Marge supérieure */
+    font-weight: bold; /* Texte en gras */
+    font-size: 18px; /* Taille de police */
+    text-align: center; /* Alignement du texte au centre */
+  }
+
+  /* css pour .entry à l'intérieur de .pink-box */
   .pink-box .entry {
-    background-color: #FFFFFF;
-    margin-bottom: 0.75rem;
-    width: 21.25rem;
-    height: 4.75rem;
-    border-radius: 1.25rem;
-    box-shadow: 4px 4px 20px #00000012;
+    background-color: #FFFFFF; /* Couleur de fond */
+    margin-bottom: 0.75rem; /* Marge inférieure */
+    width: 21.25rem; /* Largeur */
+    height: 4.75rem; /* Hauteur */ 
+    border-radius: 1.25rem; /* bordure arrondie*/
+    box-shadow: 4px 4px 20px #00000012; /* Ombre de boîte pour donner une profondeur visuelle */
   }
   
+  /* css pour les titre h3 à l'intérieur .entry */
   .entry h3 {
-    color: #000000;
-    font-size: 14px;
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    margin-top: 0,375rem;
-    padding-left: 1,8125rem;
-    padding-top: 0,9375rem;
+    color: #000000; /* Couleur du texte */
+    font-size: 14px; /* Taille de police */
+    font-family: "Poppins", Helvetica; /* Police*/
+    font-weight: 600; /* Texte en gras */
+    margin-top: 0,375rem; /* Marge supérieure */
+    padding-left: 1,8125rem; /* Remplissage à gauche */
+    padding-top: 0,9375rem; /* Remplissage supérieur */
   }
   
   .details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;  /* Utilisation de Flexbox pour la disposition en ligne */
+    flex-direction: row; /* Disposition en ligne */
+    justify-content: space-between; /* Espace équilibré entre les éléments enfants */
+    align-items: center; /* Alignement vertical au centre des éléments enfants */
   }
 
   .details .date {
-    color: #898989;
-    font-family: "Poppins", Helvetica;
-    font-size: 14px;
-    font-style: italic;
-    padding-left: 0,125rem;
-    padding-bottom: 1rem;
+    color: #898989; /* Couleur du texte */
+    font-family: "Poppins", Helvetica; /* Police */
+    font-size: 14px; /* Taille de la police */
+    font-style: italic; /* style italique*/
+    padding-left: 0.125rem; /* espacement à gauche*/
+    padding-bottom: 1rem; /* Espacement en bas */
   }
 
   .details .count {
-    color: #898989;
+    color: #898989; /* Couleur du texte*/
     font-family: "Poppins", Helvetica;
-    font-size: 12px;
-    font-style: italic;
-    padding-right: 1.25rem;
+    font-size: 12px; /* Taille de la police*/
+    font-style: italic; /* style italique */
+    padding-right: 1.25rem; /* Espacement à droite */
   }
 
 }
 
 .column {
-  flex: 1;
-  width: 345px;
-  height: 100vh;
-  margin-top: 22px;
-  margin-left: 2px;
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+  flex: 1; /* Utilisation de la propriété flex avec flex-grow: 1 pour que la colonne prenne autant d'espace que possible */
+  width: 345px; /* largeur */
+  height: 100vh; /* hauteur de la colonne égale à la hauteur de la fenêtre */
+  margin-top: 22px; /* Marge en haut */
+  margin-left: 2px; /* Marge à gauche */
+  border-radius: 22px; /* bordure arrondie */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /*Ombre*/
   @media (max-width: 783px) {
-    display: none;
+    display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
   }
 }
 .column-r{
-  display: none;
+  display: none; /* Par défaut, masquer les éléments avec la classe .column-r */
 }
 @media only screen and (max-width: 783px) {
   .column-r {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10rem;
+    display: flex; /* Utilisation du flexbox */
+    flex-direction: column; /* disposition en colonne */
+    align-items: center; /* Centrer horizontalement les éléments */
+    margin-bottom: 10rem; /* Marge en bas */
   }
   .date-section {
-    margin-right: 10.4rem;
-  }
-
+    margin-right: 10.4rem; /* Marge à droite */
+  } 
+ 
+  /* Css pour le titre h2 à l'intérieur de .date-section */
    .date-section h2 {
-    color: #000000;
-    font-size: 22px;
-    font-weight: 600;
+    color: #000000; /* Couleur du texte */
+    font-size: 22px; /* Taille de la police */
+    font-weight: 600; /* la police en gras (600)*/
     font-family: "Poppins", Helvetica;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.25rem; /* Marge en bas */
   }
   
   
   .dashboard-entry {
-    background-color: #FFFFFF;
-    width: 24.3rem;
-    height: 5.875rem;
-    border-radius: 1.25rem;
-    box-shadow: 4px 4px 20px #00000012;
-    display: flex; 
-    align-items: center;
-    margin-bottom: 0.7rem;
+    background-color: #FFFFFF; /* couleur du fond */
+    width: 24.3rem; /* Largeur */
+    height: 5.875rem; /* Hauteur */
+    border-radius: 1.25rem; /* Bordure arrondie*/
+    box-shadow: 4px 4px 20px #00000012; /* L'ombre */
+    display: flex; /* Utilisation du flexbox */
+    align-items: center; /* Disposition en colonne */
+    margin-bottom: 0.7rem; /* Marge en bas */
   }
 
   .dashboard-entry .time p {
-    font-size: 16px;
-    margin: 0.25rem 0 0.5rem 1.25rem;
+    font-size: 16px; /* taille du police */
+    margin: 0.25rem 0 0.5rem 1.25rem; /* Marge autour du paragraphe */
   }
 
   .dashboard-entry .divider {
-    background-color:#FD9340;
-    border-radius: 0.625rem;
-    width: 0.5rem;
-    height: 3.75rem;
-    margin-left: 1.25rem;
-    margin-right: 1rem;
+    background-color:#FD9340; /* Couleur de fond */
+    border-radius: 0.625rem; /* bordure arrondie */
+    width: 0.5rem; /* largeur */
+    height: 3.75rem; /* hauteur */
+    margin-left: 1.25rem; /* marge à gauche */
+    margin-right: 1rem; /* marge à droite */
   }
 
    .dashboard-entry .details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 0.625rem;
+    display: flex; /* Utilisation du flexbox */
+    flex-direction: column; /* disposition en colonne*/
+    align-items: flex-start; /* Alignement à gauche */
+    margin-top: 0.625rem; /* marge en haut */
   }
   
   .dashboard-entry .details p {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 0,375rem;
+    font-size: 14px; /* taille de la police */
+    font-weight: bold; /*texte en gras */
+    margin-bottom: 0,375rem; /* marge en bas */
   }
   
   .dashboard-entry .details .extra-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* utilisation du flexbox */
+    justify-content: space-between; /* équilibrer l'espace disponible entre les éléments */
+    align-items: center; /* centrer verticalement */
   }
   
   .dashboard-entry .details .extra-info .room {
-    color: #FD9340;
+    color: #FD9340; /* couleur du texte */
     font-family: "Poppins", Helvetica;
-    font-size: 14px;
-    font-style: italic;
-    padding-bottom: 0.125rem;
+    font-size: 14px; /* la taille du police */
+    font-style: italic; /* style italique */
+    padding-bottom: 0.125rem; /* espacement de bas */
   }
   
   .dashboard-entry .details .extra-info .count {
-    color: #898989;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: lighter;
-    padding-left: 10.5rem;
-    padding-top: 0.625rem;
+    color: #898989; /* Couleur du texte */
+    font-size: 12px; /* Taille de la police */
+    font-style: italic; /* Style italique */
+    font-weight: lighter; /* Épaisseur de police plus légère */
+    padding-left: 10.5rem; /* Espacement à gauche */
+    padding-top: 0.625rem; /* Espacement en haut */
   }
   
   
   .ap-button {
-    background-color: #FFA82526;
-    border-radius: 3.125rem;
-    font-family: "Poppins", Helvetica;
-    padding: 1.25rem;
-    height: 3.125rem;
-    width: 13.75rem;
-    color: #FFA825;
-    margin-top: 3.5rem;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    text-align: center;
-    cursor: pointer;
+    background-color: #FFA82526; /* Couleur du fond */
+    border-radius: 3.125rem; /* Bordure arrondie */
+    font-family: "Poppins", Helvetica; /* Police de caractères */
+    padding: 1.25rem; /* Espacement intérieur (rembourrage) */
+    height: 3.125rem; /* Hauteur */
+    width: 13.75rem; /* Largeur */
+    color: #FFA825; /* Couleur du texte */
+    margin-top: 3.5rem; /* Marge en haut */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* police en gras */
+    border: none; /* Pas de bordure */
+    text-align: center; /* Alignement du texte au centre */
+    cursor: pointer; /* Curseur en forme de main */
   }
 }
 
 
 .column-header {
-  background-image: url("../../assets/ractangle\ orange.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  font-size: 0.75em; /*taille de police adaptable */
-  height: 1.875em; /*hauteur adaptable */
-  width: 16.8125; /*largeur adaptable */
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2.4375em; /*marge adaptable */
-  color: #FFFFFF;
-  text-align: center;
+  background-image: url("../../assets/ractangle\ orange.svg"); /* Image d'arrière-plan */
+  background-repeat: no-repeat; /* Ne pas répéter l'image */
+  background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
+  background-position: center top; /* Position de l'image d'arrière-plan */
+  font-size: 0.75em; /* Taille de police adaptative */
+  height: 1.875em; /* Hauteur adaptative */
+  width: 16.8125em; /* Largeur adaptative */
+  margin-left: auto; /* Marge à gauche automatique */
+  margin-right: auto; /* Marge à droite automatique */
+  margin-bottom: 2.4375em; /* Marge inférieure adaptable */
+  color: #FFFFFF; /* Couleur du texte */
+  text-align: center; /* Alignement du texte au centre */
 }
 .int-block h1 {
-  color: #000000;
+  color: #000000; /* couleur du texte */
   font-family: "Poppins", Helvetica;
   font-size: 1.125em; /*taille de police adaptable */
-  font-weight: 600;
+  font-weight: 600; /*police en gras (600)*/
   margin-left: 1.75em; /*marge adaptable */
-  margin-bottom: 11px;
+  margin-bottom: 11px; /*marge en bas*/
 }
 .int-block{
   display: block;
-  margin-bottom: 44px;
+  margin-bottom: 44px; /*marge en bas*/
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF; /*couleur du texte*/
   margin: auto;
   margin-bottom: 10px; /*marge adaptable*/
   width: 19.6875em; /*marge adaptable */
   border-radius: 1.25em; /*bordure adaptable */
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07); /* ombre*/
 }
 
 h3 {
-  color: #000000;
+  color: #000000; /*couleur du texte*/
   font-size: 0.875em; /*taille de police adaptable */
   font-family: "Poppins", Helvetica;
-  font-weight: 600;
-  margin-top: 0.375em;
-  padding-left: 1.25em;
-  padding-top: 0.9375em;
+  font-weight: 600; /*police en gras */
+  margin-top: 0.375em; /*marge en haut*/
+  padding-left: 1.25em; /* espacement à gauche */
+  padding-top: 0.9375em; /*espacement en haut*/
 }
 
 .day {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-weight: lighter;
-  font-size: 0,75em;
-  padding-left: 1.25em;
-  padding-top: 0.25em;
-  padding-bottom: 1em;
+  color: #000000; /* Couleur du texte en noir */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-weight: lighter; /* Poids de la police plus léger */
+  font-size: 0.75em; /* Taille de la police */
+  padding-left: 1.25em; /* Espace intérieur à gauche */
+  padding-top: 0.25em; /* Espace intérieur en haut */
+  padding-bottom: 1em; /* Espace intérieur en bas */
 }
 
 .session {
-  color: #898989;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  font-size: 0.75em;
-  font-style: italic;
-  padding-right: 1.25em;
+  color: #898989; /* Couleur du texte en gris */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-weight: bold; /* Poids de la police en gras */
+  font-size: 0.75em; /* Taille de la police */
+  font-style: italic; /* Style de police italique */
+  padding-right: 1.25em; /* Espace intérieur à droite */
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /*utilisation du flexbox*/
+  flex-direction: row; /*disposition en ligne*/
+  justify-content: space-between; /* Répartir l'espace disponible entre les éléments enfants */
+  align-items: center; /* Aligne les éléments enfants verticalement au centre de la ligne */
 }
 
 @media only screen and (max-width: 783px) {
   .dashboard {
-    flex-direction: column;
-    margin-top: 0;
+    flex-direction: column; /* la disposition en colonne */
+    margin-top: 0; /* Pas de marge supérieure */ 
     padding: 0 0.6rem; /* une marge intérieure plus petite */
   }
 
   .column {
-    flex: 1;
-    margin: 2% 0;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* la largeur pour occuper tout l'espace */
-    max-width: 100%; /* Empêcher le dépassement de la largeur */
+    flex: 1; /* Prendre autant d'espace disponible dans la direction du flex parent */
+    margin: 2% 0; /* Marge de 2% en haut et en bas, sans marge horizontale */
+    align-items: center; /* Centrer les éléments enfants horizontalement */
+    justify-content: center; /* Centrer les éléments enfants verticalement */
+    width: 100%; /* Définir la largeur à 100% pour occuper tout l'espace disponible */
+    max-width: 100%; /* Limiter la largeur maximale à 100% pour éviter le dépassement */
   }
   .modal-overlay {
     position: fixed;
@@ -534,9 +545,9 @@ h3 {
 @media only screen and (max-width: 360px) {
   .dashboard {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*la disposition en colonne*/
     align-items: center; /* Centrer horizontalement le contenu */
-    margin-top: 0;
+    margin-top: 0; /*pas de marge supérieure*/
     padding: 0 2.77%;
     gap: 2.77%; /* Réduire l'espace entre les colonnes */
   }
