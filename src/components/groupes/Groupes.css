@@ -1,73 +1,75 @@
 .Emargements {
-  display: flex;
-  justify-content: space-between;
-  height: calc(100% - 139px);
-  min-width: 290px;
-  background-color: #FFFFFF;
-  position: fixed;
-  top: 144px;
-  right: 0;
-  gap: 26px;
-  margin-right: 2px;
+  display: flex; /* Utilisation de Flexbox */
+  justify-content: space-between; /* Espacement uniforme entre les éléments enfants */
+  height: calc(100% - 139px); /* hauteur */
+  min-width: 290px; /* largeur minimale */
+  background-color: #FFFFFF; /* couleur de fond */
+  position: fixed; /* position fixe*/
+  top: 144px; /* Distance depuis le haut du parent */
+  right: 0; /* Alignement à droite */
+  gap: 26px; /* Espacement horizontal entre les éléments enfants */
+  margin-right: 2px; /*marge à droite*/
   padding: 0 27px; /* espace intérieur */
   overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 }
 
 
 .groupes-res {
-  display: none;
+  display: none; /* l'élément est masqué (non affiché) */
 }
-
-
+/* la largeur est maximale de 783px */
 @media screen and (max-width: 783px) {
   .groupes-res {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin-right: 1.4rem;
-    margin-bottom: 2rem;
+    display: flex; /* utilisation du flexbox*/
+    flex-direction: column; /* disposition en colonne*/
+    align-items: stretch; /* Étirer les éléments horizontalement pour occuper tout l'espace */
+    margin-right: 1.4rem; /* Marge à droite */
+    margin-bottom: 2rem; /* marge en bas */
   }
 
   h3 {
-    color: #000000;
+    color: #000000; /* couleur du texte */
     font-size: 0.875em; /*taille de police adaptable */
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    margin-top: 0.20em;
-    padding-left: 1.25em;
-    padding-top: 0.9375em;
-    margin-right: 10rem;
+    font-family: "Poppins", Helvetica; /* Police de caractères */
+    font-weight: 600; /* police en gras */
+    margin-top: 0.20em; /* Marge supérieure */
+    padding-left: 1.25em; /* Espacement à gauche */
+    padding-top: 0.9375em; /* Espacement supérieur */
+    margin-right: 10rem; /* marge à droite */
   }
 }
 
 
 .co {
-  flex: 1;
-  width: 345px;
-  height: 100vh;
-  margin-top: 22px;
-  margin-left: 2px;
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  top: 142px;
-  overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
+  flex: 1; /* Utilise un espace flexible pour l'élément */
+  width: 345px;  /* Largeur */
+  height: 100vh; /* Hauteur (100% de la hauteur de la vue) */
+  margin-top: 22px; /* marge supérieur */
+  margin-left: 2px; /* marge à gauche */
+  border-radius: 22px; /* bordure arrondie */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* ombre */
+  top: 142px; /* Position verticale par rapport au haut */
+  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+
+  /* les écrans de largeur maximale de 783px */
   @media (max-width: 783px) {
+    /* Masque l'élément lorsque la largeur d'écran est inférieure à 783px */
     display: none;
   }
 }
 
 .groupes {
-  flex: 1;
-  width: 702px;
-  height: 100vh;
-  margin-top: 22px;
-  margin-left: 2px; /* Réduire la valeur de la marge gauche */
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  top: 142px;
-  overflow-y: auto;
+  flex: 1; /* Utilisation de flexbox */
+  width: 702px; /* Largeur */
+  height: 100vh; /* Hauteur de 100% de la vue du navigateur */
+  margin-top: 22px; /* Marge supérieure */
+  margin-left: 2px; /* la marge gauche */
+  border-radius: 22px; /* Bordure arrondie */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre */
+  top: 142px; /* Position verticale */
+  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
   @media (max-width: 783px) {
-    display: none;
+    display: none; /* Masquer l'élément lorsque la largeur de l'écran est inférieure à 783px */
   }
 }
 
@@ -88,98 +90,101 @@
 
 
 .card {
-  background-color: #FFFFFF;
-  margin: auto;
-  margin-bottom: 16px;
-  width: 299.5px;
-  height: 72px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 20px #00000012;
-  cursor: pointer;
+  background-color: #FFFFFF; /* couleur de fond */
+  margin: auto; /* centrer horizontalement */
+  margin-bottom: 16px; /* marge en bas */
+  width: 299.5px; /* largeur */
+  height: 72px; /* hauteur */
+  border-radius: 20px; /* Bordure arrondie*/
+  box-shadow: 4px 4px 20px #00000012; /* Ombre */
+  cursor: pointer; /* Curseur se transforme en main */
 }
 
 h3 {
-  color: #000000;
-  font-size: 14px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 600;
-  margin-top: 6px;
-  padding-left: 20px;
-  padding-top: 15px;
-  margin-right: 2.6rem;
+  color: #000000; /* Couleur du texte */
+  font-size: 14px; /* Taille de police */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-weight: 600; /* police en gras (600) */
+  margin-top: 6px; /* Marge en haut */
+  padding-left: 20px; /* Remplissage à gauche */
+  padding-top: 15px; /* Remplissage en haut */
+  margin-right: 2.6rem; /* Marge à droite */
 }
 
 .day {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  padding-left: 20px;
-  padding-top: 4px;
-  padding-bottom: 16px;
+  color: #000000; /* Couleur du texte */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-size: 14px; /* Taille de la police */
+  padding-left: 20px; /* Espacement à gauche */
+  padding-top: 4px; /* Espacement en haut */
+  padding-bottom: 16px; /* Espacement en bas */
 }
 
 .session {
-  color: #898989;
-  font-family: "Poppins", Helvetica;
-  font-weight: 600;
-  font-size: 12px;
-  font-style: italic;
-  padding-right: 20px;
+  color: #898989; /* Couleur du texte */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-weight: 600; /* Épaisseur de la police */
+  font-size: 12px; /* Taille de la police */
+  font-style: italic; /* Style de la police italique */
+  padding-right: 20px; /* Espacement à droite */
 }
 
-/* Styles pour le clic */
+/* Lorsqu'une carte (.card) est cliquée, changez la couleur de fond en #FD9340 */
 .card.clicked {
   background-color: #FD9340;
 }
 
+/* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
 .card.clicked h3,
 .card.clicked .day,
 .card.clicked .session {
 color: #FFFFFF;
 }
 
+/* Crée une disposition en ligne pour les éléments contenus dans la classe .row */
 .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* utilisation du flexbox */
+  flex-direction: row; /* Aligne les éléments horizontalement en ligne */
+  justify-content: space-between; /* Distribue l'espace horizontal uniformément entre les éléments */
+  align-items: center; /* Centre les éléments verticalement dans la ligne */
 }
 .nom-stu {
-  background-color: #FFFFFF;
-  margin: auto;
-  margin-bottom: 1rem;
-  width: 22rem;
-  height: 4.5rem;
-  margin-left: 15.5px;
-  margin-right: 16.5px;
-  border-radius: 1.4rem;
-  box-shadow: 4px 4px 20px #00000012;
-  cursor: pointer;
+  background-color: #FFFFFF; /* couleur du fond */
+  margin: auto; /* Centrer horizontalement */
+  margin-bottom: 1rem; /* marge inférieure */
+  width: 22rem; /* largeur */
+  height: 4.5rem; /* hauteur */
+  margin-left: 15.5px; /* marge à gauche*/
+  margin-right: 16.5px; /* marge à droite */
+  border-radius: 1.4rem; /* Bordure arrondie*/
+  box-shadow: 4px 4px 20px #00000012; /* ombre */
+  cursor: pointer; /* curseur de la souris */
 }
 .nom-stu + .nom-stu {
-  margin-left: 4px; /* spacing */
+  margin-left: 4px; /* Espace entre les éléments */
 }
 .nom-stu h3 {
-  color: #000000;
-  font-size: 14px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 600;
-  margin-top: -0.1rem;
-  padding-left: 1.25rem;
-  padding-top: 0,9375rem;
-  margin-right: 9rem;
+  color: #000000; /* couleur du texte */
+  font-size: 14px; /* taille de la police */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-weight: 600; /* police en gras(600) */
+  margin-top: -0.1rem; /* marge supérieure */
+  padding-left: 1.25rem; /* marge à gauche */
+  padding-top: 0,9375rem; /* espacement supérieur */
+  margin-right: 9rem; /* marge à droite */
 }
 
 .nom-stu .abs {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  padding-left: 1.25rem;
-  padding-top: 0.25rem;
-  padding-bottom: 1rem;
-  margin-right: 10.5rem;
+  color: #000000; /* couleur du texte */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-size: 14px; /* taille de la police */
+  padding-left: 1.25rem; /* marge à gauche */
+  padding-top: 0.25rem; /* espacement supérieure */
+  padding-bottom: 1rem; /* espacement en bas */
+  margin-right: 10.5rem; /* marge à droite */
 }
 
 .hide {
+  /* Propriété "display" définie sur "none", ce qui masque l'élément */
   display: none;
 }

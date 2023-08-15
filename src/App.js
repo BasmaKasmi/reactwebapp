@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from "react";
 // Importation du fichier CSS
 import './App.css';
-// Importation de la page LoginPage
+// Importation des composants nécessaires
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from './pages/DashboardPage';
 import MesemargementsPage from './pages/MesemargementsPage';

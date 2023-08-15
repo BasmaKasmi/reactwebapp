@@ -1,14 +1,15 @@
-/* MesemargementsPage.css */
-
+/* Masquer la classe .nav-emarg-container */
 .nav-emarg-container {
     display: none;
   }
-  
+  /* largeur d'écran de 783px ou moins */
   @media screen and (max-width: 783px) {
+    /* Masquer la classe .desktop-container */
     .desktop-container {
       display: none;
     }
   
+    /* Afficher la classe .nav-emarg-container */
     .nav-emarg-container {
       display: block;
     }
