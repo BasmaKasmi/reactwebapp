@@ -1,7 +1,10 @@
+
+/* Cacher l'élément avec la classe .Details par défaut */
 .Details {
     display: none;
   }
   
+  /* Css pour l'élément .Details lorsque la largeur de l'écran est inférieure à 783px */
   @media only screen and (max-width: 783px) {
     .Details {
         display: block;
@@ -10,43 +13,57 @@
         position: fixed;
         align-items: center;
         bottom: 20rem;
-        left: 5%; /* en fonction de la position horizontale souhaitée */
-        right: 5%; /*valeur en fonction de la position horizontale souhaitée */
+        left: 5%; /* La position horizontale souhaitée */
+        right: 5%; /* La position horizontale souhaitée */
         background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
         overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
         overflow-x: auto; /* Activation de la barre de défilement horizontale si le contenu dépasse */
 
       }
 
+      /* Css pour les éléments avec la classe .agenda-row */
       .agenda-row {
+        /* Appliquer l'affichage "inline-flex" pour aligner les éléments horizontalement tout en permettant le réglage de la taille de la boîte et l'alignement vertical */
         display: inline-flex;
+         /* Centrer les éléments verticalement à l'intérieur du conteneur */
         align-items: center;
+         /* marge en haut de 0.1 unité de mesure (ex. rem) pour espacer les éléments par rapport aux éléments précédents */
         margin-top: 0.1rem;
       }
       
+      /* Css pour les éléments h3 à l'intérieur de .agenda-row */
       .agenda-row h3 {
-        margin-right: 8rem; /* Ajouter de l'espace entre l'image et le titre */
+        /* Ajouter de l'espace entre l'image et le titre */
+        margin-right: 8rem; 
         color: #000000;
         font-family: "Poppins", Helvetica;
         font-size: 14px;
         margin-bottom: 1rem;
       }
       
+      /* Css pour les images à l'intérieur de .agenda-row */
       .agenda-row img {
         margin-left: 0.1rem;
       }
 
+      /* Css pour les éléments avec la classe .date-inputs */
       .date-inputs {
+        /* Affichage des éléments en ligne dans un conteneur flexible */
         display: flex;
+        /* Centrer les éléments verticalement dans le conteneur */
         align-items: center;
-        margin-right: 4rem; /* Ajuster la valeur de la marge droite */
+        /* Ajuster la valeur de la marge droite */
+        margin-right: 4rem; 
+        /* Ajuster la valeur de la marge en bas */
         margin-bottom: 1rem;
         margin-right: 1.9rem;
+        /* Média query pour les écrans ayant une largeur minimale de 360px */
         @media screen and (min-width: 360px) {
-          margin-left: 0.2rem;
+          margin-left: 0.2rem; /* Ajuster la valeur de la marge gauche pour les écrans larges */
         }
       }
       
+      /* Css pour les éléments input à l'intérieur de .date-inputs */
       .date-inputs input {
         text-align: center;
         font-family: "Poppins", Helvetica;
@@ -57,45 +74,57 @@
         margin-left: 0.4rem; /* l'espace entre les inputs */
       }
       
+      /* Css pour les images à l'intérieur de .date-inputs */
       .date-inputs img {
         margin-left: 0.4rem; /* l'espace entre input et l'image */
         @media screen and (min-width: 360px) {
-          margin-left: 0.1rem;
+          margin-left: 0.1rem; /* Ajuster la marge gauche pour les écrans larges */
         }
       }
-        
+
+        /* Css pour les éléments avec la classe .c */
         .c {
+          /* Marge en bas de 1 rem */
           margin-bottom: 1rem;
+          /* Largeur maximale de 20 rem */
           max-width: 20rem;
+          /* Bordure arrondie avec un rayon de 16 px */
           border-radius: 16px;
           height: 8%;
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
         }
         
+        /* Css pour les éléments avec la classe .row */
         .row {
+          /* Utilisation de la disposition flexbox pour aligner les éléments en ligne */
           display: flex;
+          /* Centrage vertical des éléments enfants sur l'axe transversal */
           align-items: center;
+          /* Espacement uniforme des éléments enfants sur l'axe principal avec espace entre eux */
           justify-content: space-between;
         }
         
+        /* Css pour les éléments h3 à l'intérieur de .c */
         .c h3 {
           font-size: 14px;
           margin-right: 5px;
         }
         
+        /* Css pour les éléments avec la classe .status-f */
         .status-f {
-            color: #4CAF50;
-            display: inline-block;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-          }
+            color: #4CAF50; /* Couleur du texte */
+            display: inline-block; /* L'élément est affiché en tant que bloc dans la ligne, conserve le flux du texte */
+            font-size: 12px; /* Taille de la police de 12 pixels */
+            font-weight: bold; /* Police en gras */
+            text-transform: uppercase; /* Transformation du texte en majuscules */
+          } 
           
+          /* Css pour les éléments avec la classe .status-n */
           .status-n {
-            color: #FF2525;
-            display: inline-block;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
+            color: #FF2525; /* Couleur du texte */
+            display: inline-block; /* L'élément est affiché en tant que bloc dans la ligne, conserve le flux du texte */
+            font-size: 12px; /* Taille de la police de 12 pixels */
+            font-weight: bold; /* Police en gras */
+            text-transform: uppercase; /* Transformation du texte en majuscules */
           }
         };

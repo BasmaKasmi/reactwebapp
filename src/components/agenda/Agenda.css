@@ -1,50 +1,54 @@
 .Emargements {
+    /* Flexbox pour aligner les éléments horizontalement */
     display: flex;
     justify-content: space-between;
-    height: calc(100% - 139px);
+    height: calc(100% - 139px); /* Hauteur ajustée */
     width: 67,76rem;  /*1084px width*/
-    background-color: #FFFFFF;
-    position: fixed;
-    top: 144px;
-    gap: 27px;
-    text-align: center;
-    margin-right: 2px;
+    background-color: #FFFFFF; /* Couleur de fond */
+    position: fixed; /* Position fixe */
+    top: 144px; /* Position depuis le haut de la fenêtre */
+    gap: 27px; /* Espacement entre les éléments */
+    text-align: center; /* Alignement du texte au centre */
+    margin-right: 2px; /* Marge à droite */
     padding: 0 42px;/* espace intérieur */
     overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
   }
   
   .co {
+    /* Flexbox pour mettre en page la colonne */
     flex: 1;
-    width: 345px;
-    height: 100vh;
-    margin-top: 22px;
-    margin-left: 2px;
-    border-radius: 22px;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-    top: 142px;
+    width: 345px; /* Largeur */
+    height: 100vh; /* Hauteur de 100% de la hauteur de la vue */
+    margin-top: 22px; /* Marge en haut */
+    margin-left: 2px; /* Marge à gauche */
+    border-radius: 22px; /* Coins arrondis */
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte */
+    top: 142px; /* Position depuis le haut de la fenêtre */
     overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
     @media (max-width: 783px) {
-      display: none;
+      display: none; /* Cacher si la largeur est inférieure à 783px */
     }
 }
 .int-block .date {
+  /* Aligner la date à gauche */
   text-align: left;
 }
 
 
 .groupesRes{
-  display: none;
+  display: none; /* Cacher initialement */
 }
 @media screen and (max-width: 783px) {
   .groupesRes {
+    /* Afficher si la largeur est inférieure à 783px */
     display: block;
     position: fixed;
-    top: 6.5rem;
+    top: 6.5rem; /* Position depuis le haut de la fenêtre */
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Largeur à 100% de la vue */
+    height: 100%; /* Hauteur à 100% de la vue */
     padding: 1rem; /* Espace interne pour le contenu */
-    overflow-y: auto;
+    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
   }
     /* le contenu de la colonne groupesRes */
     .groupesRes .content {
@@ -125,48 +129,65 @@
 }
 
 .groupes {
+  /* Flexbox pour mettre en page la colonne */
   flex: 1;
-  width: 702px;
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  top: 142px;
-  right: 1.86rem;
-  overflow-y: auto;
+  width: 702px; /* Largeur */
+  border-radius: 22px; /* Coins arrondis */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte */
+  top: 142px; /* Position depuis le haut de la fenêtre */
+  right: 1.86rem; /* Position depuis la droite */
+  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 }
 .agenda {
+   /* Flexbox pour mettre en page la colonne */
   flex: 1;
-  flex-direction: column; /* Pour aligner verticalement le contenu */
+  flex-direction: column; /* Aligner verticalement le contenu */
   align-items: center; /* Centrer horizontalement */
   justify-content: center; /* Centrer verticalement */
   width: 568px; /* largeur */
   height: 632px; /* hauteur */
-  border: 0px none;
+  border: 0px none; /* Pas de bordure */
   margin-left: 4rem;
   margin-right: 4rem;
-  overflow-y: auto;
+  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 }
 
+ /* Css pour l'élément .h */
 .h {
+    /* Définition de l'image de fond */
   background-image: url("../../assets/ractangle\ orange.svg");
+    /* Empêche la répétition de l'image de fond */
   background-repeat: no-repeat;
+    /* Redimensionne l'image pour couvrir tout l'élément */
   background-size: cover;
+    /* Position de l'image de fond au centre en haut */
   background-position: center top;
+    /* Taille de la police pour le texte à l'intérieur */
   font-size: 12px;
+    /* Arrondi des coins inférieurs gauche et droit */
   border-radius: 0 0 30px 30px;
+    /* Hauteur de l'élément */
   height: 54.88px;
+    /* Largeur de l'élément */
   width: 368.55px;
+    /* Marge en bas pour l'espace entre cet élément et le suivant */
   margin-bottom: 27px;
+    /* Centrage horizontal automatique dans le parent */
   margin-left: auto;
   margin-right: auto;
+    /* Couleur du texte à l'intérieur */
   color: #FFFFFF;
+    /* Affichage en mode flex pour aligner les enfants en colonne */
   display: flex;
+    /* Orientation des enfants en colonne */
   flex-direction: column;
+    /* Centrage vertical des enfants */
   justify-content: center;
   align-items: center;
 }
 
+  /* Css pour le h3 à l'intérieur de .column-head */
 .h h3 {
-  /* Styles pour le h3 à l'intérieur de .column-head */
   color: #FFFFFF;
   font-size: 18px;
   font-family: "Poppins", Helvetica;
@@ -178,12 +199,16 @@
   margin-bottom: 4rem;
   text-align: center;
 }
+
+/* Css pour l'élément .month-year */
 .month-year {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
+  /* Css pour le h3 à l'intérieur de .month-year */
 .month-year  h3{
   color: #000000;
   font-family: "Poppins", Helvetica;
@@ -193,17 +218,23 @@
   margin-bottom: 24px;
   margin-right: 20px;
 }
+
+  /* Css pour l'image à l'intérieur de .month-year */
 .month-year img {
   width: 26.8px;
   height: 26.8px;
 }
-.days-of-week{
+
+/* Css pour l'élément .days-of-week */
+.days-of-week {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 5px 0;
   align-items: center;
 }
+
+  /* Css pour l'élément .day-of-week */
 .day-of-week {
   flex: 1;
   text-align: center;
@@ -214,11 +245,18 @@
   height: 24px;
   width: 12px;
 }
+
+  /* Css pour l'élément .days-of-month */
 .days-of-month {
+  /* Le type d'affichage en grille pour l'élément .days-of-month */
   display: grid;
+  /* Utilisons la propriété grid-template-columns pour créer une grille avec 7 colonnes égales */
   grid-template-columns: repeat(7, 1fr);
+  /* Spécifions l'espace entre les éléments de la grille */
   gap: 5px;
 }
+
+   /* Css pour les éléments .day à l'intérieur de .days-of-month */
 .days-of-month .day {
   color: #000000;
   font-family: "Poppins", Helvetica;
@@ -228,6 +266,7 @@
   text-align: center;
 }
 
+  /* Css pour les jours du samedi */
 .day.saturday {
   background-image: url("../../assets/V.svg");
   background-repeat: no-repeat;
@@ -239,6 +278,7 @@
   font-weight: bold;
  }
 
+ /* Css pour les jours du lundi */
 .day.monday {
   background-image: url("../../assets/Pink.svg");
   background-repeat: no-repeat;

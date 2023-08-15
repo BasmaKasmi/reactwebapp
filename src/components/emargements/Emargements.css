@@ -73,7 +73,7 @@
   width: 702px;
   height: 100vh;
   margin-top: 22px;
-  margin-left: 2px; /* Réduire la valeur de la marge gauche */
+  margin-left: 2px; /* la marge gauche */
   border-radius: 22px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
   top: 142px;
@@ -106,6 +106,10 @@
   font-size: 12px;
   height: 54.88px;
   width: 369px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .column-head h3 {
@@ -122,9 +126,8 @@
   font-family: "Poppins", Helvetica;
   font-size: 14px;
   margin: 10px;
-  margin-top: 0; /* Réduire l'espace entre h3 et p */
+  margin-top: 0; /* l'espace entre h3 et p */
 }
-
 
 .card {
   background-color: #FFFFFF;
