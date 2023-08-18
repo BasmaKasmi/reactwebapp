@@ -1,5 +1,6 @@
 import React, { useState } from 'react'; // Importation des modules React et useState depuis 'react'
-import { Link } from 'react-router-dom'; // Importation du module Link depuis 'react-router-dom'
+import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; // Importation de l'image 'calendar.svg' depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image 'student.svg' depuis les ressources
 import Em from '../em/Em'; // Importation du composant Em
@@ -7,6 +8,7 @@ import './Emargements.css'; // Importation du fichier de styles CSS 'Emargements
 
 // Composant principal Emargements
 const Emargements = () => {
+  
   // Définit un état pour suivre la carte active (null au départ)
   const [activeCard, setActiveCard] = useState(null);
   // Définit un état pour suivre le titre sélectionné
@@ -55,6 +57,10 @@ const Emargements = () => {
     }
   };
 
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const selectedCard = searchParams.get('card');
+
   return (
     <div className='Emargements'>  {/* Conteneur principal avec la classe 'Emargements' */}
     {/* Section des groupes avec la classe 'groupes-res' */}
@@ -98,48 +104,45 @@ const Emargements = () => {
     </div>
     </Link>
     </div>
-      <div className="co">
+    <div className="co">
         {/* En-tête de la colonne */}
-        <div className="column-header">
-          <h2>Mes emargements</h2>
-        </div>
-        {/* Carte pour Sciences islamiques 2ème année */}
-        <div
+          <div className="column-header orange-bg">
+            <h2>Mes émargements</h2>
+          </div>
+          {/* Bloc interne pour les groupes */}
+          <div className='int-block'>
+          <div
           className={`card ${activeCard === 'card-1' ? 'clicked' : ''}`}
           onClick={() => handleCardClick('card-1', 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
         >
-          <h3>Sciences islamiques 2ème année</h3>
-          {/* Contenu de la carte */}
-          <div className='row'>
-            <p className='day'>Ven 18h00 à 21h00</p>
-            <p className='session'>11/32</p>
-          </div>
-        </div>
-        {/* Carte pour Sciences islamiques 1ère année */}
-        <div
+              <h3>Sciences islamiques 2ème année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
+            </div>
+            <div
           className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
           onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
         >
-          <h3>Sciences islamiques 1ère année</h3>
-          {/* Contenu de la carte */}
-          <div className='row'>
-            <p className='day'>Sam 14h30 à 17h30</p>
-            <p className='session'>11/32</p>
-          </div>
-        </div>
-        {/* Carte pour Sciences islamiques 3ème année */}
-        <div
+              <h3>Sciences islamiques 1ère année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
+            </div>
+            <div
           className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
           onClick={() => handleCardClick('card-3', 'Sciences islamiques 3ème année', 'Sam 14h30 à 17h30')}
         >
-          <h3>Sciences islamiques 3ème année</h3>
-          {/* Contenu de la carte */}
-          <div className='row'>
-            <p className='day'>Sam 14h30 à 17h30</p>
-            <p className='session'>11/32</p>
+              <h3>Sciences islamiques 3ème année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
       {/*Si showGroupesContent est vrai, affiche le contenu suivant*/}
       { showGroupesContent && (
       // Div principale pour le contenu "groupes", avec une classe "hide" si showEmContent est vrai

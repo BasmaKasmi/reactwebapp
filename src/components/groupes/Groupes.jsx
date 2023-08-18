@@ -88,62 +88,45 @@ const Groupes = () => {
     </Link>
     </div>
     </div>
-      {/* Div pour contenir les informations des groupes */}
-      <div className="co">
-        {/* Div pour l'en-tête de la colonne */}
-        <div className="column-header">
-          {/* Titre de la colonne */}
-          <h2>Mes groupes</h2>
-        </div>
-        {/* Div pour contenir les cartes de groupe */}
-        <div className="card-container">
-          {/* Carte de groupe avec condition de classe active */}
-          <div
-            className={`card ${activeCard === 'card-1' ? 'clicked' : ''}`}
-            onClick={() => handleCardClick('card-1', 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
-          >
-            {/* Titre du groupe */}
-            <h3>Sciences islamiques 2ème année</h3>
-            {/* Div pour la rangée d'informations */}
-            <div className='row'>
-              {/* Jour et horaire */}
-              <p className='day'>Ven 18h00 à 21h00</p>
-              {/* Nombre de sessions */}
-              <p className='session'>11/32</p>
-            </div>
+    <div className="co">
+        {/* En-tête de la colonne */}
+          <div className="column-header orange-bg">
+            <h2>Mes groupes</h2>
           </div>
-          {/* Carte de groupe avec condition de classe active */}
+          {/* Bloc interne pour les groupes */}
+          <div className='int-block'>
           <div
-            className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
-            onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
-          >
-            {/* Titre du groupe */}
-            <h3>Sciences islamiques 1ère année</h3>
-            {/* Div pour la rangée d'informations */}
-            <div className='row'>
-              {/* Jour et horaire */}
-              <p className='day'>Sam 14h30 à 17h30</p>
-              {/* Nombre de sessions */}
-              <p className='session'>11/32</p>
+          className={`card ${activeCard === 'card-1' ? 'clicked' : ''}`}
+          onClick={() => handleCardClick('card-1', 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
+        >
+              <h3>Sciences islamiques 2ème année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
             </div>
-          </div>
-          {/* Carte de groupe avec condition de classe active */}
-          <div
-            className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
-            onClick={() => handleCardClick('card-3', 'Sciences islamiques 3èmee année', 'Sam 14h30 à 17h30')}
-          >
-            {/* Titre du groupe */}
-            <h3>Sciences islamiques 3ème année</h3>
-            {/* Div pour la rangée d'informations */}
-            <div className='row'>
-              {/* Jour et horaire */}
-              <p className='day'>Sam 14h30 à 17h30</p>
-              {/* Nombre de sessions */}
-              <p className='session'>11/32</p>
+            <div
+          className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
+          onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
+        >
+              <h3>Sciences islamiques 1ère année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
+            </div>
+            <div
+          className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
+          onClick={() => handleCardClick('card-3', 'Sciences islamiques 3ème année', 'Sam 14h30 à 17h30')}
+        >
+              <h3>Sciences islamiques 3ème année</h3>
+              <div className='row'>
+                <p className='day'>Jeu 18h00 à 12h00</p>
+                <p className='session'>11/32</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       {/* Si showGroupesContent est vrai, affiche le contenu suivant */}
       { showGroupesContent && (
       <div className="groupes">

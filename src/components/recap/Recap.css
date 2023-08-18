@@ -3,17 +3,19 @@
 }
 
 @media screen and (max-width: 783px){
+  body {
+    overflow: hidden;
+  }
   .Recap {
       display: block;
+      position: fixed;
       width: 90%;
       margin: 0 auto;
-      position: fixed;
       align-items: center;
       top: 8rem;
       left: 5%; /* valeur en fonction de la position horizontale souhaitée */
       right: 5%; /* valeur en fonction de la position horizontale souhaitée */
       background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
-      overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 
   }
   .header {
@@ -60,11 +62,12 @@
     
     .col h3 {
       color: #000000;
+      font-size: 14px;
       font-family: "Poppins", Helvetica;
-      font-size: 18px;
       font-weight: 600;
-      margin: 0;
-      font-size: 1rem;
+      margin-top: 0,375rem;
+      padding-left: 1.25rem;
+      padding-top: 0,9375rem;
     }
     
     p.description {
@@ -112,36 +115,92 @@
       margin-right: -0.8rem; /* Utilisation d'une marge négative pour réduire l'espace */
 
     }
-    .card {
+    .card-s {
       background-color: #FFFFFF;
       margin: auto;
       margin-bottom: 1rem;
       width: 22rem;
-      height: 6rem;
+      height: 5rem;
       margin-left: 15.5px;
       margin-right: 16.5px;
       border-radius: 1.4rem;
       box-shadow: 4px 4px 20px #00000012;
       cursor: pointer;
+      padding: 0 1.25rem; /* Espacement intérieur gauche et droit */
     }
-    .card h3 {
-      color: #000000;
-      font-size: 14px;
-      font-family: "Poppins", Helvetica;
-      font-weight: 600;
-      margin-top: 0,375rem;
-      padding-left: 1.25rem;
-      padding-top: 0,9375rem;
+    .card-s .col {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-top: 1rem;
+    }
+
+  .card-s .col h3{
+    color: #000000;
+    font-size: 14px;
+    font-family: "Poppins", Helvetica;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-right: 5rem;
+  }
+  .card-s .col p {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-weight: lighter;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    margin-right: 7.2rem;
+}
+ 
+    .b-container {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 1rem;
     }
     
-    .card .abs {
-      color: #000000;
-      font-family: "Poppins", Helvetica;
-      font-size: 14px;
-      padding-left: 1.25rem;
-      padding-top: 0.25rem;
-      padding-bottom: 1rem;
+    .ap-b,
+    .ai-b {
+      background-color: #FF252526;
+      border-radius: 30px; /* le rayon de bordure pour obtenir la forme souhaitée */
+      padding: 4px 8px; /* les valeurs de padding pour réduire l'espace intérieur du bouton */
+      margin-right: 8px;
+      border: none;
+      font-weight: bold;
+      height: 35px;
+      width: 35px;
+      color: #FF2525;
+      text-align: center;
+      font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
     }
+    
+
+    .val-button{
+      background-color: #19ce1526;
+      color: #19CE15;
+      font-family: "Poppins", Helvetica;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: bold;
+      position: fixed;
+      width: 18rem;
+      height: 2,625rem;
+      border: none; /* Pas de bordure */
+      text-align: center; /* Alignement du texte au centre */
+      cursor: pointer; /* Curseur en forme de main */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1.79125rem; /* Espacement intérieur gauche et droit */
+
+      /* Positionnement en bas centré */
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .modal-overlay {
       position: fixed;
       top: 0;

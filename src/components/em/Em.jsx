@@ -4,15 +4,14 @@ import './Em.css';
 
 
 const Em = () => {
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState('card-1'); // Mettez la carte 'card-1' comme active par défaut
   const [activeButtonId, setActiveButtonId] = useState(null);
-  const [selectedTitle, setSelectedTitle] = useState('');
-  const [selectedDay, setSelectedDay] = useState('');
+  const [selectedTitle, setSelectedTitle] = useState('Sciences islamiques 2ème année'); // Mettez le titre par défaut
+  const [selectedDay, setSelectedDay] = useState('Ven 18h00 à 21h00'); // Mettez la date par défaut
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [showGroupesContent, setShowGroupesContent] = useState(false); // Contrôle de l'affichage du contenu dans la colonne "groupes"
+  const [showGroupesContent, setShowGroupesContent] = useState(true); // Affichez le contenu par défaut
 
   const handleCardClick = (cardId, cardTitle, cardDay) => {
-    setActiveCard(cardId);
     setSelectedTitle(cardTitle);
     setSelectedDay(cardDay);
     setShowGroupesContent(true); // Affichage du contenu de la colonne "groupes" après avoir cliqué sur une carte
@@ -50,8 +49,7 @@ const Em = () => {
               <p className='day'>Ven 18h00 à 21h00</p>
               <p className='session'>11/32</p>
             </div>
-          </div>
-          
+          </div>   
           <div
             className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
             onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}

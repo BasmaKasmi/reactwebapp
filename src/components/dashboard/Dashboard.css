@@ -100,7 +100,7 @@
     font-family: "Poppins", Helvetica; /* Police */
     font-size: 14px; /* Taille de la police */
     font-style: italic; /* style italique*/
-    padding-left: 0.125rem; /* espacement à gauche*/
+    padding-left: 1rem; /* espacement à gauche*/
     padding-bottom: 1rem; /* Espacement en bas */
   }
 
@@ -218,17 +218,16 @@
     font-family: "Poppins", Helvetica; /* Police de caractères */
     padding: 1.25rem; /* Espacement intérieur (rembourrage) */
     height: 3.125rem; /* Hauteur */
-    width: 13.75rem; /* Largeur */
+    width: 10,875rem; /* Largeur */
     color: #FFA825; /* Couleur du texte */
     margin-top: 3.5rem; /* Marge en haut */
-    font-size: 16px; /* Taille de la police */
+    font-size: 14px; /* Taille de la police */
     font-weight: bold; /* police en gras */
     border: none; /* Pas de bordure */
     text-align: center; /* Alignement du texte au centre */
     cursor: pointer; /* Curseur en forme de main */
   }
 }
-
 
 .column-header {
   background-image: url("../../assets/ractangle\ orange.svg"); /* Image d'arrière-plan */
@@ -377,6 +376,13 @@ h3 {
     width: 18.25rem;
     cursor: pointer;
     }
+    .bloc1{
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 4px 4px 20px #00000012;
+      width: 100%;
+    }
+
     .agenda-row {
       display: inline-flex;
       align-items: center;
@@ -384,6 +390,7 @@ h3 {
     }
     
     .agenda-row h3 {
+      flex: 1;
       margin-right: 8rem; /* l'espace entre l'image et le titre */
       color: #000000;
       font-family: "Poppins", Helvetica;

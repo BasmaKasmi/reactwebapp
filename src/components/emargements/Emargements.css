@@ -156,14 +156,14 @@
   cursor: pointer; /* Curseur en forme de main */
 
 }
-h3 {
+.card h3 {
   color: #000000; /* Couleur du texte */
   font-size: 14px; /* Taille de police */
   font-family: "Poppins", Helvetica; /* Police de caractères */
   font-weight: 600; /* police en gras (600) */
-  margin-top: 6px; /* marge supérieure */
-  padding-left: 20px; /* Remplissage à gauche */
+  margin-top: 6px; /* Marge en haut */
   padding-top: 15px; /* Remplissage en haut */
+  margin-right: 2.6rem; /* Marge à droite */
 }
 
 .day {
@@ -181,18 +181,18 @@ h3 {
   font-weight: 600; /* police en gras (600) */
   font-size: 12px; /* Taille de police */
   font-style: italic; /* style de police italique */
-  padding-right: 20px; /* Remplissage à droite */
+  padding-right: 2rem; /* Remplissage à droite */
 }
 
 /* Lorsqu'une carte (.card) est cliquée, changez la couleur de fond en #FD9340 */
-.card.clicked {
+.int-block.clicked {
   background-color: #FD9340;
 }
 
 /* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
-.card.clicked h3,
-.card.clicked .day,
-.card.clicked .session {
+.int-block.clicked h3,
+.int-block.clicked .day,
+.int-block.clicked .session {
 color: #FFFFFF;
 }
 

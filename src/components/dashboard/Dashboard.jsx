@@ -9,7 +9,8 @@ import cldr from '../../assets/calendar.svg';
 // Importation de l'image "student.svg" à partir du dossier "assets".
 import st from '../../assets/student.svg';
 // Importation de l'image "2 User.png" à partir du dossier "assets".
-import user from '../../assets/2 User.png'
+import user from '../../assets/2 User.png';
+import nom from '../../assets/nom.svg';
 
 // Définition du Dashboard
 
@@ -99,17 +100,19 @@ const Dashboard = () => {
         {/* Crée un conteneur avec une classe "content" */}
         <div className="content">
           {/* Crée une entrée avec une classe "entry" */}
+          <Link to='/rappel'>
           <div className="entry">
             {/* Affiche un titre de niveau 3 avec le nom du cours */}
             <h3>Sciences islamiques 2ème année</h3>
             {/* Crée un conteneur pour les détails avec une classe "details" */}
             <div className="details">
               {/* Affiche la date de l'emargement */}
-              <p className="date">Samedi 10 Déc 2022</p>
+              <p className="date">Sam 10 Déc 2022</p>
               {/* Affiche le nombre d'emargements */}
               <p className="count">11/32</p>
             </div>
           </div>
+          </Link>
         </div>
       </div>
       {/* Div englobante pour la colonne */}
@@ -204,6 +207,7 @@ const Dashboard = () => {
         <h2>Samedi 17 Déc 2022</h2>
       </div>
       {/* Entrée du tableau de bord */}
+      <Link to='/recap'>
       <div className="dashboard-entry">
           {/* Heures du séance */}
         <div className="time">
@@ -222,25 +226,28 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      </Link>
       {/* Deuxième entrée du tableau de bord */}
+      <Link to='/recap'>
       <div className="dashboard-entry">
           {/* Heures */}
         <div className="time">
-          <p>10h15</p> {/* début */}
-          <p>13h15</p> {/* fin */}
+          <p>14h15</p> {/* début */}
+          <p>16h15</p> {/* fin */}
         </div>
         <div className="divider"></div>
         {/* Détails du groupe */}
         <div className="details">
         {/* Titre du groupe */}
-          <p>Sciences islamiques 2ème année</p>
+          <p>Sciences islamiques 3ème année</p>
           {/* Informations supplémentaires */}
           <div className="extra-info">
-            <p className="room">Salle n°2</p> {/* Numéro de la salle */}
+            <p className="room">Salle n°1</p> {/* Numéro de la salle */}
             <p className="count">11/32</p> {/* Statistiques de session */}
           </div>
         </div>
       </div>
+      </Link>
         {/* Bouton pour déclarer une AP */}
         <button className="ap-button" onClick={handleShowAp}>Déclarer une AP</button>
     </div>
@@ -252,24 +259,27 @@ const Dashboard = () => {
           <div className="modal">
             {/* Titre de la modal */}
             <h2> Déclarer une AP </h2>
+            <div className='bloc1'>
             {/* Div pour une ligne de l'agenda */}
             <div className="agenda-row">
               {/* Icône d'un calendrier */}
-              <img src={cldr} alt='' />
+              <img src={nom} alt='' />
                 {/* Titre pour choisir les dates */}
-                <h3>Choisir dates :</h3>
+                <h3>Rechercher par nom :</h3>
             </div>
-            {/* Div pour l'entrée de date */}
-            <div className="date-input">
+             {/* Div pour l'entrée de date */}
+             <div className="date-input">
               {/* Champ de texte pour saisir le nom d'un étudiant */}
               <input type="text" placeholder=" Saisir un nom d’étudiant " />
               {/* Icône d'un étudiant */}
               <img src={st} alt='' />
             </div>
+            </div>
+  
             {/* Div pour une ligne d'AP */}
             <div className="ap-row">
               {/* Icône d'un utilisateur */}
-              <img src={user} alt='' />
+              <img src={nom} alt='' />
                {/* Titre pour rechercher par groupe */}
                 <h3>Rechercher par groupe :</h3>
             </div>

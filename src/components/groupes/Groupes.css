@@ -106,28 +106,10 @@ h3 {
   font-family: "Poppins", Helvetica; /* Police de caractères */
   font-weight: 600; /* police en gras (600) */
   margin-top: 6px; /* Marge en haut */
-  padding-left: 20px; /* Remplissage à gauche */
   padding-top: 15px; /* Remplissage en haut */
   margin-right: 2.6rem; /* Marge à droite */
 }
 
-.day {
-  color: #000000; /* Couleur du texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-size: 14px; /* Taille de la police */
-  padding-left: 20px; /* Espacement à gauche */
-  padding-top: 4px; /* Espacement en haut */
-  padding-bottom: 16px; /* Espacement en bas */
-}
-
-.session {
-  color: #898989; /* Couleur du texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: 600; /* Épaisseur de la police */
-  font-size: 12px; /* Taille de la police */
-  font-style: italic; /* Style de la police italique */
-  padding-right: 20px; /* Espacement à droite */
-}
 
 /* Lorsqu'une carte (.card) est cliquée, changez la couleur de fond en #FD9340 */
 .card.clicked {

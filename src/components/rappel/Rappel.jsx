@@ -4,9 +4,9 @@ import stu from '../../assets/2 User.png';
 import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/useredit.svg';
-import './Recap.css';
+import './Rappel.css';
 
-const Recap = () => {
+const Rappel = () => {
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -37,6 +37,9 @@ const Recap = () => {
   return (
     <div className='Recap'>
         <div className='header'>
+        <div className='R-head'>
+        <h1>Rappel</h1>
+        </div>
         <h2>Sciences islamiques</h2>
         <h3>Date du cours</h3>
         </div>
@@ -196,4 +199,4 @@ const Recap = () => {
   )
 }
 
-export default Recap;
+export default Rappel;
