@@ -261,7 +261,7 @@ const Dashboard = () => {
             <h2> Déclarer une AP </h2>
             <div className='bloc1'>
             {/* Div pour une ligne de l'agenda */}
-            <div className="agenda-row">
+            <div className="agenda-r">
               {/* Icône d'un calendrier */}
               <img src={nom} alt='' />
                 {/* Titre pour choisir les dates */}
@@ -275,16 +275,18 @@ const Dashboard = () => {
               <img src={st} alt='' />
             </div>
             </div>
-  
-            {/* Div pour une ligne d'AP */}
-            <div className="ap-row">
+            <div className='bloc2'>
+                {/* Div pour une ligne d'AP */}
+                <div className="ap-r">
               {/* Icône d'un utilisateur */}
               <img src={nom} alt='' />
                {/* Titre pour rechercher par groupe */}
                 <h3>Rechercher par groupe :</h3>
-            </div>
-            {/* Div pour sélectionner un groupe, cliquer pour effectuer une action */}
-            <div className="g" onClick={handleSelectStudent}>
+                </div>
+                <div className='g-cont'>
+              {/* Div pour sélectionner un groupe, cliquer pour effectuer une action */}
+            <Link to="/recappopup">
+            <div className="g" >
             {/* Titre du groupe */}
             <h3>Sciences islamiques 1ére année</h3>
             <div>
@@ -292,77 +294,37 @@ const Dashboard = () => {
             <p className='d'>Jeu 18h00 à 12h00</p>
             </div>
           </div>
-          {/* Div pour sélectionner un groupe, cliquer pour effectuer une action */}
-          <div className="g" onClick={handleSelectStudent}>
+            </Link>
+             {/* Div pour sélectionner un groupe, cliquer pour effectuer une action */}
+             <Link to="/recappopup">
+            <div className="g" >
             {/* Titre du groupe */}
-            <h3>Sciences islamiques 1ére année</h3>
+            <h3>Sciences islamiques 2ème année</h3>
             <div>
             {/* Horaires de l'AP */}
-            <p className='d'>Jeu 18h00 à 12h00</p>
+            <p className='d'>Sam 10h15 à 13h15</p>
             </div>
           </div>
-          {/* Div pour sélectionner un groupe, cliquer pour effectuer une action */}
-          <div className="g" onClick={handleSelectStudent}>
-          {/* Titre du groupe */}
-            <h3>Sciences islamiques 1ére année</h3>
+            </Link>
+            <Link to="/recappopup">
+            <div className="g" >
+            {/* Titre du groupe */}
+            <h3>Sciences islamiques 2ème année</h3>
             <div>
             {/* Horaires de l'AP */}
-            <p className='d'>Jeu 18h00 à 12h00</p>
+            <p className='d'>Sam 10h15 à 13h15</p>
             </div>
           </div>
+            </Link>
+                </div>
+
+            </div>
           {/* Bouton pour annuler l'action */}
-          <button className="cancel-button">Annuler</button>
+          <button className="c-button">Annuler</button>
+            </div>
           </div>
-        </div>
 )}
-    {/* Si la variable "selectStudent" , affiche le contenu suivant */}
-{selectStudent && (
-      // Overlay modal pour fermer la fenêtre modale lorsqu'on clique dessus
-        <div className="modal-overlay" onClick={handleCloseSelectStudent}>
-          {/* Fenêtre modale principale */}
-          <div className="modal">
-          <div className="pop-up-title">
-          <h2> Sciences islamiques </h2>
-          <h3>Date et heure du cours</h3>
-          </div>
-            {/* Ligne contenant une icône d'utilisateur et un texte */}
-            <div className="ap-row">
-              <img src={user} alt='' />
-                <h3>Rechercher par groupe :</h3>
-            </div>
-          {/* Bloc d'information sur l'étudiant, cliquable pour effectuer une action */}
-          <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
-            <div>
-              <p className='abs'>Absence(s) : 3</p>
-            </div>
-          </div>
-          {/* Bloc d'information sur l'étudiant, cliquable pour effectuer une action */}
-          <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
-            <div>
-              <p className='abs'>Absence(s) : 3</p>
-            </div>
-          </div>
-          {/* Bloc d'information sur l'étudiant, cliquable pour effectuer une action */}
-          <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
-            <div>
-              <p className='abs'>Absence(s) : 3</p>
-            </div>
-          </div>
-          {/* Bloc d'information sur l'étudiant, cliquable pour effectuer une action */}
-          <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
-            <div>
-              <p className='abs'>Absence(s) : 3</p>
-            </div>
-          </div>
-          {/* Bouton "Annuler" pour fermer la fenêtre modale */}
-          <button className="cancel-button">Annuler</button>
-          </div>
-        </div>
-)}
+
   {/* si "declareAp" , affiche le contenu suivant */}
 {declareAp && (
         // Overlay modal pour fermer la fenêtre modale lorsqu'on clique dessus

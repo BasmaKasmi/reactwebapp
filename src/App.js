@@ -17,6 +17,7 @@ import RecapGpPage from './pages/RecapGpPage';
 import StudentPage from './pages/StudentPage';
 import AgendaPage from './pages/AgendaPage';
 import RappelPage from './pages/RappelPage';
+import RecapPopupPage from './pages/RecapPopupPage';
 
 // Définir la fonction App
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path='/grpnavigation1' element={<GrpNavigation1/>} />
         <Route path='/recap' element={<RecapPage/>} />
         <Route path='/rappel' element={<RappelPage/>} />
+        <Route path='/recappopup' element={<RecapPopupPage/>} />
         <Route path='/recapgp' element={<RecapGpPage/>} />
         <Route path='/groupes' element={<GroupesPage/>} />
         <Route path='/nomdetudiant' element={<StudentPage/>} />
