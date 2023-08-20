@@ -46,11 +46,15 @@
 
 .sidebar-toggle {
   position: fixed;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 4px 4px 20px #00000012;
+  height: 45px;
+  width: 45px;
   top: 80px;
   margin-left: 400px;
   display: flex;
   align-items: center;
-  background-color: transparent;
   border: none;
   color: #000000;
   font-size: 32px;
@@ -59,7 +63,8 @@
   display: none;
   @media (max-width: 768px) {
     display: block;
-    margin-left: 370px;
+    margin-top: 10px;
+    margin-left: 335px;
   }
   @media (max-width: 360px) {
     margin-left: 300px;

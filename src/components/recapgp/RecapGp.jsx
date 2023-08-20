@@ -8,7 +8,7 @@ import './RecapGp.css';
 
 const RecapGp = () => {
   const [showModal, setShowModal] = useState(false);
-  const[showAp, setshowAp] = useState(false);
+  const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
 
 
@@ -38,7 +38,7 @@ const RecapGp = () => {
     <div className='Recap'>
         <div className='header'>
         <h2>Sciences islamiques</h2>
-        <h3>Date du cours</h3>
+        <h3>Date et heure du cours</h3>
         </div>
         <div className="recap-row">
         <img src={status} alt='' />
@@ -68,24 +68,29 @@ const RecapGp = () => {
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
       </div>
-      <div className='card-container'>
+      <div className='card-cont'>
       <div className="card" onClick={handleClick}>
-      <h3>Nom de l’étudiant</h3>
-        <div>
-          <p className='abs'>Absence(s) : 3</p>
-        </div>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
       </div>
+      </div>   
       <div className="card" onClick={handleClick}>
-      <h3>Nom de l’étudiant</h3>
-        <div>
-          <p className='abs'>Absence(s) : 3</p>
-        </div>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
       </div>
+      </div> 
+      <div className="card" onClick={handleClick}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
       </div>
-
-    {showModal && (
+      </div>    
+      </div>
+      {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="modal">
+          <div className="mod">
             <h2>Nom de l'étudiant</h2>
             <div className="recap-row">
               <img src={status} alt='' />
@@ -105,7 +110,7 @@ const RecapGp = () => {
                 <p className="description">Présence</p>
               </div>
             </div>
-            <div className="buttons-row">
+            <div className="buttons-ro">
               <button className="ap-button" onClick={handleShowAp}>Déclarer AP</button>
               <button className="an-button">Annuler</button>
             </div>
@@ -129,11 +134,22 @@ const RecapGp = () => {
               <img src={user} alt='' />
                 <h3>Sélectionner les AP :</h3>
             </div>
+            <div className='date-card-cont'>
+            <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
             <div className="date-card">
             <h3>01/02/2023</h3>
             </div>
             <div className="date-card">
             <h3>14/07/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>14/07/2023</h3>
+            </div>
             </div>
               <div className="buttons-row">
                 <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>

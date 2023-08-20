@@ -47,42 +47,44 @@ const Groupes = () => {
     {/* Crée un conteneur pour le groupe de cartes */}
     <div className='groupes-res'>
     {/* Affiche le titre "Mes groupes :" */}
+    <div className='t'>
     <h3> Mes groupes :</h3>
+    </div>
     {/* Crée un conteneur pour les cartes */}
-    <div className='card-container'>
+    <div className='grp-carte'>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/grpnavigation1'>
+    <Link to='/recapgp'>
     {/* Crée une carte */}
-    <div className="card">
+    <div className="carte">
     {/* Affiche le titre de la carte */}
       <h3>Sciences islamiques 1ére année</h3>
         <div>
           {/* Affiche l'horaire */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
     </Link>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/grpnavigation1'>
+    <Link to='/recapgp'>
     {/* Crée une autre carte */}
-    <div className="card">
+    <div className="carte">
     {/* Affiche le titre de la carte */}
       <h3>Sciences islamiques 1ére année</h3>
         <div>
         {/* Affiche l'horaire */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
     </Link>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/grpnavigation1'>
+    <Link to='/recapgp'>
     {/* Crée une autre carte */}
-    <div className="card">
+    <div className="carte">
       {/* Affiche le titre de la carte */}
       <h3>Sciences islamiques 1ére année</h3>
         <div>
           {/* Affiche l'horaire */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
     </Link>

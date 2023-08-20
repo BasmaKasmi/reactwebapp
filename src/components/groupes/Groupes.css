@@ -26,16 +26,45 @@
     margin-right: 1.4rem; /* Marge à droite */
     margin-bottom: 2rem; /* marge en bas */
   }
-
-  h3 {
-    color: #000000; /* couleur du texte */
-    font-size: 0.875em; /*taille de police adaptable */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-weight: 600; /* police en gras */
-    margin-top: 0.20em; /* Marge supérieure */
-    padding-left: 1.25em; /* Espacement à gauche */
-    padding-top: 0.9375em; /* Espacement supérieur */
-    margin-right: 10rem; /* marge à droite */
+  .t h3{
+    display: inline-flex;
+    margin-right: 11rem;
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .grp-carte{
+    display: block;
+    align-items: center;
+    overflow-y: auto;
+    margin-bottom: 0;
+  }
+  .carte {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px #00000012;
+    margin: auto;
+    margin-bottom: 1rem; /*marge adaptable */
+    width: 325px; 
+    height: 60px;
+  }
+  .carte  h3 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 4rem;
+    margin-top: 1rem;
+  }
+  .carte .carte-day {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-weight: 300;
+    font-size: 10px;
+    padding-right: 11.5rem;
+    padding-top: 0.25rem;
+    margin-top: -0.3rem;
   }
 }
 
