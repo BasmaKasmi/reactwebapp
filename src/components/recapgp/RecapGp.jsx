@@ -1,22 +1,30 @@
+// Import des modules React nécessaires, y compris useState pour gérer l'état local.
 import React, { useState } from 'react';
+// Import d'images depuis des chemins spécifiques.
 import status from '../../assets/statusup.svg';
 import stu from '../../assets/2 User.png';
 import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/useredit.svg';
+// Import d'une feuille de style CSS
 import './RecapGp.css';
 
+// Déclaration du composant fonctionnel RecapGp.
 const RecapGp = () => {
+  // Déclaration d'états locaux à l'aide de useState.
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
 
 
+  // Définition d'une fonction handleClick.
   const handleClick = () => {
+     // Met à jour l'état showModal à true.
     setShowModal(true);
   };
-  const handleCloseModal = () => {
-    setShowModal(false);
+
+  const handleCloseModal = () => { // Définition d'une fonction handleCloseModal.
+    setShowModal(false);  // Met à jour l'état showModal à false
   };
 
   const handleShowAp = () => {
@@ -182,4 +190,4 @@ const RecapGp = () => {
   )
 }
 
-export default RecapGp;
+export default RecapGp; // Exportation du composant RecapGp pour une utilisation ailleurs.

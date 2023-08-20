@@ -64,45 +64,51 @@ const Emargements = () => {
   return (
     <div className='Emargements'>  {/* Conteneur principal avec la classe 'Emargements' */}
     {/* Section des groupes avec la classe 'groupes-res' */}
-    <div className='groupes-res'>
-    {/* Titre "Mes groupes :" */}
+        {/* Crée un conteneur pour le groupe de cartes */}
+        <div className='groupes-res'>
+    {/* Affiche le titre "Mes groupes :" */}
+    <div className='t'>
     <h3> Mes groupes :</h3>
-    {/* Lien de navigation avec la destination '/emnavigation1' */}
-    <Link to='/emnavigation1'>
-    {/* Carte avec la classe 'card' */}
-    <div className="card">
-      {/* Titre du groupe */}
+    </div>
+    {/* Crée un conteneur pour les cartes */}
+    <div className='grp-carte'>
+    {/* Crée un lien vers la page /grpnavigation1 */}
+    <Link to='/recapgp'>
+    {/* Crée une carte */}
+    <div className="carte">
+    {/* Affiche le titre de la carte */}
       <h3>Sciences islamiques 1ére année</h3>
         <div>
-          {/* Texte du jour et de l'heure */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
+          {/* Affiche l'horaire */}
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
     </Link>
-    {/* Lien de navigation avec la destination '/emnavigation1' */}
-    <Link to='/emnavigation1'>
-    {/* Carte avec la classe 'card' */}
-    <div className="card">
-      {/* Titre du groupe */}
+    {/* Crée un lien vers la page /grpnavigation1 */}
+    <Link to='/recapgp'>
+    {/* Crée une autre carte */}
+    <div className="carte">
+    {/* Affiche le titre de la carte */}
       <h3>Sciences islamiques 1ére année</h3>
         <div>
-          {/* Texte du jour et de l'heure */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
+        {/* Affiche l'horaire */}
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
     </Link>
-    {/* Lien de navigation avec la destination '/emnavigation1' */}
-    <Link to='/emnavigation1'>
-    {/* Carte avec la classe 'card' */}
-    <div className="card">
-      {/* Titre du groupe */}
+    {/* Crée un lien vers la page /grpnavigation1 */}
+    <Link to='/recapgp'>
+    {/* Crée une autre carte */}
+    <div className="carte">
+      {/* Affiche le titre de la carte */}
       <h3>Sciences islamiques 1ére année</h3>
         <div>
-        {/* Texte du jour et de l'heure */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
+          {/* Affiche l'horaire */}
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
     </Link>
+    </div>
     </div>
     <div className="co">
         {/* En-tête de la colonne */}
