@@ -100,33 +100,45 @@ const Agenda = () => {
           </div>
           {/* Jours du mois */}
           <div className="days-of-month">{renderDaysOfMonth()}</div>
-          {/* Cartes de groupe */}
-          <Link to='/grpnavigation1'>
-            <div className="card">
-              <h3>Sciences islamiques 1ére année</h3>
-              <div>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-              </div>
-            </div>
-          </Link>
-          {/* Cartes de groupe */}
-          <Link to='/grpnavigation1'>
-            <div className="card">
-              <h3>Sciences islamiques 1ére année</h3>
-              <div>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-              </div>
-            </div>
-          </Link>
-          {/* Cartes de groupe */}
-          <Link to='/grpnavigation1'>
-            <div className="card">
-              <h3>Sciences islamiques 1ére année</h3>
-              <div>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-              </div>
-            </div>
-          </Link>
+              {/* Crée un conteneur pour les cartes */}
+    <div className='grp-carte'>
+    {/* Crée un lien vers la page /grpnavigation1 */}
+    <Link to='/recapgp'>
+    {/* Crée une carte */}
+    <div className="carte">
+    {/* Affiche le titre de la carte */}
+      <h3>Sciences islamiques 1ére année</h3>
+        <div>
+          {/* Affiche l'horaire */}
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
+        </div>
+    </div>
+    </Link>
+    {/* Crée un lien vers la page /grpnavigation1 */}
+    <Link to='/recapgp'>
+    {/* Crée une autre carte */}
+    <div className="carte">
+    {/* Affiche le titre de la carte */}
+      <h3>Sciences islamiques 1ére année</h3>
+        <div>
+        {/* Affiche l'horaire */}
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
+        </div>
+    </div>
+    </Link>
+    {/* Crée un lien vers la page /grpnavigation1 */}
+    <Link to='/recapgp'>
+    {/* Crée une autre carte */}
+    <div className="carte">
+      {/* Affiche le titre de la carte */}
+      <h3>Sciences islamiques 1ére année</h3>
+        <div>
+          {/* Affiche l'horaire */}
+          <p className='carte-day'>Jeu 18h00 à 12h00</p>
+        </div>
+    </div>
+    </Link>
+    </div>
         </div>
         {/* Colonne de l'agenda */}
         <div className="co">
