@@ -16,7 +16,7 @@ const CardDetails = () => {
         <h3>Choisir dates :</h3>
       </div>
       {/* Balise div avec la classe CSS 'date-inputs' */}
-      <div className="date-inputs">
+      <div className="da-inputs">
         {/* Champ de saisie de texte pour la première date */}
         <input type="text" placeholder="01/01/2023" />
         {/* Champ de saisie de texte pour la deuxième date */}
@@ -24,8 +24,12 @@ const CardDetails = () => {
         {/* Image de l'étudiant, la source est l'image importée */}
         <img src={st} alt='' />
       </div>
-      {/* Composant de navigation Link avec une classe CSS 'c' */}
-      <Link to="/recap" className="c">
+      <div className='c-em'>
+      <h2>
+        Mes dates :
+      </h2>
+        {/* Composant de navigation Link avec une classe CSS 'c' */}
+        <Link to="/recapem" className="c-details">
        {/* Balise div avec la classe CSS 'row' */}
         <div className='row'>
          {/* Titre de niveau 3 indiquant la semaine 1 */}
@@ -34,26 +38,36 @@ const CardDetails = () => {
           <span className="status-f">FAIT</span>
         </div>
       </Link>
-      {/* Composant de navigation Link avec une classe CSS 'c' */}
-      <Link to="/recap" className="c">
-        {/* Balise div avec la classe CSS 'row' */}
+      <Link to="/recapem" className="c-details">
+       {/* Balise div avec la classe CSS 'row' */}
         <div className='row'>
-          {/* Titre de niveau 3 indiquant la semaine 2 */}
+         {/* Titre de niveau 3 indiquant la semaine 1 */}
           <h3>semaine 2</h3>
           {/* Span indiquant que l'émargement de la semaine 1 est fait */}
           <span className="status-f">FAIT</span>
         </div>
       </Link>
       {/* Composant de navigation Link avec une classe CSS 'c' */}
-      <Link to="/recap" className="c">
+      <Link to="/recapem" className="c-details">
+        {/* Balise div avec la classe CSS 'row' */}
+        <div className='row'>
+          {/* Titre de niveau 3 indiquant la semaine 2 */}
+          <h3>semaine 3</h3>
+          {/* Span indiquant que l'émargement de la semaine 1 est fait */}
+          <span className="status-n">NON FAIT</span>
+        </div>
+      </Link>
+      {/* Composant de navigation Link avec une classe CSS 'c' */}
+      <Link to="/recapem" className="c-details">
       {/* Balise div avec la classe CSS 'row' */}
         <div className='row'>
         {/* Titre de niveau 3 indiquant la semaine 3 */}
-          <h3>semaine 3</h3>
+          <h3>semaine 4</h3>
           {/* Span indiquant que l'émargement de la semaine 3 n'est pas fait */}
           <span className="status-n">NON FAIT</span>
         </div>
       </Link>
+      </div>
     </div>
   );
 };

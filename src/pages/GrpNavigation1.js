@@ -2,7 +2,6 @@
 import React from 'react';
 import NavGrp from '../components/navGp/NavGrp';
 import RetourButton from '../components/retourbutton/RetourButton';
-import CardDetailsGp from '../components/carddetailsgp/CardDetailsGp'
 
 // Déclaration du composant GrpNavigation1
 const GrpNavigation1 = () => {
@@ -13,7 +12,6 @@ const GrpNavigation1 = () => {
     {/* Affichage du composant RetourButton */}
     <RetourButton />
     {/* Affichage du composant CardDetailsGp */}
-    <CardDetailsGp /> 
     </div>
 );
 };

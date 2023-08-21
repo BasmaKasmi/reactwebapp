@@ -18,7 +18,6 @@
         background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
         overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
         overflow-x: auto; /* Activation de la barre de défilement horizontale si le contenu dépasse */
-
       }
 
       /* Css pour les éléments avec la classe .agenda-row */
@@ -47,16 +46,13 @@
       }
 
       /* Css pour les éléments avec la classe .date-inputs */
-      .date-inputs {
+      .da-inputs {
         /* Affichage des éléments en ligne dans un conteneur flexible */
         display: flex;
         /* Centrer les éléments verticalement dans le conteneur */
         align-items: center;
-        /* Ajuster la valeur de la marge droite */
-        margin-right: 4rem; 
         /* Ajuster la valeur de la marge en bas */
         margin-bottom: 1rem;
-        margin-right: 1.9rem;
         /* Média query pour les écrans ayant une largeur minimale de 360px */
         @media screen and (min-width: 360px) {
           margin-left: 0.2rem; /* Ajuster la valeur de la marge gauche pour les écrans larges */
@@ -64,34 +60,54 @@
       }
       
       /* Css pour les éléments input à l'intérieur de .date-inputs */
-      .date-inputs input {
+      .da-inputs input {
         text-align: center;
         font-family: "Poppins", Helvetica;
         border-radius: 3rem;
         border: 0.1rem solid #e5e4e3;
-        height: 2.3rem;
-        width: 8.7rem; /* la largeur des inputs */
+        height: 30px;
+        width: 120px; /* la largeur des inputs */
         margin-left: 0.4rem; /* l'espace entre les inputs */
       }
       
       /* Css pour les images à l'intérieur de .date-inputs */
-      .date-inputs img {
+      .da-inputs img {
         margin-left: 0.4rem; /* l'espace entre input et l'image */
         @media screen and (min-width: 360px) {
           margin-left: 0.1rem; /* Ajuster la marge gauche pour les écrans larges */
         }
       }
+      
 
+      .c-em{
+        display: block;
+        align-items: center;
+        overflow-y: auto;
+        margin-bottom: 0;
+      }
+      .c-em h2{
+        display: inline-flex;
+        margin-right: 11rem;
+        color: #000000;
+        font-family: "Poppins", Helvetica;
+        font-size: 18px;
+        font-weight: 600;
+      }
         /* Css pour les éléments avec la classe .c */
-        .c {
-          /* Marge en bas de 1 rem */
-          margin-bottom: 1rem;
-          /* Largeur maximale de 20 rem */
-          max-width: 20rem;
+        .c-details {
+          /* couleur du fond */
+          background-color: #ffffff;
           /* Bordure arrondie avec un rayon de 16 px */
           border-radius: 16px;
-          height: 8%;
-          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          /* hauteur */
+          height: 52px;
+          /* Ombre */
+          box-shadow: 4px 4px 20px #00000012;
+          /* relative */
+          position: relative;
+          /* largeur */
+          width: 292px;
+          cursor: pointer;
         }
         
         /* Css pour les éléments avec la classe .row */

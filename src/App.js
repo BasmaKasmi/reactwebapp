@@ -12,12 +12,12 @@ import NewPasswordPage from './pages/NewPasswordPage';
 import EmNavigation1 from './pages/EmNavigation1';
 import RecapPage from './pages/RecapPage';
 import GroupesPage from './pages/GroupesPage';
-import GrpNavigation1 from './pages/GrpNavigation1';
 import RecapGpPage from './pages/RecapGpPage';
 import StudentPage from './pages/StudentPage';
 import AgendaPage from './pages/AgendaPage';
 import RappelPage from './pages/RappelPage';
 import RecapPopupPage from './pages/RecapPopupPage';
+import RecapEmPage from './pages/RecapEmPage';
 
 // Définir la fonction App
 function App() {
@@ -35,11 +35,11 @@ function App() {
         <Route path='/password' element={<PasswordPage/>} />
         <Route path='/newpassword' element={<NewPasswordPage/>} />
         <Route path='/emnavigation1' element={<EmNavigation1/>} />
-        <Route path='/grpnavigation1' element={<GrpNavigation1/>} />
         <Route path='/recap' element={<RecapPage/>} />
         <Route path='/rappel' element={<RappelPage/>} />
         <Route path='/recappopup' element={<RecapPopupPage/>} />
         <Route path='/recapgp' element={<RecapGpPage/>} />
+        <Route path='/recapem' element={<RecapEmPage/>} />
         <Route path='/groupes' element={<GroupesPage/>} />
         <Route path='/nomdetudiant' element={<StudentPage/>} />
         <Route path='/agenda' element={<AgendaPage/>} />

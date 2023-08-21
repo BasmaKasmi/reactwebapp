@@ -1,22 +1,30 @@
+// Import des modules React nécessaires, y compris useState pour gérer l'état local.
 import React, { useState } from 'react';
+// Import d'images depuis des chemins spécifiques.
 import status from '../../assets/statusup.svg';
 import stu from '../../assets/2 User.png';
 import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/useredit.svg';
-import './Recap.css';
+// Import d'une feuille de style CSS
+import './RecapEm.css';
 
-const Recap = () => {
+// Déclaration du composant fonctionnel RecapGp.
+const RecapEm = () => {
+  // Déclaration d'états locaux à l'aide de useState.
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
 
 
+  // Définition d'une fonction handleClick.
   const handleClick = () => {
+     // Met à jour l'état showModal à true.
     setShowModal(true);
   };
-  const handleCloseModal = () => {
-    setShowModal(false);
+
+  const handleCloseModal = () => { // Définition d'une fonction handleCloseModal.
+    setShowModal(false);  // Met à jour l'état showModal à false
   };
 
   const handleShowAp = () => {
@@ -38,7 +46,7 @@ const Recap = () => {
     <div className='Recap'>
         <div className='header'>
         <h2>Sciences islamiques</h2>
-        <h3>Date du cours</h3>
+        <h3>Date et heure du cours</h3>
         </div>
         <div className="recap-row">
         <img src={status} alt='' />
@@ -68,51 +76,26 @@ const Recap = () => {
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
       </div>
-      <div className='card-container'>
-      <div className="card-s" onClick={handleClick}>
-      <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-            <button
-            className="ap-b"
-            >
-            AP 
-            </button>
-            <button
-            className="ai-b"
-            >
-            AI
-            </button>
-            </div>
-          </div>
+      <div className='card-cont'>
+      <div className="card" onClick={handleClick}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
       </div>
-      <div className="card-s" onClick={handleClick}>
-      <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-            <button
-            className="ap-b"
-            >
-            AP 
-            </button>
-            <button
-            className="ai-b"
-            >
-            AI
-            </button>
-            </div>
-          </div>
+      </div>   
+      <div className="card" onClick={handleClick}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
       </div>
-      
+      </div> 
+      <div className="card" onClick={handleClick}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
       </div>
-      <button className="val-button" onClick={handleShowAp}>Valider la feuille d'émargement</button>
-
+      </div>    
+      </div>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mod">
@@ -207,4 +190,4 @@ const Recap = () => {
   )
 }
 
-export default Recap;
+export default RecapEm; // Exportation du composant RecapGp pour une utilisation ailleurs.

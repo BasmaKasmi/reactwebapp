@@ -73,7 +73,7 @@ const Emargements = () => {
     {/* Crée un conteneur pour les cartes */}
     <div className='grp-carte'>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
+    <Link to='/emnavigation1'>
     {/* Crée une carte */}
     <div className="carte">
     {/* Affiche le titre de la carte */}
@@ -85,7 +85,7 @@ const Emargements = () => {
     </div>
     </Link>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
+    <Link to='/emnavigation1'>
     {/* Crée une autre carte */}
     <div className="carte">
     {/* Affiche le titre de la carte */}
@@ -97,7 +97,7 @@ const Emargements = () => {
     </div>
     </Link>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
+    <Link to='/emnavigation1'>
     {/* Crée une autre carte */}
     <div className="carte">
       {/* Affiche le titre de la carte */}
