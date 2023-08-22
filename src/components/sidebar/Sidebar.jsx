@@ -159,82 +159,90 @@ const Sidebar = () => {
           </div>
             </div>
             </div>
-          <button className="cancel-button">Annuler</button>
+          <button className="A-button">Annuler</button>
           </div>
         </div>
 )}
 {selectStudent && (
         <div className="modal-overlay" onClick={handleCloseSelectStudent}>
-          <div className="modal">
+          <div className="mod-desktop">
           <div className="pop-up-title">
           <h2> Sciences islamiques </h2>
           <h3>Date et heure du cours</h3>
           </div>
-            <div className="ap-row">
+            <div className="blok-sc">
+            <div className="ap-line">
               <img src={user} alt='' />
                 <h3>Rechercher par groupe :</h3>
             </div>
-            <div className="card-container">
-            <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
+            <div className="gr-cont">
+            <div className="gr" onClick={handleDeclareAp}>
+            <h3>Nom de l'étudiant</h3>
             <div>
-              <p className='abs'>Absence(s) : 3</p>
+            <p className='jr'>Absence(s): 3</p>
             </div>
-          </div>
-          <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
+            </div>
+            <div className="gr" onClick={handleDeclareAp}>
+            <h3>Nom de l'étudiant</h3>
             <div>
-              <p className='abs'>Absence(s) : 3</p>
+            <p className='jr'>Absence(s): 3</p>
             </div>
-          </div>
-          <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
+            </div>
+            <div className="gr" onClick={handleDeclareAp}>
+            <h3>Nom de l'étudiant</h3>
             <div>
-              <p className='abs'>Absence(s) : 3</p>
+            <p className='jr'>Absence(s): 3</p>
             </div>
-          </div>
-          <div className="nom-stu" onClick={handleDeclareAp}>
-              <h3>Nom de l’étudiant</h3>
+            </div>
+            <div className="gr" onClick={handleDeclareAp}>
+            <h3>Nom de l'étudiant</h3>
             <div>
-              <p className='abs'>Absence(s) : 3</p>
+            <p className='jr'>Absence(s): 3</p>
             </div>
-          </div>
             </div>
-          <button className="cancel-button">Annuler</button>
+            </div>
+            </div>
+          <button className="A-button">Annuler</button>
           </div>
         </div>
 )}
 {declareAp && (
         <div className="modal-overlay" onClick={handleCloseDeclareAp}>
-          <div className="modal">
+          <div className="mod-desktop">
             <h2>Nom de l'étudiant</h2>
-            <div className="agenda-row">
+            <div className="blok1">
+            <div className="cldr-row">
               <img src={cldr} alt='' />
                 <h3>Choisir dates :</h3>
             </div>
-            <div className="date-inputs">
+            <div className="time-inputs">
               <input type="text" placeholder="01/01/2023" />
               <input type="text" placeholder="28/01/2023" />
               <img src={st} alt='' />
             </div>
-            <div className="ap-row">
+            </div>
+            <div className="blok-ap">
+            <div className="ap-line">
               <img src={user} alt='' />
                 <h3>Sélectionner les AP :</h3>
             </div>
-            <div className="date-card">
+            <div className="time-card-cont">
+            <div className="time-card">
             <h3>01/02/2023</h3>
             </div>
-            <div className="date-card">
+            <div className="time-card">
             <h3>01/02/2023</h3>
             </div>
-            <div className="date-card">
+            <div className="time-card">
             <h3>14/07/2023</h3>
             </div>
-            <div className="date-card">
+            <div className="time-card">
             <h3>14/07/2023</h3>
+            </div>
+            </div>
             </div>
               <div className="buttons-row">
-                <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>
+                <button className="v-button" onClick={handleConfirmationClick}>Valider</button>
                 <button className="cancel-button">Annuler</button>
               </div>
           </div>

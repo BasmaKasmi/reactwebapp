@@ -203,7 +203,6 @@
   z-index: 10000;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 .mod-desktop {
   position: fixed;
@@ -219,7 +218,6 @@
   z-index: 10000;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 .modal h2 {
   text-align: center;
@@ -296,7 +294,6 @@
   width: 23,875rem; /*382px*/
   height: 17,75rem; /*284px*/
   margin-top: 2rem;
-  overflow-y: auto;
 }
 
 .ap-line {
@@ -304,6 +301,7 @@
   align-items: center;
   margin-top: 0.1rem;
   margin-left: 1rem;
+  overflow: hidden;
   }
   .ap-line h3 {
   margin-right: 8rem; /* Ajouter de l'espace entre l'image et le titre */
@@ -326,7 +324,7 @@
     margin-bottom: 1rem;
     width: 337px; /*marge adaptable */
     height: 60px;
-    border-radius: 1.25em; /*bordure adaptable */
+    border-radius: 1.25rem; /*bordure adaptable */
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07);
   }
   
@@ -372,78 +370,130 @@
     font-family: "Poppins", Helvetica;
     font-size: 14px;
   }
-  .ap-row {
+  .blok-sc{
+    display: block;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px #00000012;
+    width: 23,875rem; /*382px*/
+    height: 25.25rem; /*404px*/
+    margin-top: 1rem;
+    overflow-y: auto;
+  }
+
+  .cldr-row {
     display: flex;
     align-items: center;
-    margin-right: 0.3rem;
-    margin-bottom: 1rem;
-  }
-
-  .nom-stu {
-    background-color: #FFFFFF;
-    margin: auto;
-    margin-top: -2rem;
-    margin: 0.5rem;
-    width: 22rem;
-    height: 4.5rem;
-    border-radius: 1.4rem;
-    box-shadow: 4px 4px 20px #00000012;
-    cursor: pointer;
-  }
-  .nom-stu h3 {
-    color: #000000;
-    font-size: 14px;
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    margin-top: 0,375rem;
-    padding-left: 1.25rem;
-    padding-top: 0,9375rem;
+    justify-content: center;
+    margin-top: 0.1rem;
   }
   
-  .nom-stu .abs {
+  .cldr-row h3 {
+    display: inline-flex;
+    margin-right: 13rem; /* l'espace entre l'image et le titre */
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 14px;
-    padding-left: 1.25rem;
-    padding-top: 0.25rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .blok-ap{
+    display: block;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px #00000012;
+    width: 23,875rem; /*382px*/
+    height: 17,75rem; /*284px*/
+    margin-top: 1rem;
+    overflow-y: auto;
   }
 
+  .time-inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: -0.2rem;   
+  }
+  
+  .time-inputs input {
+    text-align: center;
+    font-family: "Poppins", Helvetica;
+    border-radius: 3rem;
+    border: 0.1rem solid #e5e4e3;
+    height: 36px;
+    width: 151px; /* la largeur des inputs */
+    margin-left: 0.8rem; /* l'espace entre les inputs */
+  }
+  
+  .time-inputs img {
+    margin-left: 1rem; /* l'espace entre input et l'image */
+  }
+
+  .time-card-cont{
+    display: block;
+    align-items: center;
+    overflow-y: auto;
+  }
+  .time-card {
+    display: block;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 4px 4px 20px #00000012;
+    height: 52px; /*52px*/
+    width: 332px; /*332px*/
+    cursor: pointer;
+  }
   .buttons-row {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .cancel-button {
+  .A-button {
     background-color: #FF252526;
     color: #FF2525;
     font-size: 12px;
     text-align: center;
-    height: 2.875rem;
-    width: 8.5625rem;
+    height: 2.875rem; /*46px*/
+    width: 8.5625rem; /*137px*/
     border: none;
     font-family: "Poppins", Helvetica;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 3.125em;
     padding: 8px 16px;
     margin-left: 15.6rem;
     margin-top: 1.4rem;
     }
-    .validate-button {
+    .cancel-button {
+      background-color: #FF252526;
+      color: #FF2525;
+      font-size: 12px;
+      text-align: center;
+      height: 2.875rem; /*46px*/
+      width: 8.5625rem; /*137px*/
+      border: none;
+      font-family: "Poppins", Helvetica;
+      font-weight: 700;
+      border-radius: 3.125em;
+      padding: 8px 16px;
+      margin-left: 15.6rem;
+      margin-top: 1.4rem;
+      }
+    .v-button {
       background-color: #19CE1526;
       color: #19CE15;
       font-size: 12px;
       text-align: center;
-      height: 2.34rem;
-      width: 9rem;
+      height: 46px;
+      width: 243px;
       border: none;
       font-family: "Poppins", Helvetica;
-      font-weight: bold;
+      font-weight: 700;
       border-radius: 3.125em;
       padding: 8px 16px;
-      margin-right: -12rem; /* Ajoutez cette ligne pour ajuster la marge droite */
-      margin-top: 2rem;
+      margin-right: -15rem; /* Ajoutez cette ligne pour ajuster la marge droite */
+      margin-top: 1.4rem;
     }
 
 .sidebar-button-mobile {
