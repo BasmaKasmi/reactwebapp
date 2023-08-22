@@ -77,7 +77,6 @@
           margin-left: 0.1rem; /* Ajuster la marge gauche pour les écrans larges */
         }
       }
-      
 
       .c-em{
         display: block;
@@ -94,19 +93,13 @@
         font-weight: 600;
       }
         /* Css pour les éléments avec la classe .c */
-        .c-details {
-          /* couleur du fond */
+        .card-det {
           background-color: #ffffff;
-          /* Bordure arrondie avec un rayon de 16 px */
-          border-radius: 16px;
-          /* hauteur */
-          height: 52px;
-          /* Ombre */
+          border-radius: 1rem;
+          margin-bottom: 1rem;
           box-shadow: 4px 4px 20px #00000012;
-          /* relative */
-          position: relative;
-          /* largeur */
-          width: 292px;
+          height: 3.25rem;
+          width: 18.25rem;
           cursor: pointer;
         }
         

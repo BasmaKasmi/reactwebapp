@@ -22,9 +22,11 @@
   .groupes-res {
     display: flex; /* utilisation du flexbox*/
     flex-direction: column; /* disposition en colonne*/
-    align-items: stretch; /* Étirer les éléments horizontalement pour occuper tout l'espace */
-    margin-right: 1.4rem; /* Marge à droite */
+    align-items: center; 
+    margin-right: 0.6rem; /* Marge à droite */
     margin-bottom: 2rem; /* marge en bas */
+    overflow-x: auto;
+    white-space: nowrap;
   }
   .t h3{
     display: inline-flex;
@@ -33,12 +35,14 @@
     font-family: "Poppins", Helvetica;
     font-size: 18px;
     font-weight: 600;
+    overflow-x: auto;
   }
   .grp-carte{
     display: block;
     align-items: center;
     overflow-y: auto;
     margin-bottom: 0;
+    overflow-x: auto;
   }
   .carte {
     background-color: #ffffff;

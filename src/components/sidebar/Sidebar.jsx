@@ -7,6 +7,7 @@ import E from "../../assets/emargements.svg";
 import A from "../../assets/agenda.svg";
 import Ev from "../../assets/evaluations.svg";
 import cldr from '../../assets/calendar.svg';
+import nom from '../../assets/nom.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/2 User.png';
 
@@ -114,16 +115,25 @@ const Sidebar = () => {
       </div>
       {showAp && (
         <div className="modal-overlay" onClick={handleCloseShowAp}>
-          <div className="modal">
+          <div className="mod-desktop">
             <h2> Déclarer une AP </h2>
-            <div className="agenda-row">
-              <img src={cldr} alt='' />
-                <h3>Choisir dates :</h3>
+            <div className='blok1'>
+            {/* Div pour une ligne de l'agenda */}
+            <div className="nom-row">
+              {/* Icône d'un calendrier */}
+              <img src={nom} alt='' />
+                {/* Titre pour choisir les dates */}
+                <h3>Rechercher par nom :</h3>
             </div>
-            <div className="date-input">
-              <input type="text" placeholder=" Saisir un nom d’étudiant " />
+             {/* Div pour l'entrée de date */}
+             <div className="nom-input">
+              {/* Champ de texte pour saisir le nom d'un étudiant */}
+              <input type="text" placeholder="Saisir un nom d’étudiant" />
+              {/* Icône d'un étudiant */}
               <img src={st} alt='' />
             </div>
+            </div>
+            <div className="blok2">
             <div className="ap-row">
               <img src={user} alt='' />
                 <h3>Rechercher par groupe :</h3>
@@ -146,6 +156,7 @@ const Sidebar = () => {
             <p className='d'>Jeu 18h00 à 12h00</p>
             </div>
           </div>
+            </div>
           <button className="cancel-button">Annuler</button>
           </div>
         </div>

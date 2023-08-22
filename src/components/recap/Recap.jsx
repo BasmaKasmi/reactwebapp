@@ -111,7 +111,7 @@ const Recap = () => {
       </div>
       
       </div>
-      <button className="val-button" onClick={handleShowAp}>Valider la feuille d'émargement</button>
+      <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
 
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
@@ -121,6 +121,7 @@ const Recap = () => {
               <img src={status} alt='' />
               <h3> Récapitulatif du groupe : </h3>
             </div>
+            <div className='block-modal'>
             <div className='row'>
               <div className='col'>
                 <h3>17</h3>
@@ -135,9 +136,10 @@ const Recap = () => {
                 <p className="description">Présence</p>
               </div>
             </div>
+            </div>
             <div className="buttons-ro">
               <button className="ap-button" onClick={handleShowAp}>Déclarer AP</button>
-              <button className="an-button">Annuler</button>
+              <button className="ann-button">Annuler</button>
             </div>
           </div>
         </div>

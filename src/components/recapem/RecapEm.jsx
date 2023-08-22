@@ -1,30 +1,22 @@
-// Import des modules React nécessaires, y compris useState pour gérer l'état local.
 import React, { useState } from 'react';
-// Import d'images depuis des chemins spécifiques.
 import status from '../../assets/statusup.svg';
 import stu from '../../assets/2 User.png';
 import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/useredit.svg';
-// Import d'une feuille de style CSS
 import './RecapEm.css';
 
-// Déclaration du composant fonctionnel RecapGp.
 const RecapEm = () => {
-  // Déclaration d'états locaux à l'aide de useState.
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
 
 
-  // Définition d'une fonction handleClick.
   const handleClick = () => {
-     // Met à jour l'état showModal à true.
     setShowModal(true);
   };
-
-  const handleCloseModal = () => { // Définition d'une fonction handleCloseModal.
-    setShowModal(false);  // Met à jour l'état showModal à false
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   const handleShowAp = () => {
@@ -46,7 +38,7 @@ const RecapEm = () => {
     <div className='Recap'>
         <div className='header'>
         <h2>Sciences islamiques</h2>
-        <h3>Date et heure du cours</h3>
+        <h3>Date du cours</h3>
         </div>
         <div className="recap-row">
         <img src={status} alt='' />
@@ -96,6 +88,7 @@ const RecapEm = () => {
       </div>
       </div>    
       </div>
+
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mod">
@@ -104,6 +97,7 @@ const RecapEm = () => {
               <img src={status} alt='' />
               <h3> Récapitulatif du groupe : </h3>
             </div>
+            <div className='block-modal'>
             <div className='row'>
               <div className='col'>
                 <h3>17</h3>
@@ -118,9 +112,10 @@ const RecapEm = () => {
                 <p className="description">Présence</p>
               </div>
             </div>
+            </div>
             <div className="buttons-ro">
               <button className="ap-button" onClick={handleShowAp}>Déclarer AP</button>
-              <button className="an-button">Annuler</button>
+              <button className="ann-button">Annuler</button>
             </div>
           </div>
         </div>
@@ -190,4 +185,4 @@ const RecapEm = () => {
   )
 }
 
-export default RecapEm; // Exportation du composant RecapGp pour une utilisation ailleurs.
+export default RecapEm;

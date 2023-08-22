@@ -124,6 +124,7 @@
       margin-left: 15.5px;
       margin-right: 16.5px;
       border-radius: 1.4rem;
+      margin-top: 1rem;
       box-shadow: 4px 4px 20px #00000012;
       cursor: pointer;
       padding: 0 1.25rem; /* Espacement intérieur gauche et droit */
@@ -256,6 +257,52 @@
       margin-left: 0.9rem;
       margin-right: -0.8rem; /* Utilisation d'une marge négative pour réduire l'espace */
     }
+    .block-modal{
+      display: block;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 4px 4px 20px #00000012;
+      min-width: 291px;
+      min-height: 72px;
+      margin-top: 0.2rem;
+    }
+    .buttons-ro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .ap-button {
+      background-color: #FFA82526;
+      color: #FFA825;
+      font-size: 12px;
+      text-align: center;
+      height: 2.34rem;
+      width: 11rem;
+      border: none;
+      font-family: "Poppins", Helvetica;
+      font-weight: bold;
+      border-radius: 3.125em;
+      padding: 8px 16px;
+      margin-right: 10px;
+      margin-top: 2.4rem;
+    }
+    
+    .ann-button {
+      background-color: #FF252526;
+      color: #FF2525;
+      font-size: 12px;
+      text-align: center;
+      height: 2.34rem;
+      width: 6rem;
+      border: none;
+      font-family: "Poppins", Helvetica;
+      font-weight: bold;
+      border-radius: 3.125em;
+      padding: 8px 16px;
+      margin-left: 20px;
+      margin-top: 2.4rem;
+    }
 
     .row {
       display: flex;
@@ -284,44 +331,6 @@
       font-weight: lighter;
       font-size: 10px;
       font-weight: 300;
-    }
-
-    .buttons-ro {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    
-    .ap-button {
-      background-color: #FFA82526;
-      color: #FFA825;
-      font-size: 12px;
-      text-align: center;
-      height: 2.34rem;
-      width: 11rem;
-      border: none;
-      font-family: "Poppins", Helvetica;
-      font-weight: bold;
-      border-radius: 3.125em;
-      padding: 8px 16px;
-      margin-right: 10px;
-    }
-    
-    .an-button {
-      background-color: #FF252526;
-      color: #FF2525;
-      font-size: 12px;
-      text-align: center;
-      height: 2.34rem;
-      width: 6rem;
-      border: none;
-      font-family: "Poppins", Helvetica;
-      font-weight: bold;
-      border-radius: 3.125em;
-      padding: 8px 16px;
-      margin-top: 56px;
-      margin-left: 20px;
     }
     .buttons-row {
       display: flex;

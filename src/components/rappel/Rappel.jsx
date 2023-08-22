@@ -43,30 +43,6 @@ const Rappel = () => {
         <h2>Sciences islamiques</h2>
         <h3>Date du cours</h3>
         </div>
-        <div className="recap-row">
-        <img src={status} alt='' />
-        <h3> Récapitulatif du groupe : </h3>
-        </div>
-      <div className="c">
-        <div className='row'>
-          <div className='col'>
-            <h3>17</h3>
-            <p className="description">Inscrits</p>
-          </div>
-          <div className='col'>
-            <h3>2</h3>
-            <p className="description">Abandon(s)</p>
-          </div>
-          <div className='col'>
-            <h3>65%</h3>
-            <p className="description">Présence</p>
-          </div>
-          <div className='col'>
-            <h3>34%</h3>
-            <p className="description">Progression</p>
-          </div>
-        </div>
-      </div>
       <div className="stu-row">
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
@@ -114,16 +90,16 @@ const Rappel = () => {
       </div>
       
       </div>
-      <button className="val-button" onClick={handleShowAp}>Valider la feuille d'émargement</button>
-
-    {showModal && (
+      <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
+      {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="modal">
+          <div className="mod">
             <h2>Nom de l'étudiant</h2>
             <div className="recap-row">
               <img src={status} alt='' />
               <h3> Récapitulatif du groupe : </h3>
             </div>
+            <div className='block-modal'>
             <div className='row'>
               <div className='col'>
                 <h3>17</h3>
@@ -138,9 +114,10 @@ const Rappel = () => {
                 <p className="description">Présence</p>
               </div>
             </div>
-            <div className="buttons-row">
+            </div>
+            <div className="buttons-ro">
               <button className="ap-button" onClick={handleShowAp}>Déclarer AP</button>
-              <button className="an-button">Annuler</button>
+              <button className="ann-button">Annuler</button>
             </div>
           </div>
         </div>
@@ -162,11 +139,22 @@ const Rappel = () => {
               <img src={user} alt='' />
                 <h3>Sélectionner les AP :</h3>
             </div>
+            <div className='date-card-cont'>
+            <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>01/02/2023</h3>
+            </div>
             <div className="date-card">
             <h3>01/02/2023</h3>
             </div>
             <div className="date-card">
             <h3>14/07/2023</h3>
+            </div>
+            <div className="date-card">
+            <h3>14/07/2023</h3>
+            </div>
             </div>
               <div className="buttons-row">
                 <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>

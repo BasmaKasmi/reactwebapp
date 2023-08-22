@@ -29,7 +29,7 @@ const CardDetails = () => {
         Mes dates :
       </h2>
         {/* Composant de navigation Link avec une classe CSS 'c' */}
-        <Link to="/recapem" className="c-details">
+        <Link to="/recapem" className="card-det">
        {/* Balise div avec la classe CSS 'row' */}
         <div className='row'>
          {/* Titre de niveau 3 indiquant la semaine 1 */}
@@ -38,7 +38,7 @@ const CardDetails = () => {
           <span className="status-f">FAIT</span>
         </div>
       </Link>
-      <Link to="/recapem" className="c-details">
+      <Link to="/recapem" className="card-det">
        {/* Balise div avec la classe CSS 'row' */}
         <div className='row'>
          {/* Titre de niveau 3 indiquant la semaine 1 */}
@@ -48,7 +48,7 @@ const CardDetails = () => {
         </div>
       </Link>
       {/* Composant de navigation Link avec une classe CSS 'c' */}
-      <Link to="/recapem" className="c-details">
+      <Link to="/recapem" className="card-det">
         {/* Balise div avec la classe CSS 'row' */}
         <div className='row'>
           {/* Titre de niveau 3 indiquant la semaine 2 */}
@@ -58,7 +58,7 @@ const CardDetails = () => {
         </div>
       </Link>
       {/* Composant de navigation Link avec une classe CSS 'c' */}
-      <Link to="/recapem" className="c-details">
+      <Link to="/recapem" className="card-det">
       {/* Balise div avec la classe CSS 'row' */}
         <div className='row'>
         {/* Titre de niveau 3 indiquant la semaine 3 */}
