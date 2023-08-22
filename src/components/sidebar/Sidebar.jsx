@@ -134,28 +134,30 @@ const Sidebar = () => {
             </div>
             </div>
             <div className="blok2">
-            <div className="ap-row">
+            <div className="ap-line">
               <img src={user} alt='' />
                 <h3>Rechercher par groupe :</h3>
             </div>
-            <div className="g" onClick={handleSelectStudent}>
+            <div className="gr-cont">
+            <div className="gr" onClick={handleSelectStudent}>
             <h3>Sciences islamiques 1ére année</h3>
             <div>
-            <p className='d'>Jeu 18h00 à 12h00</p>
+            <p className='jr'>Jeu 18h00 à 12h00</p>
             </div>
           </div>
-          <div className="g" onClick={handleSelectStudent}>
+          <div className="gr" onClick={handleSelectStudent}>
             <h3>Sciences islamiques 1ére année</h3>
             <div>
-            <p className='d'>Jeu 18h00 à 12h00</p>
+            <p className='jr'>Jeu 18h00 à 12h00</p>
             </div>
           </div>
-          <div className="g" onClick={handleSelectStudent}>
+          <div className="gr" onClick={handleSelectStudent}>
             <h3>Sciences islamiques 1ére année</h3>
             <div>
-            <p className='d'>Jeu 18h00 à 12h00</p>
+            <p className='jr'>Jeu 18h00 à 12h00</p>
             </div>
           </div>
+            </div>
             </div>
           <button className="cancel-button">Annuler</button>
           </div>

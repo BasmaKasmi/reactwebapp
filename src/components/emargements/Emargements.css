@@ -23,7 +23,7 @@
   .groupes-res {
     display: flex; /* Utilisation de flexbox pour aligner les éléments en ligne et en colonne */ 
     flex-direction: column; /* disposition en colonne */
-    margin-right: 1.4rem; /* marge à droite */
+    margin-right: 0.6rem; /* marge à droite */
     margin-bottom: 2rem; /* marge en bas */
   }
   .t h3{

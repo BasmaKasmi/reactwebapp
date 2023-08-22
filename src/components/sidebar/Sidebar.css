@@ -270,21 +270,22 @@
 }
 
 .nom-input input {
-  color: #e5e4e3;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 700;
   text-align: center;
+  font-family: "Poppins", Helvetica;
   border-radius: 3rem;
+  border: 0.1rem solid #e5e4e3;
   padding-left: 1.25rem;
   padding-right: 2.3rem;
-  height: 3rem;
-  width: 22rem; /* la largeur des inputs */
+  height: 2.25rem;
+  margin-top: -0.4rem;
+  width: 303px; /* la largeur des inputs */
   margin-left: 1rem; /* l'espace entre les inputs */
 }
 
 .nom-input img {
   margin-left: 1rem; /* l'espace entre input et l'image */
+  margin-top: -0.5rem;
+
 }
 
 .blok2{
@@ -292,39 +293,60 @@
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 4px 4px 20px #00000012;
-  width: 382px;
-  height: 19rem;
-  margin-top: 1rem;
+  width: 23,875rem; /*382px*/
+  height: 17,75rem; /*284px*/
+  margin-top: 2rem;
   overflow-y: auto;
 }
 
-.ap-row {
+.ap-line {
   display: inline-flex;
   align-items: center;
   margin-top: 0.1rem;
+  margin-left: 1rem;
   }
-  .ap-row h3 {
+  .ap-line h3 {
   margin-right: 8rem; /* Ajouter de l'espace entre l'image et le titre */
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 14px;
   margin-bottom: 1rem;
   }
-  .date-card {
-  background-color: #ffffff;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 4px 4px 20px #00000012;
-  height: 3.5rem;
-  width: 24.6rem;
-  cursor: pointer;
+
+  .gr-cont{
+    display: block;
+    align-items: center;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+
   }
-  .date-card h3 {
+  .gr {
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-bottom: 1rem;
+    width: 337px; /*marge adaptable */
+    height: 60px;
+    border-radius: 1.25em; /*bordure adaptable */
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07);
+  }
+  
+  .gr h3 {
+    color: #000000;
     font-family: "Poppins", Helvetica;
-    font-weight: bold;
-    margin-left: 1rem;
-    margin-right: 2rem;
-    margin-top: -0.1rem;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 0.375rem;
+    margin-right: 1rem;
+  }
+  
+  .gr .jr {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-weight: 300;
+    font-size: 10px;
+    padding-left: 1rem;
+    padding-top: 0.25em;
+    padding-bottom: 1em;
   }
 
   .pop-up-title {
@@ -398,15 +420,15 @@
     color: #FF2525;
     font-size: 12px;
     text-align: center;
-    height: 2.34rem;
-    width: 6rem;
+    height: 2.875rem;
+    width: 8.5625rem;
     border: none;
     font-family: "Poppins", Helvetica;
     font-weight: bold;
     border-radius: 3.125em;
     padding: 8px 16px;
-    margin-left: 18rem;
-    margin-top: 2rem;
+    margin-left: 15.6rem;
+    margin-top: 1.4rem;
     }
     .validate-button {
       background-color: #19CE1526;

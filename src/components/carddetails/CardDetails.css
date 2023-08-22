@@ -93,18 +93,21 @@
         font-weight: 600;
       }
         /* Css pour les éléments avec la classe .c */
-        .card-det {
-          background-color: #ffffff;
-          border-radius: 1rem;
-          margin-bottom: 1rem;
-          box-shadow: 4px 4px 20px #00000012;
-          height: 3.25rem;
-          width: 18.25rem;
-          cursor: pointer;
+      .cart {
+        background-color: #FFFFFF;
+        width: 18,25rem;
+        height: 3.25rem;
+        margin-left: 15.5px;
+        margin-right: 16.5px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 1.4rem;
+        box-shadow: 4px 4px 20px #00000012;
+        cursor: pointer;
         }
         
         /* Css pour les éléments avec la classe .row */
-        .row {
+        .ligne {
           /* Utilisation de la disposition flexbox pour aligner les éléments en ligne */
           display: flex;
           /* Centrage vertical des éléments enfants sur l'axe transversal */
@@ -114,26 +117,29 @@
         }
         
         /* Css pour les éléments h3 à l'intérieur de .c */
-        .c h3 {
+        .ligne h3 {
           font-size: 14px;
-          margin-right: 5px;
+          margin-top: -0.6rem;
         }
         
         /* Css pour les éléments avec la classe .status-f */
-        .status-f {
+        .ligne .status-f {
             color: #4CAF50; /* Couleur du texte */
             display: inline-block; /* L'élément est affiché en tant que bloc dans la ligne, conserve le flux du texte */
             font-size: 12px; /* Taille de la police de 12 pixels */
             font-weight: bold; /* Police en gras */
             text-transform: uppercase; /* Transformation du texte en majuscules */
+            margin-top: 0.6rem;
+
           } 
           
           /* Css pour les éléments avec la classe .status-n */
-          .status-n {
+          .ligne .status-n {
             color: #FF2525; /* Couleur du texte */
             display: inline-block; /* L'élément est affiché en tant que bloc dans la ligne, conserve le flux du texte */
             font-size: 12px; /* Taille de la police de 12 pixels */
             font-weight: bold; /* Police en gras */
             text-transform: uppercase; /* Transformation du texte en majuscules */
+            margin-top: 0.6rem;
           }
         };

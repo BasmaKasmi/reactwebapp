@@ -29,43 +29,25 @@ const CardDetails = () => {
         Mes dates :
       </h2>
         {/* Composant de navigation Link avec une classe CSS 'c' */}
-        <Link to="/recapem" className="card-det">
-       {/* Balise div avec la classe CSS 'row' */}
-        <div className='row'>
-         {/* Titre de niveau 3 indiquant la semaine 1 */}
-          <h3>semaine 1</h3>
-          {/* Span indiquant que l'émargement de la semaine 1 est fait */}
-          <span className="status-f">FAIT</span>
-        </div>
+        <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 1</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-n">NON FAIT</p>
+      </div>
+      </div> 
       </Link>
-      <Link to="/recapem" className="card-det">
-       {/* Balise div avec la classe CSS 'row' */}
-        <div className='row'>
-         {/* Titre de niveau 3 indiquant la semaine 1 */}
-          <h3>semaine 2</h3>
-          {/* Span indiquant que l'émargement de la semaine 1 est fait */}
-          <span className="status-f">FAIT</span>
-        </div>
-      </Link>
-      {/* Composant de navigation Link avec une classe CSS 'c' */}
-      <Link to="/recapem" className="card-det">
-        {/* Balise div avec la classe CSS 'row' */}
-        <div className='row'>
-          {/* Titre de niveau 3 indiquant la semaine 2 */}
-          <h3>semaine 3</h3>
-          {/* Span indiquant que l'émargement de la semaine 1 est fait */}
-          <span className="status-n">NON FAIT</span>
-        </div>
-      </Link>
-      {/* Composant de navigation Link avec une classe CSS 'c' */}
-      <Link to="/recapem" className="card-det">
-      {/* Balise div avec la classe CSS 'row' */}
-        <div className='row'>
-        {/* Titre de niveau 3 indiquant la semaine 3 */}
-          <h3>semaine 4</h3>
-          {/* Span indiquant que l'émargement de la semaine 3 n'est pas fait */}
-          <span className="status-n">NON FAIT</span>
-        </div>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 2</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-f">FAIT</p>
+      </div>
+      </div> 
       </Link>
       </div>
     </div>
