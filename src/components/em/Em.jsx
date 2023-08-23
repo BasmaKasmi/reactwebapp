@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
 import './Em.css';
-
+import classNames from 'classnames';
 
 const Em = () => {
-  const [activeCard, setActiveCard] = useState('card-1'); // Mettez la carte 'card-1' comme active par défaut
+  const [activeCard, setActiveCard] = useState(null);
   const [activeButtonId, setActiveButtonId] = useState(null);
-  const [selectedTitle, setSelectedTitle] = useState('Sciences islamiques 2ème année'); // Mettez le titre par défaut
-  const [selectedDay, setSelectedDay] = useState('Ven 18h00 à 21h00'); // Mettez la date par défaut
+  const [selectedTitle, setSelectedTitle] = useState('');
+  const [selectedDay, setSelectedDay] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [showGroupesContent, setShowGroupesContent] = useState(true); // Affichez le contenu par défaut
+
 
   const handleCardClick = (cardId, cardTitle, cardDay) => {
+    setActiveCard(cardId);
     setSelectedTitle(cardTitle);
     setSelectedDay(cardDay);
-    setShowGroupesContent(true); // Affichage du contenu de la colonne "groupes" après avoir cliqué sur une carte
-
   };
   const handleButtonClick = (buttonId) => {
     setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
@@ -23,7 +21,6 @@ const Em = () => {
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
     document.body.classList.add('modal-open');
-    setShowGroupesContent(true); // Affichage du contenu de la colonne "groupes" après avoir cliqué sur "Valider la feuille d'émargement"
   };
   
 
@@ -49,7 +46,8 @@ const Em = () => {
               <p className='day'>Ven 18h00 à 21h00</p>
               <p className='session'>11/32</p>
             </div>
-          </div>   
+          </div>
+          
           <div
             className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
             onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
@@ -72,47 +70,52 @@ const Em = () => {
           </div>
         </div>
       </div>
-      { showGroupesContent && (
       <div className="groupes">
         <div className="column-head">
           <h3>{selectedTitle}</h3>
           <p className='day'>{selectedDay}</p>
         </div>
         <div className='card-container'>
-        <div className={classNames('std')}>
+        </div>
+        <div className='card-container'>
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-          <div className="student-buttons">
+            <div className="student-buttons">
             <button
-            className="ap-button"
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
             >
             AP 
             </button>
             <button
-            className="ai-button"
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
             >
             AI
             </button>
             </div>
           </div>
         </div>
-        <div className={classNames('std')}>
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-          <div className="student-buttons">
+            <div className="student-buttons">
             <button
-            className="ap-button"
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
             >
             AP 
             </button>
             <button
-            className="ai-button"
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
             >
             AI
             </button>
@@ -121,40 +124,44 @@ const Em = () => {
         </div>
         </div>
         <div className='card-container'>
-        <div className={classNames('std')}>
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-          <div className="student-buttons">
+            <div className="student-buttons">
             <button
-            className="ap-button"
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
             >
             AP 
             </button>
             <button
-            className="ai-button"
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
             >
             AI
             </button>
             </div>
           </div>
         </div>
-        <div className={classNames('std')}>
+        <div className={classNames('std', { 'active': activeButtonId })}>
           <div className='row'>
           <div className='col'>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
-          <div className="student-buttons">
+            <div className="student-buttons">
             <button
-            className="ap-button"
+            className={`ap-button ${activeButtonId === 'ap' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ap')}
             >
             AP 
             </button>
             <button
-            className="ai-button"
+            className={`ai-button ${activeButtonId === 'ai' ? 'active' : ''}`}
+            onClick={() => handleButtonClick('ai')}
             >
             AI
             </button>
@@ -170,10 +177,10 @@ const Em = () => {
         {showConfirmation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
-        <div className="icon-container">
+          <div className="confirmation-content">
+            <div className="icon-container">
               <i className="fas fa-check-circle"></i>
             </div>
-          <div className="confirmation-content">
             <h3>Vous déclarez avoir :</h3>
             <div className="confirmation-details">
               <p>Nb Présents</p>
@@ -189,7 +196,6 @@ const Em = () => {
     )}
         </div>
       </div>
-      )}
     </div>
   );
 }

@@ -8,11 +8,11 @@
   @media only screen and (max-width: 783px) {
     .Details {
         display: block;
+        position: absolute;
         width: 90%;
         margin: 0 auto;
-        position: fixed;
         align-items: center;
-        bottom: 20rem;
+        top: 6rem;
         left: 5%; /* La position horizontale souhaitée */
         right: 5%; /* La position horizontale souhaitée */
         background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */

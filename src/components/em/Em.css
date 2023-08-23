@@ -308,11 +308,18 @@
   margin-top: 10px;
 }
 
-
 .std.active {
 background-color: #FF252526;
 }
+.card.clicked {
+  background-color: #FD9340;
+}
 
+.card.clicked h3,
+.card.clicked .day,
+.card.clicked .session {
+  color: #FFFFFF;
+}
 
 @media (max-width: 768px) {
   .groupes .std {

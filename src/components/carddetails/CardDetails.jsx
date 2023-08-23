@@ -49,6 +49,26 @@ const CardDetails = () => {
       </div>
       </div> 
       </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 3</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-f">FAIT</p>
+      </div>
+      </div> 
+      </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 4</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-n"> NON FAIT</p>
+      </div>
+      </div> 
+      </Link>
       </div>
     </div>
   );
