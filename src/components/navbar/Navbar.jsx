@@ -8,7 +8,7 @@ function Navbar() {
       {/* Small navbar for small screens */}
       <nav className="navbar-small">
         <div className="navbar-small-title">
-          <h1>Tableau de Bord</h1>
+          <h2>Tableau de Bord</h2>
         </div>
       </nav>
 

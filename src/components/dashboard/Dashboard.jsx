@@ -247,10 +247,13 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      </Link>
-        {/* Bouton pour déclarer une AP */}
-        <button className="ap-button" onClick={handleShowAp}>Déclarer une AP</button>
+      </Link> 
+     
     </div>
+
+    {/* Bouton pour déclarer une AP */}
+    <button className="ap-bo" onClick={handleShowAp}>Déclarer une AP</button>
+
     {/* Si showAp est vrai, affiche le contenu suivant */}
     {showAp && (
       // Div pour l'arrière-plan modal, en cliquant dessus, on ferme la modal

@@ -7,7 +7,7 @@ const NavSt = () => {
       {/* Small navbar for small screens */}
       <nav className="navbar-small">
         <div className="navbar-small-title">
-          <h1>Liste étudiants</h1>
+          <h2>Liste étudiants</h2>
         </div>
       </nav>
     </div>

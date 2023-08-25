@@ -4,20 +4,17 @@
   
   /* Style for the title in the small navbar */
   .navbar-small-title {
-    color: #ffffff;
-    font-weight: bold;
     margin-top: 72px;
-    text-align: left;
-    
-
+    border-radius: 2px 0 50px ;
   }
-  
+
   .navbar-small-title h1 {
-    font-size: 0.9rem;
-    font-weight: bold;
     background-color: #FD9340;
     padding: 0.25em 1.9em; /* Add a margin of 0.5 times the font size inside the border */
-    border-radius: 2px 0 50px ;
+    color: #ffffff;
+    font-size: 19.4px;
+    font-weight: bold;
+    text-align: left;
   }
   
   /* Responsive styles for small screens */

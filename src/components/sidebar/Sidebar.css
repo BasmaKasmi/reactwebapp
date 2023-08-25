@@ -46,24 +46,23 @@
 
 .sidebar-toggle {
   position: fixed;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 4px 4px 20px #00000012;
+  display: flex;
+  align-items: center;
   height: 45px;
   width: 45px;
   top: 80px;
   margin-left: 400px;
-  display: flex;
-  align-items: center;
+  background-color: transparent; /* Rendre le bouton transparent */
+  box-shadow: 4px 4px 20px #00000012;
   border: none;
   color: #000000;
   font-size: 32px;
   cursor: pointer;
+  border-radius: 16px;
   z-index: 1;
-  display: none;
   @media (max-width: 768px) {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 1rem;
     margin-left: 335px;
   }
   @media (max-width: 360px) {

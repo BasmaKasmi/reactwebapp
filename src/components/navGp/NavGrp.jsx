@@ -6,7 +6,7 @@ const NavGrp = () => {
       {/* Small navbar for small screens */}
       <nav className="navbar-small">
         <div className="navbar-small-title">
-          <h1>Mes groupes</h1>
+          <h2>Mes groupes</h2>
         </div>
       </nav>
     </div>

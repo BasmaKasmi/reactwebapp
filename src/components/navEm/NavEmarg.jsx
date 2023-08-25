@@ -7,7 +7,7 @@ const NavEmarg = () => {
       {/* Small navbar for small screens */}
       <nav className="navbar-small">
         <div className="navbar-small-title">
-          <h1>Mes émargements</h1>
+          <h2>Mes émargements</h2>
         </div>
       </nav>
     </div>
