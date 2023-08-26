@@ -50,7 +50,7 @@
   }
 
   .pink-box {
-    display: block; /* Affichage en mode flexible */
+    display: flex; /* Affichage en mode flexible */
     flex-direction: column; /* Disposition en colonne */
     align-items: center; /* Disposition en colonne */
     background-color: #FF25254D; /* Couleur de fond */
