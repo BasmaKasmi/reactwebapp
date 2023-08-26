@@ -1,6 +1,6 @@
 .retour-button {
     position: fixed; /*Position fixe*/
-    top: 5%; /* Distance du haut de la fenêtre */
+    top: 3.5%; /* Distance du haut de la fenêtre */
     right: 2%; /* Distance de la droite de la fenêtre */
     width: 6rem; /* Largeur */
     padding: 0.5rem 1rem; /* Espacement interne (haut/bas gauche/droite) */

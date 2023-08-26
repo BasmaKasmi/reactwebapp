@@ -3,9 +3,6 @@
 }
 
 @media screen and (max-width: 783px){
-  body {
-    overflow: hidden;
-  }
   .Recap {
       display: block;
       position: fixed;
@@ -31,6 +28,9 @@
     margin-top: 0;
   }
   .header h3 {
+    text-align: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 16px;
@@ -115,6 +115,13 @@
       margin-right: -0.8rem; /* Utilisation d'une marge négative pour réduire l'espace */
 
     }
+    .container-r{
+      display: block;
+      align-items: center;
+      flex-direction: column;
+      position: fixed;
+      overflow-y: auto;
+    }
     .card-s {
       background-color: #FFFFFF;
       margin: auto;
@@ -124,10 +131,10 @@
       margin-left: 15.5px;
       margin-right: 16.5px;
       border-radius: 1.4rem;
-      margin-top: 1rem;
       box-shadow: 4px 4px 20px #00000012;
       cursor: pointer;
       padding: 0 1.25rem; /* Espacement intérieur gauche et droit */
+      
     }
     .card-s .col {
       display: flex;
@@ -177,30 +184,6 @@
       font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
     }
     
-
-    .val-button{
-      background-color: #19ce1526;
-      color: #19CE15;
-      font-family: "Poppins", Helvetica;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: bold;
-      position: fixed;
-      width: 18rem;
-      height: 2,625rem;
-      border: none; /* Pas de bordure */
-      text-align: center; /* Alignement du texte au centre */
-      cursor: pointer; /* Curseur en forme de main */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 1.79125rem; /* Espacement intérieur gauche et droit */
-
-      /* Positionnement en bas centré */
-      bottom: 5rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
 
     .modal-overlay {
       position: fixed;
@@ -286,6 +269,25 @@
       padding: 8px 16px;
       margin-right: 10px;
       margin-top: 2.4rem;
+    }
+    .val-button{
+      display: block;
+      align-items: center;
+      background-color: #19ce1526;
+      color: #19CE15;
+      font-family: "Poppins", Helvetica;
+      border-radius: 50px;
+      text-align: center; /* Alignement du texte au centre */
+      font-weight: bold;
+      position: fixed;
+      width: 18.1875rem; /*291px*/
+      height: 3.180rem; /*42px*/
+      border: none; /* Pas de bordure */
+      cursor: pointer; /* Curseur en forme de main */
+      margin-bottom: -3.2rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1.79125rem; /* Espacement intérieur gauche et droit */
     }
     
     .ann-button {
