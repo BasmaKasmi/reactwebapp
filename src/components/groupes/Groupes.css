@@ -20,41 +20,38 @@
 /* la largeur est maximale de 783px */
 @media screen and (max-width: 783px) {
   .groupes-res {
-    display: flex; /* utilisation du flexbox*/
-    flex-direction: column; /* disposition en colonne*/
+    display: block;
+    position: fixed;
+    width: 90%;
+    margin: 0 auto;
     align-items: center;
-    margin-right: 1rem; /* Marge à droite */
-    margin-top: -1rem; /* marge en bas */
-    overflow-x: auto;
-    overflow-y: auto;
+    top: 8rem;
+    left: 5%; /* valeur en fonction de la position horizontale souhaitée */
+    right: 5%; /* valeur en fonction de la position horizontale souhaitée */
+    background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
     white-space: nowrap;
   }
   .t h3{
     display: inline-flex;
-    margin-right: 11rem;
+    margin-left: -3.6rem;
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
     font-weight: 600;
-    overflow-y: auto;
-    overflow-x: auto;
   }
   .grp-carte{
     display: block;
     align-items: center;
-    overflow-y: auto;
     margin-bottom: 0;
     overflow-y: auto;
-    overflow-x: auto;
   }
   .carte {
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 4px 4px 20px #00000012;
-    margin: auto;
     margin-bottom: 1rem; /*marge adaptable */
-    width: 20.3125rem;  /*325px*/
-    height: 3.75rem; /*60px*/
+    width: 22rem;  /*325px*/
+    height: 4.2rem; /*60px*/
   }
   .carte  h3 {
     color: #000000;
