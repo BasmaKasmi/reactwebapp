@@ -1,35 +1,35 @@
 .navbar-small {
-    display: none; /* Hide the small navbar by default */
-  }
-  
-  /* Style for the title in the small navbar */
-  .navbar-small-title {
-    margin-top: 72px;
-    border-radius: 2px 0 50px ;
+  display: none; /* Hide the small navbar by default */
+}
+
+/* Style for the title in the small navbar */
+.navbar-small-title {
+  background-color: #FD9340;
+  margin-top: 72px;
+  border-radius: 2px 0 50px ;
+}
+
+.navbar-small-title h2 {
+  padding: 0.25em 1.9em; /* Add a margin of 0.5 times the font size inside the border */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 19.4px;
+  text-align: left;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 768px) {
+  /* Show the small navbar and hide the full-size navbar */
+  .navbar {
+    display: none;
   }
 
-  .navbar-small-title h1 {
-    background-color: #FD9340;
-    padding: 0.25em 1.9em; /* Add a margin of 0.5 times the font size inside the border */
-    color: #ffffff;
-    font-size: 19.4px;
-    font-weight: bold;
-    text-align: left;
+  .navbar-small {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 30px;
+    margin-left: 0;
+    margin-top: 0;
   }
-  
-  /* Responsive styles for small screens */
-  @media screen and (max-width: 768px) {
-    /* Show the small navbar and hide the full-size navbar */
-    .navbar {
-      display: none;
-    }
-  
-    .navbar-small {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      height: 30px;
-      margin-left: 0;
-      margin-top: 0;
-    }
-  }  
+}  

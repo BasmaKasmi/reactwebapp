@@ -64,11 +64,11 @@ const Recap = () => {
           </div>
         </div>
       </div>
-      <div className="stu-row">
+        <div className="stu-row">
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
-      </div>
-      <div className='card-container'>
+        </div>
+    <div className='container-r'>
       <div className="card-s" onClick={handleClick}>
       <div className='row'>
           <div className='col'>
@@ -88,31 +88,51 @@ const Recap = () => {
             </button>
             </div>
           </div>
-      </div>
-      <div className="card-s" onClick={handleClick}>
-      <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-            <button
-            className="ap-b"
-            >
-            AP 
-            </button>
-            <button
-            className="ai-b"
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
+      </div>  
       
+      <div className="card-s" onClick={handleClick}>
+      <div className='row'>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <p>Absence(s) : 3</p>
+          </div>
+          <div className="b-container">
+            <button
+            className="ap-b"
+            >
+            AP 
+            </button>
+            <button
+            className="ai-b"
+            >
+            AI
+            </button>
+            </div>
+          </div>
+      </div>
+      <div className="card-s" onClick={handleClick}>
+      <div className='row'>
+          <div className='col'>
+          <h3>Nom de l'étudiant</h3>
+          <p>Absence(s) : 3</p>
+          </div>
+          <div className="b-container">
+            <button
+            className="ap-b"
+            >
+            AP 
+            </button>
+            <button
+            className="ai-b"
+            >
+            AI
+            </button>
+            </div>
+          </div>
+      </div> 
+       
       </div>
       <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
-
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mod">

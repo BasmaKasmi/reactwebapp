@@ -1,4 +1,5 @@
 import React from 'react';
+import './NavAgenda.css';
 
 const NavAgenda = () => {
   return (
@@ -6,7 +7,7 @@ const NavAgenda = () => {
       {/* Small navbar for small screens */}
       <nav className="navbar-small">
         <div className="navbar-small-title">
-          <h1>Mon Agenda</h1>
+          <h2>Mon agenda</h2>
         </div>
       </nav>
     </div>

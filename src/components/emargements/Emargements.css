@@ -21,14 +21,20 @@
 
 @media screen and (max-width: 783px) {
   .groupes-res {
-    display: flex; /* Utilisation de flexbox pour aligner les éléments en ligne et en colonne */ 
-    flex-direction: column; /* disposition en colonne */
-    margin-right: 0.6rem; /* marge à droite */
-    margin-bottom: 2rem; /* marge en bas */
+    display: block;
+    position: fixed;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    top: 8rem;
+    left: 5%; /* valeur en fonction de la position horizontale souhaitée */
+    right: 5%; /* valeur en fonction de la position horizontale souhaitée */
+    background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
+    white-space: nowrap;
   }
   .t h3{
     display: inline-flex;
-    margin-right: 11rem;
+    margin-left: -13rem;
     color: #000000;
     font-family: "Poppins", Helvetica;
     font-size: 18px;
@@ -38,16 +44,14 @@
     display: block;
     align-items: center;
     overflow-y: auto;
-    margin-bottom: 0;
   }
   .carte {
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 4px 4px 20px #00000012;
-    margin: auto;
     margin-bottom: 1rem; /*marge adaptable */
-    width: 325px; 
-    height: 60px;
+    width: 22rem;  /*325px*/
+    height: 4.2rem; /*60px*/
   }
   .carte  h3 {
     color: #000000;

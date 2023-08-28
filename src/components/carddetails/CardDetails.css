@@ -17,7 +17,6 @@
         right: 5%; /* La position horizontale souhaitée */
         background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
         overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
-        overflow-x: auto; /* Activation de la barre de défilement horizontale si le contenu dépasse */
       }
 
       /* Css pour les éléments avec la classe .agenda-row */
@@ -65,8 +64,8 @@
         font-family: "Poppins", Helvetica;
         border-radius: 3rem;
         border: 0.1rem solid #e5e4e3;
-        height: 30px;
-        width: 120px; /* la largeur des inputs */
+        height: 40px;
+        width: 150px; /* la largeur des inputs */
         margin-left: 0.4rem; /* l'espace entre les inputs */
       }
       
@@ -86,17 +85,27 @@
       }
       .c-em h2{
         display: inline-flex;
-        margin-right: 11rem;
+        margin-left: 1.5rem;
         color: #000000;
         font-family: "Poppins", Helvetica;
         font-size: 18px;
         font-weight: 600;
       }
+
+      .cart-cont{
+        display: block;
+        align-items: center;
+        max-height: 18.75rem;
+        overflow-y: auto;
+      }
         /* Css pour les éléments avec la classe .c */
       .cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         background-color: #FFFFFF;
-        width: 18,25rem;
-        height: 3.25rem;
+        width: 22rem;
+        height: 3.75rem;
         margin-left: 15.5px;
         margin-right: 16.5px;
         margin-top: 1rem;
@@ -119,27 +128,31 @@
         /* Css pour les éléments h3 à l'intérieur de .c */
         .ligne h3 {
           font-size: 14px;
-          margin-top: -0.6rem;
+          margin-top: -1.2rem;
         }
         
         /* Css pour les éléments avec la classe .status-f */
         .ligne .status-f {
-            color: #4CAF50; /* Couleur du texte */
-            display: inline-block; /* L'élément est affiché en tant que bloc dans la ligne, conserve le flux du texte */
-            font-size: 12px; /* Taille de la police de 12 pixels */
-            font-weight: bold; /* Police en gras */
-            text-transform: uppercase; /* Transformation du texte en majuscules */
-            margin-top: 0.6rem;
+          text-align: center;
+          color: #4CAF50; /* Couleur du texte */
+          display: inline-block; /* L'élément est affiché en tant que bloc dans la ligne, conserve le flux du texte */
+          font-size: 12px; /* Taille de la police de 12 pixels */
+          font-weight: bold; /* Police en gras */
+          text-transform: uppercase; /* Transformation du texte en majuscules */
+          margin-left: 8rem;
+          margin-top: 0.2rem;
 
           } 
           
           /* Css pour les éléments avec la classe .status-n */
           .ligne .status-n {
+            text-align: center;
             color: #FF2525; /* Couleur du texte */
             display: inline-block; /* L'élément est affiché en tant que bloc dans la ligne, conserve le flux du texte */
             font-size: 12px; /* Taille de la police de 12 pixels */
             font-weight: bold; /* Police en gras */
             text-transform: uppercase; /* Transformation du texte en majuscules */
-            margin-top: 0.6rem;
+            margin-left: 7rem;
+            margin-top: 0.2rem;
           }
         };

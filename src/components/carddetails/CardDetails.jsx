@@ -28,8 +28,9 @@ const CardDetails = () => {
       <h2>
         Mes dates :
       </h2>
-        {/* Composant de navigation Link avec une classe CSS 'c' */}
-        <Link to="/recapem">
+      <div className='cart-cont'>
+           {/* Composant de navigation Link avec une classe CSS 'c' */}
+           <Link to="/recapem">
       <div className="cart">
       <div className='ligne'>
       {/* Titre de niveau 3 indiquant la semaine 3 */}
@@ -69,6 +70,7 @@ const CardDetails = () => {
       </div>
       </div> 
       </Link>
+      </div>
       </div>
     </div>
   );

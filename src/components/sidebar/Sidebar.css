@@ -46,7 +46,7 @@
 
 .sidebar-toggle {
   position: fixed;
-  display: flex;
+  display: none;
   align-items: center;
   height: 45px;
   width: 45px;
