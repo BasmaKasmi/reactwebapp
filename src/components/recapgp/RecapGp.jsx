@@ -11,6 +11,18 @@ const RecapGp = () => {
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
 
+  const [selectedDates, setSelectedDates] = useState([]);
+
+  const handleDateCardClick = (date) => {
+    // Vérifier si la date est déjà sélectionnée
+    if (selectedDates.includes(date)) {
+      // Si elle est sélectionnée, la retirer de la liste
+      setSelectedDates(selectedDates.filter(d => d !== date));
+    } else {
+      // Si elle n'est pas sélectionnée, l'ajouter à la liste
+      setSelectedDates([...selectedDates, date]);
+    }
+  };
 
   const handleClick = () => {
     setShowModal(true);
@@ -158,7 +170,7 @@ const RecapGp = () => {
             </div>
             </div>
             <div className="buttons-ro">
-              <button className="ap-button" onClick={handleShowAp}>Déclarer AP</button>
+              <button className="app-button" onClick={handleShowAp}>Déclarer AP</button>
               <button className="ann-button">Annuler</button>
             </div>
           </div>
@@ -189,21 +201,30 @@ const RecapGp = () => {
               <img src={user} alt='' />
                 <h3>Sélectionner les AP :</h3>
             </div>
-            <div className='date-card-cont'>
-            <div className="date-card">
+            <div className='date-card-cont' onClick={(e) => e.stopPropagation()}>
+            <div
+          className={`date-card ${selectedDates.includes('01/02/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('01/02/2023')}
+        >
             <h3>01/02/2023</h3>
             </div>
-            <div className="date-card">
-            <h3>01/02/2023</h3>
+            <div
+          className={`date-card ${selectedDates.includes('02/02/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('02/02/2023')}
+        >
+            <h3>02/02/2023</h3>
             </div>
-            <div className="date-card">
-            <h3>01/02/2023</h3>
-            </div>
-            <div className="date-card">
+            <div
+          className={`date-card ${selectedDates.includes('14/07/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('14/07/2023')}
+        >
             <h3>14/07/2023</h3>
             </div>
-            <div className="date-card">
-            <h3>14/07/2023</h3>
+            <div
+          className={`date-card ${selectedDates.includes('15/07/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('15/07/2023')}
+        >
+            <h3>15/07/2023</h3>
             </div>
             </div>
               <div className="buttons-row">
@@ -226,8 +247,8 @@ const RecapGp = () => {
               <p>21/01/2023</p>
             </div>
             <div className="confirmation-buttons">
-              <button className="valider-button">Valider</button>
-              <button className="annuler-button">Annuler</button>
+              <button className="va-button">Valider</button>
+              <button className="anul-button">Annuler</button>
             </div>
           </div>
         </div>

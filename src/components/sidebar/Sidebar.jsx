@@ -126,7 +126,7 @@ const Sidebar = () => {
                 <h3>Rechercher par nom :</h3>
             </div>
              {/* Div pour l'entrée de date */}
-             <div className="nom-input">
+             <div className="nom-input" onClick={(e) => e.stopPropagation()}>
               {/* Champ de texte pour saisir le nom d'un étudiant */}
               <input type="text" placeholder="Saisir un nom d’étudiant" />
               {/* Icône d'un étudiant */}
@@ -216,8 +216,8 @@ const Sidebar = () => {
                 <h3>Choisir dates :</h3>
             </div>
             <div className="time-inputs">
-              <input type="text" placeholder="01/01/2023" />
-              <input type="text" placeholder="28/01/2023" />
+              <input type="text" placeholder="01/01/2023" onClick={(e) => e.stopPropagation()} />
+              <input type="text" placeholder="28/01/2023" onClick={(e) => e.stopPropagation()} />
               <img src={st} alt='' />
             </div>
             </div>

@@ -429,9 +429,9 @@ h3 {
     .ce-button{
         background-color: #FF252526;
         color: #FF2525;
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
-        height: 2.75rem; /*35px*/
+        height: 3rem; /*35px*/
         width: 6rem; /*102px*/
         border: none;
         font-family: "Poppins", Helvetica;

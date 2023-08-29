@@ -408,9 +408,9 @@ const Dashboard = () => {
             {/* Boutons d'action de confirmation */}
             <div className="confirmation-buttons">
               {/* Bouton pour valider l'action */}
-              <button className="valider-button">Valider</button>
+              <button className="va-button">Valider</button>
               {/* Bouton pour annuler l'action */}
-              <button className="annuler-button">Annuler</button>
+              <button className="anul-button">Annuler</button>
             </div>
           </div>
         </div>

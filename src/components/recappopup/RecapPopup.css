@@ -333,35 +333,38 @@
         justify-content: center;
       }
   
-  .validate-button {
-  background-color: #19CE1526;
-  color: #19CE15;
-  font-size: 12px;
-  text-align: center;
-  height: 35px;
-  width: 178px; 
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  border-radius: 3.125rem;
-  padding: 8px 16px;
-  margin-right: 20px;
-  }
-  
-  .cancel-button {
-  background-color: #FF252526;
-  color: #FF2525;
-  font-size: 12px;
-  text-align: center;
-  height: 35px;
-  width: 102px;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  border-radius: 3.125rem;
-  padding: 8px 16px;
-  margin-left: 10px;
-  }
+      .validate-button {
+        background-color: #19CE1526;
+        color: #19CE15;
+        font-size: 16px;
+        text-align: center;
+        height: 3rem;
+        width: 11rem; 
+        border: none;
+        font-family: "Poppins", Helvetica;
+        font-weight: bold;
+        border-radius: 3.125rem;
+        padding: 8px 16px;
+        margin-right: 0.8rem;
+        margin-top: 4.3rem;
+        }
+        
+        .cancel-button {
+          background-color: #FF252526;
+          color: #FF2525;
+          font-size: 16px;
+          text-align: center;
+          height: 3rem;
+          width: 6rem;
+          border: none;
+          font-family: "Poppins", Helvetica;
+          font-weight: bold;
+          border-radius: 3.125em;
+          padding: 8px 16px;
+          margin-left: 20px;
+          margin-right: 0.2rem;
+          margin-top: 4.4rem;
+        }
   .ap-row {
   display: inline-flex;
   align-items: center;
@@ -379,6 +382,7 @@
   .date-card-cont{
     display: block;
     align-items: center;
+    max-height: 250px;
     overflow-y: auto;
     margin-bottom: 0;
   }
@@ -443,29 +447,40 @@
   justify-content: space-between;
   }
   
-  .annuler-button {
-  background-color: #FF252526;
-  color: #FF2525;
-  height: 35px;
-  width: 122px;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-left: 1rem;
+  .confirmation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
-  .valider-button {
-  background-color: #19CE1526;
-  color: #19CE15;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  height: 35px;
-  width: 125px;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-left: 8px;
+  .anul-button,
+  .va-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    height: 3rem;
+    width: 8rem;
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-left: 8px;
   }
+  
+  .anul-button {
+    background-color: #FF252526;
+    color: #FF2525;
+    margin-left: 1rem;
+    
+  }
+  
+  .va-button {
+    background-color: #19CE1526;
+    color: #19CE15;
+  }
+
   }
