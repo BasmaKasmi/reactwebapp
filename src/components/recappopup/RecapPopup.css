@@ -118,8 +118,9 @@
       .card-cont{
         display: block;
         align-items: center;
+        max-height: 250px;
+        overflow-x: hidden;
         overflow-y: auto;
-        margin-bottom: 0;
       }
       .card {
         background-color: #FFFFFF;
@@ -389,6 +390,9 @@
   height: 3.25rem;
   width: 18.25rem;
   cursor: pointer;
+  }
+  .date-card.selected {
+    background-color: #FF252526;
   }
   
   

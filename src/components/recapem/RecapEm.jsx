@@ -173,9 +173,17 @@ const RecapEm = () => {
                 <h3>Choisir dates :</h3>
             </div>
             <div className="date-inputs">
-              <input type="text" placeholder="01/01/2023" />
-              <input type="text" placeholder="28/01/2023" />
-              <img src={st} alt='' />
+            <input
+            type="text"
+            placeholder="01/01/2023"
+            onClick={(e) => e.stopPropagation()} // Empêcher la propagation du clic
+            />
+            <input
+            type="text"
+            placeholder="28/01/2023"
+            onClick={(e) => e.stopPropagation()} // Empêcher la propagation du clic
+            />
+            <img src={st} alt='' />
             </div>
             <div className="ap-row">
               <img src={user} alt='' />

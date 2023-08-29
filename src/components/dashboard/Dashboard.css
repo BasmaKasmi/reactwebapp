@@ -339,6 +339,8 @@ h3 {
     z-index: 100;
   }
   .modal {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -350,9 +352,8 @@ h3 {
     padding: 2rem;
     box-shadow: 4px 4px 20px #00000012;
     z-index: 10000;
-    display: flex;
-    flex-direction: column;
   }
+  
   .modal h2 {
     text-align: center;
     color: #000000;
@@ -364,6 +365,7 @@ h3 {
   .modal-content {
     text-align: center;
   }
+
     .bloc1{
       display: block;
       background-color: #ffffff;
@@ -405,7 +407,7 @@ h3 {
       padding-left: 1.25rem;
       padding-right: 2.3rem;
       height: 3rem;
-      width: 22rem; /* la largeur des inputs */
+      width: 11rem; /* la largeur des inputs */
       margin-left: 1rem; /* l'espace entre les inputs */
     }
     
@@ -415,6 +417,7 @@ h3 {
   
     .bloc2{
       display: block;
+      align-items: center;
       background-color: #ffffff;
       border-radius: 16px;
       box-shadow: 4px 4px 20px #00000012;
@@ -423,19 +426,19 @@ h3 {
       margin-top: 1rem;
       overflow-y: auto;
     }
-    .c-button{
+    .ce-button{
         background-color: #FF252526;
         color: #FF2525;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
-        height: 2,1875rem; /*35px*/
-        width: 6,375; /*102px*/
+        height: 2.75rem; /*35px*/
+        width: 6rem; /*102px*/
         border: none;
         font-family: "Poppins", Helvetica;
         font-weight: bold;
         border-radius: 3.125em;
         padding: 8px 16px;
-        margin-left: 13rem;
+        margin-left: 12.4rem;
         margin-top: 2rem;
       }
 
@@ -457,7 +460,9 @@ h3 {
     .g-cont{
       display: block;
       align-items: center;
+      max-height: 200px;
       overflow-y: auto;
+      overflow-x: hidden;
       margin-bottom: 0;
     }
 
@@ -517,9 +522,13 @@ h3 {
       display: flex;
       align-items: center;
       margin-right: 0.3rem;
-      margin-bottom: 1rem;
     }
-  
+    .date-card-cont{
+      display: block;
+      align-items: center;
+      overflow-y: auto;
+      margin-top: -0.6rem;
+    }
     .nom-stu {
       background-color: #FFFFFF;
       margin: auto;

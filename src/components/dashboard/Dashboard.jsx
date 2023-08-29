@@ -24,6 +24,7 @@ const Dashboard = () => {
   const [showConfirmation, setShowConfirmation] = useState(false); // État pour afficher ou masquer une confirmation d'émargement
 
 
+
   // Fonction pour afficher la confirmation
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
@@ -271,12 +272,12 @@ const Dashboard = () => {
                 <h3>Rechercher par nom :</h3>
             </div>
              {/* Div pour l'entrée de date */}
-             <div className="date-input">
-              {/* Champ de texte pour saisir le nom d'un étudiant */}
-              <input type="text" placeholder=" Saisir un nom d’étudiant " />
-              {/* Icône d'un étudiant */}
-              <img src={st} alt='' />
-            </div>
+             <div className="date-input" onClick={(e) => e.stopPropagation()}>
+             {/* Champ de texte pour saisir le nom d'un étudiant */}
+             <input type="text" placeholder=" Saisir un nom d’étudiant " />
+             {/* Icône d'un étudiant */}
+             <img src={st} alt='' />
+             </div>
             </div>
             <div className='bloc2'>
                 {/* Div pour une ligne d'AP */}
@@ -323,7 +324,7 @@ const Dashboard = () => {
 
             </div>
           {/* Bouton pour annuler l'action */}
-          <button className="c-button">Annuler</button>
+          <button className="ce-button">Annuler</button>
             </div>
           </div>
 )}
@@ -355,6 +356,7 @@ const Dashboard = () => {
               {/* Ligne pour sélectionner les AP */}
                 <h3>Sélectionner les AP :</h3>
             </div>
+            <div className='date-card-cont'>
             {/* Carte affichant une date */}
             <div className="date-card">
             <h3>01/02/2023</h3>
@@ -370,6 +372,7 @@ const Dashboard = () => {
             {/* Carte pour la quatrième date */}
             <div className="date-card">
             <h3>14/07/2023</h3>
+            </div>
             </div>
             {/* Ligne contenant des boutons */}
               <div className="buttons-row">
