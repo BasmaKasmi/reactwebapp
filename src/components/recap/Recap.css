@@ -123,7 +123,6 @@
       overflow-y: auto;
     }
     .card-s {
-      background-color: #FFFFFF;
       margin: auto;
       margin-bottom: 1rem;
       width: 22rem;
@@ -132,10 +131,12 @@
       margin-right: 16.5px;
       border-radius: 1.4rem;
       box-shadow: 4px 4px 20px #00000012;
+      background-color: #FFFFFF;
       cursor: pointer;
       padding: 0 1.25rem; /* Espacement intérieur gauche et droit */
       
     }
+
     .card-s .col {
       display: flex;
       flex-direction: column;
@@ -183,6 +184,13 @@
       text-align: center;
       font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
     }
+
+    .ap-b.active,
+    .ai-b.active {
+      background-color: #FF2525;
+      color: #fff;
+    }
+
     
 
     .modal-overlay {

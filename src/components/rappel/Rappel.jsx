@@ -10,6 +10,13 @@ const Rappel = () => {
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
+  const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
+  const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
+  const [ap2ButtonActive, setAp2ButtonActive] = useState(false);
+  const [ai3ButtonActive, setAi3ButtonActive] = useState(false);
+  const [ap3ButtonActive, setAp3ButtonActive] = useState(false);
+
 
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -59,68 +66,93 @@ const Rappel = () => {
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
         </div>
-    <div className='container-r'>
-      <div className="card-s" onClick={handleClick}>
-      <div className='row'>
-          <div className='col'>
+        <div className='container-r'>
+        <div className="card-s">
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <p>Absence(s) : 3</p>
           </div>
           <div className="b-container">
-            <button
-            className="ap-b"
+          <button
+            className={`ap-b ${ap1ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp1ButtonActive(!ap1ButtonActive);
+              setAi1ButtonActive(false);
+              }}
             >
             AP 
             </button>
-            <button
-            className="ai-b"
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>  
-      
-      <div className="card-s" onClick={handleClick}>
-      <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-            <button
-            className="ap-b"
-            >
-            AP 
-            </button>
-            <button
-            className="ai-b"
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-      <div className="card-s" onClick={handleClick}>
-      <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-            <button
-            className="ap-b"
-            >
-            AP 
-            </button>
-            <button
-            className="ai-b"
+           <button
+            className={`ai-b ${ai1ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi1ButtonActive(!ai1ButtonActive);
+              setAp1ButtonActive(false);
+              }}
             >
             AI
             </button>
             </div>
           </div>
       </div> 
+      
+      <div className="card-s">
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
+          <h3>Nom de l'étudiant</h3>
+          <p>Absence(s) : 3</p>
+          </div>
+          <div className="b-container">
+          <button
+            className={`ap-b ${ap2ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp2ButtonActive(!ap2ButtonActive);
+              setAi2ButtonActive(false);
+              }}
+            >
+            AP 
+            </button>
+           <button
+            className={`ai-b ${ai2ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi2ButtonActive(!ai2ButtonActive);
+              setAp2ButtonActive(false);
+              }}
+            >
+            AI
+            </button>
+            </div>
+          </div>
+      </div>
+
+        <div className="card-s">
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
+          <h3>Nom de l'étudiant</h3>
+          <p>Absence(s) : 3</p>
+        </div>
+          <div className="b-container">
+          <button
+            className={`ap-b ${ap3ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp3ButtonActive(!ap3ButtonActive);
+              setAi3ButtonActive(false);
+              }}
+            >
+            AP 
+            </button>
+           <button
+            className={`ai-b ${ai3ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi3ButtonActive(!ai3ButtonActive);
+              setAp3ButtonActive(false);
+              }}
+            >
+            AI
+            </button>
+            </div>
+          </div>
+      </div>
        
       </div>
       <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>

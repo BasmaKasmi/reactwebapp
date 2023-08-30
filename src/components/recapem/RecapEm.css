@@ -159,6 +159,11 @@
       margin-right: 13rem;
   }
   
+  .ap-b.active,
+  .ai-b.active {
+    background-color: #FF2525;
+    color: #fff;
+  }
       .val-button{
         background-color: #19ce1526;
         color: #19CE15;

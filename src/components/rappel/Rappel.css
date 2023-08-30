@@ -90,6 +90,12 @@
       font-size: 10px;
       font-weight: 300;
     }
+    .ap-b.active,
+    .ai-b.active {
+      background-color: #FF2525;
+      color: #fff;
+    }
+
     .recap-row {
       display: flex;
       align-items: center;
