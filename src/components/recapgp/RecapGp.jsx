@@ -87,7 +87,7 @@ const RecapGp = () => {
         <h3> Nombre d’étudiants : 22 </h3>
         </div>
         <div className='container-r'>
-        <div className="card-s">
+        <div className={`card-s ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
@@ -116,7 +116,7 @@ const RecapGp = () => {
           </div>
       </div> 
       
-      <div className="card-s">
+      <div className={`card-s ${ap2ButtonActive ? 'ap-active' : ''} ${ai2ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
@@ -145,7 +145,7 @@ const RecapGp = () => {
           </div>
       </div>
 
-        <div className="card-s">
+      <div className={`card-s ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
@@ -173,7 +173,6 @@ const RecapGp = () => {
             </div>
           </div>
       </div>
-       
       </div>
       <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
       {showModal && (
