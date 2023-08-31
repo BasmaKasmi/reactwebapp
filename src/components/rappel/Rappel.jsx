@@ -16,6 +16,8 @@ const Rappel = () => {
   const [ap2ButtonActive, setAp2ButtonActive] = useState(false);
   const [ai3ButtonActive, setAi3ButtonActive] = useState(false);
   const [ap3ButtonActive, setAp3ButtonActive] = useState(false);
+  const [ai4ButtonActive, setAi4ButtonActive] = useState(false);
+  const [ap4ButtonActive, setAp4ButtonActive] = useState(false);
 
 
   const [selectedDates, setSelectedDates] = useState([]);
@@ -181,8 +183,8 @@ const Rappel = () => {
             </div>
             </div>
             <div className="buttons-ro">
-              <button className="app-button" onClick={handleShowAp}>Déclarer AP</button>
-              <button className="ann-button">Annuler</button>
+              <button className="dec-button" onClick={handleShowAp}>Déclarer AP</button>
+              <button className="ca-button">Annuler</button>
             </div>
           </div>
         </div>
@@ -239,8 +241,8 @@ const Rappel = () => {
             </div>
             </div>
               <div className="buttons-row">
-                <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>
-                <button className="cancel-button">Annuler</button>
+                <button className="validat-button" onClick={handleConfirmationClick}>Valider</button>
+                <button className="cancell-button">Annuler</button>
               </div>
           </div>
         </div>
@@ -258,8 +260,8 @@ const Rappel = () => {
               <p>21/01/2023</p>
             </div>
             <div className="confirmation-buttons">
-              <button className="va-button">Valider</button>
-              <button className="anul-button">Annuler</button>
+              <button className="valid-button">Valider</button>
+              <button className="anu-button">Annuler</button>
             </div>
           </div>
         </div>

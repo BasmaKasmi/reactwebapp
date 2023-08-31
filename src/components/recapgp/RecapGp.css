@@ -120,7 +120,6 @@
       align-items: center;
       flex-direction: column;
       position: fixed;
-      max-height: 250px;
       overflow-y: auto;
     }
     .card-s {
@@ -292,12 +291,12 @@
       padding: 0 1.79125rem; /* Espacement intérieur gauche et droit */
     }
     
-    .app-button {
+    .dec-button {
       background-color: #FFA82526;
       color: #FFA825;
-      font-size: 16px;
+      font-size: 14px;
       text-align: center;
-      height: 3rem;
+      height: 2.5rem;
       width: 11rem;
       border: none;
       font-family: "Poppins", Helvetica;
@@ -307,12 +306,12 @@
       margin-top: 2.4rem;
     }
     
-    .ann-button {
+    .ca-button {
       background-color: #FF252526;
       color: #FF2525;
-      font-size: 16px;
+      font-size: 14px;
       text-align: center;
-      height: 3rem;
+      height: 2.5rem;
       width: 6rem;
       border: none;
       font-family: "Poppins", Helvetica;
@@ -357,12 +356,12 @@
       justify-content: center;
     }
 
-    .validate-button {
+    .validat-button {
       background-color: #19CE1526;
       color: #19CE15;
-      font-size: 16px;
+      font-size: 14px;
       text-align: center;
-      height: 3rem;
+      height: 2.5rem;
       width: 11rem; 
       border: none;
       font-family: "Poppins", Helvetica;
@@ -373,12 +372,12 @@
       margin-top: 4.3rem;
       }
       
-      .cancel-button {
+      .cancell-button {
         background-color: #FF252526;
         color: #FF2525;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
-        height: 3rem;
+        height: 2.5rem;
         width: 6rem;
         border: none;
         font-family: "Poppins", Helvetica;
@@ -447,8 +446,8 @@ flex-direction: column;
   justify-content: space-between;
 }
 
-.anul-button,
-.va-button {
+.anu-button,
+.valid-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -457,22 +456,22 @@ flex-direction: column;
   border: none;
   font-family: "Poppins", Helvetica;
   font-weight: bold;
-  height: 3rem;
+  height: 2.5rem;
   width: 8rem;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 50px;
   padding: 8px 16px;
   margin-left: 8px;
 }
 
-.anul-button {
+.anu-button {
   background-color: #FF252526;
   color: #FF2525;
   margin-left: 1rem;
   
 }
 
-.va-button {
+.valid-button {
   background-color: #19CE1526;
   color: #19CE15;
 }

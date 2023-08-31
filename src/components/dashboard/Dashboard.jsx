@@ -24,7 +24,6 @@ const Dashboard = () => {
   const [showConfirmation, setShowConfirmation] = useState(false); // État pour afficher ou masquer une confirmation d'émargement
 
 
-
   // Fonction pour afficher la confirmation
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
@@ -201,6 +200,7 @@ const Dashboard = () => {
         </div>
         </div>
       </div>
+      
       <div className="column-r">
       {/* Section de la date */}
       <div className="date-section">
@@ -208,6 +208,26 @@ const Dashboard = () => {
         <h2>Samedi 17 Déc 2022</h2>
       </div>
       {/* Entrée du tableau de bord */}
+      <Link to='/recap'>
+      <div className="dashboard-entry">
+          {/* Heures du séance */}
+        <div className="time">
+          <p>10h15</p> {/* début */}
+          <p>13h15</p> {/* fin */}
+        </div>
+        <div className="divider"></div>
+        {/* Détails du groupe */}
+        <div className="details">
+        {/* Titre du groupe */}
+          <p>Sciences islamiques 1ère année</p>
+          {/* Informations supplémentaires */}
+          <div className="extra-info">
+            <p className="room">Salle n°1</p> {/* Numéro de la salle */}
+            <p className="count">11/32</p>  {/* Statistiques de session */}
+          </div>
+        </div>
+      </div>
+      </Link>
       <Link to='/recap'>
       <div className="dashboard-entry">
           {/* Heures du séance */}
@@ -228,6 +248,27 @@ const Dashboard = () => {
         </div>
       </div>
       </Link>
+      <Link to='/recap'>
+      <div className="dashboard-entry">
+          {/* Heures du séance */}
+        <div className="time">
+          <p>10h15</p> {/* début */}
+          <p>13h15</p> {/* fin */}
+        </div>
+        <div className="divider"></div>
+        {/* Détails du groupe */}
+        <div className="details">
+        {/* Titre du groupe */}
+          <p>Sciences islamiques 2ème année</p>
+          {/* Informations supplémentaires */}
+          <div className="extra-info">
+            <p className="room">Salle n°2</p> {/* Numéro de la salle */}
+            <p className="count">11/32</p>  {/* Statistiques de session */}
+          </div>
+        </div>
+      </div>
+      </Link>
+  
       {/* Deuxième entrée du tableau de bord */}
       <Link to='/recap'>
       <div className="dashboard-entry">
@@ -249,7 +290,6 @@ const Dashboard = () => {
         </div>
       </div>
       </Link> 
-     
     </div>
 
     {/* Bouton pour déclarer une AP */}
@@ -299,6 +339,16 @@ const Dashboard = () => {
             </div>
           </div>
             </Link>
+            <Link to="/recappopup">
+            <div className="g" >
+            {/* Titre du groupe */}
+            <h3>Sciences islamiques 1ére année</h3>
+            <div>
+            {/* Horaires de l'AP */}
+            <p className='d'>Jeu 18h00 à 12h00</p>
+            </div>
+          </div>
+            </Link>
              {/* Div pour sélectionner un groupe, cliquer pour effectuer une action */}
              <Link to="/recappopup">
             <div className="g" >
@@ -320,8 +370,7 @@ const Dashboard = () => {
             </div>
           </div>
             </Link>
-                </div>
-
+            </div>
             </div>
           {/* Bouton pour annuler l'action */}
           <button className="ce-button">Annuler</button>

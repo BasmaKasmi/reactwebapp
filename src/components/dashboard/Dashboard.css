@@ -56,6 +56,7 @@
     background-color: #FF25254D; /* Couleur de fond */
     width: 24rem; /* Largeur */
     height: 11.7rem; /* Hauteur */
+    margin-top: -2rem;
     border-radius: 1.25rem; /* Bordure arrondie */
   }
 
@@ -100,6 +101,7 @@
     color: #898989; /* Couleur du texte */
     font-family: "Poppins", Helvetica; /* Police */
     font-size: 14px; /* Taille de la police */
+    font-weight: 600; /* Texte en gras */
     font-style: italic; /* style italique*/
     padding-left: 1rem; /* espacement à gauche*/
     padding-bottom: 1rem; /* Espacement en bas */
@@ -139,8 +141,8 @@
     display: flex; /* Utilisation du flexbox */
     flex-direction: column; /* disposition en colonne */
     align-items: center; /* Centrer horizontalement les éléments */
-    margin-bottom: 6rem; /* Marge en bas */
-    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+    margin-bottom: 14rem; /* Marge en bas */
+    overflow-y: auto;
   }
   .date-section {
     margin-right: 10.4rem; /* Marge à droite */
@@ -152,7 +154,6 @@
     font-size: 22px; /* Taille de la police */
     font-weight: 600; /* la police en gras (600)*/
     font-family: "Poppins", Helvetica;
-    margin-top: 2rem;
   }
   
   
@@ -164,8 +165,8 @@
     box-shadow: 4px 4px 20px #00000012; /* L'ombre */
     display: flex; /* Utilisation du flexbox */
     align-items: center; /* Disposition en colonne */
-    margin-bottom: -1rem;
-    margin-top: 2rem; /* Marge en bas */
+    flex-grow: 1;
+    margin-top: 1rem; /* Marge en bas */
   }
 
   .dashboard-entry .time p {
@@ -231,6 +232,7 @@
     font-size: 16px; /* Taille de la police */
     font-weight: bold; /* police en gras */
     border: none; /* Pas de bordure */
+    margin-top: -12rem;
     margin-bottom: 2.4rem;
     margin-left: auto;
     margin-right: auto;
@@ -404,10 +406,10 @@ h3 {
       font-family: "Poppins", Helvetica;
       border-radius: 3rem;
       border: 0.1rem solid #e5e4e3;
-      padding-left: 1.25rem;
-      padding-right: 2.3rem;
+      padding-left: 1.4rem;
+      padding-right: 1.8rem;
       height: 3rem;
-      width: 11rem; /* la largeur des inputs */
+      width: 14.2rem; /* la largeur des inputs */
       margin-left: 1rem; /* l'espace entre les inputs */
     }
     
@@ -429,9 +431,9 @@ h3 {
     .ce-button{
         background-color: #FF252526;
         color: #FF2525;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
-        height: 3rem; /*35px*/
+        height: 2.5rem; /*35px*/
         width: 6rem; /*102px*/
         border: none;
         font-family: "Poppins", Helvetica;
@@ -460,7 +462,7 @@ h3 {
     .g-cont{
       display: block;
       align-items: center;
-      max-height: 200px;
+      max-height: 210px;
       overflow-y: auto;
       overflow-x: hidden;
       margin-bottom: 0;

@@ -87,7 +87,25 @@ const RecapPopup = () => {
       <h3>Nom de l'étudiant</h3>
         <p>Absence(s) : 3</p>
       </div>
-      </div>   
+      </div>
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>  
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>  
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>     
       <div className="card" onClick={handleShowAp}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
@@ -153,8 +171,8 @@ const RecapPopup = () => {
             </div>
             </div>
               <div className="buttons-row">
-                <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>
-                <button className="cancel-button">Annuler</button>
+                <button className="validat-button" onClick={handleConfirmationClick}>Valider</button>
+                <button className="cancell-button">Annuler</button>
               </div>
           </div>
         </div>
@@ -172,8 +190,8 @@ const RecapPopup = () => {
               <p>21/01/2023</p>
             </div>
             <div className="confirmation-buttons">
-              <button className="va-button">Valider</button>
-              <button className="anul-button">Annuler</button>
+              <button className="valid-button">Valider</button>
+              <button className="anu-button">Annuler</button>
             </div>
           </div>
         </div>
