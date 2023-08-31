@@ -16,6 +16,12 @@ const RecapGp = () => {
   const [ap2ButtonActive, setAp2ButtonActive] = useState(false);
   const [ai3ButtonActive, setAi3ButtonActive] = useState(false);
   const [ap3ButtonActive, setAp3ButtonActive] = useState(false);
+  const [ai4ButtonActive, setAi4ButtonActive] = useState(false);
+  const [ap4ButtonActive, setAp4ButtonActive] = useState(false);
+  const [ai5ButtonActive, setAi5ButtonActive] = useState(false);
+  const [ap5ButtonActive, setAp5ButtonActive] = useState(false);
+  
+
 
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -114,8 +120,7 @@ const RecapGp = () => {
             </button>
             </div>
           </div>
-      </div> 
-      
+      </div>    
       <div className={`card-s ${ap2ButtonActive ? 'ap-active' : ''} ${ai2ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className='col' onClick={handleClick}>
@@ -173,6 +178,63 @@ const RecapGp = () => {
             </div>
           </div>
       </div>
+      <div className={`card-s ${ap4ButtonActive ? 'ap-active' : ''} ${ai4ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
+          <h3>Nom de l'étudiant</h3>
+          <p>Absence(s) : 3</p>
+        </div>
+          <div className="b-container">
+          <button
+            className={`ap-b ${ap4ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp4ButtonActive(!ap4ButtonActive);
+              setAi4ButtonActive(false);
+              }}
+            >
+            AP 
+            </button>
+           <button
+            className={`ai-b ${ai4ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi4ButtonActive(!ai4ButtonActive);
+              setAp4ButtonActive(false);
+              }}
+            >
+            AI
+            </button>
+            </div>
+          </div>
+      </div>
+      <div className={`card-s ${ap5ButtonActive ? 'ap-active' : ''} ${ai5ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
+          <h3>Nom de l'étudiant</h3>
+          <p>Absence(s) : 3</p>
+        </div>
+          <div className="b-container">
+          <button
+            className={`ap-b ${ap5ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp5ButtonActive(!ap5ButtonActive);
+              setAi5ButtonActive(false);
+              }}
+            >
+            AP 
+            </button>
+           <button
+            className={`ai-b ${ai5ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi5ButtonActive(!ai5ButtonActive);
+              setAp5ButtonActive(false);
+              }}
+            >
+            AI
+            </button>
+            </div>
+          </div>
+      </div>
+
       </div>
       <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
       {showModal && (
@@ -237,6 +299,18 @@ const RecapGp = () => {
           onClick={() => handleDateCardClick('01/02/2023')}
         >
             <h3>01/02/2023</h3>
+            </div>
+            <div
+          className={`date-card ${selectedDates.includes('17/02/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('17/02/2023')}
+        >
+            <h3>17/02/2023</h3>
+            </div>
+            <div
+          className={`date-card ${selectedDates.includes('13/07/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('13/07/2023')}
+        >
+            <h3>13/07/2023</h3>
             </div>
             <div
           className={`date-card ${selectedDates.includes('02/02/2023') ? 'selected' : ''}`}

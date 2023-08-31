@@ -9,7 +9,7 @@
       width: 90%;
       margin: 0 auto;
       align-items: center;
-      top: 8rem;
+      top: 6rem;
       left: 5%; /* valeur en fonction de la position horizontale souhaitée */
       right: 5%; /* valeur en fonction de la position horizontale souhaitée */
       background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
@@ -389,15 +389,22 @@
         margin-top: 4.4rem;
       }
 
-.date-card {
-background-color: #ffffff;
-border-radius: 1rem;
-margin-bottom: 1rem;
-box-shadow: 4px 4px 20px #00000012;
-height: 3.25rem;
-width: 18.25rem;
-cursor: pointer;
-}
+      .date-card-cont{
+        display: block;
+        align-items: center;
+        min-height: 310px;
+        overflow-y: auto;
+        margin-bottom: 0;
+      }
+      .date-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      box-shadow: 4px 4px 20px #00000012;
+      height: 3.25rem;
+      width: 18.25rem;
+      cursor: pointer;
+      }
 
 .confirmation-card {
 position: fixed;

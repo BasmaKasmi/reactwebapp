@@ -3,13 +3,13 @@
 }
 
 @media screen and (max-width: 783px){
-  .Recap {
+  .Rappel {
       display: block;
       width: 90%;
       margin: 0 auto;
       position: fixed;
       align-items: center;
-      top: 8rem;
+      top: 7rem;
       left: 5%; /* valeur en fonction de la position horizontale souhaitée */
       right: 5%; /* valeur en fonction de la position horizontale souhaitée */
       background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
@@ -126,12 +126,32 @@
       margin-left: 0.9rem;
       margin-right: -0.8rem; /* Utilisation d'une marge négative pour réduire l'espace */
     }
+    .stu-row {
+      display: flex;
+      align-items: center;
+      margin-right: 0.3rem;
+      margin-bottom: 0;
+    }
+    
+    .stu-row h3 {
+      color: #000000;
+      font-family: "Poppins", Helvetica;
+      font-size: 14px;
+      margin-bottom: 1rem;
+    }
+    
+    .stu-row img {
+      margin-left: 0.9rem;
+      margin-right: -0.8rem; /* Utilisation d'une marge négative pour réduire l'espace */
 
-    .container-r{
+    }
+
+    .container-re{
       display: block;
       align-items: center;
       flex-direction: column;
       position: fixed;
+      max-height: 502px;
       overflow-y: auto;
     }
     .card-s {
@@ -404,10 +424,17 @@ font-family: "Poppins", Helvetica;
 font-size: 14px;
 margin-bottom: 1rem;
 }
+.date-card-cont{
+  display: block;
+  align-items: center;
+  min-height: 310px;
+  overflow-y: auto;
+  margin-bottom: 0;
+}
 .date-card {
 background-color: #ffffff;
 border-radius: 1rem;
-margin-bottom: 1rem;
+margin-top: 1rem;
 box-shadow: 4px 4px 20px #00000012;
 height: 3.25rem;
 width: 18.25rem;

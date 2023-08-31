@@ -125,6 +125,20 @@
       font-size: 16px;
       font-weight: bold;
     }
+    .grp-carte{
+      display: block;
+      align-items: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .carte {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 4px 4px 20px #00000012;
+      margin-bottom: 1rem; /*marge adaptable */
+      width: 23.3rem;  /*325px*/
+      height: 4.2rem; /*60px*/
+    }
   
 }
 

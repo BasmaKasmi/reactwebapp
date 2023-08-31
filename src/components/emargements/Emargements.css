@@ -26,7 +26,7 @@
     width: 90%;
     margin: 0 auto;
     align-items: center;
-    top: 8rem;
+    top: 6rem;
     left: 5%; /* valeur en fonction de la position horizontale souhaitée */
     right: 5%; /* valeur en fonction de la position horizontale souhaitée */
     background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
@@ -43,6 +43,7 @@
   .grp-carte{
     display: block;
     align-items: center;
+    overflow-x: hidden;
     overflow-y: auto;
   }
   .carte {
@@ -50,7 +51,7 @@
     border-radius: 16px;
     box-shadow: 4px 4px 20px #00000012;
     margin-bottom: 1rem; /*marge adaptable */
-    width: 22rem;  /*325px*/
+    width: 23.3rem;  /*325px*/
     height: 4.2rem; /*60px*/
   }
   .carte  h3 {

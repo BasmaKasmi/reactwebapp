@@ -14,7 +14,3 @@
     border-radius: 3.125rem; /* bordure arrondie*/
     cursor: pointer; /* Curseur en forme de main */
   }
-  
-  .retour-button:hover {
-    background-color: #FF2525; /* Couleur de fond */
-  }

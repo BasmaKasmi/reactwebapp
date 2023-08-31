@@ -90,12 +90,13 @@
         font-family: "Poppins", Helvetica;
         font-size: 18px;
         font-weight: 600;
+        margin-top: 0.8rem;
       }
 
       .cart-cont{
         display: block;
         align-items: center;
-        max-height: 18.75rem;
+        max-height: 38rem;
         overflow-y: auto;
       }
         /* Css pour les éléments avec la classe .c */

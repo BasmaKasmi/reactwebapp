@@ -152,6 +152,18 @@ const RecapPopup = () => {
             <h3>01/02/2023</h3>
             </div>
             <div
+          className={`date-card ${selectedDates.includes('17/02/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('17/02/2023')}
+        >
+            <h3>17/02/2023</h3>
+            </div>
+            <div
+          className={`date-card ${selectedDates.includes('13/07/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('13/07/2023')}
+        >
+            <h3>13/07/2023</h3>
+            </div>
+            <div
           className={`date-card ${selectedDates.includes('02/02/2023') ? 'selected' : ''}`}
           onClick={() => handleDateCardClick('02/02/2023')}
         >

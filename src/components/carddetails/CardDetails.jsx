@@ -29,8 +29,8 @@ const CardDetails = () => {
         Mes dates :
       </h2>
       <div className='cart-cont'>
-           {/* Composant de navigation Link avec une classe CSS 'c' */}
-           <Link to="/recapem">
+      {/* Composant de navigation Link avec une classe CSS 'c' */}
+      <Link to="/recapem">
       <div className="cart">
       <div className='ligne'>
       {/* Titre de niveau 3 indiquant la semaine 3 */}
@@ -67,6 +67,66 @@ const CardDetails = () => {
       <h3>Semaine 4</h3>
         {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
         <p className="status-n"> NON FAIT</p>
+      </div>
+      </div> 
+      </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 5</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-f">FAIT</p>
+      </div>
+      </div> 
+      </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 6</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-f">FAIT</p>
+      </div>
+      </div> 
+      </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 7</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-n"> NON FAIT</p>
+      </div>
+      </div> 
+      </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 8</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-n"> NON FAIT</p>
+      </div>
+      </div> 
+      </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 9</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-f">FAIT</p>
+      </div>
+      </div> 
+      </Link>
+      <Link to="/recapem">
+      <div className="cart">
+      <div className='ligne'>
+      {/* Titre de niveau 3 indiquant la semaine 3 */}
+      <h3>Semaine 10</h3>
+        {/* p indiquant que l'émargement de la semaine 3 n'est pas fait */}
+        <p className="status-f">FAIT</p>
       </div>
       </div> 
       </Link>
