@@ -120,7 +120,7 @@
         align-items: center;
         max-height: 480px;
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: auto; /*scroll*/
       }
       .card {
         background-color: #FFFFFF;
