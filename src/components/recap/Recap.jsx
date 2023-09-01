@@ -119,7 +119,6 @@ const Recap = () => {
             </div>
           </div>
       </div> 
-      
       <div className="card-s">
         <div className='row'>
         <div className='col' onClick={handleClick}>

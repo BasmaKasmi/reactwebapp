@@ -162,7 +162,10 @@
     margin: 0;
     margin-right: 7.4rem;
 }
- 
+.card-s.active {
+  background-color: #FF252526;
+}
+
     .b-container {
       display: flex;
       align-items: center;
