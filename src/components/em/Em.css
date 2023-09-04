@@ -9,7 +9,6 @@
   gap: 27px;
   margin-right: 2px;
   padding: 0 42px;/* espace intérieur */
-  overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
 
 }
 
@@ -35,6 +34,7 @@
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
   top: 142px;
   right: 1.86rem;
+
 }
 
 .column-header {
@@ -77,7 +77,7 @@
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 14px;
-  padding-left: 20px;
+  padding-left: 1.3rem;
   padding-top: 4px;
   padding-bottom: 16px;
 }
@@ -221,72 +221,6 @@
   pointer-events: auto;
 }
 
-.confirmation-card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.confirmation-content {
-  text-align: center;
-}
-
-.icon-container {
-  font-size: 40px;
-  color: #19CE15;
-  margin-bottom: 20px;
-}
-
-.confirmation-details {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.confirmation-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.annuler-button {
-  background-color: #FF252526;
-  color: #FF2525;
-  height: 42px;
-  width: 100px;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-right: 8px;
-}
-
-.valider-button {
-  background-color: #19CE1526;
-  color: #19CE15;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  height: 42px;
-  width: 100px;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-left: 8px;
-}
-
 .student-buttons {
   display: flex;
   justify-content: center;
@@ -306,6 +240,23 @@
   font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
   font-weight: bold;
   margin-top: 10px;
+}
+.ap-b.active,
+.ai-b.active {
+  background-color: #FF2525;
+  color: #fff;
+}
+
+/* Pour les cartes avec AP actif */
+.std.ap-active {
+background-color: #FF252526;
+color: #000000; /* Couleur du texte */
+}
+
+/* Pour les cartes avec AI actif */
+.std.ai-active {
+background-color: #FF252526;
+color: #000000; /* Couleur du texte */
 }
 
 .std.active {

@@ -20,6 +20,19 @@ const Sidebar = () => {
   const[declareAp, setdeclareAp] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
+  const [selectedDates, setSelectedDates] = useState([]);
+
+  const handleDateCardClick = (date) => {
+    // Vérifier si la date est déjà sélectionnée
+    if (selectedDates.includes(date)) {
+      // Si elle est sélectionnée, la retirer de la liste
+      setSelectedDates(selectedDates.filter(d => d !== date));
+    } else {
+      // Si elle n'est pas sélectionnée, l'ajouter à la liste
+      setSelectedDates([...selectedDates, date]);
+    }
+  };
+
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
     document.body.classList.add('modal-open');
@@ -138,8 +151,14 @@ const Sidebar = () => {
               <img src={user} alt='' />
                 <h3>Rechercher par groupe :</h3>
             </div>
-            <div className="gr-cont">
+            <div className="gru-cont">
             <div className="gr" onClick={handleSelectStudent}>
+            <h3>Sciences islamiques 1ére année</h3>
+            <div>
+            <p className='jr'>Jeu 18h00 à 12h00</p>
+            </div>
+          </div>
+          <div className="gr" onClick={handleSelectStudent}>
             <h3>Sciences islamiques 1ére année</h3>
             <div>
             <p className='jr'>Jeu 18h00 à 12h00</p>
@@ -226,18 +245,30 @@ const Sidebar = () => {
               <img src={user} alt='' />
                 <h3>Sélectionner les AP :</h3>
             </div>
-            <div className="time-card-cont">
-            <div className="time-card">
+            <div className='time-card-cont' onClick={(e) => e.stopPropagation()}>
+            <div
+          className={`time-card ${selectedDates.includes('01/02/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('01/02/2023')}
+        >
             <h3>01/02/2023</h3>
             </div>
-            <div className="time-card">
-            <h3>01/02/2023</h3>
+            <div
+          className={`time-card ${selectedDates.includes('17/02/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('17/02/2023')}
+        >
+            <h3>17/02/2023</h3>
             </div>
-            <div className="time-card">
-            <h3>14/07/2023</h3>
+            <div
+          className={`time-card ${selectedDates.includes('13/07/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('13/07/2023')}
+        >
+            <h3>13/07/2023</h3>
             </div>
-            <div className="time-card">
-            <h3>14/07/2023</h3>
+            <div
+          className={`time-card ${selectedDates.includes('15/07/2023') ? 'selected' : ''}`}
+          onClick={() => handleDateCardClick('15/07/2023')}
+        >
+            <h3>15/07/2023</h3>
             </div>
             </div>
             </div>

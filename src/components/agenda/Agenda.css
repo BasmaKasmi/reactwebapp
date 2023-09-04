@@ -214,6 +214,25 @@
   text-align: center;
 }
 
+.day {
+  color: #000000; /* Couleur du texte en noir */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-weight: lighter; /* Poids de la police plus léger */
+  font-size: 0.75em; /* Taille de la police */
+  padding-left: 1.25em; /* Espace intérieur à gauche */
+  padding-top: 0.25em; /* Espace intérieur en haut */
+  padding-bottom: 1em; /* Espace intérieur en bas */
+}
+
+.session {
+  color: #898989; /* Couleur du texte en gris */
+  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-weight: bold; /* Poids de la police en gras */
+  font-size: 0.75em; /* Taille de la police */
+  font-style: italic; /* Style de police italique */
+  padding-right: 1.25em; /* Espace intérieur à droite */
+}
+
 /* Css pour l'élément .month-year */
 .month-year {
   display: flex;

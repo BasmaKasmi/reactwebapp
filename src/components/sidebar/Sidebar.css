@@ -314,6 +314,15 @@
     display: block;
     align-items: center;
     overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 1rem;
+
+  }
+  .gru-cont{
+    display: block;
+    align-items: center;
+    overflow-y: auto;
+    max-height: 230px;
     margin-bottom: 1rem;
 
   }
@@ -430,6 +439,7 @@
   .time-card-cont{
     display: block;
     align-items: center;
+    max-height: 250px;
     overflow-y: auto;
   }
   .time-card {
@@ -443,6 +453,10 @@
     width: 332px; /*332px*/
     cursor: pointer;
   }
+  .time-card.selected {
+    background-color: #FF252526;
+  }
+
   .buttons-row {
     display: flex;
     align-items: center;
