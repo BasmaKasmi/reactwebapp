@@ -196,7 +196,23 @@
   font-weight: bold;
   margin-top: 10px;
 }
+.ap-button.active,
+.ai-button.active {
+  background-color: #FF2525;
+  color: #fff;
+}
 
+/* Pour les cartes avec AP actif */
+.std .ap-active {
+background-color: #FF252526;
+color: #000000; /* Couleur du texte */
+}
+
+/* Pour les cartes avec AI actif */
+.std.ai-active {
+background-color: #FF252526;
+color: #000000; /* Couleur du texte */
+}
 
 .std.active {
 background-color: #FF252526;

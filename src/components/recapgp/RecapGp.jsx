@@ -68,7 +68,7 @@ const RecapGp = () => {
             <p className="description">Abandon(s)</p>
           </div>
           <div className='col'>
-            <h3>65%</h3>
+            <h3>2/32</h3>
             <p className="description">Présence</p>
           </div>
           <div className='col'>

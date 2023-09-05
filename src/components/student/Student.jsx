@@ -16,6 +16,18 @@ const Student = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const[declareAp, setdeclareAp] = useState(false);
+  const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
+  const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
+  const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
+  const [ap2ButtonActive, setAp2ButtonActive] = useState(false);
+  const [ai3ButtonActive, setAi3ButtonActive] = useState(false);
+  const [ap3ButtonActive, setAp3ButtonActive] = useState(false);
+  const [ai4ButtonActive, setAi4ButtonActive] = useState(false);
+  const [ap4ButtonActive, setAp4ButtonActive] = useState(false);
+  const [ai5ButtonActive, setAi5ButtonActive] = useState(false);
+  const [ap5ButtonActive, setAp5ButtonActive] = useState(false);
+  const [ai6ButtonActive, setAi6ButtonActive] = useState(false);
+  const [ap6ButtonActive, setAp6ButtonActive] = useState(false);
 
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -72,128 +84,176 @@ const Student = () => {
           <p className='day'>Jeu 18h00 à 12h00</p>
         </div>
         <div className='card-container'>
-        <div className={classNames('std')} onClick={handleClick}>
-          <div className='row'>
-          <div className='col'>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-            <div className="student-buttons">
-            <button
-            className="ap-button"
-            >
-            AP 
-            </button>
-            <button
-            className="ai-button"
-            >
-            AI
-            </button>
-            </div>
-          </div>
-        </div>
-        <div className={classNames('std')} onClick={handleClick}>
-          <div className='row'>
-          <div className='col'>
+        <div className={`std ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
           <div className="student-buttons">
-            <button
-            className="ap-button"
+          <button
+            className={`ap-button ${ap1ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp1ButtonActive(!ap1ButtonActive);
+              setAi1ButtonActive(false);
+              }}
             >
             AP 
             </button>
-            <button
-            className="ai-button"
+           <button
+            className={`ai-button ${ai1ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi1ButtonActive(!ai1ButtonActive);
+              setAp1ButtonActive(false);
+              }}
             >
             AI
             </button>
             </div>
           </div>
-        </div>
-        <div className={classNames('std')} onClick={handleClick}>
-          <div className='row'>
-          <div className='col'>
+      </div> 
+      <div className={`std ${ap2ButtonActive ? 'ap-active' : ''} ${ai2ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
           <div className="student-buttons">
-            <button
-            className="ap-button"
+          <button
+            className={`ap-button ${ap2ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp2ButtonActive(!ap2ButtonActive);
+              setAi2ButtonActive(false);
+              }}
             >
             AP 
             </button>
-            <button
-            className="ai-button"
+           <button
+            className={`ai-button ${ai2ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi2ButtonActive(!ai2ButtonActive);
+              setAp2ButtonActive(false);
+              }}
             >
             AI
             </button>
             </div>
           </div>
-        </div>
+      </div> 
+      <div className={`std ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
+          <h3>Nom de l'étudiant</h3>
+          <span>Absence(s) : 3</span>
+          </div>
+          <div className="student-buttons">
+          <button
+            className={`ap-button ${ap3ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp3ButtonActive(!ap3ButtonActive);
+              setAi3ButtonActive(false);
+              }}
+            >
+            AP 
+            </button>
+           <button
+            className={`ai-button ${ai3ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi3ButtonActive(!ai3ButtonActive);
+              setAp3ButtonActive(false);
+              }}
+            >
+            AI
+            </button>
+            </div>
+          </div>
+      </div> 
         </div>
         <div className='card-container'>
-        <div className={classNames('std')} onClick={handleClick}>
-          <div className='row'>
-          <div className='col'>
+        <div className={`std ${ap4ButtonActive ? 'ap-active' : ''} ${ai4ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
           <div className="student-buttons">
-            <button
-            className="ap-button"
+          <button
+            className={`ap-button ${ap4ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp4ButtonActive(!ap4ButtonActive);
+              setAi4ButtonActive(false);
+              }}
             >
             AP 
             </button>
-            <button
-            className="ai-button"
+           <button
+            className={`ai-button ${ai4ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi4ButtonActive(!ai4ButtonActive);
+              setAp4ButtonActive(false);
+              }}
             >
             AI
             </button>
             </div>
           </div>
-        </div>
-        <div className={classNames('std')} onClick={handleClick}>
-          <div className='row'>
-          <div className='col'>
+      </div> 
+      <div className={`std ${ap5ButtonActive ? 'ap-active' : ''} ${ai5ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
           <div className="student-buttons">
-            <button
-            className="ap-button"
+          <button
+            className={`ap-button ${ap5ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp5ButtonActive(!ap5ButtonActive);
+              setAi5ButtonActive(false);
+              }}
             >
             AP 
             </button>
-            <button
-            className="ai-button"
+           <button
+            className={`ai-button ${ai5ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi5ButtonActive(!ai5ButtonActive);
+              setAp5ButtonActive(false);
+              }}
             >
             AI
             </button>
             </div>
           </div>
-        </div>
-        <div className={classNames('std')} onClick={handleClick}>
-          <div className='row'>
-          <div className='col'>
+      </div> 
+      <div className={`std ${ap6ButtonActive ? 'ap-active' : ''} ${ai6ButtonActive ? 'ai-active' : ''}`}>
+        <div className='row'>
+        <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
           </div>
           <div className="student-buttons">
-            <button
-            className="ap-button"
+          <button
+            className={`ap-button ${ap6ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAp6ButtonActive(!ap6ButtonActive);
+              setAi6ButtonActive(false);
+              }}
             >
             AP 
             </button>
-            <button
-            className="ai-button"
+           <button
+            className={`ai-button ${ai6ButtonActive ? 'active' : ''}`}
+            onClick={() => {
+              setAi6ButtonActive(!ai6ButtonActive);
+              setAp6ButtonActive(false);
+              }}
             >
             AI
             </button>
             </div>
           </div>
-        </div>
+      </div> 
         </div>
         <div className='button-container'>
         <button className="fem-button" onClick={handleConfirmationClick}>

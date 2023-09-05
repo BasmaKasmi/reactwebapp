@@ -91,6 +91,12 @@
   }
 }
 
+.groupes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .groupes {
   flex: 1; /* Utilisation de flexbox */
   width: 702px; /* Largeur */
@@ -203,3 +209,4 @@ color: #FFFFFF;
   /* Propriété "display" définie sur "none", ce qui masque l'élément */
   display: none;
 }
+
