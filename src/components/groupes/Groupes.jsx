@@ -1,9 +1,7 @@
-import React, { useState } from 'react'; // Importation des modules React et useState depuis 'react'
-import { Link } from 'react-router-dom'; // Importation du module Link depuis 'react-router-dom'
-import classNames from 'classnames'; // Importation du module classNames
-import './Groupes.css'; // Importation du fichier de styles 'Groupes.css'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Groupes.css';
 
-// Définition du composant fonctionnel Groupes
 const Groupes = () => {
   // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);
@@ -15,6 +13,12 @@ const Groupes = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   // Contrôler l'affichage du contenu dans la colonne "groupes"
   const [showGroupesContent, setShowGroupesContent] = useState(false); 
+  const navigate = useNavigate(); // Utiliser useNavigate
+
+  const handleMobileGroupClick = () => {
+    // Redirigez l'utilisateur vers la page RecapGp en mode mobile
+    navigate('/recapgp');
+  };
 
 
 
@@ -53,7 +57,7 @@ const Groupes = () => {
     {/* Crée un conteneur pour les cartes */}
     <div className='grp-carte'>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
+    <Link to='/recapgp' onClick={handleMobileGroupClick}>
     {/* Crée une carte */}
     <div className="carte">
     {/* Affiche le titre de la carte */}
@@ -65,7 +69,7 @@ const Groupes = () => {
     </div>
     </Link>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
+    <Link to='/recapgp' onClick={handleMobileGroupClick}>
     {/* Crée une autre carte */}
     <div className="carte">
     {/* Affiche le titre de la carte */}
@@ -77,7 +81,7 @@ const Groupes = () => {
     </div>
     </Link>
     {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
+    <Link to='/recapgp' onClick={handleMobileGroupClick}>
     {/* Crée une autre carte */}
     <div className="carte">
       {/* Affiche le titre de la carte */}

@@ -5,6 +5,7 @@ import Sidebar from '../components/sidebar/Sidebar';
 import RetourButton from '../components/retourbutton/RetourButton';
 import Groupes from '../components/groupes/Groupes';
 import NavGrp from '../components/navGp/NavGrp';
+import RecapGp from '../components/recapgp/RecapGp';
 
 // Déclaration du composant GroupesPage
 const GroupesPage = () => {

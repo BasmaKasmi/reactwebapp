@@ -10,18 +10,6 @@ const RecapGp = () => {
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
-  const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
-  const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
-  const [ap2ButtonActive, setAp2ButtonActive] = useState(false);
-  const [ai3ButtonActive, setAi3ButtonActive] = useState(false);
-  const [ap3ButtonActive, setAp3ButtonActive] = useState(false);
-  const [ai4ButtonActive, setAi4ButtonActive] = useState(false);
-  const [ap4ButtonActive, setAp4ButtonActive] = useState(false);
-  const [ai5ButtonActive, setAi5ButtonActive] = useState(false);
-  const [ap5ButtonActive, setAp5ButtonActive] = useState(false);
-  
-
 
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -35,6 +23,7 @@ const RecapGp = () => {
       setSelectedDates([...selectedDates, date]);
     }
   };
+
 
   const handleClick = () => {
     setShowModal(true);
@@ -88,186 +77,48 @@ const RecapGp = () => {
           </div>
         </div>
       </div>
-        <div className="stu-row">
+      <div className="stu-row">
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
-        </div>
-        <div className='container-r'>
-        <div className={`card-s ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap1ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp1ButtonActive(!ap1ButtonActive);
-              setAi1ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai1ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi1ButtonActive(!ai1ButtonActive);
-              setAp1ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
+      </div>
+      <div className='card-cont'>
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>  
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>  
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>     
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div> 
+      <div className="card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
       </div>    
-      <div className={`card-s ${ap2ButtonActive ? 'ap-active' : ''} ${ai2ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp2ButtonActive(!ap2ButtonActive);
-              setAi2ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi2ButtonActive(!ai2ButtonActive);
-              setAp2ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
       </div>
-
-      <div className={`card-s ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-        </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp3ButtonActive(!ap3ButtonActive);
-              setAi3ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi3ButtonActive(!ai3ButtonActive);
-              setAp3ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-      <div className={`card-s ${ap4ButtonActive ? 'ap-active' : ''} ${ai4ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-        </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp4ButtonActive(!ap4ButtonActive);
-              setAi4ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi4ButtonActive(!ai4ButtonActive);
-              setAp4ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-      <div className={`card-s ${ap5ButtonActive ? 'ap-active' : ''} ${ai5ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-        </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap5ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp5ButtonActive(!ap5ButtonActive);
-              setAi5ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai5ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi5ButtonActive(!ai5ButtonActive);
-              setAp5ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-
-      </div>
-      <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
-      {showModal && (
-        <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="mod">
-            <h2>Nom de l'étudiant</h2>
-            <div className="recap-row">
-              <img src={status} alt='' />
-              <h3> Récapitulatif du groupe : </h3>
-            </div>
-            <div className='block-modal'>
-            <div className='row'>
-              <div className='col'>
-                <h3>17</h3>
-                <p className="description">Inscrits</p>
-              </div>
-              <div className='col'>
-                <h3>2</h3>
-                <p className="description">Abandon(s)</p>
-              </div>
-              <div className='col'>
-                <h3>65%</h3>
-                <p className="description">Présence</p>
-              </div>
-            </div>
-            </div>
-            <div className="buttons-ro">
-              <button className="dec-button" onClick={handleShowAp}>Déclarer AP</button>
-              <button className="ca-button">Annuler</button>
-            </div>
-          </div>
-        </div>
-      )}
       {showAp && (
         <div className="modal-overlay" onClick={handleCloseShowAp}>
           <div className="modal">

@@ -298,6 +298,7 @@
   border-radius: 30px; /* le rayon de bordure pour obtenir la forme souhaitée */
   padding: 4px 8px; /* les valeurs de padding pour réduire l'espace intérieur du bouton */
   margin-right: 8px;
+  font-weight: bold;
   border: none;
   height: 35px;
   width:35px;
@@ -306,6 +307,23 @@
   font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
   font-weight: bold;
   margin-top: 10px;
+}
+.ap-b.active,
+.ai-b.active {
+  background-color: #FF2525;
+  color: #fff;
+}
+
+/* Pour les cartes avec AP actif */
+.std.ap-active {
+background-color: #FF252526;
+color: #000000; /* Couleur du texte */
+}
+
+/* Pour les cartes avec AI actif */
+.std.ai-active {
+background-color: #FF252526;
+color: #000000; /* Couleur du texte */
 }
 
 .std.active {
