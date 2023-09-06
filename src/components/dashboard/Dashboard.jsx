@@ -100,6 +100,7 @@ const Dashboard = () => {
         {/* Crée un conteneur avec une classe "content" */}
         <div className="content">
           {/* Crée une entrée avec une classe "entry" */}
+          <div className="entry-cont">
           <Link to='/rappel'>
           <div className="entry">
             {/* Affiche un titre de niveau 3 avec le nom du cours */}
@@ -113,6 +114,20 @@ const Dashboard = () => {
             </div>
           </div>
           </Link>
+          <Link to='/rappel'>
+          <div className="entry">
+            {/* Affiche un titre de niveau 3 avec le nom du cours */}
+            <h3>Sciences islamiques 3ème année</h3>
+            {/* Crée un conteneur pour les détails avec une classe "details" */}
+            <div className="details">
+              {/* Affiche la date de l'emargement */}
+              <p className="date">Sam 10 Déc 2022</p>
+              {/* Affiche le nombre d'emargements */}
+              <p className="count">11/32</p>
+            </div>
+          </div>
+          </Link>
+          </div>
         </div>
       </div>
       {/* Div englobante pour la colonne */}

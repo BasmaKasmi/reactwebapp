@@ -68,6 +68,13 @@
     font-size: 18px; /* Taille de police */
     text-align: center; /* Alignement du texte au centre */
   }
+  .entry-cont{
+    display: block;
+    align-items: center;
+    position: fixed;
+    max-height: 80px;
+    overflow-y: auto;
+  }
 
   /* css pour .entry à l'intérieur de .pink-box */
   .pink-box .entry {

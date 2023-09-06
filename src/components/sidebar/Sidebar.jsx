@@ -10,6 +10,11 @@ import cldr from '../../assets/calendar.svg';
 import nom from '../../assets/nom.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/2 User.png';
+// l'icone de menu
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 const Sidebar = () => {
@@ -75,8 +80,9 @@ const Sidebar = () => {
   return (
     <div>
       <button className="sidebar-toggle" onClick={handleToggle}>
-        {isActive ? ">" : "<"}
+        <FontAwesomeIcon icon={faBars} />
       </button>
+
       {isActive && <div className="sidebar-overlay" onClick={handleToggle} />}
       <div
         className={`sidebar ${isActive ? "active" : ""}`}

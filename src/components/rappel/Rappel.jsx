@@ -244,7 +244,6 @@ const Rappel = () => {
       </div>
 
       </div>
-      
       <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>

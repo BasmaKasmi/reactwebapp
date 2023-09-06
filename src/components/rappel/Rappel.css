@@ -244,11 +244,16 @@
       margin-left: 20px;
       margin-top: 2.4rem;
     }
-    
+  .container-boutton{
+    display: block;
+    justify-content: center;
+    border: 2px solid  red;
+    min-height: 4rem;
+  }
     .val-button{
       display: block;
       align-items: center;
-      background-color: #19ce1526;
+      background-color: #000000;
       color: #19CE15;
       font-size: 16px;
       font-family: "Poppins", Helvetica;
@@ -260,7 +265,7 @@
       height: 3.180rem; /*42px*/
       border: none; /* Pas de bordure */
       cursor: pointer; /* Curseur en forme de main */
-      margin-bottom: -3.2rem;
+      margin: bottom 0;;
       margin-left: auto;
       margin-right: auto;
       padding: 0 1.79125rem; /* Espacement intérieur gauche et droit */
