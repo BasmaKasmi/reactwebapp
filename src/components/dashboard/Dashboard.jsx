@@ -11,6 +11,10 @@ import st from '../../assets/student.svg';
 // Importation de l'image "2 User.png" à partir du dossier "assets".
 import user from '../../assets/2 User.png';
 import nom from '../../assets/nom.svg';
+// importation de l'icone de validation
+import iconeValidation from '../../assets/valid.svg'; 
+import classNames from 'classnames'; // Importation de la bibliothèque classNames 
+
 
 // Définition du Dashboard
 
@@ -22,6 +26,12 @@ const Dashboard = () => {
   const[selectStudent, setselectStudent] = useState(false); // État pour sélectionner ou désélectionner un étudiant
   const[declareAp, setdeclareAp] = useState(false); // État pour déclarer ou ne pas déclarer une AP
   const [showConfirmation, setShowConfirmation] = useState(false); // État pour afficher ou masquer une confirmation d'émargement
+  const [isEmargementValide, setIsEmargementValide] = useState(false); // Pour suivre si l'émargement est validé ou non 
+
+  //lorsque l'utilisateur clique sur un bouton de validation
+  const validerEmargement = () => {
+    setIsEmargementValide(true);
+  };
 
 
   // Fonction pour afficher la confirmation
@@ -89,6 +99,9 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div> 
         </div>
+        <div className={classNames('emargement-validation-desktop', { 'hide-validation': !isEmargementValide })}>
+          <img src={iconeValidation} alt="Emargement validé" />
+        </div>
         </div>
         </Link>
       </div>
@@ -112,6 +125,9 @@ const Dashboard = () => {
               {/* Affiche le nombre d'emargements */}
               <p className="count">11/32</p>
             </div>
+            <div className={classNames('enf-validation', { 'hide-validation': !isEmargementValide })}>
+              <img src={iconeValidation} alt="Emargement validé" />
+            </div>
           </div>
           </Link>
           <Link to='/rappel'>
@@ -124,6 +140,9 @@ const Dashboard = () => {
               <p className="date">Sam 10 Déc 2022</p>
               {/* Affiche le nombre d'emargements */}
               <p className="count">11/32</p>
+            </div>
+            <div className={classNames('enf-validation', { 'hide-validation': !isEmargementValide })}>
+              <img src={iconeValidation} alt="Emargement validé" />
             </div>
           </div>
           </Link>
@@ -163,10 +182,13 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
+        <div className={classNames('emargement-validation-desktop', { 'hide-validation': !isEmargementValide })}>
+          <img src={iconeValidation} alt="Emargement validé" />
+        </div>
         </div>
         </Link>
       </div>
-      
+
         {/* Div englobante pour la colonne */}
       <div className="column">
           {/* En-tête de la colonne avec arrière-plan orange */}
@@ -241,25 +263,8 @@ const Dashboard = () => {
             <p className="count">11/32</p>  {/* Statistiques de session */}
           </div>
         </div>
-      </div>
-      </Link>
-      <Link to='/recap'>
-      <div className="dashboard-entry">
-          {/* Heures du séance */}
-        <div className="time">
-          <p>10h15</p> {/* début */}
-          <p>13h15</p> {/* fin */}
-        </div>
-        <div className="divider"></div>
-        {/* Détails du groupe */}
-        <div className="details">
-        {/* Titre du groupe */}
-          <p>Sciences islamiques 2ème année</p>
-          {/* Informations supplémentaires */}
-          <div className="extra-info">
-            <p className="room">Salle n°2</p> {/* Numéro de la salle */}
-            <p className="count">11/32</p>  {/* Statistiques de session */}
-          </div>
+        <div className={classNames('emargement-validation', { 'hide-validation': !isEmargementValide })}>
+          <img src={iconeValidation} alt="Emargement validé" />
         </div>
       </div>
       </Link>
@@ -277,9 +282,35 @@ const Dashboard = () => {
           <p>Sciences islamiques 2ème année</p>
           {/* Informations supplémentaires */}
           <div className="extra-info">
-            <p className="room">Salle n°2</p> {/* Numéro de la salle */}
+            <p className="room">Salle n°1</p> {/* Numéro de la salle */}
             <p className="count">11/32</p>  {/* Statistiques de session */}
           </div>
+        </div>
+        <div className={classNames('emargement-validation', { 'hide-validation': !isEmargementValide })}>
+          <img src={iconeValidation} alt="Emargement validé" />
+        </div>
+      </div>
+      </Link>
+      <Link to='/recap'>
+      <div className="dashboard-entry">
+          {/* Heures du séance */}
+        <div className="time">
+          <p>10h15</p> {/* début */}
+          <p>13h15</p> {/* fin */}
+        </div>
+        <div className="divider"></div>
+        {/* Détails du groupe */}
+        <div className="details">
+        {/* Titre du groupe */}
+          <p>Sciences islamiques 2ème année</p>
+          {/* Informations supplémentaires */}
+          <div className="extra-info">
+            <p className="room">Salle n°1</p> {/* Numéro de la salle */}
+            <p className="count">11/32</p>  {/* Statistiques de session */}
+          </div>
+        </div>
+        <div className={classNames('emargement-validation', { 'hide-validation': !isEmargementValide })}>
+          <img src={iconeValidation} alt="Emargement validé" />
         </div>
       </div>
       </Link>
@@ -302,6 +333,9 @@ const Dashboard = () => {
             <p className="room">Salle n°1</p> {/* Numéro de la salle */}
             <p className="count">11/32</p> {/* Statistiques de session */}
           </div>
+        </div>
+        <div className={classNames('emargement-validation', { 'hide-validation': !isEmargementValide })}>
+          <img src={iconeValidation} alt="Emargement validé" />
         </div>
       </div>
       </Link> 

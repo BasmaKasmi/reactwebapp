@@ -31,6 +31,12 @@
     display: none; /* Masquer complètement l'élément en dessous de 783 pixels de large */
   }
 }
+.emargement-validation-desktop {
+  display: block;
+  position: relative;
+  bottom: 4rem;
+  left: 18rem;
+}
 
 .pink-box {
   display: none; /* Masquer complètement l'élément */
@@ -48,6 +54,13 @@
   .pink-box{
     display: block;
   }
+  /* Styles pour l'icône de validation */
+.enf-validation {
+  display: block;
+  position: relative;
+  left: 19rem;
+  bottom: 3.2rem;
+}
 
   .pink-box {
     display: flex; /* Affichage en mode flexible */
@@ -59,6 +72,7 @@
     margin-top: -2rem;
     border-radius: 1.25rem; /* Bordure arrondie */
   }
+
 
   /* css pour le titre h2 à l'intérieur de .pink-box */
   .pink-box h2 {
@@ -74,6 +88,7 @@
     position: fixed;
     max-height: 80px;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   /* css pour .entry à l'intérieur de .pink-box */
@@ -122,6 +137,7 @@
     padding-right: 1.25rem; /* Espacement à droite */
   }
 
+
 }
 
 .column {
@@ -143,12 +159,14 @@
 .column-r{
   display: none; /* Par défaut, masquer les éléments avec la classe .column-r */
 }
+
 @media only screen and (max-width: 783px) {
   .column-r {
     display: flex; /* Utilisation du flexbox */
     flex-direction: column; /* disposition en colonne */
     align-items: center; /* Centrer horizontalement les éléments */
     margin-bottom: 14rem; /* Marge en bas */
+    overflow-x: hidden;
     overflow-y: auto;
   }
   .date-section {
@@ -163,7 +181,13 @@
     font-family: "Poppins", Helvetica;
   }
   
-  
+  /* Styles pour l'icône de validation */
+.emargement-validation {
+  display: block;
+  position: relative;
+  right: 1.3rem;
+}
+
   .dashboard-entry {
     background-color: #FFFFFF; /* couleur du fond */
     width: 24.3rem; /* Largeur */
@@ -212,7 +236,7 @@
   .dashboard-entry .details .extra-info .room {
     color: #FD9340; /* couleur du texte */
     font-family: "Poppins", Helvetica;
-    font-size: 14px; /* la taille du police */
+    font-size: 12px; /* la taille du police */
     font-style: italic; /* style italique */
     padding-bottom: 0.125rem; /* espacement de bas */
   }
