@@ -244,7 +244,8 @@ const Dashboard = () => {
       {/* titre de la date */}
         <h2>Samedi 17 Déc 2022</h2>
       </div>
-      {/* Entrée du tableau de bord */}
+      <div className="dash-cont">
+        {/* Entrée du tableau de bord */}
       <Link to='/recap'>
       <div className="dashboard-entry">
           {/* Heures du séance */}
@@ -339,6 +340,7 @@ const Dashboard = () => {
         </div>
       </div>
       </Link> 
+      </div>
     </div>
 
     {/* Bouton pour déclarer une AP */}

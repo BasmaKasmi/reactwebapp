@@ -12,7 +12,7 @@
       width: 90%;
       margin: 0 auto;
       align-items: center;
-      top: 8rem;
+      top: 6rem;
       left: 5%; /* valeur en fonction de la position horizontale souhaitée */
       right: 5%; /* valeur en fonction de la position horizontale souhaitée */
       background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
@@ -88,7 +88,7 @@
       display: flex;
       align-items: center;
       margin-right: 1rem;
-      margin-bottom: 0.1rem;
+      margin-bottom: 0;
     }
     
     .recap-row h3 {
@@ -106,7 +106,7 @@
       display: flex;
       align-items: center;
       margin-right: 0.3rem;
-      margin-bottom: 0.1rem;
+      margin-bottom: 0;
     }
     
     .stu-row h3 {
@@ -124,8 +124,6 @@
     .card-cont{
       display: block;
       align-items: center;
-      max-height: 480px;
-      overflow-x: hidden;
       overflow-y: auto;
     }
     .card {
@@ -165,6 +163,81 @@
     margin: 0;
     margin-right: 13rem;
 }
+.container-r{
+  display: block;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  max-height: 370px;
+  overflow-y: auto;
+}
+.card-s {
+  background-color: #FFFFFF;
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 22rem;
+  height: 5rem;
+  margin-left: 15.5px;
+  margin-right: 16.5px;
+  border-radius: 1.4rem;
+  box-shadow: 4px 4px 20px #00000012;
+  cursor: pointer;
+  padding: 0 1.25rem; /* Espacement intérieur gauche et droit */
+  
+}
+.card-s .col {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.card-s .col {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.card-s .col h3 {
+  color: #000000;
+  font-size: 14px;
+  font-family: "Poppins", Helvetica;
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+  margin-right: 5rem;
+}
+
+.card-s .col p {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-weight: lighter;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  margin-right: 7.4rem;
+}
+
+.ap-b.active,
+.ai-b.active {
+  background-color: #FF2525;
+  color: #fff;
+}
+.card-s.ap-active {
+  background-color: #FF252526;
+  color: #000000; /* Couleur du texte */
+}
+
+/* Pour les cartes avec AI actif */
+.card-s.ai-active {
+  background-color: #FF252526;
+  color: #000000; /* Couleur du texte */
+}
+.val-b-c {
+  background-color: #ffffff; /* Couleur de fond blanche */
+  position: fixed;
+  text-align: center;
+}
+
+
 
     .val-button{
       background-color: #19ce1526;
@@ -173,7 +246,6 @@
       border-radius: 50px;
       font-size: 14px;
       font-weight: bold;
-      position: fixed;
       width: 18rem;
       height: 2,625rem;
       border: none; /* Pas de bordure */
@@ -226,7 +298,60 @@
     .modal-content {
       text-align: center;
     }
-    .modal 
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 4px 4px 20px #00000012;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+    .date-card-cont{
+      display: block;
+      align-items: center;
+      min-height: 310px;
+      overflow-y: auto;
+      margin-bottom: 0;
+    }
+    .date-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    box-shadow: 4px 4px 20px #00000012;
+    height: 3.25rem;
+    width: 18.25rem;
+    cursor: pointer;
+    }
+    .mod {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      border-radius: 2.6rem;
+      width: 20,625rem; /*330px*/
+      height: 18rem; /*280*/
+      padding: 2rem;
+      box-shadow: 4px 4px 20px #00000012;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+    }
+    .mod h2 {
+      text-align: center;
+      color: #000000;
+      font-family: "Poppins", Helvetica;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 1,625rem;
+    }
+    
+    .mod-content {
+      text-align: center;
+    }
+    .mod
     .recap-row {
       display: flex;
       align-items: center;
@@ -234,14 +359,15 @@
       margin-bottom: 0.1rem;
     }
     
-    .modal 
+    .mod
     .recap-row h3 {
       color: #000000;
       font-family: "Poppins", Helvetica;
       font-size: 14px;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
-    .modal
+    .mod
     .recap-row img {
       margin-left: 0.9rem;
       margin-right: -0.8rem; /* Utilisation d'une marge négative pour réduire l'espace */
@@ -264,80 +390,51 @@
       font-family: "Poppins", Helvetica;
       font-size: 18px;
       font-weight: 600;
-      font-size: 1rem;
       margin-right: 1.2rem;
     }
     
     p.description {
       color: #000000;
       font-family: "Poppins", Helvetica;
-      font-weight: lighter;
       font-size: 10px;
       font-weight: 300;
     }
-    .date-inputs {
-      display: flex;
-      align-items: center;
-      margin-right: 4rem; /* Ajuster la valeur de la marge droite */
-      margin-bottom: 1rem;
-      margin-left: -0.8rem;
-    }
-    
-    .date-inputs input {
-      text-align: center;
-      font-family: "Poppins", Helvetica;
-      border-radius: 3rem;
-      border: 0.1rem solid #e5e4e3;
-      height: 2.3rem;
-      width: 8.7rem; /* la largeur des inputs */
-      margin-left: 0.4rem; /* l'espace entre les inputs */
-    }
-    
-    .date-inputs img {
-      margin-left: 0.4rem; /* l'espace entre input et l'image */
-    }
-    .buttons-row {
+    .buttons-ro {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: -1rem;
     }
-    
-    
-    .ap-button {
+
+    .dec-button {
       background-color: #FFA82526;
       color: #FFA825;
-      font-size: 12px;
+      font-size: 14px;
       text-align: center;
-      height: 2.34rem;
+      height: 2.5rem;
       width: 11rem;
       border: none;
       font-family: "Poppins", Helvetica;
       font-weight: bold;
       border-radius: 3.125em;
       padding: 8px 16px;
-      margin-right: 10px;
+      margin-top: 2.4rem;
     }
     
-    .an-button {
+    .ca-button {
       background-color: #FF252526;
       color: #FF2525;
-      font-size: 12px;
+      font-size: 14px;
       text-align: center;
-      height: 2.34rem;
+      height: 2.5rem;
       width: 6rem;
       border: none;
       font-family: "Poppins", Helvetica;
       font-weight: bold;
       border-radius: 3.125em;
       padding: 8px 16px;
-      margin-top: 56px;
       margin-left: 20px;
-    }
-    .buttons-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: -2rem;
+      margin-top: 2.4rem;
     }
 
     .validat-button {
@@ -353,6 +450,7 @@
       border-radius: 3.125rem;
       padding: 8px 16px;
       margin-right: 0.8rem;
+      margin-top: 4.3rem;
       }
       
       .cancell-button {
@@ -369,40 +467,8 @@
         padding: 8px 16px;
         margin-left: 20px;
         margin-right: 0.2rem;
+        margin-top: 4.4rem;
       }
-.ap-row {
-display: inline-flex;
-align-items: center;
-margin-top: 0.1rem;
-}
-.ap-row h3 {
-  display: inline-flex;
-  margin-right: 4rem; /* l'espace entre l'image et le titre */
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  margin-bottom: 1rem;
-}
-
-.date-card-cont{
-  display: block;
-  align-items: center;
-  min-height: 310px;
-  overflow-y: auto;
-  margin-bottom: 0;
-}
-.date-card {
-background-color: #ffffff;
-border-radius: 1rem;
-margin-top: 1rem;
-box-shadow: 4px 4px 20px #00000012;
-height: 3.25rem;
-width: 18.25rem;
-cursor: pointer;
-}
-.date-card.selected {
-  background-color: #FF252526;
-}
 
 
 .confirmation-card {
@@ -444,12 +510,6 @@ color: #19CE15;
 display: flex;
 align-items: center;
 flex-direction: column;
-}
-
-.confirmation-buttons {
-display: flex;
-align-items: center;
-justify-content: space-between;
 }
 
 .confirmation-buttons {

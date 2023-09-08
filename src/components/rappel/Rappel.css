@@ -151,7 +151,7 @@
       align-items: center;
       flex-direction: column;
       position: fixed;
-      max-height: 502px;
+      max-height: 460px;
       overflow-y: auto;
     }
     .card-s {
@@ -244,12 +244,6 @@
       margin-left: 20px;
       margin-top: 2.4rem;
     }
-  .container-boutton{
-    display: block;
-    justify-content: center;
-    border: 2px solid  red;
-    min-height: 4rem;
-  }
     .val-button{
       display: block;
       align-items: center;

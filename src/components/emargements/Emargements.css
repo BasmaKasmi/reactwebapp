@@ -329,3 +329,21 @@ color: #FFFFFF;
 .hide {
   display: none;
 }
+/* Les écrans de largeur maximale de 783px */
+@media screen and (min-width: 783px) {
+  /* Masque l'élément .co lorsque la largeur d'écran est inférieure à 783px */
+  .co {
+    display: block;
+    width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-top: 0; /* Réinitialiser la marge supérieure */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+  }
+
+  /* Affiche l'élément .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
+  .groupes {
+    display: block;
+    width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-top: 1rem; /* Ajoutez une marge supérieure pour séparer les deux colonnes */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+  }
+}

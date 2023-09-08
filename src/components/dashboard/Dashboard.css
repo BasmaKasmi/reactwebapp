@@ -23,6 +23,7 @@
   margin-left: 2px; /* Marge gauche */
   border-radius: 22px; /* Bordure arrondie */
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte pour donner une profondeur visuelle */
+  overflow-x: hidden;
   overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 
   
@@ -69,7 +70,6 @@
     background-color: #FF25254D; /* Couleur de fond */
     width: 24rem; /* Largeur */
     height: 11.7rem; /* Hauteur */
-    margin-top: -2rem;
     border-radius: 1.25rem; /* Bordure arrondie */
   }
 
@@ -148,6 +148,7 @@
   margin-left: 2px; /* Marge à gauche */
   border-radius: 22px; /* bordure arrondie */
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /*Ombre*/
+  overflow-x: hidden;
   overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
   @media (max-width: 783px) {
     display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
@@ -186,6 +187,13 @@
   display: block;
   position: relative;
   right: 1.3rem;
+}
+.dash-cont{
+  display: block;
+  align-items: center;
+  flex-direction: column;
+  max-height: 337px;
+  overflow-y: auto;
 }
 
   .dashboard-entry {
@@ -669,4 +677,51 @@ h3 {
     margin-right: 20%
   }
   
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles pour les écrans de tablette et les ordinateurs portables */
+  .dashboard {
+    flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
+    margin-top: 0; /* Pas de marge supérieure */
+    padding: 0 2.77%; /* Une marge intérieure plus petite */
+    gap: 2.77%; /* Réduire l'espace entre les colonnes */
+  }
+  .column-Enf {
+    width: 32rem; /* Ajustez la largeur de la colonne pour les tablettes */
+  }
+  .column {
+    width: 32rem; /* Ajustez la largeur de la colonne pour les tablettes */
+  }
+  .column-Enf .card{
+    width: 30rem;
+  }
+  .column .card{
+    width: 30rem;
+  }
+  .emargement-validation-desktop {
+    display: block;
+    position: relative;
+    bottom: 4rem;
+    left: 28rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 772px) {
+  /* Styles pour les écrans de tablette et les ordinateurs portables */
+  .dashboard {
+    flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
+    margin-top: 0; /* Pas de marge supérieure */
+    padding: 0 2.77%; /* Une marge intérieure plus petite */
+    gap: 2.77%; /* Réduire l'espace entre les colonnes */
+  }
+  .column-Enf {
+    width: 90%; /* Ajustez la largeur de la colonne pour les tablettes */
+  }
+  .column-r{
+    display: block;
+    width: 90%;
+
+  }
+
+
 }

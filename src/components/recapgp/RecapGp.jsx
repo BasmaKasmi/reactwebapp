@@ -76,7 +76,7 @@ const RecapGp = () => {
             <p className="description">Progression</p>
           </div>
         </div>
-      </div>
+      </div> 
       <div className="stu-row">
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>

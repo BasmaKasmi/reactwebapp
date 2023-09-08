@@ -43,12 +43,29 @@ a {
   /* Permet au contenu de remplir l'espace disponible */
   flex: 1;
   /* Marge intérieure de 20 pixels */
-  padding: 20px;
+  padding: 2rem;
   /* Suppression de la marge inférieure */
   margin-bottom: 0;
   /* Activation de la barre de défilement verticale si le contenu dépasse */
   overflow-y: auto;
 }
+
+/* Style pour le contenu principal de l'application sur les écrans de largeur supérieure ou égale à 768 pixels (PC portables) */
+@media (min-width: 768px) {
+  .main-content {
+    /* Ajuster les styles en fonction de la largeur de l'écran des PC portables */
+    padding: 30px; /* la marge intérieure pour un meilleur espacement */
+  }
+}
+/* Style pour le contenu principal de l'application sur les écrans de largeur entre 480px et 767px (Tablettes) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .main-content {
+    /* Ajuster les styles pour les tablettes */
+    padding: 25px;
+  }
+}
+
+
 
 /* Style pour le contenu principal de l'application sur les écrans de largeur supérieure ou égale à 360 pixels */
 @media (min-width: 360px) {
@@ -56,9 +73,11 @@ a {
     /* Permet au contenu de s'étendre pour remplir l'espace disponible */
     flex: 1;
     /* Marge intérieure de 20 pixels */
-    padding: 20px;
+    padding: 1rem;
     /* Suppression de la marge inférieure */
     margin-bottom: 0;
+    /* Activation de la barre de défilement verticale si le contenu dépasse */
+    overflow-y: auto;
   }
 }
 
@@ -66,6 +85,6 @@ a {
 @media (max-width: 359px) {
   .main-content {
     /* Marge intérieure réduite pour mieux s'adapter aux petits écrans */
-    padding: 10px;
+    padding: 15px;
   }
 }

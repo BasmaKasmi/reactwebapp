@@ -168,7 +168,7 @@
     align-items: center;
     flex-direction: column;
     position: fixed;
-    max-height: 400px;
+    max-height: 370px;
     overflow-y: auto;
   }
   .card-s {
@@ -231,7 +231,15 @@
     background-color: #FF252526;
     color: #000000; /* Couleur du texte */
   }
+
+  .val-button-c {
+    background-color: #b51111; /* Couleur de fond blanche */
+    position: fixed;
+    text-align: center;
+  }
   
+
+
       .val-button{
         background-color: #19ce1526;
         color: #19CE15;
@@ -239,7 +247,6 @@
         border-radius: 50px;
         font-size: 14px;
         font-weight: bold;
-        position: fixed;
         width: 18rem;
         height: 2,625rem;
         border: none; /* Pas de bordure */

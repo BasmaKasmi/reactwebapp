@@ -234,9 +234,10 @@ const Recap = () => {
             </div>
           </div>
       </div>
-
+      <div className="val-b-c">
+        <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
       </div>
-      <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
+      </div>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mod">

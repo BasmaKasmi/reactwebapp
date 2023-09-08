@@ -12,7 +12,7 @@ const StudentPage = () => {
   return (
     <div>
       <div className="nav-emarg-container">
-      {/* Affichage du composant NavGrp */}
+      {/* Affichage du composant NavEmarg */}
         <NavEmarg />
         {/* Affichage du composant RetourButton */}
         <RetourButton />

@@ -583,3 +583,8 @@
     }
   } 
 }
+@media (min-width: 481px) and (max-width: 778px) {
+  .declare-button{
+    display: none;
+  }
+}
