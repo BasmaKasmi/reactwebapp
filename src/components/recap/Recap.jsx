@@ -206,38 +206,11 @@ const Recap = () => {
             </div>
           </div>
       </div>
-      <div className={`card-s ${ap5ButtonActive ? 'ap-active' : ''} ${ai5ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-        </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap5ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp5ButtonActive(!ap5ButtonActive);
-              setAi5ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai5ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi5ButtonActive(!ai5ButtonActive);
-              setAp5ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
       </div>
-      <div className="val-b-c">
-        <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
+      <div className="b-c">
+        <button className="va-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
       </div>
-      </div>
+
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mod">

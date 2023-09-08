@@ -214,37 +214,11 @@ const Rappel = () => {
             </div>
           </div>
       </div>
-      <div className={`card-s ${ap6ButtonActive ? 'ap-active' : ''} ${ai6ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-        </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap6ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp6ButtonActive(!ap6ButtonActive);
-              setAi6ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai6ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi6ButtonActive(!ai6ButtonActive);
-              setAp6ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
+      </div>
+      <div className="b-c">
+        <button className="va-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
       </div>
 
-      </div>
-      <button className="val-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mod">

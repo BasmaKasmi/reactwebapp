@@ -231,15 +231,26 @@
   background-color: #FF252526;
   color: #000000; /* Couleur du texte */
 }
-.val-b-c {
-  background-color: #ffffff; /* Couleur de fond blanche */
+.b-c {
+  display: block;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  text-align: center;
+  background-color: #FFFFFF;
+  width: 22rem;
+  height: 5rem;
+  border-radius: 1.4rem;
+  cursor: pointer;
+  /* Positionnement en bas centré */
+  bottom: 1rem;
+  left: 51%;
+  transform: translateX(-50%);
+  padding: 0 1.25rem; /* Espacement intérieur gauche et droit */
 }
 
 
 
-    .val-button{
+    .b-c .va-button{
       background-color: #19ce1526;
       color: #19CE15;
       font-family: "Poppins", Helvetica;
@@ -247,7 +258,8 @@
       font-size: 14px;
       font-weight: bold;
       width: 18rem;
-      height: 2,625rem;
+      height: 3rem;
+      margin-top: 1rem;
       border: none; /* Pas de bordure */
       text-align: center; /* Alignement du texte au centre */
       cursor: pointer; /* Curseur en forme de main */
@@ -256,10 +268,6 @@
       justify-content: center;
       padding: 0 1.79125rem; /* Espacement intérieur gauche et droit */
 
-      /* Positionnement en bas centré */
-      bottom: 5rem;
-      left: 50%;
-      transform: translateX(-50%);
     }
 
     .modal-overlay {
