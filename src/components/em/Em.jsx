@@ -201,11 +201,11 @@ const Em = () => {
           </div>
       </div>
         </div>
-        <div className='button-container'>
-        <button className="fem-button" onClick={handleConfirmationClick}>
+        <div className='butt-container'>
+        <button className="fem-butt" onClick={handleConfirmationClick}>
           Valider la feuille d'émargement
         </button>
-        <button className="an-button">Annuler</button>
+        <button className="an-butt">Annuler</button>
         {showConfirmation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">

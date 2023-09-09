@@ -10,7 +10,6 @@
   gap: 26px; /* Espacement horizontal */
   margin-right: 2px; /* marge à droite */
   padding: 0 27px; /* espace intérieur */
-  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 }
 
 /* cacher l'élément ayant la classe .groupes-res */
@@ -94,15 +93,14 @@
 
 .groupes {
   flex: 1;  /* Utilise l'espace disponible pour la flexibilité */
-  width: 702px; /* largeur */
+  width: 43.875rem; /* largeur */
   height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
   margin-top: 22px; /* Marge en haut */
   margin-left: 2px; /* Marge à gauche */
   border-radius: 22px; /* bordure arrondie */
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre */
   top: 142px; /* Marge supérieure de 142px depuis le haut de la fenêtre */
-  overflow-y: auto;  /* Activation de la barre de défilement verticale si le contenu dépasse */
-
+  overflow: hidden;
   /* la largeur de l'écran est inférieure à 783px */
   @media (max-width: 783px) {
     display: none; /* Masquer complètement l'élément */
@@ -345,5 +343,93 @@ color: #FFFFFF;
     width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
     margin-top: 1rem; /* Ajoutez une marge supérieure pour séparer les deux colonnes */
     margin-left: 0; /* Réinitialiser la marge gauche */
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .Emargements {
+    display: flex;
+    flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
+    padding: 0 2.77%; /* Une marge intérieure plus petite */
+    gap: 2.77%; /* Réduire l'espace entre les colonnes */
+    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+
+  }
+
+  .Emargements .co {
+    display: block;
+    width: 30rem; /* la largeur*/
+    margin-top: 1rem; /* Réinitialiser la marge supérieure */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+    max-height: 22rem;
+    overflow-y: auto;
+  }
+  .co .card{
+    width: 26rem;
+  }
+  .co .card h3{
+    margin-right: 9.4rem;
+  }
+
+  /* .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
+  .Emargements .groupes {
+    display: block;
+    position: relative;
+    background-color: #FFFFFF;
+    max-height: 24rem;
+    margin-top: 15rem;
+    width: 30rem; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-left: auto; /* Réinitialiser la marge gauche */
+  }
+  .agenda-section {
+    display: flex; /* utilisation du flexbox */
+    align-items: center; /* Centre les éléments verticalement dans la ligne */
+  }
+  
+  .agenda-section span {
+    margin-right: 20rem;
+  }
+  
+  .agenda-section img {
+    margin-left: 1.8rem; /* Marge à gauche */
+  }
+  .d-inputs {
+    margin-top: 10px;
+    margin-left: 1rem;
+  }
+
+  .d-inputs input {
+    width: 10rem; /* Largeur de 100% pour occuper toute la largeur du conteneur parent */
+    margin: 2px 0 8px 0; /* Réinitialiser la marge */
+  }
+
+  .d-inputs input + input {
+    margin-left: 1rem; /* Réinitialiser la marge entre les éléments */
+  }
+
+  .d-inputs img {
+    margin-left: 1rem; /* Réinitialiser la marge à gauche */
+    margin-top: 0.3rem; /* Ajuster la marge supérieure */
+  }
+
+  .c {
+    width: 26rem; /* Largeur de 100% pour occuper toute la largeur du conteneur parent */
+    margin-top: 10px;
+  }
+
+  .c h3 {
+    font-size: 12px; /* Ajuster la taille de la police */
+    margin-left: 0; /* Réinitialiser la marge à gauche */
+  }
+
+  .row {
+    flex-direction: column; /* Mettre en colonne les éléments dans .row */
+    align-items: flex-start; /* Aligner les éléments à gauche */
+  }
+
+  .status-f,
+  .status-n {
+    margin-right: 0; /* Réinitialiser la marge à droite */
+    margin-top: 10px; /* Ajuster la marge supérieure */
   }
 }

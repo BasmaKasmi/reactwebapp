@@ -10,6 +10,7 @@ const Recap = () => {
   const [showModal, setShowModal] = useState(false);
   const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showValidation, setShowValidation] = useState(false);
   const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
   const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
   const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
@@ -52,8 +53,12 @@ const Recap = () => {
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
   };
+  const handleValidationClick = () => {
+    setShowValidation(true);
+  };
   const handleOverlayClick = () => {
     setShowConfirmation(false);
+    setShowValidation(false);
     document.body.classList.remove('modal-open');
   };
 
@@ -208,9 +213,8 @@ const Recap = () => {
       </div>
       </div>
       <div className="b-c">
-        <button className="va-button" onClick={handleConfirmationClick}>Valider la feuille d'émargement</button>
+        <button className="va-button" onClick={handleValidationClick}>Valider la feuille d'émargement</button>
       </div>
-
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mod">
@@ -222,12 +226,12 @@ const Recap = () => {
             <div className='block-modal'>
             <div className='row'>
               <div className='col'>
-                <h3>17</h3>
-                <p className="description">Inscrits</p>
+                <h3>4</h3>
+                <p className="description">Absences</p>
               </div>
               <div className='col'>
                 <h3>2</h3>
-                <p className="description">Abandon(s)</p>
+                <p className="description">AP</p>
               </div>
               <div className='col'>
                 <h3>65%</h3>
@@ -323,6 +327,26 @@ const Recap = () => {
             <div className="confirmation-details">
               <p>14/01/2023</p>
               <p>21/01/2023</p>
+            </div>
+            <div className="confirmation-buttons">
+              <button className="valid-button">Valider</button>
+              <button className="anu-button">Annuler</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+    {showValidation && (
+      <div className="modal-overlay" onClick={handleOverlayClick}>
+        <div className="confirmation-card">
+            <div className="icon-container">
+              <i className="fas fa-check-circle"></i>
+            </div>
+          <div className="confirmation-content">
+            <h3>Vous avez déclarez avoir :</h3>
+            <div className="confirmation-details">
+              <p> 17 présents </p>
+              <p> 5 Absents </p>
             </div>
             <div className="confirmation-buttons">
               <button className="valid-button">Valider</button>

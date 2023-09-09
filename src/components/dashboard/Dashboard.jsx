@@ -99,9 +99,6 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div> 
         </div>
-        <div className={classNames('emargement-validation-desktop', { 'hide-validation': !isEmargementValide })}>
-          <img src={iconeValidation} alt="Emargement validé" />
-        </div>
         </div>
         </Link>
       </div>
@@ -125,9 +122,6 @@ const Dashboard = () => {
               {/* Affiche le nombre d'emargements */}
               <p className="count">11/32</p>
             </div>
-            <div className={classNames('enf-validation', { 'hide-validation': !isEmargementValide })}>
-              <img src={iconeValidation} alt="Emargement validé" />
-            </div>
           </div>
           </Link>
           <Link to='/rappel'>
@@ -140,9 +134,6 @@ const Dashboard = () => {
               <p className="date">Sam 10 Déc 2022</p>
               {/* Affiche le nombre d'emargements */}
               <p className="count">11/32</p>
-            </div>
-            <div className={classNames('enf-validation', { 'hide-validation': !isEmargementValide })}>
-              <img src={iconeValidation} alt="Emargement validé" />
             </div>
           </div>
           </Link>

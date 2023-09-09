@@ -34,6 +34,7 @@
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
   top: 142px;
   right: 1.86rem;
+  overflow: hidden;
 
 }
 
@@ -166,9 +167,8 @@
 .std span {
   color: #000000; /* Couleur du texte pour le span */
   font-family: "Poppins", Helvetica;
-  font-weight: lighter;
-  font-size: 12px; /* Taille de police pour le span */
-  margin-left: -0.9rem;
+  font-size: 14px; /* Taille de police pour le span */
+  margin-left: -0.10rem;
 
 }
 
@@ -177,12 +177,15 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.button-container {
+.butt-container {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 44rem;
+  position: fixed;
+  margin-top: 35rem;
+  margin-left: 15rem;
+  background-color: #FFFFFF; /* Définissez la couleur d'arrière-plan souhaitée */
+  z-index: 100; /* Assurez-vous que les boutons sont au-dessus du contenu */
 }
-.fem-button {
+.fem-butt {
   background-color: #19CE1526;
   color: #19CE15;
   border: none;
@@ -195,7 +198,7 @@
   margin-right: 1.25rem;
 }
 
-.an-button {
+.an-butt {
   background-color: #FF252526;
   color: #FF2525;
   height: 42px;
@@ -277,4 +280,56 @@ background-color: #FF252526;
   .groupes .std {
     width: 100%;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .Emargements {
+    display: flex;
+    flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
+    padding: 0 2.77%; /* Une marge intérieure plus petite */
+    gap: 2.77%; /* Réduire l'espace entre les colonnes */
+    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+
+  }
+
+  .Emargements .co {
+    display: block;
+    width: 30rem; /* la largeur*/
+    margin-top: 1rem; /* Réinitialiser la marge supérieure */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+    max-height: 22rem;
+    overflow-y: auto;
+  }
+  .co .card{
+    width: 26rem;
+  }
+  .co .card h3{
+    margin-right: 9.4rem;
+  }
+
+  /* .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
+  .Emargements .groupes {
+    display: block;
+    position: relative;
+    background-color: #FFFFFF;
+    max-height: 24rem;
+    margin-top: 15rem;
+    width: 30rem; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-left: auto; /* Réinitialiser la marge gauche */
+  }
+  .groupes .card-container{
+    display: block;
+    flex-direction: column;
+
+  }
+
+  .card-container .std {
+    margin: auto; /* Centrer horizontalement */
+    margin-bottom: 1rem; /* marge inférieure */
+    width: 26rem; /* largeur */
+    height: 4.5rem; /* hauteur */
+  }
+
+
 }

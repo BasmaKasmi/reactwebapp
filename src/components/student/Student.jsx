@@ -83,6 +83,7 @@ const Student = () => {
           <h3>Sciences islamiques 2ème année</h3>
           <p className='day'>Jeu 18h00 à 12h00</p>
         </div>
+        <div className="list-container">
         <div className='card-container'>
         <div className={`std ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
@@ -255,6 +256,7 @@ const Student = () => {
           </div>
       </div> 
         </div>
+        </div>
         <div className='button-container'>
         <button className="fem-button" onClick={handleConfirmationClick}>
           Valider la feuille d'émargement
@@ -280,7 +282,7 @@ const Student = () => {
         </div>
       </div>
     )}
-        </div>
+      </div>
       </div>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>

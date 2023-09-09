@@ -82,43 +82,75 @@ const RecapGp = () => {
         <h3> Nombre d’étudiants : 22 </h3>
       </div>
       <div className='card-cont'>
-      <div className="card" onClick={handleShowAp}>
+      <div className="card" onClick={handleClick}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
         <p>Absence(s) : 3</p>
       </div>
       </div>
-      <div className="card" onClick={handleShowAp}>
-      <div className='col'>
-      <h3>Nom de l'étudiant</h3>
-        <p>Absence(s) : 3</p>
-      </div>
-      </div>  
-      <div className="card" onClick={handleShowAp}>
+      <div className="card" onClick={handleClick}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
         <p>Absence(s) : 3</p>
       </div>
       </div>  
-      <div className="card" onClick={handleShowAp}>
+      <div className="card" onClick={handleClick}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+        <p>Absence(s) : 3</p>
+      </div>
+      </div>  
+      <div className="card" onClick={handleClick}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
         <p>Absence(s) : 3</p>
       </div>
       </div>     
-      <div className="card" onClick={handleShowAp}>
+      <div className="card" onClick={handleClick}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
         <p>Absence(s) : 3</p>
       </div>
       </div> 
-      <div className="card" onClick={handleShowAp}>
+      <div className="card" onClick={handleClick}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
         <p>Absence(s) : 3</p>
       </div>
       </div>    
       </div>
+
+      {showModal && (
+        <div className="modal-overlay" onClick={handleCloseModal}>
+          <div className="mod">
+            <h2>Nom de l'étudiant</h2>
+            <div className="recap-row">
+              <img src={status} alt='' />
+              <h3> Récapitulatif du groupe : </h3>
+            </div>
+            <div className='block-modal'>
+            <div className='row'>
+              <div className='col'>
+                <h3>4</h3>
+                <p className="description">Absences</p>
+              </div>
+              <div className='col'>
+                <h3>2</h3>
+                <p className="description">AP</p>
+              </div>
+              <div className='col'>
+                <h3>65%</h3>
+                <p className="description">Présence</p>
+              </div>
+            </div>
+            </div>
+            <div className="buttons-ro">
+              <button className="dec-button" onClick={handleShowAp}>Déclarer AP</button>
+              <button className="ca-button">Annuler</button>
+            </div>
+          </div>
+        </div>
+      )}
       {showAp && (
         <div className="modal-overlay" onClick={handleCloseShowAp}>
           <div className="modal">

@@ -10,9 +10,7 @@
   gap: 26px; /* Espacement horizontal entre les éléments enfants */
   margin-right: 2px; /*marge à droite*/
   padding: 0 27px; /* espace intérieur */
-  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 }
-
 
 .groupes-res {
   display: none; /* l'élément est masqué (non affiché) */
@@ -106,7 +104,7 @@
   border-radius: 22px; /* Bordure arrondie */
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre */
   top: 142px; /* Position verticale */
-  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+  overflow: hidden;
   @media (max-width: 783px) {
     display: none; /* Masquer l'élément lorsque la largeur de l'écran est inférieure à 783px */
   }
@@ -208,4 +206,80 @@ color: #FFFFFF;
 .hide {
   /* Propriété "display" définie sur "none", ce qui masque l'élément */
   display: none;
+}
+@media screen and (min-width: 783px) {
+  /* Masque l'élément .co lorsque la largeur d'écran est inférieure à 783px */
+  .co {
+    display: block;
+    width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-top: 0; /* Réinitialiser la marge supérieure */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+  }
+
+  /* Affiche l'élément .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
+  .groupes {
+    display: block;
+    width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-top: 1rem; /* Ajoutez une marge supérieure pour séparer les deux colonnes */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .Emargements {
+    display: flex;
+    flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
+    padding: 0 2.77%; /* Une marge intérieure plus petite */
+    gap: 2.77%; /* Réduire l'espace entre les colonnes */
+    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+
+  }
+
+  .Emargements .co {
+    display: block;
+    width: 30rem; /* la largeur*/
+    margin-top: 1rem; /* Réinitialiser la marge supérieure */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+    max-height: 22rem;
+    overflow-y: auto;
+  }
+  .co .card{
+    width: 26rem;
+  }
+  .co .card h3{
+    margin-right: 9.4rem;
+  }
+
+  /* .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
+  .Emargements .groupes {
+    display: block;
+    position: relative;
+    background-color: #FFFFFF;
+    max-height: 24rem;
+    margin-top: 15rem;
+    width: 30rem; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-left: auto; /* Réinitialiser la marge gauche */
+  }
+  .groupes .card-container{
+    display: block;
+    flex-direction: column;
+
+  }
+
+  .card-container .nom-stu {
+    margin: auto; /* Centrer horizontalement */
+    margin-bottom: 1rem; /* marge inférieure */
+    width: 26rem; /* largeur */
+    height: 4.5rem; /* hauteur */
+  }
+  .nom-stu h3 {
+    font-size: 14px; /* taille de la police */
+    margin-right: 14rem;
+  }
+  
+  .nom-stu .abs {
+    font-size: 14px; /* taille de la police */
+    margin-right: 16rem;
+  }
+
 }
