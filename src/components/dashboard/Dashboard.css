@@ -340,8 +340,8 @@ h3 {
 .session {
   color: #898989; /* Couleur du texte en gris */
   font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: bold; /* Poids de la police en gras */
-  font-size: 0.75em; /* Taille de la police */
+  font-weight: 600; /* Poids de la police en gras */
+  font-size: 0.5rem; /* Taille de la police */
   font-style: italic; /* Style de police italique */
   padding-right: 1.25em; /* Espace intérieur à droite */
 }

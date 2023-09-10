@@ -226,7 +226,7 @@ background-color: #FF252526;
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 20rem;
+  width: 21rem;
   height: 15rem;
   transform: translate(-50%, -50%);
   background-color: #FFFFFF;
@@ -329,6 +329,16 @@ background-color: #FF252526;
   .recap-row img {
     margin-left: 0.9rem;
     margin-right: -0.10rem; /* Utilisation d'une marge négative pour réduire l'espace */
+  }
+  .bloc-pop{
+    display: block;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px #00000012;
+    width: 386px;
+    height: 86px;
+    margin-left: -1rem;
+    margin-top: 1rem;
   }
 
   .modal-overlay {

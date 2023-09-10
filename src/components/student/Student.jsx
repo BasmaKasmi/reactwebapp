@@ -16,6 +16,7 @@ const Student = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const[declareAp, setdeclareAp] = useState(false);
+  const [showValidation, setShowValidation] = useState(false);
   const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
   const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
   const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
@@ -63,15 +64,15 @@ const Student = () => {
     setActiveCard(cardId);
 
   };
-
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
-    document.body.classList.add('modal-open');
   };
-  
-
+  const handleValidationClick = () => {
+    setShowValidation(true);
+  };
   const handleOverlayClick = () => {
     setShowConfirmation(false);
+    setShowValidation(false);
     document.body.classList.remove('modal-open');
   };
   
@@ -258,26 +259,26 @@ const Student = () => {
         </div>
         </div>
         <div className='button-container'>
-        <button className="fem-button" onClick={handleConfirmationClick}>
+        <button className="fem-button" onClick={handleValidationClick}>
           Valider la feuille d'émargement
         </button>
         <button className="an-button">Annuler</button>
-        {showConfirmation && (
+        {showValidation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
-        <div className="icon-container">
+            <div className="icon-container">
               <i className="fas fa-check-circle"></i>
             </div>
           <div className="confirmation-content">
-            <h3>Vous déclarez avoir :</h3>
+            <h3>Vous avez déclarez avoir :</h3>
             <div className="confirmation-details">
-              <p>Nb Présents</p>
-              <p>Nb Absents</p>
+              <p> 17 présents </p>
+              <p> 5 Absents </p>
             </div>
             <div className="confirmation-buttons">
               <button className="valider-button">Valider</button>
               <button className="annuler-button">Annuler</button>
-            </div>
+         </div>
           </div>
         </div>
       </div>
@@ -292,6 +293,7 @@ const Student = () => {
               <img src={status} alt='' />
               <h3> Récapitulatif du groupe : </h3>
             </div>
+            <div className="bloc-pop">
             <div className='row'>
               <div className='colon'>
                 <h3>17</h3>
@@ -305,6 +307,7 @@ const Student = () => {
                 <h3>65%</h3>
                 <p className="des">Présence</p>
               </div>
+            </div>
             </div>
             <div className="buttons-row">
               <button className="ap" onClick={handleDeclareAp}>Déclarer AP</button>
@@ -367,6 +370,27 @@ const Student = () => {
           </div>
         </div>
 )}
+{showConfirmation && (
+     <div className="modal-overlay" onClick={handleOverlayClick}>
+     <div className="confirmation-card">
+     <div className="icon-container">
+           <i className="fas fa-check-circle"></i>
+         </div>
+       <div className="confirmation-content">
+         <h3>Absences prévues le :</h3>
+         <div className="confirmation-details">
+          <p>14/01/2023</p>
+          <p>21/01/2023</p>
+         </div>
+         <div className="confirmation-buttons">
+           <button className="valider-button">Valider</button>
+           <button className="annuler-button">Annuler</button>
+         </div>
+       </div>
+     </div>
+   </div>
+    )}
+
 
     </div>
   );

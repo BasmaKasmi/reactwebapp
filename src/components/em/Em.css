@@ -168,6 +168,7 @@
   color: #000000; /* Couleur du texte pour le span */
   font-family: "Poppins", Helvetica;
   font-size: 14px; /* Taille de police pour le span */
+  font-weight: 300;
   margin-left: -0.10rem;
 
 }

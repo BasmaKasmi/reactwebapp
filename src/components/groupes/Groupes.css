@@ -172,7 +172,7 @@ color: #FFFFFF;
   margin: auto; /* Centrer horizontalement */
   margin-bottom: 1rem; /* marge inférieure */
   width: 22rem; /* largeur */
-  height: 4.5rem; /* hauteur */
+  height: 4.2rem; /* hauteur */
   margin-left: 15.5px; /* marge à gauche*/
   margin-right: 16.5px; /* marge à droite */
   border-radius: 1.4rem; /* Bordure arrondie*/
@@ -197,6 +197,7 @@ color: #FFFFFF;
   color: #000000; /* couleur du texte */
   font-family: "Poppins", Helvetica; /* Police de caractères */
   font-size: 14px; /* taille de la police */
+  font-weight: 300;
   padding-left: 1.25rem; /* marge à gauche */
   padding-top: 0.25rem; /* espacement supérieure */
   padding-bottom: 1rem; /* espacement en bas */
