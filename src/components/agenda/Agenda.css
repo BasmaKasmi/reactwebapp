@@ -139,6 +139,15 @@
       width: 23.3rem;  /*325px*/
       height: 4.2rem; /*60px*/
     }
+    .carte.clicked {
+      background-color: #FD9340;
+    }
+    
+    /* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
+    .carte.clicked h3,
+    .carte.clicked .carte-day {
+    color: #FFFFFF;
+    }
   
 }
 
