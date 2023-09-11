@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
-import { Link } from 'react-router-dom';
 import './Agenda.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
 const Agenda = () => {
   // État local pour gérer la carte active et le contenu des groupes
-  const [activeCard, setActiveCard] = useState(null);
-  const [showGroupesContent, setShowGroupesContent] = useState(false);
+  const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
 
   // Tableau des noms des mois
   const months = [
@@ -47,11 +45,17 @@ const Agenda = () => {
     return days;
   };
   
-  // Gérer le clic sur une carte
   const handleCardClick = (cardId) => {
-    setActiveCard(cardId);
-    setShowGroupesContent(true); // Affichons le contenu de la colonne "groupes" après avoir cliqué sur une carte
-  };
+    // Vérifions si la carte est déjà sélectionnée
+    if (activeCards.includes(cardId)) {
+      // Si la carte est déjà sélectionnée, la retirer de la liste des cartes actives
+      setActiveCards((prevActiveCards) => prevActiveCards.filter((id) => id !== cardId));
+    } else {
+      // Sinon, ajoutons la carte à la liste des cartes actives
+      setActiveCards((prevActiveCards) => [...prevActiveCards, cardId]);
+    }
+    };
+
 
   // Gérer le clic sur le mois suivant
   const handleNextMonthClick = () => {
@@ -98,12 +102,10 @@ const Agenda = () => {
               </div>
             ))}
           </div>
-          {/* Jours du mois */}
-          <div className="days-of-month">{renderDaysOfMonth()}</div>
-              {/* Crée un conteneur pour les cartes */}
+    {/* Jours du mois */}
+    <div className="days-of-month">{renderDaysOfMonth()}</div>
+    {/* Crée un conteneur pour les cartes */}
     <div className='grp-carte'>
-    {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
     {/* Crée une carte */}
     <div className="carte">
     {/* Affiche le titre de la carte */}
@@ -113,9 +115,6 @@ const Agenda = () => {
           <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
-    </Link>
-    {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
     {/* Crée une autre carte */}
     <div className="carte">
     {/* Affiche le titre de la carte */}
@@ -125,9 +124,6 @@ const Agenda = () => {
           <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
-    </Link>
-    {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapgp'>
     {/* Crée une autre carte */}
     <div className="carte">
       {/* Affiche le titre de la carte */}
@@ -137,58 +133,52 @@ const Agenda = () => {
           <p className='carte-day'>Jeu 18h00 à 12h00</p>
         </div>
     </div>
-    </Link>
+
     </div>
         </div>
         {/* Colonne de l'agenda */}
         <div className="co">
-        {/* En-tête de la colonne */}
-          <div className="column-header orange-bg">
-            <h2>Mon agenda</h2>
-          </div>
-          {/* Bloc interne pour les groupes */}
-          <div className='int-block'>
-            {/* Date et carte du groupe */}
-            <h1 className='date'>Samedi 17 Dec 2022</h1>
-            <div
-              className={classnames('card', { 'clicked': activeCard === 'card-1' })}
-              onClick={() => handleCardClick('card-1')}
-            >
-              <h3>Sciences islamiques 2ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-            <div
-              className={classnames('card', { 'clicked': activeCard === 'card-2' })}
-              onClick={() => handleCardClick('card-2')}
-            >
-              <h3>Sciences islamiques 1ère année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
+        <div className="column-header orange-bg">
+          <h2>Mon agenda</h2>
+        </div>
+        <div className='int-block'>
+          <h1 className='date'>Samedi 17 Dec 2022</h1>
+          <div
+            className={classnames('card', { 'clicked': activeCards.includes('card-1') })}
+            onClick={() => handleCardClick('card-1')}
+          >
+            <h3>Sciences islamiques 2ème année</h3>
+            <div className='row'>
+              <p className='day'>Jeu 18h00 à 12h00</p>
+              <p className='session'>11/32</p>
             </div>
           </div>
-          {/* Bloc interne pour les groupes */}
-          <div className='int-block'>
-          {/* Date et carte du groupe */}
-            <h1 className='date'>Samedi 19 Dec 2022</h1>
-            <div
-              className={classnames('card', { 'clicked': activeCard === 'card-3' })}
-              onClick={() => handleCardClick('card-3')}
-            >
-              <h3>Sciences islamiques 2ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
+          <div
+            className={classnames('card', { 'clicked': activeCards.includes('card-2') })}
+            onClick={() => handleCardClick('card-2')}
+          >
+            <h3>Sciences islamiques 1ère année</h3>
+            <div className='row'>
+              <p className='day'>Jeu 18h00 à 12h00</p>
+              <p className='session'>11/32</p>
             </div>
           </div>
         </div>
+        <div className='int-block'>
+          <h1 className='date'>Samedi 19 Dec 2022</h1>
+          <div
+            className={classnames('card', { 'clicked': activeCards.includes('card-3') })}
+            onClick={() => handleCardClick('card-3')}
+          >
+            <h3>Sciences islamiques 2ème année</h3>
+            <div className='row'>
+              <p className='day'>Jeu 18h00 à 12h00</p>
+              <p className='session'>11/32</p>
+            </div>
+          </div>
+        </div>
+      </div>
         {/* Contenu des groupes */}
-        {showGroupesContent && (
           <div className="groupes">
             {/* En-tête de la section des groupes */}
             <div className="h">
@@ -216,7 +206,6 @@ const Agenda = () => {
               </div>
             </div>
           </div>
-        )}
       </div>
     </div>
   );
