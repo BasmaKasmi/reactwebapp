@@ -29,10 +29,13 @@ const Agenda = () => {
       // Récupérer le jour de la semaine correspondant à la date (ici, nous utilisons un jour fictif pour l'exemple)
       const dayOfWeek = new Date(year, month, day).getDay();
   
-      // Ajouter des classes spécifiques aux jours du samedi (6) et du lundi (1)
+      // Ajouter des classes spécifiques aux jours du samedi (6) et du lundi (1) en fonction de la carte cliquée
+      const isCard1Clicked = activeCards.includes('card-1');
+      const isCard2Clicked = activeCards.includes('card-2');
+  
       const classNames = classnames('day', {
-        'saturday': dayOfWeek === 6,
-        'monday': dayOfWeek === 1,
+        'saturday': dayOfWeek === 6 && isCard1Clicked,
+        'monday': dayOfWeek === 1 && isCard2Clicked,
       });
   
       days.push(
