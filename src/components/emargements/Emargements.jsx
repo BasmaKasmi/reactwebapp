@@ -149,10 +149,7 @@ const Emargements = () => {
             </div>
           </div>
         </div>
-      {/*Si showGroupesContent est vrai, affiche le contenu suivant*/}
-      { showGroupesContent && (
-      // Div principale pour le contenu "groupes", avec une classe "hide" si showEmContent est vrai
-      <div className={`groupes ${showEmContent ? 'hide' : ''}`}>
+      <div className='groupes'>
         {/* Div pour l'en-tête de colonne */}
         <div className="column-head">
           {/* Affiche le titre sélectionné dynamiquement */}
@@ -217,7 +214,6 @@ const Emargements = () => {
           </div>
         </div>
       </div>
-      )}
       {/* Si showEmContent est vrai, affiche un composant Em */}
       {showEmContent && <Em />}
     </div>

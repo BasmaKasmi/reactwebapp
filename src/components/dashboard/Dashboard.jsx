@@ -106,7 +106,7 @@ const Dashboard = () => {
       {/* Crée une boîte avec une classe "pink-box" */}
       <div className="pink-box">
         {/* Affiche un titre de niveau 2 */}
-          <h2>Emargement(s) non fait(s)</h2>
+          <h2>Emargements non faits</h2>
         {/* Crée un conteneur avec une classe "content" */}
         <div className="content">
           {/* Crée une entrée avec une classe "entry" */}
