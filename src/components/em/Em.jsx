@@ -74,7 +74,7 @@ const Em = () => {
     document.body.classList.remove('modal-open');
   };
 
-  const [isValidationDone, setIsValidationDone] = useState(null);
+  const [isValidationDone, setIsValidationDone] = useState(false);
   const navigate = useNavigate();
 
   const handleValidationConfirm = () => {
