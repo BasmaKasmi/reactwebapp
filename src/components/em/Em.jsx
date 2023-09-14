@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import status from '../../assets/statusup.svg';
 import st from '../../assets/student.svg';
 import cldr from '../../assets/calendar.svg';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import user from '../../assets/2 User.png';
 
 const Em = () => {
@@ -66,14 +67,30 @@ const Em = () => {
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
   };
-  const handleValidationClick = () => {
-    setShowValidation(true);
-  };
+ 
+
   const handleOverlayClick = () => {
     setShowConfirmation(false);
-    setShowValidation(false);
     document.body.classList.remove('modal-open');
   };
+
+  const [isValidationDone, setIsValidationDone] = useState(null);
+  const navigate = useNavigate();
+
+  const handleValidationConfirm = () => {
+    setIsValidationDone(true);
+    setShowValidation(false);
+
+    // Naviguer vers la page Dashboard
+    navigate('/dashboard');
+  };
+
+  
+  // Gèrer le clic sur le bouton "Retour"
+  const handleRetourClick = () => {
+    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
+  };
+
   
   
 
@@ -240,10 +257,10 @@ const Em = () => {
       </div>
         </div>
         <div className='butt-container'>
-        <button className="fem-butt" onClick={handleValidationClick}>
+        <button className="fem-butt" onClick={handleValidationConfirm}>
           Valider la feuille d'émargement
         </button>
-        <button className="an-butt">Annuler</button>
+        <button className="an-butt" onClick={handleRetourClick}>Annuler</button>
         {showValidation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
