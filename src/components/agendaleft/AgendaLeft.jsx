@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
-import './Agenda.css';
+import './AgendaLeft.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
-const Agenda = () => {
+const AgendaLeft = () => {
   // État local pour gérer la carte active et le contenu des groupes
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
 
@@ -87,7 +87,7 @@ const Agenda = () => {
   };
 
   return (
-    <div >
+    <div>
         <div className="groupesRes">
           {/* En-tête du mois et année avec boutons de navigation */}
           <div className="month-year">
@@ -188,36 +188,8 @@ const Agenda = () => {
           </div>
         </div>
       </div>
-        {/* Contenu des groupes */}
-          <div className="groupes">
-            {/* En-tête de la section des groupes */}
-            <div className="h">
-              <h3> Calendrier </h3>
-            </div>
-            {/* Calendrier des groupes */}
-            <div className="agenda">
-              {/* En-tête du mois et année avec boutons de navigation */}
-              <div className="month-year">
-                <img src={left} alt='' onClick={handlePrevMonthClick} />
-                <h3> {months[month]} {year} </h3>
-                <img src={right} alt='' onClick={handleNextMonthClick} />
-              </div>
-              {/* Jours de la semaine */}
-              <div className="days-of-week">
-                {daysOfWeek.map((day) => (
-                  <div key={day} className="day-of-week">
-                    {day}
-                  </div>
-                ))}
-              </div>
-              {/* Jours du mois */}
-              <div className="days-of-month">
-                {renderDaysOfMonth()}
-              </div>
-            </div>
-          </div>
     </div>
   );
 }
 
-export default Agenda;
+export default AgendaLeft;

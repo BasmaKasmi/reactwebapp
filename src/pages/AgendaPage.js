@@ -1,34 +1,45 @@
 // Importation des modules nécessaires
+
 import React from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import RetourButton from '../components/retourbutton/RetourButton';
 import NavAgenda from '../components/navAgenda/NavAgenda';
 import Agenda from '../components/agenda/Agenda';
-
-// Déclaration du composant AgendaPage
+import AgendaColumn from '../components/agendacolumn/AgendaColumn';
+import AgendaLeft from '../components/agendaleft/AgendaLeft';
+// Déclaration du composant GroupesPage
 const AgendaPage = () => {
   return (
     <div>
       <div className="nav-emarg-container">
-      {/* Affichage du composant NavAgenda */}
+      {/* Affichage du composant NavGrp */}
         <NavAgenda />
         {/* Affichage du composant RetourButton */}
         <RetourButton />
-        {/* Affichage du composant Agenda */}
+        {/* Affichage du composant Groupes */}
         <Agenda />
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
-        <Navbar />
-        {/* Affichage du composant Sidebar */}
+      <div className="full-row" style={{height:'100px'}}>
+      <Navbar />
+      </div>
+      <div className="three-columns" style={{display: 'flex', padding: '10px', maxHeight: '50vh' }}>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
         <Sidebar />
-        {/* Affichage du composant Agenda */}
-        <Agenda />
+        </div>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
+          <AgendaLeft />
+        </div>
+        <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
+          <AgendaColumn/>
+        </div>
+      </div>
       </div>
     </div>
   );
 };
 
-//Exportation du composant AgendaPage
+//Exportation du composant GroupesPage
 export default AgendaPage;

@@ -1,35 +1,48 @@
 // Importation des modules nécessaires
 import React from 'react';
+import './MesemargementsPage.css'
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
-import Emargements from '../components/emargements/Emargements';
-import NavEmarg from '../components/navEm/NavEmarg';
-import './MesemargementsPage.css';
 import RetourButton from '../components/retourbutton/RetourButton';
+import Groupes from '../components/groupes/Groupes';
+import NavGrp from '../components/navGp/NavGrp';
+import RecapGp from '../components/recapgp/RecapGp';
+import DashEmarg from '../components/dashemargements/DashEmarg';
+import EmargementsColumn from '../components/emargementscolumn/EmargementsColumn';
 
-// Déclaration du composant MesemargementsPage
+// Déclaration du composant GroupesPage
 const MesemargementsPage = () => {
   return (
     <div>
       <div className="nav-emarg-container">
-        {/* Affichage du composant NavEmarg */}
-        <NavEmarg />
+      {/* Affichage du composant NavGrp */}
+        <NavGrp />
         {/* Affichage du composant RetourButton */}
         <RetourButton />
-        {/* Affichage du composant Emargements */}
-        <Emargements />
+        {/* Affichage du composant Groupes */}
+        <Groupes />
+        <RecapGp />
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
-        <Navbar />
-        {/* Affichage du composant Sidebar */}
+      <div className="full-row" style={{height:'100px'}}>
+      <Navbar />
+      </div>
+      <div className="three-columns" style={{display: 'flex', padding: '10px', maxHeight: '50vh' }}>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
         <Sidebar />
-        {/* Affichage du composant Emargements */}
-        <Emargements />
+        </div>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
+          <DashEmarg />
+        </div>
+        <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
+          <EmargementsColumn />
+        </div>
+      </div>
       </div>
     </div>
   );
 };
 
-//Exportation du composant MesemargementsPage
+//Exportation du composant GroupesPage
 export default MesemargementsPage;

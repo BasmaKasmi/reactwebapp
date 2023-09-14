@@ -1,34 +1,13 @@
-.Emargements {
-    /* Flexbox pour aligner les éléments horizontalement */
-    display: flex;
-    justify-content: space-between;
-    height: calc(100% - 139px); /* Hauteur ajustée */
-    width: 67,76rem;  /*1084px width*/
-    background-color: #FFFFFF; /* Couleur de fond */
-    position: fixed; /* Position fixe */
-    top: 144px; /* Position depuis le haut de la fenêtre */
-    gap: 27px; /* Espacement entre les éléments */
-    text-align: center; /* Alignement du texte au centre */
-    margin-right: 2px; /* Marge à droite */
-    padding: 0 42px;/* espace intérieur */
-    overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
+
+.co {
+  height: 100vh;
+  box-sizing: border-box;
+  border-radius: 22px; /* bordure arrondie */
+  @media (max-width: 783px) {
+    display: none;
   }
-  
-  .co {
-    /* Flexbox pour mettre en page la colonne */
-    flex: 1;
-    width: 345px; /* Largeur */
-    height: 100vh; /* Hauteur de 100% de la hauteur de la vue */
-    margin-top: 22px; /* Marge en haut */
-    margin-left: 2px; /* Marge à gauche */
-    border-radius: 22px; /* Coins arrondis */
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte */
-    top: 142px; /* Position depuis le haut de la fenêtre */
-    overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
-    @media (max-width: 783px) {
-      display: none; /* Cacher si la largeur est inférieure à 783px */
-    }
 }
+
 .int-block .date {
   /* Aligner la date à gauche */
   text-align: left;
@@ -149,30 +128,6 @@
     color: #FFFFFF;
     }
   
-}
-
-.groupes {
-  /* Flexbox pour mettre en page la colonne */
-  flex: 1;
-  width: 702px; /* Largeur */
-  border-radius: 22px; /* Coins arrondis */
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte */
-  top: 142px; /* Position depuis le haut de la fenêtre */
-  right: 1.86rem; /* Position depuis la droite */
-  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
-}
-.agenda {
-   /* Flexbox pour mettre en page la colonne */
-  flex: 1;
-  flex-direction: column; /* Aligner verticalement le contenu */
-  align-items: center; /* Centrer horizontalement */
-  justify-content: center; /* Centrer verticalement */
-  width: 568px; /* largeur */
-  height: 632px; /* hauteur */
-  border: 0px none; /* Pas de bordure */
-  margin-left: 4rem;
-  margin-right: 4rem;
-  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 }
 
  /* Css pour l'élément .h */

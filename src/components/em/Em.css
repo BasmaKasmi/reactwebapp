@@ -1,42 +1,6 @@
-.Emargements {
-  display: flex;
-  justify-content: space-between;
-  height: calc(100% - 139px);
-  width: 67,76rem;  /*1084px width*/
-  background-color: #FFFFFF;
-  position: fixed;
-  top: 144px;
-  gap: 27px;
-  margin-right: 2px;
-  padding: 0 42px;/* espace intérieur */
 
-}
 
-.co {
-  flex: 1;
-  width: 23rem;
-  height: 100vh;
-  margin-top: 22px;
-  margin-right: 50px; /* une marge à droite */
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  position: fixed;
-  top: 142px;
-  left: 20.68rem;
-  overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
 
-}
-
-.groupes {
-  flex: 1;
-  width: 702px;
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  top: 142px;
-  right: 1.86rem;
-  overflow: hidden;
-
-}
 
 .column-header {
   background-image: url("../../assets/ractangle\ orange.svg");
@@ -128,12 +92,6 @@
   margin-right: 10px;
 }
 
-.groupes .card-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 .std {
   position: relative;
   background-color: #ffffff;
@@ -167,8 +125,7 @@
 .std span {
   color: #000000; /* Couleur du texte pour le span */
   font-family: "Poppins", Helvetica;
-  font-size: 14px; /* Taille de police pour le span */
-  font-weight: 300;
+  font-size: 12px; /* Taille de police pour le span */
   margin-left: -0.10rem;
 
 }

@@ -4,10 +4,10 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; // Importation de l'image 'calendar.svg' depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image 'student.svg' depuis les ressources
 import Em from '../em/Em'; // Importation du composant Em
-import './Emargements.css'; // Importation du fichier de styles CSS 'Emargements.css'
+import './DashEmarg.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
 // Composant principal Emargements
-const Emargements = () => {
+const DashEmarg = () => {
   
   // Définit un état pour suivre la carte active (null au départ)
   const [activeCard, setActiveCard] = useState(null);
@@ -149,75 +149,8 @@ const Emargements = () => {
             </div>
           </div>
         </div>
-      <div className='groupe'>
-        {/* Div pour l'en-tête de colonne */}
-        <div className="column-head">
-          {/* Affiche le titre sélectionné dynamiquement */}
-          <h3>{selectedTitle}</h3>
-          {/* Affiche le jour sélectionné dynamiquement */}
-          <p className='day'>{selectedDay}</p>
-        </div>
-        {/* Div pour la section de l'agenda */}
-        <div className="agenda-section">
-          {/* Affiche une image d'icône d'agenda */}
-          <img src={cldr} alt=''/>
-          {/* Affiche un texte "Choisir dates :" */}
-          <span>Choisir dates :</span>
-        </div>
-        {/* Div pour les entrées de date */}
-        <div className="d-inputs">
-            {/* Champ de saisie pour la date de début */}
-            <input type="text" placeholder="01/01/2023" />
-            {/* Champ de saisie pour la date de fin */}
-            <input type="text" placeholder="28/01/2023" />
-            {/* Affiche une image l'icône */}
-            <img src={st} alt=''/>
-        </div> 
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-          {/* Div pour une rangée */}
-          <div className='row'>
-            {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(n-1)</h3>
-            {/* Affiche le statut "FAIT" */}
-            <span className="status-f">FAIT</span>
-          </div>
-        </div>
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-          {/* Div pour une rangée */}
-          <div className='row'>
-            {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(du jour)</h3>
-            {/* Affiche le statut "FAIT" */}
-            <span className="status-f">FAIT</span>
-          </div>
-        </div>
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-        {/* Div pour une rangée */}
-          <div className='row'>
-          {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(n+1)</h3>
-            {/* Affiche le statut "NON FAIT" */}
-            <span className="status-n">NON FAIT</span>
-          </div>
-        </div>
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-        {/* Div pour une rangée */}
-          <div className='row'>
-          {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(n+3)</h3>
-            {/* Affiche le statut "NON FAIT" */}
-            <span className="status-n">NON FAIT</span>
-          </div>
-        </div>
-      </div>
-      {/* Si showEmContent est vrai, affiche un composant Em */}
-      {showEmContent && <Em />}
     </div>
   );
 }
 
-export default Emargements; // Exportation du composant Emargements
+export default DashEmarg; // Exportation du composant Emargements

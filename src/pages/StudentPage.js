@@ -21,11 +21,17 @@ const StudentPage = () => {
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
-        <Navbar />
-        {/* Affichage du composant Sidebar */}
+      <div className="full-row" style={{height:'100px'}}>
+      <Navbar />
+      </div>
+      <div className="three-columns" style={{display: 'flex', padding: '10px', maxHeight: '50vh' }}>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
         <Sidebar />
-        {/* Affichage du composant Student */}
-        <Student />
+        </div>
+        <div className="column" style={{ flexBasis: '75%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
+          <Student />
+        </div>
+      </div>
       </div>
      </div>
   )

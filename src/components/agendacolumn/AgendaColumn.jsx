@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
-import './Agenda.css';
+import './AgendaColumn.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
-const Agenda = () => {
+const AgendaColumn = () => {
   // État local pour gérer la carte active et le contenu des groupes
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
 
@@ -87,109 +87,9 @@ const Agenda = () => {
   };
 
   return (
-    <div >
-        <div className="groupesRes">
-          {/* En-tête du mois et année avec boutons de navigation */}
-          <div className="month-year">
-            <img src={left} alt='' onClick={handlePrevMonthClick} />
-            <h3> {months[month]} {year} </h3>
-            <img src={right} alt='' onClick={handleNextMonthClick} />
-          </div>
-          {/* Jours de la semaine */}
-          <div className="days-of-week">
-            {daysOfWeek.map((day) => (
-              <div key={day} className="day-of-week">
-                {day}
-              </div>
-            ))}
-          </div>
-          {/* Jours du mois */}
-          <div className="days-of-month">{renderDaysOfMonth()}</div>
-          {/* Crée un conteneur pour les cartes */}
-          <div className='grp-carte'>
-          {/* Crée une carte */}
-          <div
-          className={classnames('carte', { 'clicked': activeCards.includes('card-1') })}
-          onClick={() => handleCardClick('card-1')}
-          >
-            {/* Affiche le titre de la carte */}
-            <h3>Sciences islamiques 1ére année</h3>
-            <div>
-          {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
-        </div>
-       </div>
-       {/* Crée une autre carte */}
-       <div
-       className={classnames('carte', { 'clicked': activeCards.includes('card-2') })}
-       onClick={() => handleCardClick('card-2')}
-       >
-        {/* Affiche le titre de la carte */}
-        <h3>Sciences islamiques 1ére année</h3>
-        <div>
-        {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
-          </div>
-        </div>
-        {/* Crée une autre carte */}
-        <div
-        className={classnames('carte', { 'clicked': activeCards.includes('card-3') })}
-        onClick={() => handleCardClick('card-3')}
-        >
-        {/* Affiche le titre de la carte */}
-        <h3>Sciences islamiques 1ére année</h3>
-        <div>
-          {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
-        </div>
-        </div>
-
-    </div>
-        </div>
-        {/* Colonne de l'agenda */}
-        <div className="co">
-        <div className="column-header orange-bg">
-          <h2>Mon agenda</h2>
-        </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 17 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-1') })}
-            onClick={() => handleCardClick('card-1')}
-          >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-2') })}
-            onClick={() => handleCardClick('card-2')}
-          >
-            <h3>Sciences islamiques 1ère année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-        </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 19 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-3') })}
-            onClick={() => handleCardClick('card-3')}
-          >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
         {/* Contenu des groupes */}
-          <div className="groupes">
+          <div className="groupes" >
             {/* En-tête de la section des groupes */}
             <div className="h">
               <h3> Calendrier </h3>
@@ -220,4 +120,4 @@ const Agenda = () => {
   );
 }
 
-export default Agenda;
+export default AgendaColumn;

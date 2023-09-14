@@ -16,7 +16,7 @@ import RappelPage from './pages/RappelPage';
 import RecapPopupPage from './pages/RecapPopupPage';
 import RecapEmPage from './pages/RecapEmPage';
 import Em from '../src/components/em/Em';
-
+import StructureBinairePage from '../src/pages/StructureBinairePage';
 function App() {
 
     return (
@@ -37,6 +37,8 @@ function App() {
                     <Route path='/groupes' element={<GroupesPage />} />
                     <Route path='/nomdetudiant' element={<StudentPage />} />
                     <Route path='/agenda' element={<AgendaPage />} />
+                    <Route path='/structurebinaire' element={<StructureBinairePage />} />
+
                 </Routes>
             </BrowserRouter>
         </div>

@@ -4,10 +4,10 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; // Importation de l'image 'calendar.svg' depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image 'student.svg' depuis les ressources
 import Em from '../em/Em'; // Importation du composant Em
-import './Emargements.css'; // Importation du fichier de styles CSS 'Emargements.css'
+import './EmargementsColumn.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
 // Composant principal Emargements
-const Emargements = () => {
+const EmargementsColumn = () => {
   
   // Définit un état pour suivre la carte active (null au départ)
   const [activeCard, setActiveCard] = useState(null);
@@ -110,45 +110,7 @@ const Emargements = () => {
     </Link>
     </div>
     </div>
-    <div className="co">
-        {/* En-tête de la colonne */}
-          <div className="column-header orange-bg">
-            <h2>Mes émargements</h2>
-          </div>
-          {/* Bloc interne pour les groupes */}
-          <div className='int-block'>
-          <div
-          className={`card ${activeCard === 'card-1' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-1', 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
-        >
-              <h3>Sciences islamiques 2ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-            <div
-          className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
-        >
-              <h3>Sciences islamiques 1ère année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-            <div
-          className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-3', 'Sciences islamiques 3ème année', 'Sam 14h30 à 17h30')}
-        >
-              <h3>Sciences islamiques 3ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
       <div className='groupe'>
         {/* Div pour l'en-tête de colonne */}
         <div className="column-head">
@@ -220,4 +182,4 @@ const Emargements = () => {
   );
 }
 
-export default Emargements; // Exportation du composant Emargements
+export default EmargementsColumn; // Exportation du composant Emargements

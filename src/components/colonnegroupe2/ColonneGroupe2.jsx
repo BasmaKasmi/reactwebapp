@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Groupes.css';
+import './ColonneGroupe2.css';
 import status from '../../assets/statusup.svg';
 import st from '../../assets/student.svg';
 import cldr from '../../assets/calendar.svg';
 import user from '../../assets/2 User.png';
 
-const Groupes = () => {
+const ColonneGroupe2 = () => {
   // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);
   // Utilisation de l'état local pour suivre le titre de la carte sélectionnée
@@ -72,7 +72,6 @@ const Groupes = () => {
     setShowGroupesContent(true);
   };
 
-
   // Définition de la fonction handleConfirmationClick
    const handleConfirmationClick = () => {
     // Affiche la fenêtre de confirmation
@@ -132,54 +131,15 @@ const Groupes = () => {
     </Link>
     </div>
     </div>
-    <div className="co">
-        {/* En-tête de la colonne */}
-          <div className="column-header">
-            <h2>Mes groupes</h2>
-          </div>
-          {/* Bloc interne pour les groupes */}
-          <div className='int-block'>
-          <div
-          className={`card ${activeCard === 'card-1' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-1', 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
-        >
-              <h3>Sciences islamiques 2ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-            <div
-          className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
-        >
-              <h3>Sciences islamiques 1ère année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-            <div
-          className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-3', 'Sciences islamiques 3ème année', 'Sam 14h30 à 17h30')}
-        >
-              <h3>Sciences islamiques 3ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {/* Si showGroupesContent est vrai, affiche le contenu suivant */}
-      { showGroupesContent && (
-      <div className="groupes">
+      <div className="groupe">
         {/* Entête de la colonne */}
         <div className="column-head">
           {/* Affiche le titre sélectionné */}
           <h3>{selectedTitle}</h3>
           {/* Affiche le jour sélectionné */}
-          <p className='day'>{selectedDay}</p>
+          <p className='day'>
+            {selectedDay}
+            </p>
         </div>
         {/* Conteneur pour les cartes d'étudiants */}
         <div className='card-container'>
@@ -221,7 +181,7 @@ const Groupes = () => {
         </div>
       </div>
       
-      )}
+      
             {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mdl">
@@ -332,4 +292,4 @@ const Groupes = () => {
   );
 }
 
-export default Groupes; // Exportation du composant Groupes
+export default ColonneGroupe2; // Exportation du composant Groupes

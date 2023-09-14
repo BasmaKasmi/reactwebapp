@@ -1,16 +1,4 @@
-.Emargements {
-  display: flex; /* Utilisation de flexbox pour aligner les éléments en ligne */
-  justify-content: space-between; /* Espace entre les éléments sur l'axe horizontal */
-  height: calc(100% - 139px); /* hauteur */
-  min-width: 290px; /* Largeur minimale */
-  background-color: #FFFFFF; /* Couleur de fond */
-  position: fixed; /* Position fixe */
-  top: 144px;  /* Marge supérieure de 144px depuis le haut de la fenêtre */
-  right: 0; /*Aligné à droite */
-  gap: 26px; /* Espacement horizontal */
-  margin-right: 2px; /* marge à droite */
-  padding: 0 27px; /* espace intérieur */
-}
+
 
 /* cacher l'élément ayant la classe .groupes-res */
 .groupes-res {
@@ -73,39 +61,10 @@
 }
 
 
-.co {
-  flex: 1; /* Utilise l'espace disponible pour la flexibilité */
-  width: 345px; /* largeur */
-  height: 100vh;  /* Hauteur de 100 % de la hauteur de la vue */
-  margin-top: 22px; /* Marge en haut */
-  margin-left: 2px; /* marge à gauche*/
-  border-radius: 22px; /* bordure arrondie */
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* ombre */
-  top: 142px; /* Marge supérieure de 142px depuis le haut de la fenêtre */
-  overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
 
-  /* Les écrans de largeur maximale de 783 pixels */
-  @media (max-width: 783px) {
-    /* Masque l'élément .co */
-    display: none;
-  }
-}
 
-.groupes {
-  flex: 1;  /* Utilise l'espace disponible pour la flexibilité */
-  width: 43.875rem; /* largeur */
-  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
-  margin-top: 22px; /* Marge en haut */
-  margin-left: 2px; /* Marge à gauche */
-  border-radius: 22px; /* bordure arrondie */
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre */
-  top: 142px; /* Marge supérieure de 142px depuis le haut de la fenêtre */
-  overflow: hidden;
-  /* la largeur de l'écran est inférieure à 783px */
-  @media (max-width: 783px) {
-    display: none; /* Masquer complètement l'élément */
-  }
-}
+
+
 
 .column-header {
   background-image: url("../../assets/ractangle\ orange.svg");
