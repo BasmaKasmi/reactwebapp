@@ -181,35 +181,36 @@
 .butt-container {
   display: flex;
   position: fixed;
-  margin-top: 35rem;
-  margin-left: 15rem;
+  bottom: 2rem;
+  margin-left: 14rem;
   background-color: #FFFFFF; /* Définissez la couleur d'arrière-plan souhaitée */
   z-index: 100; /* Assurez-vous que les boutons sont au-dessus du contenu */
+
 }
 .fem-butt {
-  background-color: #19CE1526;
-  color: #19CE15;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  height: 42px;
-  width: 291px;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-right: 1.25rem;
+background-color: #19CE1526;
+color: #19CE15;
+border: none;
+font-family: "Poppins", Helvetica;
+font-weight: bold;
+height: 42px;
+width: 291px;
+border-radius: 50px;
+padding: 8px 16px;
+margin-right: 1.25rem;
 }
 
 .an-butt {
-  background-color: #FF252526;
-  color: #FF2525;
-  height: 42px;
-  width: 122px;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-right: 1rem;
+background-color: #FF252526;
+color: #FF2525;
+height: 42px;
+width: 122px;
+border: none;
+font-family: "Poppins", Helvetica;
+font-weight: bold;
+border-radius: 50px;
+padding: 8px 16px;
+margin-right: 1rem;
 }
 .modal-overlay {
   position: fixed;

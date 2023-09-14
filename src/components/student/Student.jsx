@@ -6,6 +6,8 @@ import status from '../../assets/statusup.svg';
 import st from '../../assets/student.svg';
 import cldr from '../../assets/calendar.svg';
 import user from '../../assets/2 User.png';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 
 
 const Student = () => {
@@ -29,6 +31,13 @@ const Student = () => {
   const [ap5ButtonActive, setAp5ButtonActive] = useState(false);
   const [ai6ButtonActive, setAi6ButtonActive] = useState(false);
   const [ap6ButtonActive, setAp6ButtonActive] = useState(false);
+
+  const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
+
+  // Gèrer le clic sur le bouton "Retour"
+  const handleRetourClick = () => {
+    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
+  };
 
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -258,11 +267,12 @@ const Student = () => {
       </div> 
         </div>
         </div>
+        
         <div className='button-container'>
         <button className="fem-button" onClick={handleValidationClick}>
           Valider la feuille d'émargement
         </button>
-        <button className="an-button">Annuler</button>
+        <button className="an-button" onClick={handleRetourClick}>Annuler</button>
         {showValidation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
