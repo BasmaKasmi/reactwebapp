@@ -178,11 +178,10 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
-        {isEmargementValide && (
-  <div className="emargement-validation-desktop">
-    <img src={iconeValidation} alt="Emargement validé" />
-  </div>
-)}
+        <div className="emargement-validation-desktop">
+          <img src={iconeValidation} alt="Emargement validé" />
+        </div>
+
         </div>
         </Link>
       </div>

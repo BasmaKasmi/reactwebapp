@@ -29,6 +29,8 @@ const Em = () => {
   const [ap4ButtonActive, setAp4ButtonActive] = useState(false);
 
   const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
+  const [isValidationDone, setIsValidationDone] = useState(false);
+
 
   // Gèrer le clic sur le bouton "Retour"
   const handleRetourClick = () => {
@@ -74,6 +76,9 @@ const Em = () => {
 
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
+    setIsValidationDone(true);
+
+  navigate('/dashboard');
   };
   const handleValidationClick = () => {
     setShowValidation(true);
@@ -266,7 +271,7 @@ const Em = () => {
               <p> 5 Absents </p>
             </div>
             <div className="confirmation-buttons">
-              <button className="valider-button">Valider</button>
+              <button className="valider-button" onClick={handleConfirmationClick}>Valider</button>
               <button className="annuler-button">Annuler</button>
          </div>
           </div>
