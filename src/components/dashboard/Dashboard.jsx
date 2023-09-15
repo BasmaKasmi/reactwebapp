@@ -196,6 +196,7 @@ const Dashboard = () => {
         {/* Titre de la date */}
         <h1 className='date'>Samedi 17 Dec 2022</h1>
         {/* Carte pour le groupe */}
+        <Link to='/agenda'>
         <div className="card">
           {/* Titre du groupe */}
           <h3>Sciences islamiques 2ème année</h3>
@@ -206,7 +207,10 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
+        </Link>
+    
         {/* Carte pour un autre groupe */}
+        <Link to='/agenda'>
         <div className="card">
         {/* Titre de l'activité */}
           <h3>Sciences islamiques 1ére année</h3>
@@ -217,11 +221,13 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
+        </Link>
         </div>
         <div className='int-block'>
         {/* Titre de la date */}
         <h1 className='date'>Samedi 19 Dec 2022</h1>
         {/* Carte pour un groupe */}
+        <Link to='/agenda'>
         <div className="card">
         {/* Titre du groupe */}
           <h3>Sciences islamiques 2ème année</h3>
@@ -232,6 +238,7 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
+        </Link>
         </div>
       </div>
       
