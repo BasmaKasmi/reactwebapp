@@ -14,6 +14,8 @@ import nom from '../../assets/nom.svg';
 // importation de l'icone de validation
 import iconeValidation from '../../assets/valid.svg'; 
 import classNames from 'classnames'; // Importation de la bibliothèque classNames 
+import { useLocation } from 'react-router-dom';
+
 
 
 // Définition du Dashboard
@@ -28,8 +30,11 @@ const Dashboard = () => {
   const [showConfirmation, setShowConfirmation] = useState(false); // État pour afficher ou masquer une confirmation d'émargement
   const [isEmargementValide, setIsEmargementValide] = useState(false); // Pour suivre si l'émargement est validé ou non 
 
+  const location = useLocation();
+  const isValidationDone = location.state && location.state.isValidationDone;
+
   //lorsque l'utilisateur clique sur un bouton de validation
-  const validerEmargement = () => {
+  const showValidation = () => {
     setIsEmargementValide(true);
   };
 
@@ -173,9 +178,11 @@ const Dashboard = () => {
           <p className='session'>11/32</p>
           </div>
         </div>
-        <div className={classNames('emargement-validation-desktop', { 'hide-validation': !isEmargementValide })}>
-          <img src={iconeValidation} alt="Emargement validé" />
-        </div>
+        {isEmargementValide && (
+  <div className="emargement-validation-desktop">
+    <img src={iconeValidation} alt="Emargement validé" />
+  </div>
+)}
         </div>
         </Link>
       </div>

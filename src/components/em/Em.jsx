@@ -4,8 +4,9 @@ import classNames from 'classnames';
 import status from '../../assets/statusup.svg';
 import st from '../../assets/student.svg';
 import cldr from '../../assets/calendar.svg';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import user from '../../assets/2 User.png';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 
 const Em = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -26,6 +27,13 @@ const Em = () => {
   const [ap3ButtonActive, setAp3ButtonActive] = useState(false);
   const [ai4ButtonActive, setAi4ButtonActive] = useState(false);
   const [ap4ButtonActive, setAp4ButtonActive] = useState(false);
+
+  const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
+
+  // Gèrer le clic sur le bouton "Retour"
+  const handleRetourClick = () => {
+    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
+  };
   
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -67,30 +75,14 @@ const Em = () => {
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
   };
- 
-
+  const handleValidationClick = () => {
+    setShowValidation(true);
+  };
   const handleOverlayClick = () => {
     setShowConfirmation(false);
+    setShowValidation(false);
     document.body.classList.remove('modal-open');
   };
-
-  const [isValidationDone, setIsValidationDone] = useState(false);
-  const navigate = useNavigate();
-
-  const handleValidationConfirm = () => {
-    setIsValidationDone(true);
-    setShowValidation(false);
-
-    // Naviguer vers la page Dashboard
-    navigate('/dashboard');
-  };
-
-  
-  // Gèrer le clic sur le bouton "Retour"
-  const handleRetourClick = () => {
-    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
-  };
-
   
   
 
@@ -257,7 +249,7 @@ const Em = () => {
       </div>
         </div>
         <div className='butt-container'>
-        <button className="fem-butt" onClick={handleValidationConfirm}>
+        <button className="fem-butt" onClick={handleValidationClick}>
           Valider la feuille d'émargement
         </button>
         <button className="an-butt" onClick={handleRetourClick}>Annuler</button>
@@ -281,7 +273,7 @@ const Em = () => {
         </div>
       </div>
     )}
-        </div>
+      </div>
       </div>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
