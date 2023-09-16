@@ -7,7 +7,6 @@ import Groupes from '../components/groupes/Groupes';
 import NavGrp from '../components/navGp/NavGrp';
 import RecapGp from '../components/recapgp/RecapGp';
 import ColonneGroupes from '../components/colonnegroupes/ColonneGroupes';
-import DashEmnf from '../components/dashenf/DashEnf';
 import ColonneGroupe2 from '../components/colonnegroupe2/ColonneGroupe2';
 
 // Déclaration du composant GroupesPage

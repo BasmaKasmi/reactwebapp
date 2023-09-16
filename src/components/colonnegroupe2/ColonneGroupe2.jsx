@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './ColonneGroupe2.css';
+import Groupes from '../groupes/Groupes';
 import status from '../../assets/statusup.svg';
 import st from '../../assets/student.svg';
 import cldr from '../../assets/calendar.svg';
 import user from '../../assets/2 User.png';
 
-const ColonneGroupe2 = () => {
+const ColonneGroupe2 = (props) => {
   // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);
-  // Utilisation de l'état local pour suivre le titre de la carte sélectionnée
-  const [selectedTitle, setSelectedTitle] = useState('');
-  // Utilisation de l'état local pour suivre le jour de la carte sélectionnée
-  const [selectedDay, setSelectedDay] = useState('');
-  // Utilisation de l'état local pour contrôler l'affichage de la confirmation
+  const { selectedCard } = props;
   // Contrôler l'affichage du contenu dans la colonne "groupes"
   const [showGroupesContent, setShowGroupesContent] = useState(false); 
-  const navigate = useNavigate(); // Utiliser useNavigate
+  const navigate = useNavigate(); 
+
+  useEffect(() => {
+    // Mettez à jour l'état local lorsque selectedCard dans les props change
+    if (props.selectedCard) {
+      setActiveCard(props.selectedCard.title); // Mettez à jour activeCard avec le titre
+    }
+  }, [props.selectedCard]);
 
   const handleMobileGroupClick = () => {
     // Redirigez l'utilisateur vers la page RecapGp en mode mobile
@@ -56,20 +60,6 @@ const ColonneGroupe2 = () => {
   const handleOverlayClick = () => {
     setShowConfirmation(false);
     document.body.classList.remove('modal-open');
-  };
-
-
-
-  // Définition de la fonction handleCardClick avec des paramètres
-  const handleCardClick = (cardId, cardTitle, cardDay) => {
-    // Met à jour l'état de la carte active
-    setActiveCard(cardId);
-    // Met à jour l'état du titre sélectionné avec le titre de la carte cliquée
-    setSelectedTitle(cardTitle);
-    // Met à jour l'état du jour sélectionné avec le jour de la carte cliquée
-    setSelectedDay(cardDay);
-    // Affiche le contenu de la colonne "groupes" après avoir cliqué sur une carte
-    setShowGroupesContent(true);
   };
 
   // Définition de la fonction handleConfirmationClick
@@ -135,11 +125,9 @@ const ColonneGroupe2 = () => {
         {/* Entête de la colonne */}
         <div className="column-head">
           {/* Affiche le titre sélectionné */}
-          <h3>{selectedTitle}</h3>
+          {activeCard && <h3>{activeCard}</h3>}
           {/* Affiche le jour sélectionné */}
-          <p className='day'>
-            {selectedDay}
-            </p>
+          {selectedCard && <p className='day'>{selectedCard.date}</p>}
         </div>
         {/* Conteneur pour les cartes d'étudiants */}
         <div className='card-container'>

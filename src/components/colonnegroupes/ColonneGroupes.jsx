@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './ColonneGroupes.css';
-import ColonneGroupe2 from '../colonnegroupe2/ColonneGroupe2';
+import Groupes from '../groupes/Groupes';
 
+const ColonneGroupes = (props) => {
+  const { onCardClick } = props; // Fonction de gestionnaire de clic passée en tant que prop
 
-const ColonneGroupes = () => {
   // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);
-  // Utilisation de l'état local pour suivre le titre de la carte sélectionnée
-  const [selectedTitle, setSelectedTitle] = useState('');
-  // Utilisation de l'état local pour suivre le jour de la carte sélectionnée
-  const [selectedDay, setSelectedDay] = useState('');
-  // Utilisation de l'état local pour contrôler l'affichage de la confirmation
-  // Contrôler l'affichage du contenu dans la colonne "groupes"
   const [showGroupesContent, setShowGroupesContent] = useState(false); 
+  const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
   const navigate = useNavigate(); // Utiliser useNavigate
 
   const handleMobileGroupClick = () => {
@@ -24,7 +20,6 @@ const ColonneGroupes = () => {
   const [showModal, setShowModal] = useState(false);
   const[declareAp, setdeclareAp] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
-
   const [selectedDates, setSelectedDates] = useState([]);
 
   const handleDateCardClick = (date) => {
@@ -56,21 +51,6 @@ const ColonneGroupes = () => {
     document.body.classList.remove('modal-open');
   };
 
-
-
-  // Définition de la fonction handleCardClick avec des paramètres
-  const handleCardClick = (cardId, cardTitle, cardDay) => {
-    // Met à jour l'état de la carte active
-    setActiveCard(cardId);
-    // Met à jour l'état du titre sélectionné avec le titre de la carte cliquée
-    setSelectedTitle(cardTitle);
-    // Met à jour l'état du jour sélectionné avec le jour de la carte cliquée
-    setSelectedDay(cardDay);
-    // Affiche le contenu de la colonne "groupes" après avoir cliqué sur une carte
-    setShowGroupesContent(true);
-  };
-
-
   // Définition de la fonction handleConfirmationClick
    const handleConfirmationClick = () => {
     // Affiche la fenêtre de confirmation
@@ -80,7 +60,13 @@ const ColonneGroupes = () => {
     // Affiche le contenu de la colonne "groupes" après avoir cliqué sur "Valider la feuille d'émargement"
     setShowGroupesContent(true); 
   };
-
+  const handleCardClick = (title, date) => {
+    const cardData = { title, date };
+    setSelectedCard(cardData); 
+    setActiveCard(title);
+    onCardClick(title, date);
+  };
+ 
 
   return (
     <div>
@@ -174,4 +160,4 @@ const ColonneGroupes = () => {
   );
 }
 
-export default ColonneGroupes; // Exportation du composant Groupes
+export default ColonneGroupes; 
