@@ -124,8 +124,8 @@ const ColonneGroupes = (props) => {
           {/* Bloc interne pour les groupes */}
           <div className='int-block'>
           <div
-          className={`card ${activeCard === 'card-1' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-1', 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
+          className={`card ${activeCard === 'Sciences islamiques 2ème année' ? 'clicked' : ''}`}
+          onClick={() => handleCardClick( 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
         >
               <h3>Sciences islamiques 2ème année</h3>
               <div className='row'>
@@ -134,8 +134,8 @@ const ColonneGroupes = (props) => {
               </div>
             </div>
             <div
-          className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
+          className={`card ${activeCard === 'Sciences islamiques 1ère année' ? 'clicked' : ''}`}
+          onClick={() => handleCardClick('Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
         >
               <h3>Sciences islamiques 1ère année</h3>
               <div className='row'>
@@ -144,8 +144,8 @@ const ColonneGroupes = (props) => {
               </div>
             </div>
             <div
-          className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-3', 'Sciences islamiques 3ème année', 'Sam 14h30 à 17h30')}
+          className={`card ${activeCard === 'Sciences islamiques 3ème année' ? 'clicked' : ''}`}
+          onClick={() => handleCardClick('Sciences islamiques 3ème année', 'Sam 14h30 à 17h30')}
         >
               <h3>Sciences islamiques 3ème année</h3>
               <div className='row'>

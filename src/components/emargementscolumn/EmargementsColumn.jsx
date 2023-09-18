@@ -1,16 +1,29 @@
-import React, { useState } from 'react'; // Importation des modules React et useState depuis 'react'
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; // Importation de l'image 'calendar.svg' depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image 'student.svg' depuis les ressources
 import Em from '../em/Em'; // Importation du composant Em
 import './EmargementsColumn.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
 // Composant principal Emargements
-const EmargementsColumn = () => {
+const EmargementsColumn = (props) => {
+
+   // Utilisation de l'état local pour suivre l'état de la carte active
+   const [activeCard, setActiveCard] = useState(null);
+   const { selectedCard } = props;
+   // Contrôler l'affichage du contenu dans la colonne "groupes"
+   const [showGroupesContent, setShowGroupesContent] = useState(false); 
+   const navigate = useNavigate(); 
+ 
+   useEffect(() => {
+     // Mettez à jour l'état local lorsque selectedCard dans les props change
+     if (props.selectedCard) {
+       setActiveCard(props.selectedCard.title); // Mettez à jour activeCard avec le titre
+     }
+   }, [props.selectedCard]);
   
   // Définit un état pour suivre la carte active (null au départ)
-  const [activeCard, setActiveCard] = useState(null);
   // Définit un état pour suivre le titre sélectionné
   const [selectedTitle, setSelectedTitle] = useState('');
   // Définit un état pour suivre le titre sélectionné
@@ -19,8 +32,6 @@ const EmargementsColumn = () => {
   const [showEmContent, setShowEmContent] = useState(false);
   // Définit un état pour contrôler l'affichage de la confirmation
   const [showConfirmation, setShowConfirmation] = useState(false);
-  // Contrôle de l'affichage du contenu dans la colonne "groupes"
-  const [showGroupesContent, setShowGroupesContent] = useState(false); 
 
 
   // Déclaration d'une fonction de gestion de clic sur une carte
@@ -59,7 +70,6 @@ const EmargementsColumn = () => {
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const selectedCard = searchParams.get('card');
 
   return (
     <div>  {/* Conteneur principal avec la classe 'Emargements' */}
@@ -114,10 +124,10 @@ const EmargementsColumn = () => {
       <div className='groupe'>
         {/* Div pour l'en-tête de colonne */}
         <div className="column-head">
-          {/* Affiche le titre sélectionné dynamiquement */}
-          <h3>{selectedTitle}</h3>
-          {/* Affiche le jour sélectionné dynamiquement */}
-          <p className='day'>{selectedDay}</p>
+          {/* Affiche le titre sélectionné */}
+          {activeCard && <h3>{activeCard}</h3>}
+          {/* Affiche le jour sélectionné */}
+          {selectedCard && <p className='day'>{selectedCard.date}</p>}
         </div>
         {/* Div pour la section de l'agenda */}
         <div className="agenda-section">

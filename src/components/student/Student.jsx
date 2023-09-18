@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom'; //Importons useLocation du module 'react-router-dom'
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import classNames from 'classnames';
 import './Student.css';
 import status from '../../assets/statusup.svg';
@@ -29,6 +30,14 @@ const Student = () => {
   const [ap5ButtonActive, setAp5ButtonActive] = useState(false);
   const [ai6ButtonActive, setAi6ButtonActive] = useState(false);
   const [ap6ButtonActive, setAp6ButtonActive] = useState(false);
+
+  const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
+  const [isValidationDone, setIsValidationDone] = useState(false);
+
+  // Gèrer le clic sur le bouton "Retour"
+  const handleRetourClick = () => {
+    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
+  };
 
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -66,6 +75,9 @@ const Student = () => {
   };
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
+    setIsValidationDone(true);
+
+  navigate('/dashboard');
   };
   const handleValidationClick = () => {
     setShowValidation(true);
@@ -75,6 +87,7 @@ const Student = () => {
     setShowValidation(false);
     document.body.classList.remove('modal-open');
   };
+  
   
 
   return (
@@ -276,8 +289,7 @@ const Student = () => {
         <button className="fem-button" onClick={handleValidationClick}>
           Valider la feuille d'émargement
         </button>
-        <button className="an-button">Annuler</button>
-        {showValidation && (
+        <button className="an-button" onClick={handleRetourClick}>Annuler</button>        {showValidation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
             <div className="icon-container">
@@ -290,7 +302,7 @@ const Student = () => {
               <p> 5 Absents </p>
             </div>
             <div className="confirmation-buttons">
-              <button className="valider-button">Valider</button>
+              <button className="valider-button" onClick={handleConfirmationClick}>Valider</button>
               <button className="annuler-button">Annuler</button>
          </div>
           </div>
