@@ -149,7 +149,8 @@
     /* Largeur de l'élément */
   width: 368.55px;
     /* Marge en bas pour l'espace entre cet élément et le suivant */
-  margin-bottom: 27px;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
     /* Centrage horizontal automatique dans le parent */
   margin-left: auto;
   margin-right: auto;

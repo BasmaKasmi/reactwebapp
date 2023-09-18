@@ -166,13 +166,13 @@
   font-weight: 300;
 
 }
-.student-b {
+.student-buttons{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.student-b button {
+.student-buttons button {
   background-color: #FF252526;
   border-radius: 30px; /* le rayon de bordure pour obtenir la forme souhaitée */
   font-weight: bold;
@@ -184,9 +184,9 @@
   font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
   font-weight: bold;
 }
-.student-b
-.ap-b.active,
-.ai-b.active {
+.student-buttons
+.ap-bu.active,
+.ai-bu.active {
   background-color: #FF2525;
   color: #fff;
 }

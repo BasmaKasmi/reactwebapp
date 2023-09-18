@@ -7,6 +7,7 @@ import right from '../../assets/right.svg';
 const AgendaColumn = () => {
   // État local pour gérer la carte active et le contenu des groupes
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
+  
 
   // Tableau des noms des mois
   const months = [

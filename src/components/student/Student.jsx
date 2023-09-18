@@ -91,9 +91,9 @@ const Student = () => {
         <h4>Nom de l'étudiant</h4>
         <span> Absences : 3</span>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ap-button ${ap1ButtonActive ? 'active' : ''}` }
+            className={`ap-bu ${ap1ButtonActive ? 'active' : ''}` }
             onClick={() => {
               setAp1ButtonActive(!ap1ButtonActive);
               setAi1ButtonActive(false);
@@ -102,9 +102,9 @@ const Student = () => {
             AP 
         </button>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ai-button ${ai1ButtonActive ? 'active' : ''}`}
+            className={`ai-bu ${ai1ButtonActive ? 'active' : ''}`}
             onClick={() => {
               setAi1ButtonActive(!ai1ButtonActive);
               setAp1ButtonActive(false);
@@ -122,9 +122,9 @@ const Student = () => {
         <h4>Nom de l'étudiant</h4>
         <span> Absences : 3</span>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ap-button ${ap2ButtonActive ? 'active' : ''}` }
+            className={`ap-bu ${ap2ButtonActive ? 'active' : ''}` }
             onClick={() => {
               setAp2ButtonActive(!ap2ButtonActive);
               setAi2ButtonActive(false);
@@ -133,9 +133,9 @@ const Student = () => {
             AP 
         </button>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ai-button ${ai2ButtonActive ? 'active' : ''}`}
+            className={`ai-bu ${ai2ButtonActive ? 'active' : ''}`}
             onClick={() => {
               setAi2ButtonActive(!ai2ButtonActive);
               setAp2ButtonActive(false);
@@ -153,9 +153,9 @@ const Student = () => {
         <h4>Nom de l'étudiant</h4>
         <span> Absences : 3</span>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ap-button ${ap3ButtonActive ? 'active' : ''}` }
+            className={`ap-bu ${ap3ButtonActive ? 'active' : ''}` }
             onClick={() => {
               setAp3ButtonActive(!ap3ButtonActive);
               setAi3ButtonActive(false);
@@ -164,9 +164,9 @@ const Student = () => {
             AP 
         </button>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ai-button ${ai3ButtonActive ? 'active' : ''}`}
+            className={`ai-bu ${ai3ButtonActive ? 'active' : ''}`}
             onClick={() => {
               setAi3ButtonActive(!ai3ButtonActive);
               setAp3ButtonActive(false);
@@ -177,29 +177,29 @@ const Student = () => {
         </div>
         </div>
       </div>
-      <div className={`std ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
+      <div className={`std ${ap4ButtonActive ? 'ap-active' : ''} ${ai4ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
         <span> Absences : 3</span>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ap-button ${ap3ButtonActive ? 'active' : ''}` }
+            className={`ap-bu ${ap4ButtonActive ? 'active' : ''}` }
             onClick={() => {
-              setAp3ButtonActive(!ap3ButtonActive);
-              setAi3ButtonActive(false);
+              setAp4ButtonActive(!ap4ButtonActive);
+              setAi4ButtonActive(false);
               }}
             >
             AP 
         </button>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ai-button ${ai3ButtonActive ? 'active' : ''}`}
+            className={`ai-bu ${ai4ButtonActive ? 'active' : ''}`}
             onClick={() => {
-              setAi3ButtonActive(!ai3ButtonActive);
-              setAp3ButtonActive(false);
+              setAi4ButtonActive(!ai4ButtonActive);
+              setAp4ButtonActive(false);
               }}
             >
             AI
@@ -208,29 +208,29 @@ const Student = () => {
         </div>
       </div>
 
-      <div className={`std ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
+      <div className={`std ${ap5ButtonActive ? 'ap-active' : ''} ${ai5ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
         <span> Absences : 3</span>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ap-button ${ap3ButtonActive ? 'active' : ''}` }
+            className={`ap-bu ${ap5ButtonActive ? 'active' : ''}` }
             onClick={() => {
-              setAp3ButtonActive(!ap3ButtonActive);
-              setAi3ButtonActive(false);
+              setAp5ButtonActive(!ap5ButtonActive);
+              setAi5ButtonActive(false);
               }}
             >
             AP 
         </button>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ai-button ${ai3ButtonActive ? 'active' : ''}`}
+            className={`ai-bu ${ai5ButtonActive ? 'active' : ''}`}
             onClick={() => {
-              setAi3ButtonActive(!ai3ButtonActive);
-              setAp3ButtonActive(false);
+              setAi5ButtonActive(!ai5ButtonActive);
+              setAp5ButtonActive(false);
               }}
             >
             AI
@@ -238,29 +238,29 @@ const Student = () => {
         </div>
         </div>
       </div>
-      <div className={`std ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
+      <div className={`std ${ap6ButtonActive ? 'ap-active' : ''} ${ai6ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
         <span> Absences : 3</span>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ap-button ${ap3ButtonActive ? 'active' : ''}` }
+            className={`ap-bu ${ap6ButtonActive ? 'active' : ''}` }
             onClick={() => {
-              setAp3ButtonActive(!ap3ButtonActive);
-              setAi3ButtonActive(false);
+              setAp6ButtonActive(!ap6ButtonActive);
+              setAi6ButtonActive(false);
               }}
             >
             AP 
         </button>
         </div>
-        <div className="student-b" style={{flexBasis: '15%'}}>
+        <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
-            className={`ai-button ${ai3ButtonActive ? 'active' : ''}`}
+            className={`ai-bu ${ai6ButtonActive ? 'active' : ''}`}
             onClick={() => {
-              setAi3ButtonActive(!ai3ButtonActive);
-              setAp3ButtonActive(false);
+              setAi6ButtonActive(!ai6ButtonActive);
+              setAp6ButtonActive(false);
               }}
             >
             AI
