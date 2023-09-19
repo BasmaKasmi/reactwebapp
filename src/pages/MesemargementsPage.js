@@ -43,7 +43,7 @@ const MesemargementsPage = () => {
           <DashEmarg onCardClick={handleCardClick} />
         </div>
         <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
-          <EmargementsColumn selectedCard={selectedCard} />
+          {selectedCard.title && <EmargementsColumn selectedCard={selectedCard} />}   
         </div>
       </div>
       </div>

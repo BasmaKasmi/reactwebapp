@@ -40,8 +40,8 @@ const GroupesPage = () => {
         <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
         <ColonneGroupes onCardClick={handleCardClick} />
         </div>
-        <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
-          <ColonneGroupe2 selectedCard={selectedCard} />   
+        <div className="column" style={{ flexBasis: '50%', margin:'10px',  opacity:'0 !important', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
+          {selectedCard.title && <ColonneGroupe2 selectedCard={selectedCard} />}   
         </div>
       </div>
       </div>
