@@ -102,7 +102,7 @@ const Student = () => {
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
-        <span> Absences : 3</span>
+        <p> Absences : 3</p>
         </div>
         <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
@@ -133,7 +133,7 @@ const Student = () => {
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
-        <span> Absences : 3</span>
+        <p> Absences : 3</p>
         </div>
         <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
@@ -164,7 +164,7 @@ const Student = () => {
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
-        <span> Absences : 3</span>
+        <p> Absences : 3</p>
         </div>
         <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
@@ -194,7 +194,7 @@ const Student = () => {
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
-        <span> Absences : 3</span>
+        <p> Absences : 3</p>
         </div>
         <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
@@ -225,7 +225,7 @@ const Student = () => {
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
-        <span> Absences : 3</span>
+        <p> Absences : 3</p>
         </div>
         <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button
@@ -255,7 +255,7 @@ const Student = () => {
         <div className='row'>
         <div className="col" onClick={handleClick} style={{flexBasis: '70%'}}>
         <h4>Nom de l'étudiant</h4>
-        <span> Absences : 3</span>
+        <p> Absences : 3</p>
         </div>
         <div className="student-buttons" style={{flexBasis: '15%'}}>
         <button

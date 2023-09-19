@@ -1,22 +1,33 @@
-import React, { useState } from 'react';
-import './Em.css';
+import React, { useState, useEffect } from 'react';
+import './Emarg2.css';
 import classNames from 'classnames';
 import status from '../../assets/statusup.svg';
 import st from '../../assets/student.svg';
 import cldr from '../../assets/calendar.svg';
 import user from '../../assets/2 User.png';
 
-const Em = () => {
-  const [activeCard, setActiveCard] = useState(null);
+const Emarg2 = (props) => {
+
+     // Utilisation de l'état local pour suivre l'état de la carte active
+   const [activeCard, setActiveCard] = useState(null);
+   const { selectedCard } = props;
+  
+ 
+   useEffect(() => {
+     // Mettez à jour l'état local lorsque selectedCard dans les props change
+     if (props.selectedCard) {
+       setActiveCard(props.selectedCard.title); // Mettez à jour activeCard avec le titre
+     }
+   }, [props.selectedCard]);
+  
   const [activeButtonId, setActiveButtonId] = useState(null);
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const[declareAp, setdeclareAp] = useState(false);
-  const [showValidation, setShowValidation] = useState(false);
+  const [showValidation, setShowValidation] = useState(false); 
   
-
   const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
   const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
   const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
@@ -54,11 +65,6 @@ const Em = () => {
     setdeclareAp(false);
   };
 
-  const handleCardClick = (cardId, cardTitle, cardDay) => {
-    setActiveCard(cardId);
-    setSelectedTitle(cardTitle);
-    setSelectedDay(cardDay);
-  };
   const handleButtonClick = (buttonId) => {
     setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
   };
@@ -74,8 +80,6 @@ const Em = () => {
     setShowValidation(false);
     document.body.classList.remove('modal-open');
   };
-  
-  
 
   return (
     <div>
@@ -84,13 +88,30 @@ const Em = () => {
           <h3>{selectedTitle}</h3>
           <p className='day'>{selectedDay}</p>
         </div>
-       
-        <div className='card-container'>
+        <div className='card-container'  style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
+        { /*
+            Route : Récupération de la liste des étudiants du groupe sélectionné
+            URL :
+            Informations transmises :
+                Identifiant du groupe
+            Informations attendues :
+                Liste des étudiants
+            */}
+
         <div className={`std ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
+          { /*
+            Route : Récupération des infos de l'étudiant
+            URL :
+            Informations transmises :
+                Identifiant de l'étudiant
+            Informations attendues (sous forme de card):
+                Nom & prénom de l'étudiant
+                Nb d'absences de l'étudiant (AP+AI)
+            */}
           </div>
           <div className="student-buttons">
           <button
@@ -107,92 +128,6 @@ const Em = () => {
             onClick={() => {
               setAi1ButtonActive(!ai1ButtonActive);
               setAp1ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-      <div className={`std ${ap2ButtonActive ? 'ap-active' : ''} ${ai2ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-          <div className="student-buttons">
-          <button
-            className={`ap-b ${ap2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp2ButtonActive(!ap2ButtonActive);
-              setAi2ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi2ButtonActive(!ai2ButtonActive);
-              setAp2ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div> 
-        </div>
-        <div className='card-container'>
-        <div className={`std ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-          <div className="student-buttons">
-          <button
-            className={`ap-b ${ap3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp3ButtonActive(!ap3ButtonActive);
-              setAi3ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi3ButtonActive(!ai3ButtonActive);
-              setAp3ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-      <div className={`std ${ap4ButtonActive ? 'ap-active' : ''} ${ai4ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-          <div className="student-buttons">
-          <button
-            className={`ap-b ${ap4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp4ButtonActive(!ap4ButtonActive);
-              setAi4ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi4ButtonActive(!ai4ButtonActive);
-              setAp4ButtonActive(false);
               }}
             >
             AI
@@ -338,4 +273,4 @@ const Em = () => {
   );
 }
 
-export default Em;
+export default Emarg2;

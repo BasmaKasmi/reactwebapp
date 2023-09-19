@@ -1,33 +1,30 @@
 // Importation des modules nécessaires
-
 import React, { useState } from 'react';
-import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
+import './MesemargementsPage.css'
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import RetourButton from '../components/retourbutton/RetourButton';
-import NavAgenda from '../components/navAgenda/NavAgenda';
-import Agenda from '../components/agenda/Agenda';
-import AgendaColumn from '../components/agendacolumn/AgendaColumn';
-import AgendaLeft from '../components/agendaleft/AgendaLeft';
+import NavEmarg from '../components/navEm/NavEmarg';
+import RecapEm from '../components/recapem/RecapEm';
+import DashEmarg from '../components/dashemargements/DashEmarg';
+import Emarg2 from '../components/emarg2/Emarg2';
 // Déclaration du composant GroupesPage
-const AgendaPage = () => {
-  const [selectedDay, setSelectedDay] = useState(null);
-  const [selectedCard, setSelectedCard] = useState(null);
+const Emarg2Page = () => {
+  const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
 
-  const handleCardClick = (cardId) => {
-    setSelectedCard(cardId);
+  const handleCardClick = (title, date) => {
+    setSelectedCard({ title, date });
   };
-
-
+  
   return (
     <div>
       <div className="nav-emarg-container">
       {/* Affichage du composant NavGrp */}
-        <NavAgenda />
+        <NavEmarg />
         {/* Affichage du composant RetourButton */}
         <RetourButton />
         {/* Affichage du composant Groupes */}
-        <Agenda />
+        <RecapEm />
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
@@ -39,10 +36,10 @@ const AgendaPage = () => {
         <Sidebar />
         </div>
         <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
-        <AgendaLeft onCardClick={handleCardClick} /> 
+          <DashEmarg onCardClick={handleCardClick} />
         </div>
         <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
-          <AgendaColumn selectedDay={selectedDay} selectedCard={selectedCard} />
+          <Emarg2 selectedCard={selectedCard} />
         </div>
       </div>
       </div>
@@ -51,4 +48,4 @@ const AgendaPage = () => {
 };
 
 //Exportation du composant GroupesPage
-export default AgendaPage;
+export default Emarg2Page;

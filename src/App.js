@@ -15,7 +15,8 @@ import AgendaPage from './pages/AgendaPage';
 import RappelPage from './pages/RappelPage';
 import RecapPopupPage from './pages/RecapPopupPage';
 import RecapEmPage from './pages/RecapEmPage';
-import Em from '../src/components/em/Em';
+import Emarg2 from './components/emarg2/Emarg2';
+import Emarg2Page from './pages/Emarg2Page';
 import StructureBinairePage from '../src/pages/StructureBinairePage';
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                     <Route index element={<LoginPage />} />
                     <Route path='/dashboard' element={<DashboardPage />} />
                     <Route path='/émargements' element={<MesemargementsPage />} />
+                    <Route path='/emarg2' element={<Emarg2Page />} />
                     <Route path='/password' element={<PasswordPage />} />
                     <Route path='/newpassword' element={<NewPasswordPage />} />
                     <Route path='/emnavigation1' element={<EmNavigation1 />} />

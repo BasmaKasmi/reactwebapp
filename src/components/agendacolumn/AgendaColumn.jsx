@@ -4,10 +4,12 @@ import './AgendaColumn.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
-const AgendaColumn = () => {
+const AgendaColumn = ({ selectedDay, selectedCard }) => {
+  const isSaturdaySelected = (selectedCard && selectedDay === 'Saturday');
+
+
   // État local pour gérer la carte active et le contenu des groupes
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
-  
 
   // Tableau des noms des mois
   const months = [
@@ -35,8 +37,8 @@ const AgendaColumn = () => {
       const isCard2Clicked = activeCards.includes('card-2');
   
       const classNames = classnames('day', {
-        'saturday': dayOfWeek === 6 && isCard1Clicked,
-        'monday': dayOfWeek === 1 && isCard2Clicked,
+        'saturday': dayOfWeek === 6 && (isSaturdaySelected || isCard1Clicked), // Mettre à jour en fonction de la carte
+        'monday': dayOfWeek === 1 && isCard2Clicked, // Ajoutez d'autres jours si nécessaire
       });
   
       days.push(

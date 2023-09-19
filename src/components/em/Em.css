@@ -1,7 +1,37 @@
 
+  /* Affiche l'élément .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
+  .groupes {
+    display: block;
+    width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-bottom: 3rem; /* Ajoutez une marge supérieure pour séparer les deux colonnes */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+  }
 
-
-
+.column-head {
+  /* Définition de l'image d'arrière-plan et son comportement */
+  background-image: url("../../assets/ractangle\ orange.svg");
+  /* L'image ne se répète pas */
+  background-repeat: no-repeat;
+   /* L'image couvre complètement l'arrière-plan */
+  background-size: cover;
+  /* Positionnement de l'image au centre en haut de l'élément */
+  background-position: center top;
+  /* taille de la police */
+  font-size: 12px;
+  /* hauteur */
+  height: 54.88px;
+  /* largeur */
+  width: 369px;
+  /* Utilisation de flexbox pour aligner les éléments en ligne*/
+  display: flex;
+  /* disposition en colonne */
+  flex-direction: column;
+  margin-bottom: 10px;
+  /* Alignement horizontal au centre des éléments enfants */
+  align-items: center;
+  /* Alignement vertical au centre des éléments enfants */
+  justify-content: center; 
+}
 .column-header {
   background-image: url("../../assets/ractangle\ orange.svg");
   background-repeat: no-repeat;
@@ -126,7 +156,7 @@
   color: #000000; /* Couleur du texte pour le span */
   font-family: "Poppins", Helvetica;
   font-size: 12px; /* Taille de police pour le span */
-  margin-left: -0.10rem;
+  margin-left: 1.6rem;
 
 }
 

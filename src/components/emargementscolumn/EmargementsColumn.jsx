@@ -6,7 +6,6 @@ import st from '../../assets/student.svg'; // Importation de l'image 'student.sv
 import Em from '../em/Em'; // Importation du composant Em
 import './EmargementsColumn.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
-// Composant principal Emargements
 const EmargementsColumn = (props) => {
 
    // Utilisation de l'état local pour suivre l'état de la carte active
@@ -145,17 +144,8 @@ const EmargementsColumn = (props) => {
             {/* Affiche une image l'icône */}
             <img src={st} alt=''/>
         </div> 
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-          {/* Div pour une rangée */}
-          <div className='row'>
-            {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(n-1)</h3>
-            {/* Affiche le statut "FAIT" */}
-            <span className="status-f">FAIT</span>
-          </div>
-        </div>
-        {/* Div pour une carte cliquable */}
+        <Link to={{pathname: '/emarg2',}}>
+           {/* Div pour une carte cliquable */}
         <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
           {/* Div pour une rangée */}
           <div className='row'>
@@ -165,18 +155,10 @@ const EmargementsColumn = (props) => {
             <span className="status-f">FAIT</span>
           </div>
         </div>
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-        {/* Div pour une rangée */}
-          <div className='row'>
-          {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(n+1)</h3>
-            {/* Affiche le statut "NON FAIT" */}
-            <span className="status-n">NON FAIT</span>
-          </div>
-        </div>
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
+        </Link>    
+        <Link to={{pathname: '/emarg2',}}>
+         {/* Div pour une carte cliquable */}
+         <div className="c">
         {/* Div pour une rangée */}
           <div className='row'>
           {/* Affiche un titre avec une date */}
@@ -185,6 +167,7 @@ const EmargementsColumn = (props) => {
             <span className="status-n">NON FAIT</span>
           </div>
         </div>
+        </Link>
       </div>
       {/* Si showEmContent est vrai, affiche un composant Em */}
       {showEmContent && <Em />}
