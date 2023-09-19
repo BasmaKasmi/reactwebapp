@@ -130,46 +130,35 @@ const ColonneGroupe2 = (props) => {
           {selectedCard && <p className='day'>{selectedCard.date}</p>}
         </div>
         {/* Conteneur pour les cartes d'étudiants */}
-        <div className='card-container'>
-        <div className="nom-stu" onClick={handleClick}>
-          {/* Nom de l'étudiant */}
-          <h3>Nom de l’étudiant</h3>
-            <div>
-            {/* Affiche le nombre d'absences */}
-            <p className='abs'>Absence(s) : 3</p>
-            </div>
-        </div>
+        <div className='card-container' style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
+        { /*
+      
+            Route : Récupération de la liste des étudiants du groupe sélectionné
+            URL :
+            Informations transmises :
+                Identifiant du groupe
+            Informations attendues :
+                Liste des étudiants (nom + nb absence (AP+AI))
+            */}
         {/* Nom de l'étudiant */}
         <div className="nom-stu" onClick={handleClick}>
           <h3>Nom de l’étudiant</h3>
           <div>
           {/* Affiche le nombre d'absences */}
             <p className='abs'>Absence(s) : 3</p>
-          </div>
-        </div>
-        </div>
-        {/* Deuxième conteneur pour les cartes d'étudiants */}
-        <div className='card-container'>
-        {/* Nom de l'étudiant */}
-        <div className="nom-stu" onClick={handleClick}>
-          <h3>Nom de l’étudiant</h3>
-          <div>
-            {/* Affiche le nombre d'absences */}
-            <p className='abs'>Absence(s) : 3</p>
-          </div>
-        </div>
-        {/* Nom de l'étudiant */}
-        <div className="nom-stu" onClick={handleClick}>
-          <h3>Nom de l’étudiant</h3>
-          <div>
-            {/* Affiche le nombre d'absences */}
-            <p className='abs'>Absence(s) : 3</p>
+              { /*
+            Route : Récupération des infos de l'étudiant
+            URL :
+            Informations transmises :
+                Identifiant de l'étudiant
+            Informations attendues (sous forme de card):
+                Nom & prénom de l'étudiant
+                Nb d'absences de l'étudiant (AP+AI)
+            */}
           </div>
         </div>
         </div>
       </div>
-      
-      
             {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="mdl">

@@ -4,9 +4,8 @@ import './AgendaLeft.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
-const AgendaLeft = () => {
-  // État local pour gérer la carte active et le contenu des groupes
-  const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
+const AgendaLeft = ({ onCardClick }) => {
+
 
   // Tableau des noms des mois
   const months = [
@@ -47,45 +46,38 @@ const AgendaLeft = () => {
   
     return days;
   };
-  
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
+
   const handleCardClick = (cardId) => {
-    // Vérifions si la carte est déjà sélectionnée
-    if (activeCards.includes(cardId)) {
-      // Si la carte est déjà sélectionnée, la retirer de la liste des cartes actives
-      setActiveCards((prevActiveCards) => prevActiveCards.filter((id) => id !== cardId));
-    } else {
-      // Sinon, ajoutons la carte à la liste des cartes actives
-      setActiveCards((prevActiveCards) => [...prevActiveCards, cardId]);
-    }
+    setSelectedCard(cardId);
+    onCardClick(cardId);
+  };
+    // Gérer le clic sur le mois suivant
+    const handleNextMonthClick = () => {
+      // Mettons à jour le mois et l'année pour passer au mois suivant
+      if (month === 11) {
+        // Si le mois est décembre, passons à janvier et mettons à jour l'année
+        setMonth(0);
+        setYear((prevYear) => prevYear + 1);
+      } else {
+        // Sinon, passons simplement au mois suivant
+        setMonth((prevMonth) => prevMonth + 1);
+      }
     };
-
-
-  // Gérer le clic sur le mois suivant
-  const handleNextMonthClick = () => {
-    // Mettons à jour le mois et l'année pour passer au mois suivant
-    if (month === 11) {
-      // Si le mois est décembre, passons à janvier et mettons à jour l'année
-      setMonth(0);
-      setYear((prevYear) => prevYear + 1);
-    } else {
-      // Sinon, passons simplement au mois suivant
-      setMonth((prevMonth) => prevMonth + 1);
-    }
-  };
-
-  // Gérer le clic sur le mois précédent
-  const handlePrevMonthClick = () => {
-    // Mettons à jour le mois et l'année pour passer au mois précédent
-    if (month === 0) {
-      // Si le mois est janvier, passons à décembre et mettons à jour l'année
-      setMonth(11);
-      setYear((prevYear) => prevYear - 1);
-    } else {
-      // Sinon, passons simplement au mois précédent
-      setMonth((prevMonth) => prevMonth - 1);
-    }
-  };
-
+  
+    // Gérer le clic sur le mois précédent
+    const handlePrevMonthClick = () => {
+      // Mettons à jour le mois et l'année pour passer au mois précédent
+      if (month === 0) {
+        // Si le mois est janvier, passons à décembre et mettons à jour l'année
+        setMonth(11);
+        setYear((prevYear) => prevYear - 1);
+      } else {
+        // Sinon, passons simplement au mois précédent
+        setMonth((prevMonth) => prevMonth - 1);
+      }
+    };
   return (
     <div>
         <div className="groupesRes">

@@ -14,7 +14,7 @@ const Em = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const[declareAp, setdeclareAp] = useState(false);
-  const [showValidation, setShowValidation] = useState(false);
+  const [showValidation, setShowValidation] = useState(false); 
   
 
   const [ai1ButtonActive, setAi1ButtonActive] = useState(false);

@@ -3,7 +3,6 @@
   .groupes {
     display: block;
     width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
-    margin-bottom: 3rem; /* Ajoutez une marge supérieure pour séparer les deux colonnes */
     margin-left: 0; /* Réinitialiser la marge gauche */
   }
 
