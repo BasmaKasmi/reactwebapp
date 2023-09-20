@@ -4,8 +4,9 @@ import './AgendaColumn.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
-const AgendaColumn = ({ selectedDay, selectedCard }) => {
-  const isSaturdaySelected = (selectedCard && selectedDay === 'Saturday');
+const AgendaColumn = ({ selectedCard }) => {
+  const isSaturdaySelected = (selectedCard && selectedCard === 'card-1'); // Mettez à jour avec d'autres cartes
+  const isMondaySelected = (selectedCard && selectedCard === 'card-2'); // Mettez à jour avec d'autres cartes
 
   // État local pour gérer la carte active et le contenu des groupes
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
@@ -37,7 +38,7 @@ const AgendaColumn = ({ selectedDay, selectedCard }) => {
   
       const classNames = classnames('day', {
         'saturday': dayOfWeek === 6 && (isSaturdaySelected || isCard1Clicked), // Mettre à jour en fonction de la carte
-        'monday': dayOfWeek === 1 && isCard2Clicked, // Ajoutez d'autres jours si nécessaire
+        'monday': dayOfWeek === 1 && (isMondaySelected ||isCard2Clicked), // Ajoutez d'autres jours si nécessaire
       });
   
       days.push(

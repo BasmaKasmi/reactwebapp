@@ -42,9 +42,9 @@ const MesemargementsPage = () => {
         <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
           <DashEmarg onCardClick={handleCardClick} />
         </div>
-        <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
-          {selectedCard.title && <EmargementsColumn selectedCard={selectedCard} />}   
-        </div>
+        {selectedCard.title && <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
+           <EmargementsColumn selectedCard={selectedCard} />  
+        </div>} 
       </div>
       </div>
     </div>

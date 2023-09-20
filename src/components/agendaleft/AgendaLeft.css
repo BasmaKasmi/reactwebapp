@@ -12,6 +12,17 @@
   /* Aligner la date à gauche */
   text-align: left;
 }
+/* Lorsqu'une carte (.card) est cliquée, changez la couleur de fond en #FD9340 */
+.card.clicked {
+  background-color: #FD9340;
+}
+
+/* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
+.card.clicked h3,
+.card.clicked .day,
+.card.clicked .session {
+color: #FFFFFF;
+}
 
 
 .groupesRes{

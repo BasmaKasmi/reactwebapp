@@ -11,7 +11,6 @@ import AgendaColumn from '../components/agendacolumn/AgendaColumn';
 import AgendaLeft from '../components/agendaleft/AgendaLeft';
 // Déclaration du composant GroupesPage
 const AgendaPage = () => {
-  const [selectedDay, setSelectedDay] = useState(null);
   const [selectedCard, setSelectedCard] = useState(null);
 
   const handleCardClick = (cardId) => {
@@ -42,7 +41,7 @@ const AgendaPage = () => {
         <AgendaLeft onCardClick={handleCardClick} /> 
         </div>
         <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
-          <AgendaColumn selectedDay={selectedDay} selectedCard={selectedCard} />
+          <AgendaColumn selectedCard={selectedCard} />
         </div>
       </div>
       </div>

@@ -167,7 +167,7 @@
 .butt-container {
   display: flex;
   position: fixed;
-  margin-top: 35rem;
+  margin-top: 25rem;
   margin-left: 15rem;
   background-color: #FFFFFF; /* Définissez la couleur d'arrière-plan souhaitée */
   z-index: 100; /* Assurez-vous que les boutons sont au-dessus du contenu */

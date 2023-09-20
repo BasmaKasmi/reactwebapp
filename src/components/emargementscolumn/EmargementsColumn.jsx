@@ -22,7 +22,6 @@ const EmargementsColumn = (props) => {
      }
    }, [props.selectedCard]);
   
-  // Définit un état pour suivre la carte active (null au départ)
   // Définit un état pour suivre le titre sélectionné
   const [selectedTitle, setSelectedTitle] = useState('');
   // Définit un état pour suivre le titre sélectionné
@@ -32,7 +31,7 @@ const EmargementsColumn = (props) => {
   // Définit un état pour contrôler l'affichage de la confirmation
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-
+  
   // Déclaration d'une fonction de gestion de clic sur une carte
   const handleCardClick = (cardId, cardTitle, cardDay) => {
     // Mise à jour de l'état de la carte active
@@ -144,7 +143,7 @@ const EmargementsColumn = (props) => {
             {/* Affiche une image l'icône */}
             <img src={st} alt=''/>
         </div> 
-        <Link to={{pathname: '/emarg2',}}>
+        <Link to={`/emarg2/${selectedCard.title}/${selectedCard.date}`}>
            {/* Div pour une carte cliquable */}
         <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
           {/* Div pour une rangée */}
@@ -156,7 +155,7 @@ const EmargementsColumn = (props) => {
           </div>
         </div>
         </Link>    
-        <Link to={{pathname: '/emarg2',}}>
+        <Link to={`/emarg2/${selectedCard.title}/${selectedCard.date}`}>
          {/* Div pour une carte cliquable */}
          <div className="c">
         {/* Div pour une rangée */}
