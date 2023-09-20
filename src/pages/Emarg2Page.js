@@ -1,6 +1,6 @@
 // Importation des modules nécessaires
-import React, { useState, useEffect} from 'react';
-import { Route, Routes, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import Route from 'react-router-dom';
 import './MesemargementsPage.css'
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
@@ -11,7 +11,6 @@ import DashEmarg from '../components/dashemargements/DashEmarg';
 import Emarg2 from '../components/emarg2/Emarg2';
 // Déclaration du composant GroupesPage
 const Emarg2Page = () => {
-  const { title, date } = useParams();
   const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
 
   const handleCardClick = (title, date) => {
@@ -41,9 +40,7 @@ const Emarg2Page = () => {
           <DashEmarg onCardClick={handleCardClick} />
         </div>
         <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
-          <Routes>
-              <Route path="/emarg2/:title/:date" element={<Emarg2 selectedCard={selectedCard} />} />
-          </Routes>
+          <Emarg2 selectedCard={selectedCard} />
         </div>
       </div>
       </div>

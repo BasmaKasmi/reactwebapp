@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Emarg2.css';
 import classNames from 'classnames';
 import status from '../../assets/statusup.svg';
@@ -107,7 +108,11 @@ const Emarg2 = (props) => {
 
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
+    setIsValidationDone(true);
+
+  navigate('/dashboard');
   };
+  
   const handleValidationClick = () => {
     setShowValidation(true);
   };
@@ -115,6 +120,14 @@ const Emarg2 = (props) => {
     setShowConfirmation(false);
     setShowValidation(false);
     document.body.classList.remove('modal-open');
+  };
+
+  const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
+  const [isValidationDone, setIsValidationDone] = useState(false);
+
+  // Gèrer le clic sur le bouton "Retour"
+  const handleRetourClick = () => {
+    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
   };
 
   return (
@@ -179,7 +192,7 @@ const Emarg2 = (props) => {
         <button className="fem-butt" onClick={handleValidationClick}>
           Valider la feuille d'émargement
         </button>
-        <button className="an-butt">Annuler</button>
+        <button className="an-butt" onClick={handleRetourClick}>Annuler</button>        
         {showValidation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
@@ -193,14 +206,14 @@ const Emarg2 = (props) => {
               <p> 5 Absents </p>
             </div>
             <div className="confirmation-buttons">
-              <button className="valider-button">Valider</button>
+              <button className="valider-button" onClick={handleConfirmationClick}>Valider</button>
               <button className="annuler-button">Annuler</button>
          </div>
           </div>
         </div>
       </div>
     )}
-        </div>
+      </div>
       </div>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>

@@ -143,7 +143,7 @@ const EmargementsColumn = (props) => {
             {/* Affiche une image l'icône */}
             <img src={st} alt=''/>
         </div> 
-        <Link to={`/emarg2/${selectedCard.title}/${selectedCard.date}`}>
+        <Link to={{pathname: '/emarg2',}}>
            {/* Div pour une carte cliquable */}
         <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
           {/* Div pour une rangée */}
@@ -155,7 +155,7 @@ const EmargementsColumn = (props) => {
           </div>
         </div>
         </Link>    
-        <Link to={`/emarg2/${selectedCard.title}/${selectedCard.date}`}>
+        <Link to={{pathname: '/emarg2',}}>
          {/* Div pour une carte cliquable */}
          <div className="c">
         {/* Div pour une rangée */}
