@@ -33,6 +33,7 @@ const AgendaColumn = ({ selectedCard }) => {
     for (let day = 1; day <= numDays; day++) {
       // Récupérer le jour de la semaine correspondant à la date (ici, nous utilisons un jour fictif pour l'exemple)
       const dayOfWeek = new Date(year, month, day).getDay();
+
   
       // Ajouter des classes spécifiques aux jours du samedi (6) et du lundi (1) en fonction de la carte cliquée
       const isCard1Clicked = activeCards.includes('card-1');
@@ -54,15 +55,24 @@ const AgendaColumn = ({ selectedCard }) => {
   };
   
   const handleCardClick = (cardId) => {
-    // Vérifions si la carte est déjà sélectionnée
     if (activeCards.includes(cardId)) {
-      // Si la carte est déjà sélectionnée, la retirer de la liste des cartes actives
       setActiveCards((prevActiveCards) => prevActiveCards.filter((id) => id !== cardId));
+      // Mettez à jour l'état local correspondant ici
+      if (cardId === 'card-1') {
+        setIsCard1Selected(false);
+      } else if (cardId === 'card-2') {
+        setIsCard2Selected(false);
+      }
     } else {
-      // Sinon, ajoutons la carte à la liste des cartes actives
       setActiveCards((prevActiveCards) => [...prevActiveCards, cardId]);
+      // Mettez à jour l'état local correspondant ici
+      if (cardId === 'card-1') {
+        setIsCard1Selected(true);
+      } else if (cardId === 'card-2') {
+        setIsCard2Selected(true);
+      }
     }
-    };
+  };
 
 
   // Gérer le clic sur le mois suivant
