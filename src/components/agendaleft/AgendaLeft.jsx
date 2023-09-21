@@ -8,6 +8,7 @@ const AgendaLeft = ({ onCardClick }) => {
 
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
   const [selectedCards, setSelectedCards] = useState([]);
+  
 
 
   const handleCardClick = (cardId) => {

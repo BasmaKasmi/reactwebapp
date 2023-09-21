@@ -1,7 +1,6 @@
 // Importation des modules nécessaires
 
 import React, { useState } from 'react';
-import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import RetourButton from '../components/retourbutton/RetourButton';
@@ -12,7 +11,6 @@ import AgendaLeft from '../components/agendaleft/AgendaLeft';
 // Déclaration du composant GroupesPage
 const AgendaPage = () => {
   const [selectedCard, setSelectedCard] = useState(null);
-
   const handleCardClick = (cardId) => {
     setSelectedCard(cardId);
   };

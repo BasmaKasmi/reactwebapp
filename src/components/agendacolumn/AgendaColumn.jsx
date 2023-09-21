@@ -7,6 +7,8 @@ import right from '../../assets/right.svg';
 const AgendaColumn = ({ selectedCard }) => {
   const isSaturdaySelected = (selectedCard && selectedCard === 'card-1'); // Mettez à jour avec d'autres cartes
   const isMondaySelected = (selectedCard && selectedCard === 'card-2'); // Mettez à jour avec d'autres cartes
+  const [isCard1Selected, setIsCard1Selected] = useState(false);
+  const [isCard2Selected, setIsCard2Selected] = useState(false);
 
   // État local pour gérer la carte active et le contenu des groupes
   const [activeCards, setActiveCards] = useState([]); // tableau pour conserver plusieurs cartes sélectionnées
