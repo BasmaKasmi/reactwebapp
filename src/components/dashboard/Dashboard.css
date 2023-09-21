@@ -1,30 +1,10 @@
-/* Styles pour .dashboard */
-.dashboard {
-  display: flex; /* Affichage des éléments en ligne dans un conteneur flexible */
-  justify-content: space-between; /* Espace uniformément les éléments enfants sur l'axe horizontal */
-  height: calc(100% - 139px); /* Hauteur égale à 100% de la hauteur de son parent moins 139px */
-  min-width: 290px; /* Largeur minimale */
-  background-color: #FFFFFF; /* Couleur de fond blanche */
-  position: fixed; /* Position fixe */
-  top: 144px; /* Distance de 144px depuis le haut de la fenêtre */
-  right: 0; /* Aligne l'élément à droite */
-  gap: 22px; /* Espacement horizontal */
-  margin-right: 2px; /* Marge à droite */
-  padding: 0 27px; /* espace intérieur */
-
-}
 
 /* Css pour .column-Enf */
 .column-Enf {
-  flex: 1; /* Utilisation de flexbox */
-  width: 345px; /* la largeur*/
-  height: 100vh; /* la hauteur */
-  margin-top: 22px; /* Marge supérieure */
-  margin-left: 2px; /* Marge gauche */
+  height: 100vh;
+  box-sizing: border-box;
   border-radius: 22px; /* Bordure arrondie */
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte pour donner une profondeur visuelle */
-  overflow-x: hidden;
-  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 
   
   /* css appliqué pour les écrands inférieures à 783px*/
@@ -141,15 +121,10 @@
 }
 
 .column {
-  flex: 1; /* Utilisation de la propriété flex avec flex-grow: 1 pour que la colonne prenne autant d'espace que possible */
-  width: 345px; /* largeur */
   height: 100vh; /* hauteur de la colonne égale à la hauteur de la fenêtre */
-  margin-top: 22px; /* Marge en haut */
-  margin-left: 2px; /* Marge à gauche */
+  box-sizing: border-box;
   border-radius: 22px; /* bordure arrondie */
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /*Ombre*/
-  overflow-x: hidden;
-  overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
   @media (max-width: 783px) {
     display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
   }

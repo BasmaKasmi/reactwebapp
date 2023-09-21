@@ -1,7 +1,7 @@
 // Importation des modules nécessaires de React, y compris useState pour gérer l'état.
 import React, { useState } from 'react';
 // Importation du fichier de styles CSS spécifique pour le composant Dashboard.
-import './Dashboard.css';
+import './DashEnf.css';
 // Importation du composant Link de react-router-dom, utilisé pour créer des liens vers d'autres routes.
 import { Link } from 'react-router-dom';
 // Importation de l'image "calendar.svg" à partir du dossier "assets".
@@ -18,7 +18,7 @@ import classNames from 'classnames'; // Importation de la bibliothèque classNam
 
 // Définition du Dashboard
 
-const Dashboard = () => {
+const DashEnf = () => {
   // Utilisation de useState pour gérer l'état local du composant.
   const [selectedTitle, setSelectedTitle] = useState('');  // État pour stocker un titre sélectionné
   const [selectedDay, setSelectedDay] = useState(''); // État pour stocker un jour sélectionné
@@ -70,7 +70,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard">
+    <div>
     {/* Première colonne */}
       <div className="column-Enf">
         {/* En-tête de la colonne */}
@@ -139,96 +139,7 @@ const Dashboard = () => {
           </Link>
           </div>
         </div>
-      </div>
-      {/* Div englobante pour la colonne */}
-      <div className="column">
-          {/* En-tête de la colonne avec arrière-plan orange */}
-        <div className="column-header orange-bg">
-            {/* Titre de l'en-tête */}
-          <h2>Mes emargements</h2>
-        </div>
-        {/* Lien de navigation avec données d'état et gestionnaire d'événements */}
-        <Link
-        to={{
-          pathname: '/nomdetudiant',
-          state: { title: 'Sciences islamiques 2ème année', day: 'Jeu 18h00 à 12h00' }
-          }}
-          onClick={() => {
-            setSelectedTitle('Sciences islamiques 2ème année');
-            setSelectedDay('Jeu 18h00 à 12h00');
-            }}
-            >
-        {/* Bloc interne de la colonne */}
-        <div className='int-block'>
-        {/* Titre de la date */}
-        <h1 className='date'>Samedi 17 Dec 2022</h1>
-        {/* Carte du séance */}
-        <div className="card">
-          {/* Titre de l'événement */}
-          <h3>Sciences islamiques 2ème année</h3>
-          <div className='row'>
-          {/* Ligne de contenu du carte */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
-          {/* Statistiques de session */}
-          <p className='session'>11/32</p>
-          </div>
-        </div>
-        <div className={classNames('emargement-validation-desktop', { 'hide-validation': !isEmargementValide })}>
-          <img src={iconeValidation} alt="Emargement validé" />
-        </div>
-        </div>
-        </Link>
-      </div>
-
-        {/* Div englobante pour la colonne */}
-      <div className="column">
-          {/* En-tête de la colonne avec arrière-plan orange */}
-        <div className="column-header orange-bg">
-          <h2>Mon agenda</h2>
-        </div>
-        <div className='int-block'>
-        {/* Titre de la date */}
-        <h1 className='date'>Samedi 17 Dec 2022</h1>
-        {/* Carte pour le groupe */}
-        <div className="card">
-          {/* Titre du groupe */}
-          <h3>Sciences islamiques 2ème année</h3>
-          <div className='row'>
-          {/* Jour et horaires de la séance */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
-          {/* Statistiques de session */}
-          <p className='session'>11/32</p>
-          </div>
-        </div>
-        {/* Carte pour un autre groupe */}
-        <div className="card">
-        {/* Titre de l'activité */}
-          <h3>Sciences islamiques 1ére année</h3>
-          <div className='row'>
-          {/* Jour et horaires du séance */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
-          {/* Statistiques de session */}
-          <p className='session'>11/32</p>
-          </div>
-        </div>
-        </div>
-        <div className='int-block'>
-        {/* Titre de la date */}
-        <h1 className='date'>Samedi 19 Dec 2022</h1>
-        {/* Carte pour un groupe */}
-        <div className="card">
-        {/* Titre du groupe */}
-          <h3>Sciences islamiques 2ème année</h3>
-          <div className='row'>
-          {/* Jour et horaires de la séance */}
-          <p className='day'>Jeu 18h00 à 12h00</p>
-          {/* Statistiques de session */}
-          <p className='session'>11/32</p>
-          </div>
-        </div>
-        </div>
-      </div>
-      
+      </div>   
       <div className="column-r">
       {/* Section de la date */}
       <div className="date-section">
@@ -511,4 +422,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard; // Exportation du composant Dashboard
+export default DashEnf; // Exportation du composant Dashboard

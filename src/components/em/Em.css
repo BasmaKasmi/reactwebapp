@@ -1,43 +1,36 @@
-.Emargements {
+
+  /* Affiche l'élément .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
+  .groupes {
+    display: block;
+    width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
+    margin-left: 0; /* Réinitialiser la marge gauche */
+  }
+
+.column-head {
+  /* Définition de l'image d'arrière-plan et son comportement */
+  background-image: url("../../assets/ractangle\ orange.svg");
+  /* L'image ne se répète pas */
+  background-repeat: no-repeat;
+   /* L'image couvre complètement l'arrière-plan */
+  background-size: cover;
+  /* Positionnement de l'image au centre en haut de l'élément */
+  background-position: center top;
+  /* taille de la police */
+  font-size: 12px;
+  /* hauteur */
+  height: 54.88px;
+  /* largeur */
+  width: 369px;
+  /* Utilisation de flexbox pour aligner les éléments en ligne*/
   display: flex;
-  justify-content: space-between;
-  height: calc(100% - 139px);
-  width: 67,76rem;  /*1084px width*/
-  background-color: #FFFFFF;
-  position: fixed;
-  top: 144px;
-  gap: 27px;
-  margin-right: 2px;
-  padding: 0 42px;/* espace intérieur */
-
+  /* disposition en colonne */
+  flex-direction: column;
+  margin-bottom: 10px;
+  /* Alignement horizontal au centre des éléments enfants */
+  align-items: center;
+  /* Alignement vertical au centre des éléments enfants */
+  justify-content: center; 
 }
-
-.co {
-  flex: 1;
-  width: 23rem;
-  height: 100vh;
-  margin-top: 22px;
-  margin-right: 50px; /* une marge à droite */
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  position: fixed;
-  top: 142px;
-  left: 20.68rem;
-  overflow-y: auto;   /* Activation de la barre de défilement verticale si le contenu dépasse */
-
-}
-
-.groupes {
-  flex: 1;
-  width: 702px;
-  border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  top: 142px;
-  right: 1.86rem;
-  overflow: hidden;
-
-}
-
 .column-header {
   background-image: url("../../assets/ractangle\ orange.svg");
   background-repeat: no-repeat;
@@ -128,12 +121,6 @@
   margin-right: 10px;
 }
 
-.groupes .card-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 .std {
   position: relative;
   background-color: #ffffff;
@@ -167,9 +154,8 @@
 .std span {
   color: #000000; /* Couleur du texte pour le span */
   font-family: "Poppins", Helvetica;
-  font-size: 14px; /* Taille de police pour le span */
-  font-weight: 300;
-  margin-left: -0.10rem;
+  font-size: 12px; /* Taille de police pour le span */
+  margin-left: 1.6rem;
 
 }
 
@@ -181,36 +167,35 @@
 .butt-container {
   display: flex;
   position: fixed;
-  bottom: 2rem;
-  margin-left: 14rem;
+  margin-top: 25rem;
+  margin-left: 15rem;
   background-color: #FFFFFF; /* Définissez la couleur d'arrière-plan souhaitée */
   z-index: 100; /* Assurez-vous que les boutons sont au-dessus du contenu */
-
 }
 .fem-butt {
-background-color: #19CE1526;
-color: #19CE15;
-border: none;
-font-family: "Poppins", Helvetica;
-font-weight: bold;
-height: 42px;
-width: 291px;
-border-radius: 50px;
-padding: 8px 16px;
-margin-right: 1.25rem;
+  background-color: #19CE1526;
+  color: #19CE15;
+  border: none;
+  font-family: "Poppins", Helvetica;
+  font-weight: bold;
+  height: 42px;
+  width: 291px;
+  border-radius: 50px;
+  padding: 8px 16px;
+  margin-right: 1.25rem;
 }
 
 .an-butt {
-background-color: #FF252526;
-color: #FF2525;
-height: 42px;
-width: 122px;
-border: none;
-font-family: "Poppins", Helvetica;
-font-weight: bold;
-border-radius: 50px;
-padding: 8px 16px;
-margin-right: 1rem;
+  background-color: #FF252526;
+  color: #FF2525;
+  height: 42px;
+  width: 122px;
+  border: none;
+  font-family: "Poppins", Helvetica;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 8px 16px;
+  margin-right: 1rem;
 }
 .modal-overlay {
   position: fixed;

@@ -1,24 +1,11 @@
-.Emargements {
-  display: flex;
-  justify-content: space-between;
-  height: calc(100% - 139px);
-  min-width: 290px;
-  background-color: #FFFFFF;
-  position: fixed;
-  top: 144px;
-  right: 0;
-  gap: 26px;
-  margin-right: 3px;
-  padding: 0 27px; /* espace intérieur */
-}
+
 .groups {
   flex: 1;
-  width: 1080px;
   border-radius: 22px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
-  top: 142px;
   right: 1.86rem;
-  margin-right: -1.2rem;
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box; 
 }
 
 .column-head {
@@ -37,8 +24,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .column-head h3 {
@@ -75,41 +61,39 @@
   justify-content: space-between;
 }
 .button-container {
-  display: flex;
-  position: fixed;
-  bottom: 2rem;
-  margin-left: 38rem;
-  background-color: #FFFFFF; /* Définissez la couleur d'arrière-plan souhaitée */
-  z-index: 100; /* Assurez-vous que les boutons sont au-dessus du contenu */
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    margin-left: 38rem;
+    background-color: #FFFFFF; /* Définissez la couleur d'arrière-plan souhaitée */
+    z-index: 100; /* Assurez-vous que les boutons sont au-dessus du contenu */
 
 }
 .fem-button {
-background-color: #19CE1526;
-color: #19CE15;
-border: none;
-font-family: "Poppins", Helvetica;
-font-weight: bold;
-height: 42px;
-width: 291px;
-border-radius: 50px;
-padding: 8px 16px;
-margin-right: 1.25rem;
+  background-color: #19CE1526;
+  color: #19CE15;
+  border: none;
+  font-family: "Poppins", Helvetica;
+  font-weight: bold;
+  height: 42px;
+  width: 291px;
+  border-radius: 50px;
+  padding: 8px 16px;
+  margin-right: 1.25rem;
 }
 
 .an-button {
-background-color: #FF252526;
-color: #FF2525;
-height: 42px;
-width: 122px;
-border: none;
-font-family: "Poppins", Helvetica;
-font-weight: bold;
-border-radius: 50px;
-padding: 8px 16px;
-margin-right: 1rem;
+  background-color: #FF252526;
+  color: #FF2525;
+  height: 42px;
+  width: 122px;
+  border: none;
+  font-family: "Poppins", Helvetica;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 8px 16px;
+  margin-right: 1rem;
 }
-
-
 .list-container{
   display: block;
   align-items: center;
@@ -119,73 +103,71 @@ margin-right: 1rem;
   margin-bottom: 0;
 }
 
-.confirmation-card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
+
+.std-container{
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(3,1fr);
+  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+
+}
+@media screen and (max-width: 900px){
+  .std-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (min-width: 1600px){
+  .std-container{
+    grid-template-columns: repeat(4,1fr);
+  }
 }
 
-.confirmation-content {
-  text-align: center;
-}
-
-.icon-container {
-  font-size: 40px;
-  color: #19CE15;
-  margin-bottom: 20px;
-}
-
-.confirmation-details {
+.row {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-direction: row;
 }
 
-.confirmation-buttons {
+.std {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 4px 4px 20px #00000012;
+  height: 60px;
+  width: 332px;
+  padding: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  @media screen and (max-width: 1000px) {
+    max-width: 100%;
+  }
 }
 
-.annuler-button {
-  background-color: #FF252526;
-  color: #FF2525;
-  height: 42px;
-  width: 100px;
-  border: none;
+
+.std + .std {
+  margin-left: 4px; /* spacing value */
+  margin-bottom: 10px;
+}
+
+
+.std h4 {
+  color: #000000;
+  font-size: 14px;
   font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-right: 8px;
+  font-weight: 600;
 }
 
-.valider-button {
-  background-color: #19CE1526;
-  color: #19CE15;
-  border: none;
+.std p {
+  color: #000000; /* Couleur du texte pour le span */
   font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  height: 42px;
-  width: 100px;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-left: 8px;
+  font-size: 12px; /* Taille de police pour le span */
+  margin-left: 0.1rem;
+
 }
 
-.student-buttons {
+.student-buttons{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,25 +176,24 @@ margin-right: 1rem;
 .student-buttons button {
   background-color: #FF252526;
   border-radius: 30px; /* le rayon de bordure pour obtenir la forme souhaitée */
-  padding: 4px 8px; /* les valeurs de padding pour réduire l'espace intérieur du bouton */
-  margin-right: 8px;
+  font-weight: bold;
   border: none;
   height: 35px;
   width:35px;
-  color: #FF2525;
+  color: red;
   text-align: center;
   font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
   font-weight: bold;
-  margin-top: 10px;
 }
-.ap-button.active,
-.ai-button.active {
+.student-buttons
+.ap-bu.active,
+.ai-bu.active {
   background-color: #FF2525;
   color: #fff;
 }
 
 /* Pour les cartes avec AP actif */
-.std .ap-active {
+.std.ap-active {
 background-color: #FF252526;
 color: #000000; /* Couleur du texte */
 }
@@ -223,9 +204,6 @@ background-color: #FF252526;
 color: #000000; /* Couleur du texte */
 }
 
-.std.active {
-background-color: #FF252526;
-}  
   .confirmation-card {
   position: fixed;
   top: 50%;
@@ -506,9 +484,3 @@ background-color: #FF252526;
     margin-top: 4rem;
 
   }
-
-@media (max-width: 768px) {
-  .groupes .std {
-    width: 100%;
-  }
-}

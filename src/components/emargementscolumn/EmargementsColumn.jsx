@@ -1,16 +1,27 @@
-import React, { useState } from 'react'; // Importation des modules React et useState depuis 'react'
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; // Importation de l'image 'calendar.svg' depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image 'student.svg' depuis les ressources
 import Em from '../em/Em'; // Importation du composant Em
-import './Emargements.css'; // Importation du fichier de styles CSS 'Emargements.css'
+import './EmargementsColumn.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
-// Composant principal Emargements
-const Emargements = () => {
+const EmargementsColumn = (props) => {
+
+   // Utilisation de l'état local pour suivre l'état de la carte active
+   const [activeCard, setActiveCard] = useState(null);
+   const { selectedCard } = props;
+   // Contrôler l'affichage du contenu dans la colonne "groupes"
+   const [showGroupesContent, setShowGroupesContent] = useState(false); 
+   const navigate = useNavigate(); 
+ 
+   useEffect(() => {
+     // Mettez à jour l'état local lorsque selectedCard dans les props change
+     if (props.selectedCard) {
+       setActiveCard(props.selectedCard.title); // Mettez à jour activeCard avec le titre
+     }
+   }, [props.selectedCard]);
   
-  // Définit un état pour suivre la carte active (null au départ)
-  const [activeCard, setActiveCard] = useState(null);
   // Définit un état pour suivre le titre sélectionné
   const [selectedTitle, setSelectedTitle] = useState('');
   // Définit un état pour suivre le titre sélectionné
@@ -19,10 +30,8 @@ const Emargements = () => {
   const [showEmContent, setShowEmContent] = useState(false);
   // Définit un état pour contrôler l'affichage de la confirmation
   const [showConfirmation, setShowConfirmation] = useState(false);
-  // Contrôle de l'affichage du contenu dans la colonne "groupes"
-  const [showGroupesContent, setShowGroupesContent] = useState(false); 
 
-
+  
   // Déclaration d'une fonction de gestion de clic sur une carte
   const handleCardClick = (cardId, cardTitle, cardDay) => {
     // Mise à jour de l'état de la carte active
@@ -59,7 +68,6 @@ const Emargements = () => {
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const selectedCard = searchParams.get('card');
 
   return (
     <div>  {/* Conteneur principal avec la classe 'Emargements' */}
@@ -110,52 +118,14 @@ const Emargements = () => {
     </Link>
     </div>
     </div>
-    <div className="co">
-        {/* En-tête de la colonne */}
-          <div className="column-header orange-bg">
-            <h2>Mes émargements</h2>
-          </div>
-          {/* Bloc interne pour les groupes */}
-          <div className='int-block'>
-          <div
-          className={`card ${activeCard === 'card-1' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-1', 'Sciences islamiques 2ème année', 'Ven 18h00 à 21h00')}
-        >
-              <h3>Sciences islamiques 2ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-            <div
-          className={`card ${activeCard === 'card-2' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-2', 'Sciences islamiques 1ère année', 'Sam 14h30 à 17h30')}
-        >
-              <h3>Sciences islamiques 1ère année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-            <div
-          className={`card ${activeCard === 'card-3' ? 'clicked' : ''}`}
-          onClick={() => handleCardClick('card-3', 'Sciences islamiques 3ème année', 'Sam 14h30 à 17h30')}
-        >
-              <h3>Sciences islamiques 3ème année</h3>
-              <div className='row'>
-                <p className='day'>Jeu 18h00 à 12h00</p>
-                <p className='session'>11/32</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
       <div className='groupe'>
         {/* Div pour l'en-tête de colonne */}
         <div className="column-head">
-          {/* Affiche le titre sélectionné dynamiquement */}
-          <h3>{selectedTitle}</h3>
-          {/* Affiche le jour sélectionné dynamiquement */}
-          <p className='day'>{selectedDay}</p>
+          {/* Affiche le titre sélectionné */}
+          {activeCard && <h3>{activeCard}</h3>}
+          {/* Affiche le jour sélectionné */}
+          {selectedCard && <p className='day'>{selectedCard.date}</p>}
         </div>
         {/* Div pour la section de l'agenda */}
         <div className="agenda-section">
@@ -173,17 +143,8 @@ const Emargements = () => {
             {/* Affiche une image l'icône */}
             <img src={st} alt=''/>
         </div> 
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-          {/* Div pour une rangée */}
-          <div className='row'>
-            {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(n-1)</h3>
-            {/* Affiche le statut "FAIT" */}
-            <span className="status-f">FAIT</span>
-          </div>
-        </div>
-        {/* Div pour une carte cliquable */}
+        <Link to={{pathname: '/emarg2',}}>
+           {/* Div pour une carte cliquable */}
         <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
           {/* Div pour une rangée */}
           <div className='row'>
@@ -193,18 +154,10 @@ const Emargements = () => {
             <span className="status-f">FAIT</span>
           </div>
         </div>
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
-        {/* Div pour une rangée */}
-          <div className='row'>
-          {/* Affiche un titre avec une date */}
-            <h3>Emargement : 12/12/2022(n+1)</h3>
-            {/* Affiche le statut "NON FAIT" */}
-            <span className="status-n">NON FAIT</span>
-          </div>
-        </div>
-        {/* Div pour une carte cliquable */}
-        <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
+        </Link>    
+        <Link to={{pathname: '/emarg2',}}>
+         {/* Div pour une carte cliquable */}
+         <div className="c">
         {/* Div pour une rangée */}
           <div className='row'>
           {/* Affiche un titre avec une date */}
@@ -213,6 +166,7 @@ const Emargements = () => {
             <span className="status-n">NON FAIT</span>
           </div>
         </div>
+        </Link>
       </div>
       {/* Si showEmContent est vrai, affiche un composant Em */}
       {showEmContent && <Em />}
@@ -220,4 +174,4 @@ const Emargements = () => {
   );
 }
 
-export default Emargements; // Exportation du composant Emargements
+export default EmargementsColumn; // Exportation du composant Emargements

@@ -78,7 +78,7 @@ const Sidebar = () => {
 
 
   return (
-    <div>
+    <div className="sidebar">
       <button className="sidebar-toggle" onClick={handleToggle}>
         <FontAwesomeIcon icon={faBars} />
       </button>

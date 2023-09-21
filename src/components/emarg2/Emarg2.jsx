@@ -1,13 +1,62 @@
-import React, { useState } from 'react';
-import './Em.css';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './Emarg2.css';
 import classNames from 'classnames';
 import status from '../../assets/statusup.svg';
 import st from '../../assets/student.svg';
 import cldr from '../../assets/calendar.svg';
 import user from '../../assets/2 User.png';
 
-const Em = () => {
+const Emarg2 = (props) => {
+
+  // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);
+  const { selectedCard } = props;
+
+  useEffect(() => {
+    // Mettez à jour l'état local lorsque selectedCard dans les props change
+    if (props.selectedCard) {
+      setActiveCard(props.selectedCard.title); // Mettez à jour activeCard avec le titre
+    }
+  }, [props.selectedCard]);
+
+
+  // Déclaration d'une fonction de gestion de clic sur une carte
+  const handleCardClick = (cardId, cardTitle, cardDay) => {
+    // Mise à jour de l'état de la carte active
+    setActiveCard(cardId);
+    // Mise à jour de l'état du titre et du jour sélectionnés
+    setSelectedTitle(cardTitle);
+    setSelectedDay(cardDay);
+    // Affichage le contenu de la colonne "groupes" après avoir cliqué sur une carte
+    setShowGroupesContent(true); 
+
+    // Déclaration d'une fonction de gestion de clic pour la confirmation
+    const handleConfirmationClick = () => {
+      // Affichage de la fenêtre modale de confirmation
+      setShowConfirmation(true);
+      // Ajout d'une classe au corps du document pour désactiver le défilement lorsque la fenêtre modale est ouverte
+      document.body.classList.add('modal-open');
+      // Affichage le contenu de la colonne "groupes" après avoir cliqué sur "Valider la feuille d'émargement"
+      setShowGroupesContent(true); 
+    };
+
+
+    // Vérifie si l'identifiant de la carte est 'card-1', 'card-2' ou 'card-3'
+    if (cardId === 'card-1' || cardId === 'card-2' || cardId === 'card-3') {
+      // Si l'identifiant correspond à l'une de ces cartes, masque le contenu lié à Emargements
+      setShowEmContent(false);
+    } else if (cardId === 'card-4') {
+      // Si l'identifiant correspond à 'card-4', affiche le contenu lié à Emargements
+      setShowEmContent(true);
+    } else {
+      // Si l'identifiant ne correspond à aucune des cartes mentionnées, masque le contenu lié à Emargements
+      setShowEmContent(false);
+    }
+  };
+
+  const [showGroupesContent, setShowGroupesContent] = useState(false);
+  const [showEmContent, setShowEmContent] = useState(false);
   const [activeButtonId, setActiveButtonId] = useState(null);
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
@@ -16,7 +65,6 @@ const Em = () => {
   const[declareAp, setdeclareAp] = useState(false);
   const [showValidation, setShowValidation] = useState(false); 
   
-
   const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
   const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
   const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
@@ -54,18 +102,17 @@ const Em = () => {
     setdeclareAp(false);
   };
 
-  const handleCardClick = (cardId, cardTitle, cardDay) => {
-    setActiveCard(cardId);
-    setSelectedTitle(cardTitle);
-    setSelectedDay(cardDay);
-  };
   const handleButtonClick = (buttonId) => {
     setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
   };
 
   const handleConfirmationClick = () => {
     setShowConfirmation(true);
+    setIsValidationDone(true);
+
+  navigate('/dashboard');
   };
+  
   const handleValidationClick = () => {
     setShowValidation(true);
   };
@@ -74,23 +121,49 @@ const Em = () => {
     setShowValidation(false);
     document.body.classList.remove('modal-open');
   };
-  
-  
+
+  const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
+  const [isValidationDone, setIsValidationDone] = useState(false);
+
+  // Gèrer le clic sur le bouton "Retour"
+  const handleRetourClick = () => {
+    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
+  };
 
   return (
     <div>
       <div className="groupes">
-        <div className="column-head">
-          <h3>{selectedTitle}</h3>
-          <p className='day'>{selectedDay}</p>
+          {/* Div pour l'en-tête de colonne */}
+          <div className="column-head">
+          {/* Affiche le titre sélectionné */}
+          {activeCard && <h3>{activeCard}</h3>}
+          {/* Affiche le jour sélectionné */}
+          {selectedCard && <p className='day'>{selectedCard.date}</p>}
         </div>
-       
-        <div className='card-container'>
+        <div className='card-container'  style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
+        { /*
+            Route : Récupération de la liste des étudiants du groupe sélectionné
+            URL :
+            Informations transmises :
+                Identifiant du groupe
+            Informations attendues :
+                Liste des étudiants
+            */}
+
         <div className={`std ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
         <div className='row'>
         <div className='col' onClick={handleClick}>
           <h3>Nom de l'étudiant</h3>
           <span>Absence(s) : 3</span>
+          { /*
+            Route : Récupération des infos de l'étudiant
+            URL :
+            Informations transmises :
+                Identifiant de l'étudiant
+            Informations attendues (sous forme de card):
+                Nom & prénom de l'étudiant
+                Nb d'absences de l'étudiant (AP+AI)
+            */}
           </div>
           <div className="student-buttons">
           <button
@@ -114,98 +187,12 @@ const Em = () => {
             </div>
           </div>
       </div>
-      <div className={`std ${ap2ButtonActive ? 'ap-active' : ''} ${ai2ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-          <div className="student-buttons">
-          <button
-            className={`ap-b ${ap2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp2ButtonActive(!ap2ButtonActive);
-              setAi2ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi2ButtonActive(!ai2ButtonActive);
-              setAp2ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div> 
-        </div>
-        <div className='card-container'>
-        <div className={`std ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-          <div className="student-buttons">
-          <button
-            className={`ap-b ${ap3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp3ButtonActive(!ap3ButtonActive);
-              setAi3ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi3ButtonActive(!ai3ButtonActive);
-              setAp3ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-      <div className={`std ${ap4ButtonActive ? 'ap-active' : ''} ${ai4ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <span>Absence(s) : 3</span>
-          </div>
-          <div className="student-buttons">
-          <button
-            className={`ap-b ${ap4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp4ButtonActive(!ap4ButtonActive);
-              setAi4ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi4ButtonActive(!ai4ButtonActive);
-              setAp4ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
         </div>
         <div className='butt-container'>
         <button className="fem-butt" onClick={handleValidationClick}>
           Valider la feuille d'émargement
         </button>
-        <button className="an-butt">Annuler</button>
+        <button className="an-butt" onClick={handleRetourClick}>Annuler</button>        
         {showValidation && (
       <div className="modal-overlay" onClick={handleOverlayClick}>
         <div className="confirmation-card">
@@ -219,14 +206,14 @@ const Em = () => {
               <p> 5 Absents </p>
             </div>
             <div className="confirmation-buttons">
-              <button className="valider-button">Valider</button>
+              <button className="valider-button" onClick={handleConfirmationClick}>Valider</button>
               <button className="annuler-button">Annuler</button>
          </div>
           </div>
         </div>
       </div>
     )}
-        </div>
+      </div>
       </div>
       {showModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>
@@ -338,4 +325,4 @@ const Em = () => {
   );
 }
 
-export default Em;
+export default Emarg2;
