@@ -1,6 +1,7 @@
 
 .groups {
   flex: 1;
+  border: 2px solid red;
   border-radius: 22px;
   right: 1.86rem;
   padding: 1rem;
@@ -8,7 +9,7 @@
   box-sizing: border-box; 
 }
 
-.column-head {
+.groups .column-head {
   background-image: url("../../assets/ractangle\ orange.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,6 +18,7 @@
   border-radius: 0 0 30px 30px;
   height: 54.88px;
   width: 368.55px;
+  margin-top: -1rem;
   margin-bottom: 27px;
   margin-left: auto;
   margin-right: auto;

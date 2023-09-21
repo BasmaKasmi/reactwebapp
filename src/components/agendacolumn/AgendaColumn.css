@@ -130,7 +130,7 @@
   
 }
 
-.groupe{
+.group-agenda{
   height: 100vh; /* hauteur de la colonne égale à la hauteur de la fenêtre */
   box-sizing: border-box;
   margin-top: 16px;

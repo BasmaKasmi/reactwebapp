@@ -92,7 +92,7 @@ const AgendaColumn = ({ selectedCard }) => {
   return (
     <div>
         {/* Contenu des groupes */}
-          <div className="groupe" >
+          <div className="group-agenda" >
             {/* En-tête de la section des groupes */}
             <div className="h">
               <h3> Calendrier </h3>
