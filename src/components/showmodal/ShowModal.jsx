@@ -31,10 +31,11 @@ const ShowModal = () => {
   };
   const handleOverlayClick = (e) => {
     const isOverlay = e.target.classList.contains('modal-overlay');
-    const isCancel = e.target.classList.contains('an');
+    const isCancel = e.target.classList.contains('cancel-button');
   
     if (isOverlay || isCancel) {
       handleCloseShowModal();
+      handleCloseDeclareAp(false);
     }
   };
   

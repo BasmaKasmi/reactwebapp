@@ -8,19 +8,22 @@ import DeclareAp from '../declareap/DeclareAp';
 const ShowConfirmation = () => {
     const[declareAp, setdeclareAp] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
+    const [isValidationDone, setIsValidationDone] = useState(false);
     const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
     const handleDeclareAp = () => {
         setdeclareAp(true)
       }
-      // Gèrer le clic sur le bouton "Retour"
-  const handleRetourClick = () => {
-    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
-  };
   const handleOverlayClick = () => {
     setShowConfirmation(false);
     document.body.classList.remove('modal-open');
   };
-  
+  const handleConfirmationClick = () => {
+    setShowConfirmation(true);
+    setIsValidationDone(true);
+
+  navigate('/dashboard');
+  };
+
   return (
     <div>
         <div className="modal-overlay" onClick={handleOverlayClick}>
@@ -35,7 +38,7 @@ const ShowConfirmation = () => {
                             <p>21/01/2023</p>
                         </div>
                         <div className="confirmation-buttons">
-                            <button className="valider-button">Valider</button>
+                            <button className="valider-button" onClick={handleConfirmationClick}>Valider</button>
                             <button className="annuler-button">Annuler</button>
                         </div>
                     </div>

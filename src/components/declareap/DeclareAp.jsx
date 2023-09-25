@@ -11,18 +11,19 @@ const DeclareAp = () => {
     const [showConfirmation, setShowConfirmation] = useState(false);
     const[declareAp, setdeclareAp] = useState(false);
     const [isAnyPopupOpen, setIsAnyPopupOpen] = useState(false);
+    const [currentPopup, setCurrentPopup] = useState(null);
+
 
 
   
     const handleDeclareAp = () => {
         setdeclareAp(true);
-        setIsAnyPopupOpen(true); // Le pop-up est ouvert
+        setCurrentPopup('DeclareAp');
       };
       const handleCloseDeclareAp = () => {
         setdeclareAp(false);
-        setIsAnyPopupOpen(false); // Le pop-up est fermé
+        setCurrentPopup(null); // La pop-up DeclareAp est fermée
       };
-
 
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -38,13 +39,17 @@ const DeclareAp = () => {
   };
     // Définition de la fonction handleConfirmationClick
     const handleConfirmationClick = () => {
-        // Affiche la fenêtre de confirmation
         setShowConfirmation(true);
-        // Ajoute la classe 'modal-open' au corps du document (utilisé pour les styles de superposition)
-        document.body.classList.add('modal-open');
-        // Affiche le contenu de la colonne "groupes" après avoir cliqué sur "Valider la feuille d'émargement"
+        setCurrentPopup('ShowConfirmation');
       };
-
+      const handleOverlayClick = (e) => {
+        const isOverlay = e.target.classList.contains('modal-overlay');
+        const isCancel = e.target.classList.contains('cancel-button');
+      
+        if (isOverlay || isCancel) {
+          handleCloseDeclareAp(false);
+        }
+      };
 
   return (
     <div>
@@ -97,7 +102,7 @@ const DeclareAp = () => {
       </div>
         <div className="buttons-row">
           <button className="v-button" onClick={handleConfirmationClick}>Valider</button>
-          <button className="cancel-button">Annuler</button>
+          <button className="cancel-button" onClick={handleOverlayClick}>Annuler</button>
         </div>
     </div>
   </div>
