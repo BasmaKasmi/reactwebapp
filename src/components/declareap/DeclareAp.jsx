@@ -107,7 +107,11 @@ const DeclareAp = () => {
     </div>
   </div>
     )}
-  {showConfirmation && <ShowConfirmation/> }
+    {showConfirmation && (
+        <div>
+          <ShowConfirmation handleOverlayClick={handleOverlayClick} />
+        </div>
+      )}
     </div>
 
   );
