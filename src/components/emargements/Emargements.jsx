@@ -3,7 +3,6 @@ import classnames from 'classnames'; // importation de la bibliothèque 'classna
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; // Importation de l'image 'calendar.svg' depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image 'student.svg' depuis les ressources
-import Em from '../em/Em'; // Importation du composant Em
 import './Emargements.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
 // Composant principal Emargements
@@ -214,8 +213,6 @@ const Emargements = () => {
           </div>
         </div>
       </div>
-      {/* Si showEmContent est vrai, affiche un composant Em */}
-      {showEmContent && <Em />}
     </div>
   );
 }

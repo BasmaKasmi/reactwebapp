@@ -3,7 +3,6 @@ import classnames from 'classnames'; // importation de la bibliothèque 'classna
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; // Importation de l'image 'calendar.svg' depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image 'student.svg' depuis les ressources
-import Em from '../em/Em'; // Importation du composant Em
 import './EmargementsColumn.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
 const EmargementsColumn = (props) => {
@@ -128,7 +127,7 @@ const EmargementsColumn = (props) => {
           {selectedCard && <p className='day'>{selectedCard.date}</p>}
         </div>
         {/* Div pour la section de l'agenda */}
-        <div className="agenda-section">
+        <div className="agenda-info">
           {/* Affiche une image d'icône d'agenda */}
           <img src={cldr} alt=''/>
           {/* Affiche un texte "Choisir dates :" */}
@@ -168,8 +167,7 @@ const EmargementsColumn = (props) => {
         </div>
         </Link>
       </div>
-      {/* Si showEmContent est vrai, affiche un composant Em */}
-      {showEmContent && <Em />}
+  
     </div>
   );
 }

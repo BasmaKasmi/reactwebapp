@@ -5,7 +5,6 @@ import Recap from '../components/recap/Recap';
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import NavEmarg from '../components/navEm/NavEmarg';
-import Em from '../components/em/Em';
 
 // Déclaration du composant RecapEmPage
 const RecapPage = () => {
@@ -17,7 +16,6 @@ const RecapPage = () => {
         {/* Affichage du composant RetourButton */}
         <RetourButton />
         {/* Affichage du composant Em */}
-        <Em />
         <Recap />
       </div>
       <div className="desktop-container">
@@ -25,8 +23,6 @@ const RecapPage = () => {
         <Navbar />
         {/* Affichage du composant Sidebar */}
         <Sidebar />
-        {/* Affichage du composant Em */}
-        <Em />
       </div>
      </div>
   )
