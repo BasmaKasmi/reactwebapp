@@ -26,7 +26,6 @@ const GroupesPage = () => {
         <RetourButton />
         {/* Affichage du composant Groupes */}
         <Groupes />
-        <RecapGp />
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}

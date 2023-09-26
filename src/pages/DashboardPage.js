@@ -45,5 +45,4 @@ const DashboardPage = () => {
   )
 }
 
-//Exportation du composant StudentPage
 export default DashboardPage;

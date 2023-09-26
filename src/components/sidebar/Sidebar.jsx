@@ -6,10 +6,6 @@ import G from "../../assets/groupes.svg";
 import E from "../../assets/emargements.svg";
 import A from "../../assets/agenda.svg";
 import Ev from "../../assets/evaluations.svg";
-import cldr from '../../assets/calendar.svg';
-import nom from '../../assets/nom.svg';
-import st from '../../assets/student.svg';
-import user from '../../assets/2 User.png';
 import ShowAp from "../showap/ShowAp";
 // l'icone de menu
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,22 +19,10 @@ const Sidebar = () => {
   const sidebarRef = useRef(null);
   const[showAp, setshowAp] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
-  const[selectStudent, setselectStudent] = useState(false);
-  const[declareAp, setdeclareAp] = useState(false);
-  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
-  const [selectedDates, setSelectedDates] = useState([]);
+  
 
-  const handleDateCardClick = (date) => {
-    // Vérifier si la date est déjà sélectionnée
-    if (selectedDates.includes(date)) {
-      // Si elle est sélectionnée, la retirer de la liste
-      setSelectedDates(selectedDates.filter(d => d !== date));
-    } else {
-      // Si elle n'est pas sélectionnée, l'ajouter à la liste
-      setSelectedDates([...selectedDates, date]);
-    }
-  };
   const handleOverlayClick = (e) => {
     const isOverlay = e.target.classList.contains('modal-overlay');
     const isCancel = e.target.classList.contains('an');
@@ -52,16 +36,15 @@ const Sidebar = () => {
     }
   };
 
-  const handleConfirmationClick = () => {
-    setShowConfirmation(true);
-    document.body.classList.add('modal-open');
-  };
-
   const handleToggle = () => {
     setActive(!isActive);
-
-    if (!isActive) {
-      sidebarRef.current.focus();
+    if (window.innerWidth <= 768) {
+      setMobileSidebarOpen(!isMobileSidebarOpen);
+      if (!isMobileSidebarOpen) {
+        document.body.classList.add("sidebar-open");
+      } else {
+        document.body.classList.remove("sidebar-open");
+      }
     }
   };
 
@@ -71,33 +54,21 @@ const Sidebar = () => {
   const handleCloseShowAp = () => {
     setshowAp(false);
   };
-  const handleSelectStudent = () => {
-    setselectStudent(true)
-  }
-  const handleCloseSelectStudent = () => {
-    setselectStudent(false);
-  };
 
-  const handleDeclareAp = () => {
-    setdeclareAp(true)
-  }
-  const handleCloseDeclareAp = () => {
-    setdeclareAp(false);
-  };
-  
 
 
   return (
-    <div className="sidebar">
-      <button className="sidebar-toggle" onClick={handleToggle}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-  
-      {isActive && <div className="sidebar-overlay" onClick={handleToggle} />}
+    <div>
+      {isActive && (
+        <div className="sidebar-overlay" onClick={handleToggle} />
+      )}
+      <button className={`toggle ${isMobileSidebarOpen ? "hidden" : ""}`} onClick={handleToggle}>
+      <FontAwesomeIcon icon={faBars} />
+      </button>    
       <div
-        className={`sidebar ${isActive ? "active" : ""}`}
-        tabIndex={isActive ? 0 : -1}
-        ref={sidebarRef}
+      className={`sidebar ${isActive || isMobileSidebarOpen ? "active" : ""}`}
+      tabIndex={isActive || isMobileSidebarOpen ? 0 : -1}
+      ref={sidebarRef}
       >
         <h2 className="sidebar-title desktop">Espace professeur</h2>
         <div className="sidebar-small-title mobile">
@@ -141,6 +112,7 @@ const Sidebar = () => {
         <div className="sidebar-button-mobile">
           <Link to="/">Se déconnecter</Link>
         </div>
+ 
       </div>
       {showAp && (
         <div className="modal-overlay" onClick={handleOverlayClick}>

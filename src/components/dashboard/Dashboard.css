@@ -141,7 +141,7 @@
     display: flex; /* Utilisation du flexbox */
     flex-direction: column; /* disposition en colonne */
     align-items: center; /* Centrer horizontalement les éléments */
-    margin-top: 7rem;
+    margin-top: 4rem;
     overflow-x: hidden;
     overflow-y: auto;
   }
