@@ -103,43 +103,7 @@ const Dashboard = () => {
         </Link>
       </div>
       
-      {/* Crée une boîte avec une classe "pink-box" */}
-      <div className="pink-box">
-        {/* Affiche un titre de niveau 2 */}
-          <h2>Emargements non faits</h2>
-        {/* Crée un conteneur avec une classe "content" */}
-        <div className="content">
-          {/* Crée une entrée avec une classe "entry" */}
-          <div className="entry-cont">
-          <Link to='/rappel'>
-          <div className="entry">
-            {/* Affiche un titre de niveau 3 avec le nom du cours */}
-            <h3>Sciences islamiques 2ème année</h3>
-            {/* Crée un conteneur pour les détails avec une classe "details" */}
-            <div className="details">
-              {/* Affiche la date de l'emargement */}
-              <p className="date">Sam 10 Déc 2022</p>
-              {/* Affiche le nombre d'emargements */}
-              <p className="count">11/32</p>
-            </div>
-          </div>
-          </Link>
-          <Link to='/rappel'>
-          <div className="entry">
-            {/* Affiche un titre de niveau 3 avec le nom du cours */}
-            <h3>Sciences islamiques 3ème année</h3>
-            {/* Crée un conteneur pour les détails avec une classe "details" */}
-            <div className="details">
-              {/* Affiche la date de l'emargement */}
-              <p className="date">Sam 10 Déc 2022</p>
-              {/* Affiche le nombre d'emargements */}
-              <p className="count">11/32</p>
-            </div>
-          </div>
-          </Link>
-          </div>
-        </div>
-      </div>
+
       {/* Div englobante pour la colonne */}
       <div className="column">
           {/* En-tête de la colonne avec arrière-plan orange */}
@@ -230,6 +194,43 @@ const Dashboard = () => {
       </div>
       
       <div className="column-r">
+              {/* Crée une boîte avec une classe "pink-box" */}
+      <div className="pink-box">
+        {/* Affiche un titre de niveau 2 */}
+          <h2>Emargements non faits</h2>
+        {/* Crée un conteneur avec une classe "content" */}
+        <div className="content">
+          {/* Crée une entrée avec une classe "entry" */}
+          <div className="entry-cont">
+          <Link to='/rappel'>
+          <div className="entry">
+            {/* Affiche un titre de niveau 3 avec le nom du cours */}
+            <h3>Sciences islamiques 2ème année</h3>
+            {/* Crée un conteneur pour les détails avec une classe "details" */}
+            <div className="details">
+              {/* Affiche la date de l'emargement */}
+              <p className="date">Sam 10 Déc 2022</p>
+              {/* Affiche le nombre d'emargements */}
+              <p className="count">11/32</p>
+            </div>
+          </div>
+          </Link>
+          <Link to='/rappel'>
+          <div className="entry">
+            {/* Affiche un titre de niveau 3 avec le nom du cours */}
+            <h3>Sciences islamiques 3ème année</h3>
+            {/* Crée un conteneur pour les détails avec une classe "details" */}
+            <div className="details">
+              {/* Affiche la date de l'emargement */}
+              <p className="date">Sam 10 Déc 2022</p>
+              {/* Affiche le nombre d'emargements */}
+              <p className="count">11/32</p>
+            </div>
+          </div>
+          </Link>
+          </div>
+        </div>
+      </div>
       {/* Section de la date */}
       <div className="date-section">
       {/* titre de la date */}

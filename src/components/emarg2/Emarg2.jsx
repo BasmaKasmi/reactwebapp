@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './Emarg2.css';
 import classNames from 'classnames';
 import status from '../../assets/statusup.svg';
@@ -10,15 +11,15 @@ import ShowModal from '../showmodal/ShowModal';
 import ShowValidation from '../showvalidation/ShowValidation';
 
 const Emarg2 = (props) => {
+  const { title, date } = useParams(); // Récupérer les paramètres d'URL
 
   // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);
   const { selectedCard } = props;
 
   useEffect(() => {
-    // Mettez à jour l'état local lorsque selectedCard dans les props change
     if (props.selectedCard) {
-      setActiveCard(props.selectedCard.title); // Mettez à jour activeCard avec le titre
+      setActiveCard(props.selectedCard.title); 
     }
   }, [props.selectedCard]);
 
@@ -31,7 +32,6 @@ const Emarg2 = (props) => {
     setSelectedTitle(cardTitle);
     setSelectedDay(cardDay);
     // Affichage le contenu de la colonne "groupes" après avoir cliqué sur une carte
-    setShowGroupesContent(true); 
 
     // Déclaration d'une fonction de gestion de clic pour la confirmation
     const handleConfirmationClick = () => {
@@ -40,21 +40,8 @@ const Emarg2 = (props) => {
       // Ajout d'une classe au corps du document pour désactiver le défilement lorsque la fenêtre modale est ouverte
       document.body.classList.add('modal-open');
       // Affichage le contenu de la colonne "groupes" après avoir cliqué sur "Valider la feuille d'émargement"
-      setShowGroupesContent(true); 
     };
 
-
-    // Vérifie si l'identifiant de la carte est 'card-1', 'card-2' ou 'card-3'
-    if (cardId === 'card-1' || cardId === 'card-2' || cardId === 'card-3') {
-      // Si l'identifiant correspond à l'une de ces cartes, masque le contenu lié à Emargements
-      setShowEmContent(false);
-    } else if (cardId === 'card-4') {
-      // Si l'identifiant correspond à 'card-4', affiche le contenu lié à Emargements
-      setShowEmContent(true);
-    } else {
-      // Si l'identifiant ne correspond à aucune des cartes mentionnées, masque le contenu lié à Emargements
-      setShowEmContent(false);
-    }
   };
 
   const [showGroupesContent, setShowGroupesContent] = useState(false);
@@ -146,9 +133,9 @@ const Emarg2 = (props) => {
           {/* Div pour l'en-tête de colonne */}
           <div className="column-head">
           {/* Affiche le titre sélectionné */}
-          {activeCard && <h3>{activeCard}</h3>}
+          {activeCard && <h3>{title}</h3>}
           {/* Affiche le jour sélectionné */}
-          {selectedCard && <p className='day'>{selectedCard.date}</p>}
+          {selectedCard && <p className='day'>{date}</p>}
         </div>
         <div className='card-container'  style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
         { /*

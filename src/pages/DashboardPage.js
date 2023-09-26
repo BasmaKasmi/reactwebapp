@@ -16,7 +16,7 @@ const DashboardPage = () => {
       {/* Affichage du composant NavEmarg */}
         <Navbar />
         {/* Affichage du composant RetourButton */}
-        <RetourButton />
+        <Sidebar />
         {/* Affichage du composant Dashboard */}
         <Dashboard />
       </div>

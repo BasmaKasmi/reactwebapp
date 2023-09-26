@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 import './DashEmarg.css';
 import Groupes from '../groupes/Groupes';
 
@@ -11,6 +13,8 @@ const DashEmarg = (props) => {
   const [showGroupesContent, setShowGroupesContent] = useState(false); 
   const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
   const navigate = useNavigate(); // Utiliser useNavigate
+
+  
 
   const handleMobileGroupClick = () => {
     // Redirigez l'utilisateur vers la page RecapGp en mode mobile

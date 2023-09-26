@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+
 }
 
 .sidebar {
@@ -9,6 +10,7 @@
   box-sizing: border-box;
   transition: transform 0.02s ease;
   @media (max-width: 768px) {
+    display: none;
     transform: translateX(100%);
     min-width: 336px;
     padding-margin: 20px;
@@ -39,12 +41,10 @@
 }
 
 .sidebar-toggle {
-  position: fixed;
   display: none;
   align-items: center;
   height: 40px;
   width: 40px;
-  top: 80px;
   margin-left: 40rem;
   background-color: transparent; /* Rendre le bouton transparent */
   box-shadow: 4px 4px 20px #00000012;

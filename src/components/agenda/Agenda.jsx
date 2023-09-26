@@ -146,48 +146,6 @@ const Agenda = () => {
 
     </div>
         </div>
-        {/* Colonne de l'agenda */}
-        <div className="co">
-        <div className="column-header orange-bg">
-          <h2>Mon agenda</h2>
-        </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 17 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-1') })}
-            onClick={() => handleCardClick('card-1')}
-          >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-2') })}
-            onClick={() => handleCardClick('card-2')}
-          >
-            <h3>Sciences islamiques 1ère année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-        </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 19 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': activeCards.includes('card-3') })}
-            onClick={() => handleCardClick('card-3')}
-          >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-        </div>
-      </div>
         {/* Contenu des groupes */}
           <div className="groupes">
             {/* En-tête de la section des groupes */}

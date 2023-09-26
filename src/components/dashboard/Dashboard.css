@@ -141,12 +141,13 @@
     display: flex; /* Utilisation du flexbox */
     flex-direction: column; /* disposition en colonne */
     align-items: center; /* Centrer horizontalement les éléments */
-    margin-bottom: 14rem; /* Marge en bas */
+    margin-top: 7rem;
     overflow-x: hidden;
     overflow-y: auto;
   }
   .date-section {
     margin-right: 10.4rem; /* Marge à droite */
+    margin-top: 2rem;
   } 
  
   /* Css pour le titre h2 à l'intérieur de .date-section */
@@ -233,27 +234,26 @@
     padding-left: 10.5rem; /* Espacement à gauche */
     padding-top: 0.625rem; /* Espacement en haut */
   }
-
   .ap-bo {
-    display: block;
-    background-color: #FFA82526; /* Couleur du fond */
-    border-radius: 3.125rem; /* Bordure arrondie */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    height: 3.180rem; /* Hauteur */
-    width: 12.9rem; /* Largeur : 174px*/
-    padding-left: auto;
-    padding-right: auto;
-    color: #FFA825; /* Couleur du texte */
-    font-size: 16px; /* Taille de la police */
-    font-weight: bold; /* police en gras */
-    border: none; /* Pas de bordure */
-    margin-top: -12rem;
-    margin-bottom: 2.4rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; /* Alignement du texte au centre */
-    cursor: pointer; /* Curseur en forme de main */
-  }
+      display: block;
+      background-color: #FFA82526;
+      border-radius: 3.125rem;
+      font-family: "Poppins", Helvetica;
+      height: 3.180rem;
+      width: 12.9rem;
+      color: #FFA825;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute; /* Utilisation de position absolue */
+      bottom: 2rem; /* Espace en bas de la page, ajustez cette valeur selon vos besoins */
+      left: 0;
+      right: 0;
+      text-align: center;
+      cursor: pointer;
+}
 }
 
 .column-header {
@@ -329,20 +329,7 @@ h3 {
 }
 
 @media only screen and (max-width: 783px) {
-  .dashboard {
-    flex-direction: column; /* la disposition en colonne */
-    margin-top: 0; /* Pas de marge supérieure */ 
-    padding: 0 0.6rem; /* une marge intérieure plus petite */
-  }
 
-  .column {
-    flex: 1; /* Prendre autant d'espace disponible dans la direction du flex parent */
-    margin: 2% 0; /* Marge de 2% en haut et en bas, sans marge horizontale */
-    align-items: center; /* Centrer les éléments enfants horizontalement */
-    justify-content: center; /* Centrer les éléments enfants verticalement */
-    width: 100%; /* Définir la largeur à 100% pour occuper tout l'espace disponible */
-    max-width: 100%; /* Limiter la largeur maximale à 100% pour éviter le dépassement */
-  }
   .modal-overlay {
     position: fixed;
     top: 0;
