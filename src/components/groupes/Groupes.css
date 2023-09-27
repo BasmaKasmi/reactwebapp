@@ -24,19 +24,21 @@
     font-size: 18px;
     font-weight: 600;
   }
-  .group-cards{
-    display: block;
+  .group-cards {
+    display: flex;
+    justify-content: center;
     align-items: center;
     overflow-x: hidden;
     overflow-y: auto;
-  }
+    margin-left: -1.4rem;
+}
   .group-card {
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 4px 4px 20px #00000012;
     margin-bottom: 1rem; /*marge adaptable */
-    width: 23.3rem;  /*325px*/
-    height: 4.2rem; /*60px*/
+    width: 19rem;  /*325px*/
+    height: 4.2rem; 
   }
   .group-card  h3 {
     color: #000000;
