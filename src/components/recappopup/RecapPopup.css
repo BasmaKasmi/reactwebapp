@@ -13,9 +13,9 @@
         margin: 0 auto;
         align-items: center;
         top: 8rem;
-        left: 5%; /* valeur en fonction de la position horizontale souhaitée */
-        right: 5%; /* valeur en fonction de la position horizontale souhaitée */
-        background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
+        left: 5%;
+        right: 5%; 
+        background-color: #fff; 
   
     }
     .header {
