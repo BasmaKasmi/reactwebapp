@@ -106,41 +106,41 @@ const Agenda = () => {
           {/* Jours du mois */}
           <div className="days-of-month">{renderDaysOfMonth()}</div>
           {/* Crée un conteneur pour les cartes */}
-          <div className='grp-carte'>
+          <div className='group-card-cont'>
           {/* Crée une carte */}
           <div
-          className={classnames('carte', { 'clicked': activeCards.includes('card-1') })}
+          className={classnames('group-card', { 'clicked': activeCards.includes('card-1') })}
           onClick={() => handleCardClick('card-1')}
           >
             {/* Affiche le titre de la carte */}
             <h3>Sciences islamiques 1ére année</h3>
             <div>
           {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
+          <p className='group-card-day'>Jeu 18h00 à 12h00</p>
         </div>
        </div>
        {/* Crée une autre carte */}
        <div
-       className={classnames('carte', { 'clicked': activeCards.includes('card-2') })}
+       className={classnames('group-card', { 'clicked': activeCards.includes('card-2') })}
        onClick={() => handleCardClick('card-2')}
        >
         {/* Affiche le titre de la carte */}
         <h3>Sciences islamiques 1ére année</h3>
         <div>
         {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
+          <p className='group-card-day'>Jeu 18h00 à 12h00</p>
           </div>
         </div>
         {/* Crée une autre carte */}
         <div
-        className={classnames('carte', { 'clicked': activeCards.includes('card-3') })}
+        className={classnames('group-card', { 'clicked': activeCards.includes('card-3') })}
         onClick={() => handleCardClick('card-3')}
         >
         {/* Affiche le titre de la carte */}
         <h3>Sciences islamiques 1ére année</h3>
         <div>
           {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
+          <p className='group-card-day'>Jeu 18h00 à 12h00</p>
         </div>
         </div>
 

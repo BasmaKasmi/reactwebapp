@@ -104,13 +104,13 @@
       font-size: 16px;
       font-weight: bold;
     }
-    .grp-carte{
+    .group-card-cont{
       display: block;
       align-items: center;
       overflow-x: hidden;
       overflow-y: auto;
     }
-    .carte {
+    .group-card {
       background-color: #ffffff;
       border-radius: 16px;
       box-shadow: 4px 4px 20px #00000012;
@@ -118,18 +118,18 @@
       width: 23.3rem;  /*325px*/
       height: 4.2rem; /*60px*/
     }
-    .carte.clicked {
+    .group-card.clicked {
       background-color: #FD9340;
     }
     
     /* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
-    .carte.clicked h3,
-    .carte.clicked .carte-day {
+    .group-card.clicked h3,
+    .group-card.clicked .group-card-day {
     color: #FFFFFF;
     }
   
 }
-.groupe{
+.groupes{
   height: 100vh; /* hauteur de la colonne égale à la hauteur de la fenêtre */
   box-sizing: border-box;
   border-radius: 22px; /* bordure arrondie */
@@ -139,7 +139,7 @@
   }
 }
  /* Css pour l'élément .h */
-.h {
+.groupes .h {
     /* Définition de l'image de fond */
   background-image: url("../../assets/ractangle\ orange.svg");
     /* Empêche la répétition de l'image de fond */
@@ -171,6 +171,9 @@
     /* Centrage vertical des enfants */
   justify-content: center;
   align-items: center;
+  @media (max-width: 783px) {
+    display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
+  }
 }
 
   /* Css pour le h3 à l'intérieur de .column-head */

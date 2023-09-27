@@ -19,12 +19,11 @@ const AgendaPage = () => {
   return (
     <div>
       <div className="nav-emarg-container">
-      {/* Affichage du composant NavGrp */}
+      {/* Affichage du composant NavAgenda */}
         <NavAgenda />
         {/* Affichage du composant RetourButton */}
         <RetourButton />
-        {/* Affichage du composant Groupes */}
-        <Agenda />
+        <Agenda/>
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
