@@ -148,6 +148,9 @@
 .sidebar-menu li a:hover {
   color: #FD9340;
 }
+.sidebar-menu li a.active {
+  color: #FD9340;
+}
 
 .sidebar-menu li a span {
   margin-left: 10px;

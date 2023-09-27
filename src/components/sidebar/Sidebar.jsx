@@ -20,6 +20,11 @@ const Sidebar = () => {
   const[showAp, setshowAp] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(""); 
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName); 
+  };
 
   
 
@@ -76,31 +81,51 @@ const Sidebar = () => {
         </div>
         <ul className="sidebar-menu">
           <li>
-            <Link to="/dashboard">
+          <Link
+            to="/dashboard"
+            className={activeLink === "dashboard" ? "active" : ""}
+            onClick={() => handleLinkClick("dashboard")} 
+          >
               <img className="image" src={D} alt="" />
               <span>Tableau de bord</span>
             </Link>
           </li>
           <li>
-            <Link to="/groupes">
+          <Link
+            to="/groupes"
+            className={activeLink === "groupes" ? "active" : ""}
+            onClick={() => handleLinkClick("groupes")}
+          >
               <img className="image" src={G} alt="" />
               <span>Mes groupes</span>
             </Link>
           </li>
           <li>
-            <Link to="/émargements">
+          <Link
+            to="/émargements"
+            className={activeLink === "émargements" ? "active" : ""}
+            onClick={() => handleLinkClick("émargements")}
+          >
               <img className="image" src={E} alt="" />
               <span>Mes émargements</span>
-            </Link>
+          </Link>
           </li>
           <li>
-            <Link to="/agenda">
-              <img className="image" src={A} alt="" />
-              <span>Mon agenda</span>
-            </Link>
+          <Link
+            to="/agenda"
+            className={activeLink === "agenda" ? "active" : ""}
+            onClick={() => handleLinkClick("agenda")}
+          > 
+          <img className="image" src={A} alt="" />
+          <span>Mon agenda</span>
+          </Link>
           </li>
           <li>
-            <Link to="/évaluations">
+          <Link
+            to="/évaluations"
+            className={activeLink === "évaluations" ? "active" : ""}
+            onClick={() => handleLinkClick("évaluations")}
+          > 
               <img className="image" src={Ev} alt="" />
               <span>Mes évaluations</span>
             </Link>
