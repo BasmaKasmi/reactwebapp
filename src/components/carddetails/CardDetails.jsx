@@ -1,3 +1,5 @@
+// version mobile emargements
+
 import React from 'react'; // Importation de la bibliothèque React
 import cldr from '../../assets/calendar.svg'; // Importation de l'image du calendrier depuis les ressources
 import st from '../../assets/student.svg'; // Importation de l'image de l'étudiant depuis les ressources

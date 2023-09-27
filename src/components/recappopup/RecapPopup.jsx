@@ -81,41 +81,41 @@ const RecapPopup = () => {
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
       </div>
-      <div className='card-cont'>
-      <div className="card" onClick={handleShowAp}>
+      <div className='group-card-cont'>
+      <div className="group-card" onClick={handleShowAp}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
-        <p>Absence(s) : 3</p>
+      <span>Absence(s) : 3</span>
       </div>
       </div>
-      <div className="card" onClick={handleShowAp}>
+      <div className="group-card" onClick={handleShowAp}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
-        <p>Absence(s) : 3</p>
-      </div>
-      </div>  
-      <div className="card" onClick={handleShowAp}>
-      <div className='col'>
-      <h3>Nom de l'étudiant</h3>
-        <p>Absence(s) : 3</p>
+        <span>Absence(s) : 3</span>
       </div>
       </div>  
-      <div className="card" onClick={handleShowAp}>
+      <div className="group-card" onClick={handleShowAp}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
-        <p>Absence(s) : 3</p>
+      <span>Absence(s) : 3</span>
+      </div>
+      </div>  
+      <div className="group-card" onClick={handleShowAp}>
+      <div className='col'>
+      <h3>Nom de l'étudiant</h3>
+      <span>Absence(s) : 3</span>
       </div>
       </div>     
-      <div className="card" onClick={handleShowAp}>
+      <div className="group-card" onClick={handleShowAp}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
-        <p>Absence(s) : 3</p>
+      <span>Absence(s) : 3</span>
       </div>
       </div> 
-      <div className="card" onClick={handleShowAp}>
+      <div className="group-card" onClick={handleShowAp}>
       <div className='col'>
       <h3>Nom de l'étudiant</h3>
-        <p>Absence(s) : 3</p>
+      <span>Absence(s) : 3</span>
       </div>
       </div>    
       </div>

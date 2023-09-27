@@ -9,7 +9,6 @@ import RecapEm from '../components/recapem/RecapEm';
 import DashEmarg from '../components/dashemargements/DashEmarg';
 import EmargementsColumn from '../components/emargementscolumn/EmargementsColumn';
 import Emargements from '../components/emargements/Emargements';
-import CardDetails from '../components/carddetails/CardDetails';
 
 // Déclaration du composant GroupesPage
 const MesemargementsPage = () => {
@@ -26,9 +25,8 @@ const MesemargementsPage = () => {
         <NavEmarg />
         {/* Affichage du composant RetourButton */}
         <RetourButton />
-        {/* Affichage du composant Groupes */}
+        {/* Affichage du composant  */}
         <Emargements />
-        <CardDetails />
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
@@ -51,5 +49,5 @@ const MesemargementsPage = () => {
   );
 };
 
-//Exportation du composant GroupesPage
+//Exportation du composant 
 export default MesemargementsPage;

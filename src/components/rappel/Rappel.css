@@ -90,6 +90,53 @@
       font-size: 10px;
       font-weight: 300;
     }
+    .container-r{
+      display: block;
+      align-items: center;
+      flex-direction: column;
+      position: fixed;
+      overflow-y: auto;
+    }
+    .card-s {
+      background-color: #FFFFFF;
+      margin: auto;
+      margin-bottom: 1rem;
+      width: 22rem;
+      height: 5rem;
+      margin-left: 15.5px;
+      margin-right: 16.5px;
+      border-radius: 1.4rem;
+      box-shadow: 4px 4px 20px #00000012;
+      cursor: pointer;
+      padding: 0 1.25rem; /* Espacement intérieur gauche et droit */
+      
+    }
+    .card-s .col {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-top: 1rem;
+    }
+
+  .card-s .col h3{
+    color: #000000;
+    font-size: 14px;
+    font-family: "Poppins", Helvetica;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-right: 5rem;
+  }
+  .card-s .col p {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-weight: lighter;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    margin-right: 7.4rem;
+}
+ 
     .ap-b.active,
     .ai-b.active {
       background-color: #FF2525;

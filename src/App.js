@@ -18,6 +18,7 @@ import RecapEmPage from './pages/RecapEmPage';
 import Emarg2 from './components/emarg2/Emarg2';
 import Emarg2Page from './pages/Emarg2Page';
 import StructureBinairePage from '../src/pages/StructureBinairePage';
+import CarddetailsPage from './pages/CarddetailsPage';
 function App() {
 
     return (
@@ -27,6 +28,7 @@ function App() {
                     <Route index element={<LoginPage />} />
                     <Route path='/dashboard' element={<DashboardPage />} />
                     <Route path='/émargements' element={<MesemargementsPage />} />
+                    <Route path='/carddeatils' element={<CarddetailsPage />} />
                     <Route path='/emarg2' element={<Emarg2Page />} />
                     <Route path='/password' element={<PasswordPage />} />
                     <Route path='/newpassword' element={<NewPasswordPage />} />

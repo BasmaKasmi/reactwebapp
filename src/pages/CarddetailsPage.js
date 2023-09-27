@@ -1,31 +1,30 @@
 // Importation des modules nécessaires
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom'; // Import de useParams
+import RetourButton from '../components/retourbutton/RetourButton';
+import CardDetails from '../components/carddetails/CardDetails';
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
-import RetourButton from '../components/retourbutton/RetourButton';
 import NavEmarg from '../components/navEm/NavEmarg';
-import RecapEm from '../components/recapem/RecapEm';
 import DashEmarg from '../components/dashemargements/DashEmarg';
-import Emarg2 from '../components/emarg2/Emarg2';
-// Déclaration du composant GroupesPage
-const Emarg2Page = () => {
-  const { group } = useParams(); // Récupérer le paramètre du groupe depuis l'URL
-  const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
+import EmargementsColumn from '../components/emargementscolumn/EmargementsColumn';
 
-  const handleCardClick = (title, date) => {
-    setSelectedCard({ title, date });
-  };
-  
+// Déclaration du composant RecapEmPage
+const CarddetailsPage = () => {
+    const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
+
+    const handleCardClick = (title, date) => {
+      setSelectedCard({ title, date });
+    };
+    
   return (
     <div>
       <div className="nav-emarg-container">
-      {/* Affichage du composant NavGrp */}
-        <NavEmarg />
+      {/* Affichage du composant NavEmarg */}
+        <NavEmarg/>
         {/* Affichage du composant RetourButton */}
         <RetourButton />
-        {/* Affichage du composant Groupes */}
-        <RecapEm />
+        {/* Affichage du composant Em */}
+        <CardDetails />
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
@@ -39,14 +38,14 @@ const Emarg2Page = () => {
         <div className="column" style={{ flexBasis: '25%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'  }}>
           <DashEmarg onCardClick={handleCardClick} />
         </div>
-        <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
-          <Emarg2 selectedCard={selectedCard} />
-        </div>
+        {selectedCard.title && <div className="column" style={{ flexBasis: '50%', margin:'10px', boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.12)'}}>
+           <EmargementsColumn selectedCard={selectedCard} />  
+        </div>} 
       </div>
       </div>
-    </div>
-  );
-};
+     </div>
+  )
+}
 
-//Exportation du composant GroupesPage
-export default Emarg2Page;
+//Exportation du composant RecapEmPage
+export default CarddetailsPage;
