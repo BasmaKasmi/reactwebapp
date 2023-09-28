@@ -23,29 +23,12 @@ const Dashboard = () => {
   const [selectedTitle, setSelectedTitle] = useState('');  // État pour stocker un titre sélectionné
   const [selectedDay, setSelectedDay] = useState(''); // État pour stocker un jour sélectionné
   const[showAp, setshowAp] = useState(false); // État pour afficher ou masquer un composant
-  const[selectStudent, setselectStudent] = useState(false); // État pour sélectionner ou désélectionner un étudiant
-  const[declareAp, setdeclareAp] = useState(false); // État pour déclarer ou ne pas déclarer une AP
-  const [showConfirmation, setShowConfirmation] = useState(false); // État pour afficher ou masquer une confirmation d'émargement
   const [isEmargementValide, setIsEmargementValide] = useState(false); // Pour suivre si l'émargement est validé ou non 
 
   //lorsque l'utilisateur clique sur un bouton de validation
   const validerEmargement = () => {
     setIsEmargementValide(true);
   };
-
-
-  // Fonction pour afficher la confirmation
-  const handleConfirmationClick = () => {
-    setShowConfirmation(true);
-  };
-
-  // Fonction pour masquer la confirmation et réinitialiser le body du document
-  const handleOverlayClick = () => {
-    setShowConfirmation(false);
-    document.body.classList.remove('modal-open');
-  };
-
-  // Fonctions pour afficher ou masquer les composants
   const handleShowAp = () => {
     setshowAp(true)
   }
@@ -53,21 +36,7 @@ const Dashboard = () => {
     setshowAp(false);
   };
 
-  // Fonctions pour sélectionner ou désélectionner un étudiant
-  const handleSelectStudent = () => {
-    setselectStudent(true)
-  }
-  const handleCloseSelectStudent = () => {
-    setselectStudent(false);
-  };
 
-  // Fonctions pour déclarer ou ne pas déclarer une AP
-  const handleDeclareAp = () => {
-    setdeclareAp(true)
-  }
-  const handleCloseDeclareAp = () => {
-    setdeclareAp(false);
-  };
 
   return (
     <div className="dashboard">
@@ -419,95 +388,7 @@ const Dashboard = () => {
           <button className="ce-button">Annuler</button>
             </div>
           </div>
-)}
-
-  {/* si "declareAp" , affiche le contenu suivant */}
-{declareAp && (
-        // Overlay modal pour fermer la fenêtre modale lorsqu'on clique dessus
-        <div className="modal-overlay" onClick={handleCloseDeclareAp}>
-          {/* Fenêtre modale principale */}
-          <div className="modal">
-            <h2>Nom de l'étudiant</h2>
-            {/* Ligne contenant une icône et un titre */}
-            <div className="agenda-row">
-              <img src={cldr} alt='' />
-                <h3>Choisir dates :</h3>
-            </div>
-            {/* Ligne pour choisir les dates */}
-            <div className="date-inputs">
-              {/* Champ de saisie pour la première date */}
-              <input type="text" placeholder="01/01/2023" />
-              {/* Champ de saisie pour la deuxième date */}
-              <input type="text" placeholder="28/01/2023" />
-              {/* Icône pour sélectionner les dates */}
-              <img src={st} alt='' />
-            </div>
-            {/* Ligne contenant une icône et un titre */}
-            <div className="ap-row">
-              <img src={user} alt='' />
-              {/* Ligne pour sélectionner les AP */}
-                <h3>Sélectionner les AP :</h3>
-            </div>
-            <div className='date-card-cont'>
-            {/* Carte affichant une date */}
-            <div className="date-card">
-            <h3>01/02/2023</h3>
-            </div>
-            {/* Carte pour la deuxième date */}
-            <div className="date-card">
-            <h3>01/04/2023</h3>
-            </div>
-             {/* Carte pour la troisième date */}
-            <div className="date-card">
-            <h3>14/07/2023</h3>
-            </div>
-            {/* Carte pour la quatrième date */}
-            <div className="date-card">
-            <h3>14/07/2023</h3>
-            </div>
-            </div>
-            {/* Ligne contenant des boutons */}
-              <div className="buttons-row">
-               {/* Bouton pour valider la sélection */}
-                <button className="validate-button" onClick={handleConfirmationClick}>Valider</button>
-               {/* Bouton pour annuler la sélection */}
-                <button className="cancel-button">Annuler</button>
-              </div>
-          </div>
-        </div>
-)}
-  {/* si "showConfirmation" , affiche le contenu suivant */}
-{showConfirmation && (
-      // Overlay modal pour fermer la fenêtre modale lorsqu'on clique dessus
-      <div className="modal-overlay" onClick={handleOverlayClick}>
-        {/* Contenu du modal de confirmation */}
-        <div className="confirmation-card">
-        {/* Conteneur de l'icône de confirmation */}
-        <div className="icon-container">
-              <i className="fas fa-check-circle"></i>
-        </div>
-          {/* Contenu de la fenêtre de confirmation */}
-          <div className="confirmation-content">
-            {/* Titre de la confirmation */}
-            <h3>Vous déclarez avoir :</h3>
-            {/* Détails de la confirmation */}
-            <div className="confirmation-details">
-              {/* Nombre de personnes présentes */}
-              <p>Nb Présents</p>
-              {/* Nombre de personnes absentes */}
-              <p>Nb Absents</p>
-            </div>
-            {/* Boutons d'action de confirmation */}
-            <div className="confirmation-buttons">
-              {/* Bouton pour valider l'action */}
-              <button className="va-button">Valider</button>
-              {/* Bouton pour annuler l'action */}
-              <button className="anul-button">Annuler</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    )}
+)} 
     </div>
   );
 };

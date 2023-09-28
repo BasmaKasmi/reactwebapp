@@ -70,56 +70,9 @@ const DashEmarg = (props) => {
     setActiveCard(title);
     onCardClick(title, date);
   };
- 
 
   return (
     <div>
-    {/* Crée un conteneur pour le groupe de cartes */}
-    <div className='groupes-res'>
-    {/* Affiche le titre "Mes groupes :" */}
-    <div className='t'>
-    <h3> Mes groupes :</h3>
-    </div>
-    {/* Crée un conteneur pour les cartes */}
-    <div className='grp-carte'>
-    {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapEm' onClick={handleMobileGroupClick}>
-    {/* Crée une carte */}
-    <div className="carte">
-    {/* Affiche le titre de la carte */}
-      <h3>Sciences islamiques 1ére année</h3>
-        <div>
-          {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
-        </div>
-    </div>
-    </Link>
-    {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapEm' onClick={handleMobileGroupClick}>
-    {/* Crée une autre carte */}
-    <div className="carte">
-    {/* Affiche le titre de la carte */}
-      <h3>Sciences islamiques 1ére année</h3>
-        <div>
-        {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
-        </div>
-    </div>
-    </Link>
-    {/* Crée un lien vers la page /grpnavigation1 */}
-    <Link to='/recapEm' onClick={handleMobileGroupClick}>
-    {/* Crée une autre carte */}
-    <div className="carte">
-      {/* Affiche le titre de la carte */}
-      <h3>Sciences islamiques 1ére année</h3>
-        <div>
-          {/* Affiche l'horaire */}
-          <p className='carte-day'>Jeu 18h00 à 12h00</p>
-        </div>
-    </div>
-    </Link>
-    </div>
-    </div>
     <div className='column'>
         {/* En-tête de la colonne */}
           <div className="column-header orange-bg">
@@ -127,6 +80,7 @@ const DashEmarg = (props) => {
           </div>
           {/* Bloc interne pour les groupes */}
           <div className='int-block'>
+          <Link to={`/emarg2/${encodeURIComponent('Sciences islamiques 1ère année')}/${encodeURIComponent('Jeu 18h00 à 12h00')}`}>
           <div
           className={`card ${activeCard === 'Sciences islamiques 2ème année' ? 'clicked' : ''}`}
           onClick={() => handleCardClick( 'Sciences islamiques 2ème année', 'Jeu 18h00 à 12h00')}
@@ -137,6 +91,7 @@ const DashEmarg = (props) => {
                 <p className='session'>11/32</p>
               </div>
             </div>
+            </Link>
             <div
           className={`card ${activeCard === 'Sciences islamiques 1ère année' ? 'clicked' : ''}`}
           onClick={() => handleCardClick('Sciences islamiques 1ère année', 'Jeu 18h00 à 12h00')}
