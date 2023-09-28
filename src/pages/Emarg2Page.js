@@ -10,7 +10,7 @@ import DashEmarg from '../components/dashemargements/DashEmarg';
 import Emarg2 from '../components/emarg2/Emarg2';
 // Déclaration du composant GroupesPage
 const Emarg2Page = () => {
-  const { group } = useParams(); // Récupérer le paramètre du groupe depuis l'URL
+  const { title, date } = useParams();
   const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
 
   const handleCardClick = (title, date) => {
@@ -48,5 +48,5 @@ const Emarg2Page = () => {
   );
 };
 
-//Exportation du composant GroupesPage
+//Exportation du composant
 export default Emarg2Page;

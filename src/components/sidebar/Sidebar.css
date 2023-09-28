@@ -77,10 +77,6 @@
   }
 }
 
-.sidebar-content {
-  margin-top: 82px;
-}
-
 .sidebar-title {
   padding: 20px;
   font-size: 1.5rem;
@@ -110,7 +106,7 @@
     font-family: "Poppins", Helvetica;
     font-size: 28px;
     font-weight: 700;
-    top: 3rem;
+    top: 2.4rem;
   }
 
 }
@@ -137,7 +133,9 @@
   color: #000000;
   white-space: nowrap;
   text-overflow: ellipsis;
-
+  @media (max-width: 768px) {
+    margin-right: 1rem;
+  }
 }
 
 .sidebar-menu li a .image {
@@ -513,8 +511,6 @@
 .sidebar-button-mobile {
   display: none; /* Caché par défaut */
 }
-
-
 
 @media (max-width: 620px) {
   .declare-button.desktop {

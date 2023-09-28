@@ -11,7 +11,7 @@ import ShowModal from '../showmodal/ShowModal';
 import ShowValidation from '../showvalidation/ShowValidation';
 
 const Emarg2 = (props) => {
-  const { title, date } = useParams(); // Récupérer les paramètres d'URL
+  const { title, date } = useParams();
 
   // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);

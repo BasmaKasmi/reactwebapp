@@ -14,8 +14,6 @@ const DashEmarg = (props) => {
   const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
   const navigate = useNavigate(); // Utiliser useNavigate
 
-  
-
   const handleMobileGroupClick = () => {
     // Redirigez l'utilisateur vers la page RecapGp en mode mobile
     navigate('/recapEm');
@@ -80,7 +78,6 @@ const DashEmarg = (props) => {
           </div>
           {/* Bloc interne pour les groupes */}
           <div className='int-block'>
-          <Link to={`/emarg2/${encodeURIComponent('Sciences islamiques 1ère année')}/${encodeURIComponent('Jeu 18h00 à 12h00')}`}>
           <div
           className={`card ${activeCard === 'Sciences islamiques 2ème année' ? 'clicked' : ''}`}
           onClick={() => handleCardClick( 'Sciences islamiques 2ème année', 'Jeu 18h00 à 12h00')}
@@ -91,7 +88,6 @@ const DashEmarg = (props) => {
                 <p className='session'>11/32</p>
               </div>
             </div>
-            </Link>
             <div
           className={`card ${activeCard === 'Sciences islamiques 1ère année' ? 'clicked' : ''}`}
           onClick={() => handleCardClick('Sciences islamiques 1ère année', 'Jeu 18h00 à 12h00')}

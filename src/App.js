@@ -29,7 +29,7 @@ function App() {
                     <Route path='/dashboard' element={<DashboardPage />} />
                     <Route path='/émargements' element={<MesemargementsPage />} />
                     <Route path='/carddeatils' element={<CarddetailsPage />} />
-                    <Route path='/emarg2' element={<Emarg2Page />} />
+                    <Route path="/emarg2/:title/:date" element={<Emarg2Page />} />
                     <Route path='/password' element={<PasswordPage />} />
                     <Route path='/newpassword' element={<NewPasswordPage />} />
                     <Route path='/emnavigation1' element={<EmNavigation1 />} />

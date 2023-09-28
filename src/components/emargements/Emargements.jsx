@@ -1,3 +1,5 @@
+// version mobile
+
 import React, { useState } from 'react'; // Importation des modules React et useState depuis 'react'
 import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
 import { Link, useHistory, useLocation } from 'react-router-dom';

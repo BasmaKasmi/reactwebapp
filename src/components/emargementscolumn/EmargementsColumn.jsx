@@ -6,7 +6,8 @@ import st from '../../assets/student.svg'; // Importation de l'image 'student.sv
 import './EmargementsColumn.css'; // Importation du fichier de styles CSS 'Emargements.css'
 
 const EmargementsColumn = (props) => {
-
+  
+ 
    // Utilisation de l'état local pour suivre l'état de la carte active
    const [activeCard, setActiveCard] = useState(null);
    const { selectedCard } = props;
@@ -69,10 +70,8 @@ const EmargementsColumn = (props) => {
   const searchParams = new URLSearchParams(location.search);
 
   return (
-    <div>  {/* Conteneur principal avec la classe 'Emargements' */}
-    {/* Section des groupes avec la classe 'groupes-res' */}
-        {/* Crée un conteneur pour le groupe de cartes */}
-        <div className='groupes-res'>
+    <div> 
+      <div className='groupes-res'>
     {/* Affiche le titre "Mes groupes :" */}
     <div className='t'>
     <h3> Mes groupes :</h3>
@@ -142,7 +141,7 @@ const EmargementsColumn = (props) => {
             {/* Affiche une image l'icône */}
             <img src={st} alt=''/>
         </div> 
-        <Link to={{pathname: '/emarg2',}}>
+        <Link to={{pathname: '/emarg2/:title/:date',}}>
            {/* Div pour une carte cliquable */}
         <div className="c" onClick={() => handleCardClick('card-4', '', '')}>
           {/* Div pour une rangée */}
@@ -154,7 +153,7 @@ const EmargementsColumn = (props) => {
           </div>
         </div>
         </Link>    
-        <Link to={{pathname: '/emarg2',}}>
+        <Link to={{pathname: '/emarg2/:title/:date',}}>
          {/* Div pour une carte cliquable */}
          <div className="c">
         {/* Div pour une rangée */}
@@ -172,4 +171,4 @@ const EmargementsColumn = (props) => {
   );
 }
 
-export default EmargementsColumn; // Exportation du composant Emargements
+export default EmargementsColumn;
