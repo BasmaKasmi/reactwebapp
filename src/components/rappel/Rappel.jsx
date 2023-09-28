@@ -5,6 +5,7 @@ import cldr from '../../assets/calendar.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/useredit.svg';
 import './Rappel.css';
+import { Link } from 'react-router-dom';
 
 const Rappel = () => {
   const [showModal, setShowModal] = useState(false);
@@ -358,7 +359,9 @@ const Rappel = () => {
               <p> 5 Absents </p>
             </div>
             <div className="confirmation-buttons">
+              <Link to='/dashboard'>
               <button className="valid-button">Valider</button>
+              </Link>
               <button className="anu-button">Annuler</button>
             </div>
           </div>
