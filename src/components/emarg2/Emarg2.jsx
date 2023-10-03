@@ -2,18 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import './Emarg2.css';
-import classNames from 'classnames';
-import status from '../../assets/statusup.svg';
-import st from '../../assets/student.svg';
-import cldr from '../../assets/calendar.svg';
-import user from '../../assets/2 User.png';
 import ShowModal from '../showmodal/ShowModal';
 import ShowValidation from '../showvalidation/ShowValidation';
 
 const Emarg2 = (props) => {
   const { title, date } = useParams();
-
-  // Utilisation de l'état local pour suivre l'état de la carte active
   const [activeCard, setActiveCard] = useState(null);
   const { selectedCard } = props;
 
@@ -44,14 +37,11 @@ const Emarg2 = (props) => {
 
   };
 
-  const [showGroupesContent, setShowGroupesContent] = useState(false);
-  const [showEmContent, setShowEmContent] = useState(false);
   const [activeButtonId, setActiveButtonId] = useState(null);
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const[declareAp, setdeclareAp] = useState(false);
   const [showValidation, setShowValidation] = useState(false); 
   
   const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
@@ -83,35 +73,20 @@ const Emarg2 = (props) => {
     setShowModal(false);
   };
 
-  const handleDeclareAp = () => {
-    setdeclareAp(true)
-  }
-  const handleCloseDeclareAp = () => {
-    setdeclareAp(false);
-  };
 
   const handleButtonClick = (buttonId) => {
     setActiveButtonId((prevState) => (prevState === buttonId ? null : buttonId));
   };
 
-  const handleConfirmationClick = () => {
-    setShowConfirmation(true);
-    setIsValidationDone(true);
-
-  navigate('/dashboard');
-  };
   
   const handleValidationClick = () => {
     setShowValidation(true);
   };
 
 
-  const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
-  const [isValidationDone, setIsValidationDone] = useState(false);
 
-  // Gèrer le clic sur le bouton "Retour"
   const handleRetourClick = () => {
-    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
+    props.setEmargementId(null);
   };
      // Ajoutez le gestionnaire d'événement onClick à la div "modal-overlay" pour fermer la popup
      const handleOverlayClick = (e) => {
@@ -129,11 +104,11 @@ const Emarg2 = (props) => {
 
   return (
     <div>
-      <div className="groupes">
+      <div className="groupe">
           {/* Div pour l'en-tête de colonne */}
           <div className="column-head">
           {/* Affiche le titre sélectionné */}
-          {activeCard && <h3>{title}</h3>}
+          {props.activeCard && <h3>{props.activeCard}</h3>}
           {/* Affiche le jour sélectionné */}
           {selectedCard && <p className='day'>{date}</p>}
         </div>

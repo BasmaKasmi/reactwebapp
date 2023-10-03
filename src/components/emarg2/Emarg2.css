@@ -1,10 +1,12 @@
-
-  /* Affiche l'élément .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
-  .groupes {
-    display: block;
-    width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
-    margin-left: 0; /* Réinitialiser la marge gauche */
+.groupe{
+  height: 100vh; /* hauteur de la colonne égale à la hauteur de la fenêtre */
+  box-sizing: border-box;
+  border-radius: 22px; /* bordure arrondie */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /*Ombre*/
+  @media (max-width: 783px) {
+    display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
   }
+}
 
 .column-head {
   /* Définition de l'image d'arrière-plan et son comportement */
