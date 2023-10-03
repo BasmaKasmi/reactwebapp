@@ -12,7 +12,6 @@ const EmargementsColumn = (props) => {
    // Utilisation de l'état local pour suivre l'état de la carte active
    const [activeCard, setActiveCard] = useState(null);
    const [emargementId, setEmargementId] = useState(null);
-
    const { selectedCard } = props;
  
  
