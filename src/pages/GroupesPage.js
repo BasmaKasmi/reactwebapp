@@ -20,11 +20,8 @@ const GroupesPage = () => {
   return (
     <div>
       <div className="nav-emarg-container">
-      {/* Affichage du composant NavGrp */}
         <NavGrp />
-        {/* Affichage du composant RetourButton */}
         <RetourButton />
-        {/* Affichage du composant Groupes */}
         <Groupes />
       </div>
       <div className="desktop-container">
@@ -48,5 +45,4 @@ const GroupesPage = () => {
   );
 };
 
-//Exportation du composant GroupesPage
 export default GroupesPage;

@@ -1,34 +1,25 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './ShowModal.css';
 import status from '../../assets/statusup.svg';
 import DeclareAp from '../declareap/DeclareAp';
 
 
-const ShowModal = () => {
+const ShowModal = (props) => {
     const [showModal, setShowModal] = useState(false);
-    const[declareAp, setdeclareAp] = useState(false);
+    const[declareAp, setDeclareAp] = useState(false);
     const [isAnyPopupOpen, setIsAnyPopupOpen] = useState(false);
-    const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
 
     const handleCloseShowModal = () => {
-      setIsAnyPopupOpen(false); // Le pop-up est fermé
       setShowModal(false);
-    };
-    const handleShowModal = () => {
-      setdeclareAp(true);
-      setIsAnyPopupOpen(true); // Le pop-up est ouvert
+      setDeclareAp(false);
     };
     const handleDeclareAp = () => {
-        setdeclareAp(true)
+        setDeclareAp(true)
       }
       const handleCloseDeclareAp = () => {
-        setdeclareAp(false);
+        setDeclareAp(false);
       };
-      // Gèrer le clic sur le bouton "Retour"
-  const handleRetourClick = () => {
-    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
-  };
+
   const handleOverlayClick = (e) => {
     const isOverlay = e.target.classList.contains('modal-overlay');
     const isCancel = e.target.classList.contains('cancel-button');
@@ -43,37 +34,65 @@ const ShowModal = () => {
   return (
     <div>
       {!declareAp && !isAnyPopupOpen && (
-          <div className="modal-overlay" onClick={handleOverlayClick}>
-          <div className="model-desktop">
-            <h2>Nom de l'étudiant</h2>
-            <div className="recap-row">
-              <img src={status} alt='' />
-              <h3> Récapitulatif du groupe : </h3>
-            </div>
-            <div className="bloc-pop">
-            <div className='row'>
-              <div className='colonne-pop'>
-                <h3>17</h3>
-                <p className="text">Inscrits</p>
+            <div className="modal-overlay" onClick={handleOverlayClick}>
+            <div className="model-desktop">
+              <h2>Nom de l'étudiant</h2>
+              {/* Route : Récupération du nom de l'étudiant suite au clique sur la card d'un étudiant
+                      URL :
+                      Informations transmises :
+                      Identifiant du groupe
+                      Identifiant de l'étudiant (nom de l'étudiant)
+                      Informations attendues :
+                      Nom de l'étudiant %*/}
+              <div className="recap-row">
+                <img src={status} alt='' />
+                <h3> Récapitulatif de l'étudiant : </h3> {/* Information statique%*/}
+              </div> 
+              <div className="bloc-pop">
+              <div className='row'>
+                <div className='colonne-pop'>
+                  <h3>4</h3>
+                  <p className="des">Abs. prévues</p>
+                  {/* Route : Récupération du nombre d'absences prévues (AP) de l'étudiant
+                      URL : 
+                      Informations transmises :
+                      Identifiant du groupe
+                      Identifiant de l'étudiant (nom de l'étudiant)
+                      Informations attendues :
+                      Nb d'AP de l'étudiant*/}
+                </div>
+                <div className='colonne-pop'>
+                  <h3>2</h3>
+                  <p className="des">Abs. injustifiées</p>
+                  {/* Route : Récupération du nombre d'absences injustifiée (AI) de l'étudiant
+                      URL : 
+                      Informations transmises :
+                      Identifiant du groupe
+                      Identifiant de l'étudiant (nom de l'étudiant)
+                      Informations attendues :
+                      Nb d'AI de l'étudiant*/}
+                </div>
+                <div className='colonne-pop'>
+                  <h3>65%</h3>
+                  <p className="des">Présence</p>
+                   {/* Route : Récupération du taux de présence moyen de l'étudiant % pour le cours en question
+                      URL :
+                      Informations transmises :
+                      Identifiant du groupe
+                      Identifiant de l'étudiant (nom de l'étudiant)
+                      Informations attendues :
+                      Taux de présence moyen de l'étudiant (pour ce cours) %*/}
+                </div>
               </div>
-              <div className='colonne-pop'>
-                <h3>2</h3>
-                <p className="text">Abandon(s)</p>
               </div>
-              <div className='colonne-pop'>
-                <h3>65%</h3>
-                <p className="text">Présence</p>
+              <div className="buttons-row">
+                <button className="ap" onClick={handleDeclareAp}>Déclarer AP</button>
+                <button className="an" onClick={handleCloseShowModal}>Annuler</button>
               </div>
-            </div>
-            </div>
-            <div className="buttons-row">
-              <button className="ap" onClick={handleDeclareAp}>Déclarer AP</button>
-              <button className="an" onClick={handleCloseShowModal}>Annuler</button>
             </div>
           </div>
-     </div>
       )}
-     {declareAp && <DeclareAp handleCloseDeclareAp={handleCloseDeclareAp}/>}
+      {declareAp && <DeclareAp onCancel={handleCloseDeclareAp} />}
     </div>
 
   );

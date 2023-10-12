@@ -1,85 +1,93 @@
 import React, { useState } from 'react';
-import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
+import classnames from 'classnames'; 
 import './AgendaLeft.css';
-import left from '../../assets/left.svg';
-import right from '../../assets/right.svg';
 
 const AgendaLeft = ({ onCardClick }) => {
-  const [isCard1Selected, setIsCard1Selected] = useState(false);
-  const [isCard2Selected, setIsCard2Selected] = useState(false);
-  const [isCard3Selected, setIsCard3Selected] = useState(false);
+  const [selectedCards, setSelectedCards] = useState([]); 
 
-  const handleCardClick = (cardId) => {
-    if (cardId === 'card-1') {
-      setIsCard1Selected(!isCard1Selected);
-      onCardClick(cardId);
-    } else if (cardId === 'card-2') {
-      setIsCard2Selected(!isCard2Selected);
-      onCardClick(cardId);
-    } else if (cardId === 'card-3') {
-      setIsCard3Selected(!isCard3Selected);
-      onCardClick(cardId);
-    }
+  const handleCardClick = (cardId, dayType) => {
+    // Gérer la sélection des cartes ici
+    const updatedSelectedCards = selectedCards.includes(cardId)
+      ? selectedCards.filter((id) => id !== cardId)
+      : [...selectedCards, cardId];
+    setSelectedCards(updatedSelectedCards);
+    onCardClick(updatedSelectedCards, dayType);
   };
+  
+
+  const groupes = [
+ {
+      id: 'card-1',
+      title: 'Sciences islamiques 1ère année',
+      date: 'Samedi 17 Dec 2022',
+      time: 'Jeu 18h00 à 12h00',
+      session: '11/32',
+      dayType: 'Lundi', 
+    },
+    {
+      id: 'card-2',
+      title: 'Sciences islamiques 2ème année',
+      date: 'Samedi 17 Dec 2022',
+      time: 'Lun 14h00 à 18h00',
+      session: '11/32',
+      dayType: 'Samedi', 
+    },
+    {
+      id: 'card-3',
+      title: 'Sciences islamiques 3ème année',
+      date: 'Samedi 19 Dec 2022',
+      time: 'Jeu 18h00 à 12h00',
+      session: '11/32',
+    },
+  ];
+  
 
   return (
     <div>
-      {/* Colonne de l'agenda */}
       <div className="co">
         <div className="column-header orange-bg">
           <h2>Mon agenda</h2>
         </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 17 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': isCard1Selected })}
-            onClick={() => handleCardClick('card-1')}
-            style={{
-              backgroundColor: isCard1Selected ? '#FD9340' : '', // Utilisez isCard1Selected ici
-              color: isCard1Selected ? '#FFFFFF' : '',
-            }}
+        {groupes.map((card) => (
+          <div className="dash-block" key={card.id}>
+            { /*
+                  Route : Récupération de la liste de TOUS les groupes du prof
+                  URL :
+                    Informations transmises :
+                    Identifiant du prof
+                  Informations attendues :
+                    Liste des groupes du prof
+                */}
+            <h1 className="date">{card.date}</h1>
+           <div
+          className={classnames('card', { clicked: selectedCards.includes(card.id) })}
+          onClick={() => handleCardClick(card.id, card.dayType)}
+          style={{
+            backgroundImage: `url(${card.dayType === 'Lundi' ? '../../assets/Pink.svg' : '../../assets/V.svg'})`,
+            color: selectedCards.includes(card.id) ? '#FFFFFF' : '',
+          }}
           >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
+              <h3>{card.title}</h3>
+              <div className="row">
+                <p className="day">{card.time}</p>
+                <p className="session">{card.session}</p>
+                { /*
+                  Route : Récupération du nom du groupe et de son horaire
+                  URL :
+                  Informations transmises :
+                      Identifiant du groupe
+                  Informations attendues :
+                      Nom du groupe (h3)
+                      Horaire du groupe (p)
+                  */}
+
+              </div>
             </div>
           </div>
-          <div
-            className={classnames('card', { 'clicked': isCard2Selected })}
-            onClick={() => handleCardClick('card-2')}
-            style={{
-              backgroundColor: isCard2Selected ? '#FD9340' : '', // Utilisez isCard2Selected ici
-              color: isCard2Selected ? '#FFFFFF' : '',
-            }}
-          >
-            <h3>Sciences islamiques 1ère année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-        </div>
-        <div className='int-block'>
-          <h1 className='date'>Samedi 18 Dec 2022</h1>
-          <div
-            className={classnames('card', { 'clicked': isCard3Selected })}
-            onClick={() => handleCardClick('card-3')}
-            style={{
-              backgroundColor: isCard3Selected ? '#FD9340' : '', // Utilisez isCard3Selected ici
-              color: isCard3Selected ? '#FFFFFF' : '',
-            }}
-          >
-            <h3>Sciences islamiques 2ème année</h3>
-            <div className='row'>
-              <p className='day'>Jeu 18h00 à 12h00</p>
-              <p className='session'>11/32</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default AgendaLeft;

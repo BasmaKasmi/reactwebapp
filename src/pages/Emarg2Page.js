@@ -1,6 +1,5 @@
 // Importation des modules nécessaires
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom'; // Import de useParams
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import RetourButton from '../components/retourbutton/RetourButton';
@@ -10,12 +9,13 @@ import DashEmarg from '../components/dashemargements/DashEmarg';
 import Emarg2 from '../components/emarg2/Emarg2';
 // Déclaration du composant GroupesPage
 const Emarg2Page = () => {
-  const { title, date } = useParams();
   const [selectedCard, setSelectedCard] = useState({ title: '', date: '' });
 
   const handleCardClick = (title, date) => {
     setSelectedCard({ title, date });
+
   };
+
   
   return (
     <div>

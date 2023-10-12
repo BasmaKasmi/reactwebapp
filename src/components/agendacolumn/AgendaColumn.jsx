@@ -1,64 +1,66 @@
 import React, { useState, useEffect } from 'react';
-import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
+import moment from 'moment';
+import classnames from 'classnames'; 
 import './AgendaColumn.css';
 import left from '../../assets/left.svg';
 import right from '../../assets/right.svg';
 
-const AgendaColumn = ({ selectedCard }) => {
-  const [activeCards, setActiveCards] = useState([]);
 
-  useEffect(() => {
-    if (selectedCard) {
-      setActiveCards((prevActiveCards) => {
-        if (prevActiveCards.includes(selectedCard)) {
-          return prevActiveCards.filter((card) => card !== selectedCard);
-        } else {
-          return [...prevActiveCards, selectedCard];
-        }
-      });
-    }
-  }, [selectedCard]);
+const AgendaColumn = ({ selectedCards, selectedDayType }) => {
+  const [year, setYear] = useState(moment().year()); 
+  const [month, setMonth] = useState(moment().month());
 
-  // Tableau des noms des mois
   const months = [
     'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
     'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
   ];
-
-  const [year, setYear] = useState(2023); // Année actuelle
-  const [month, setMonth] = useState(0); // Mois actuel (0 pour janvier, 1 pour février, etc.)
-
-  // Tableau des jours de la semaine
-  const daysOfWeek = ['D', 'L', 'M', 'M', 'J', 'V', 'S']; // Jours de la semaine
-
-  // Fonction pour afficher les jours du mois (exemple ici, on montre les jours de janvier)
-  const renderDaysOfMonth = () => {
-    const days = [];
-    const numDays = 31; // Nombre de jours dans le mois (à adapter selon le mois)
+  const daysOfWeek = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
   
-    for (let day = 1; day <= numDays; day++) {
-      // Récupérer le jour de la semaine correspondant à la date (ici, nous utilisons un jour fictif pour l'exemple)
-      const dayOfWeek = new Date(year, month, day).getDay();
-
-      const classNames = classnames('day', {
-        'saturday': dayOfWeek === 6 && activeCards.includes('card-1'),
-        'monday': dayOfWeek === 1 && activeCards.includes('card-2'),
-      });
-
-      days.push(
-        <div key={day} className={classNames}>
-          {day}
-        </div>
-      );
+  const getDayClass = (dayOfWeek) => {
+    const isCard1Selected = selectedCards.includes('card-1') && selectedDayType === 'Lundi';
+    const isCard2Selected = selectedCards.includes('card-2') && selectedDayType === 'Samedi';
+  
+    if (isCard1Selected && dayOfWeek === 1) {
+      return 'saturday';
     }
   
+    if (isCard2Selected && dayOfWeek === 6) {
+      return 'monday';
+    }
+  
+    return '';
+  };
+
+  const renderDaysOfMonth = () => {
+    const days = [];
+    const firstDayOfMonth = new Date(year, month, 1).getDay();
+    const numDaysInMonth = new Date(year, month + 1, 0).getDate();
+
+    // Remplir les jours vides avant le 1er jour du mois
+    for (let i = 0; i < firstDayOfMonth; i++) {
+      days.push(<div key={`empty-${i}`} className="empty-day"></div>);
+    }
+
+    // Remplir les jours du mois avec les classes appropriées
+    for (let day = 1; day <= numDaysInMonth; day++) {
+      const dayOfWeek = new Date(year, month, day).getDay();
+      const dayClass = getDayClass(dayOfWeek);
+      const dayClassName = classnames('day', dayClass);
+
+      days.push(<div key={day} className={dayClassName}>{day}</div>);
+    }
+
     return days;
   };
+
+
   
+  const getMonthYearHeader = () => {
+    const monthName = months[month];
+  
+    return `${monthName} ${year}`;
+  };
 
-
-
-  // Gérer le clic sur le mois suivant
   const handleNextMonthClick = () => {
     // Mettons à jour le mois et l'année pour passer au mois suivant
     if (month === 11) {
@@ -71,7 +73,6 @@ const AgendaColumn = ({ selectedCard }) => {
     }
   };
 
-  // Gérer le clic sur le mois précédent
   const handlePrevMonthClick = () => {
     // Mettons à jour le mois et l'année pour passer au mois précédent
     if (month === 0) {
@@ -83,24 +84,28 @@ const AgendaColumn = ({ selectedCard }) => {
       setMonth((prevMonth) => prevMonth - 1);
     }
   };
+  const groupes = [
+    { id: 'card-1', title: 'Sciences islamiques 2ème année', date: 'Samedi 17 Dec 2022', time: 'Jeu 18h00 à 12h00', session: '11/32', dayType: 'Lundi',},
+    { id: 'card-2', title: 'Sciences islamiques 1ère année', date: 'Samedi 17 Dec 2022', time: 'Jeu 18h00 à 12h00', session: '11/32', dayType: 'Samedi'},
+    { id: 'card-3', title: 'Sciences islamiques 3ème année', date: 'Samedi 19 Dec 2022', time: 'Jeu 18h00 à 12h00', session: '11/32',},
+  ];
+  
+
 
   return (
     <div>
-        {/* Contenu des groupes */}
           <div className="group-agenda" >
             {/* En-tête de la section des groupes */}
             <div className="h">
               <h3> Calendrier </h3>
             </div>
-            {/* Calendrier des groupes */}
             <div className="agenda">
               {/* En-tête du mois et année avec boutons de navigation */}
               <div className="month-year">
                 <img src={left} alt='' onClick={handlePrevMonthClick} />
-                <h3> {months[month]} {year} </h3>
+                <h3> {getMonthYearHeader()}</h3>
                 <img src={right} alt='' onClick={handleNextMonthClick} />
               </div>
-              {/* Jours de la semaine */}
               <div className="days-of-week">
                 {daysOfWeek.map((day) => (
                   <div key={day} className="day-of-week">
@@ -108,7 +113,6 @@ const AgendaColumn = ({ selectedCard }) => {
                   </div>
                 ))}
               </div>
-              {/* Jours du mois */}
               <div className="days-of-month">
                 {renderDaysOfMonth()}
               </div>
