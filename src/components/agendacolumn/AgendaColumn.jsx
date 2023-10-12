@@ -21,11 +21,11 @@ const AgendaColumn = ({ selectedCards, selectedDayType }) => {
     const isCard2Selected = selectedCards.includes('card-2') && selectedDayType === 'Samedi';
   
     if (isCard1Selected && dayOfWeek === 1) {
-      return 'saturday';
+      return 'monday';
     }
   
     if (isCard2Selected && dayOfWeek === 6) {
-      return 'monday';
+      return 'saturday';
     }
   
     return '';

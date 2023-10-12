@@ -10,7 +10,6 @@ const Agenda = ({ selectedCard }) => {
   const [activeCards, setActiveCards] = useState([]);
   const [year, setYear] = useState(moment().year()); 
   const [month, setMonth] = useState(moment().month());
-  const [selectedGroupId, setSelectedGroupId] = useState(null);
 
 
   const months = [
@@ -35,8 +34,8 @@ const Agenda = ({ selectedCard }) => {
     const isCard2Clicked = activeCards.includes('card-2');
   
     return classnames({
-      'saturday': dayOfWeek === 6 && isCard1Clicked,
-      'monday': dayOfWeek === 1 && isCard2Clicked,
+      'monday': dayOfWeek === 6 && isCard2Clicked,
+      'saturday': dayOfWeek === 1 && isCard1Clicked,
     });
   };
 
@@ -92,8 +91,8 @@ const Agenda = ({ selectedCard }) => {
     }
   };
   const cartesData = [
-    { id: 'card-1', titre: 'Sciences islamiques 1ère année', horaire: 'Jeu 18h00 à 12h00' },
-    { id: 'card-2', titre: 'Sciences islamiques 2ème année', horaire: 'Lun 14h00 à 18h00' },
+    { id: 'card-1', titre: 'Sciences islamiques 1ère année', horaire: 'Lun 18h00 à 12h00' },
+    { id: 'card-2', titre: 'Sciences islamiques 2ème année', horaire: 'Sam 14h00 à 18h00' },
     { id: 'card-3', titre: 'Sciences islamiques 3ème année', horaire: 'Mar 14h00 à 18h00' },
 
   ];

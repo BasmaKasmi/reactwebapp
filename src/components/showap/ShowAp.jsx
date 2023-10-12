@@ -64,8 +64,6 @@ const ShowAp = () => {
                 <img src={st} alt='' />
               </button>
             </div>
-            {isDeclareApPopupOpen && <DeclareAp onCancel={handleCloseDeclareAp} />}
-
           </div>
           <div className="blok-g">
             <div className="ap-line">
