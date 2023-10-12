@@ -25,7 +25,6 @@ const MesemargementsPage = () => {
         <NavEmarg />
         {/* Affichage du composant RetourButton */}
         <RetourButton />
-        {/* Affichage du composant  */}
         <Emargements />
       </div>
       <div className="desktop-container">

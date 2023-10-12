@@ -1,4 +1,4 @@
-/* Réinitialisation des marges, paddings et boite de modèles pour tous les éléments */
+
 * {
   padding: 0;
   margin: 0;
@@ -7,84 +7,59 @@
 
 /* Style global pour le corps de la page */
 body {
-  /* Couleur de fond blanche*/
   background-color: #fff;
-  /* Couleur du texte principale */
   color: #000;
-  /* Hauteur à 100% */
+  font-size: 1rem;
   height: 100%;
   font-family: "Poppins", Helvetica;
 }
 
 /*Style global pour les liens */
 a {
-  /* Suppression du soulignement des liens */
   text-decoration: none;
-  /* Utilisation de la couleur par défaut du texte*/
   color: unset;
 }
 
-/* Style pour 'container' principal de l'application */
 .container {
-  /* Utilisation de la disposition flexible pour controler l'alignement des éléments */
   display: flex;
-  /* Masquage du contenu dépassant du conteneur */
   overflow: hidden;
-  /* Disposition vertical des éléments */
   flex-direction: column;
-  /* Définir une hauteur minimale de 100% de la hauteur de la fenêtre */
   min-height: 100vh;
-  /* Permet au 'container' de s'étendre pour remplir l'espace disponible */
   flex-grow: 1;
 }
 
-/* Style pour le contenu principal de l'application */
 .main-content {
-  /* Permet au contenu de remplir l'espace disponible */
   flex: 1;
-  /* Marge intérieure de 20 pixels */
   padding: 2rem;
-  /* Suppression de la marge inférieure */
   margin-bottom: 0;
-  /* Activation de la barre de défilement verticale si le contenu dépasse */
   overflow-y: auto;
 }
 
-/* Style pour le contenu principal de l'application sur les écrans de largeur supérieure ou égale à 768 pixels (PC portables) */
 @media (min-width: 768px) {
   .main-content {
-    /* Ajuster les styles en fonction de la largeur de l'écran des PC portables */
-    padding: 30px; /* la marge intérieure pour un meilleur espacement */
+    padding: 30px; 
   }
 }
-/* Style pour le contenu principal de l'application sur les écrans de largeur entre 480px et 767px (Tablettes) */
 @media (min-width: 480px) and (max-width: 767px) {
   .main-content {
-    /* Ajuster les styles pour les tablettes */
     padding: 25px;
   }
 }
 
 
 
-/* Style pour le contenu principal de l'application sur les écrans de largeur supérieure ou égale à 360 pixels */
 @media (min-width: 360px) {
   .main-content {
     /* Permet au contenu de s'étendre pour remplir l'espace disponible */
     flex: 1;
-    /* Marge intérieure de 20 pixels */
     padding: 1rem;
-    /* Suppression de la marge inférieure */
     margin-bottom: 0;
-    /* Activation de la barre de défilement verticale si le contenu dépasse */
     overflow-y: auto;
   }
 }
 
-/* Style pour le contenu principal de l'application sur les écrans de largeur maximale de 359 pixels (petits écrans) */
 @media (max-width: 359px) {
   .main-content {
-    /* Marge intérieure réduite pour mieux s'adapter aux petits écrans */
     padding: 15px;
   }
 }

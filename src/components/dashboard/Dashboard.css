@@ -1,41 +1,17 @@
 
-/* Css pour .column-Enf */
-.column-Enf {
-  height: 100vh;
-  box-sizing: border-box;
-  border-radius: 22px; /* Bordure arrondie */
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /* Ombre de boîte pour donner une profondeur visuelle */
-
-  
-  /* css appliqué pour les écrands inférieures à 783px*/
-  @media (max-width: 783px) {
-    display: none; /* Masquer complètement l'élément en dessous de 783 pixels de large */
-  }
-}
-.emargement-validation-desktop {
-  display: block;
-  position: relative;
-  bottom: 4rem;
-  left: 18rem;
-}
-
 .pink-box {
-  display: none; /* Masquer complètement l'élément */
+  display: none;
 }
 
-  /* css appliqué pour les écrands inférieures à 783px*/
 @media screen and (max-width: 783px) {
 
-  /* Cacher les éléments ayant la classe .column-Enf */
   .column-Enf {
     display: none;
   }
 
-  /* Afficher les éléments ayant la classe .pink-box */
   .pink-box{
     display: block;
   }
-  /* Styles pour l'icône de validation */
 .enf-validation {
   display: block;
   position: relative;
@@ -54,11 +30,10 @@
   }
 
 
-  /* css pour le titre h2 à l'intérieur de .pink-box */
   .pink-box h2 {
-    color: #000000; /* Couleur du texte */
-    margin-top: 1.5rem; /* Marge supérieure */
-    font-weight: bold; /* Texte en gras */
+    color: #000000; 
+    margin-top: 1.5rem; 
+    font-weight: bold; 
     font-size: 18px; /* Taille de police */
     text-align: center; /* Alignement du texte au centre */
   }
@@ -71,7 +46,6 @@
     overflow-x: hidden;
   }
 
-  /* css pour .entry à l'intérieur de .pink-box */
   .pink-box .entry {
     background-color: #FFFFFF; /* Couleur de fond */
     margin-bottom: 0.75rem; /* Marge inférieure */
@@ -83,11 +57,11 @@
   
   /* css pour les titre h3 à l'intérieur .entry */
   .entry h3 {
-    color: #000000; /* Couleur du texte */
+    color: #000000; 
     font-size: 14px; /* Taille de police */
     font-family: "Poppins", Helvetica; /* Police*/
-    font-weight: 600; /* Texte en gras */
-    margin-top: 0,375rem; /* Marge supérieure */
+    font-weight: 600; 
+    margin-top: 0,375rem; 
     padding-left: 1,8125rem; /* Remplissage à gauche */
     padding-top: 0,9375rem; /* Remplissage supérieur */
   }
@@ -100,10 +74,10 @@
   }
 
   .details .date {
-    color: #898989; /* Couleur du texte */
+    color: #898989; 
     font-family: "Poppins", Helvetica; /* Police */
     font-size: 14px; /* Taille de la police */
-    font-weight: 600; /* Texte en gras */
+    font-weight: 600; 
     font-style: italic; /* style italique*/
     padding-left: 1rem; /* espacement à gauche*/
     padding-bottom: 1rem; /* Espacement en bas */
@@ -152,7 +126,7 @@
  
   /* Css pour le titre h2 à l'intérieur de .date-section */
    .date-section h2 {
-    color: #000000; /* Couleur du texte */
+    color: #000000; 
     font-size: 22px; /* Taille de la police */
     font-weight: 600; /* la police en gras (600)*/
     font-family: "Poppins", Helvetica;
@@ -200,39 +174,40 @@
   }
 
    .dashboard-entry .details {
-    display: flex; /* Utilisation du flexbox */
-    flex-direction: column; /* disposition en colonne*/
-    align-items: flex-start; /* Alignement à gauche */
-    margin-top: 0.625rem; /* marge en haut */
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-top: 0.625rem; 
   }
   
   .dashboard-entry .details p {
-    font-size: 14px; /* taille de la police */
-    font-weight: bold; /*texte en gras */
-    margin-bottom: 0,375rem; /* marge en bas */
+    font-size: 14px; 
+    font-weight: bold; 
+    margin-bottom: 0,375rem; 
   }
   
   .dashboard-entry .details .extra-info {
-    display: flex; /* utilisation du flexbox */
-    justify-content: space-between; /* équilibrer l'espace disponible entre les éléments */
-    align-items: center; /* centrer verticalement */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
   }
   
-  .dashboard-entry .details .extra-info .room {
-    color: #FD9340; /* couleur du texte */
+  .details .extra-info .room {
+    color: #FD9340;
     font-family: "Poppins", Helvetica;
-    font-size: 12px; /* la taille du police */
-    font-style: italic; /* style italique */
-    padding-bottom: 0.125rem; /* espacement de bas */
-  }
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: 0.125rem;
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne suivante */
+}
   
   .dashboard-entry .details .extra-info .count {
-    color: #898989; /* Couleur du texte */
-    font-size: 12px; /* Taille de la police */
-    font-style: italic; /* Style italique */
-    font-weight: lighter; /* Épaisseur de police plus légère */
-    padding-left: 10.5rem; /* Espacement à gauche */
-    padding-top: 0.625rem; /* Espacement en haut */
+    color: #898989; 
+    font-size: 12px; 
+    font-style: italic; 
+    font-weight: lighter; 
+    padding-left: 10.5rem; 
+    padding-top: 0.625rem; 
   }
   .ap-bo {
       display: block;
@@ -247,8 +222,8 @@
       border: none;
       margin-left: auto;
       margin-right: auto;
-      position: absolute; /* Utilisation de position absolue */
-      bottom: 2rem; /* Espace en bas de la page, ajustez cette valeur selon vos besoins */
+      position: absolute; 
+      bottom: 2rem; 
       left: 0;
       right: 0;
       text-align: center;
@@ -256,77 +231,6 @@
 }
 }
 
-.column-header {
-  background-image: url("../../assets/ractangle\ orange.svg"); /* Image d'arrière-plan */
-  background-repeat: no-repeat; /* Ne pas répéter l'image */
-  background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
-  background-position: center top; /* Position de l'image d'arrière-plan */
-  font-size: 0.75em; /* Taille de police adaptative */
-  height: 1.875em; /* Hauteur adaptative */
-  width: 16.8125em; /* Largeur adaptative */
-  margin-left: auto; /* Marge à gauche automatique */
-  margin-right: auto; /* Marge à droite automatique */
-  margin-bottom: 2.4375em; /* Marge inférieure adaptable */
-  color: #FFFFFF; /* Couleur du texte */
-  text-align: center; /* Alignement du texte au centre */
-}
-.int-block h1 {
-  color: #000000; /* couleur du texte */
-  font-family: "Poppins", Helvetica;
-  font-size: 1.125em; /*taille de police adaptable */
-  font-weight: 600; /*police en gras (600)*/
-  margin-left: 1.75em; /*marge adaptable */
-  margin-bottom: 11px; /*marge en bas*/
-}
-.int-block{
-  display: block;
-  margin-bottom: 44px; /*marge en bas*/
-}
-
-.card {
-  background-color: #FFFFFF; /*couleur du texte*/
-  margin: auto;
-  margin-bottom: 10px; /*marge adaptable*/
-  width: 19.6875em; /*marge adaptable */
-  border-radius: 1.25em; /*bordure adaptable */
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07); /* ombre*/
-}
-
-h3 {
-  color: #000000; /*couleur du texte*/
-  font-size: 0.875em; /*taille de police adaptable */
-  font-family: "Poppins", Helvetica;
-  font-weight: 600; /*police en gras */
-  margin-top: 0.375em; /*marge en haut*/
-  padding-left: 1.25em; /* espacement à gauche */
-  padding-top: 0.9375em; /*espacement en haut*/
-}
-
-.day {
-  color: #000000; /* Couleur du texte en noir */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: lighter; /* Poids de la police plus léger */
-  font-size: 0.75em; /* Taille de la police */
-  padding-left: 1.25em; /* Espace intérieur à gauche */
-  padding-top: 0.25em; /* Espace intérieur en haut */
-  padding-bottom: 1em; /* Espace intérieur en bas */
-}
-
-.session {
-  color: #898989; /* Couleur du texte en gris */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: 600; /* Poids de la police en gras */
-  font-size: 0.5rem; /* Taille de la police */
-  font-style: italic; /* Style de police italique */
-  padding-right: 1.25em; /* Espace intérieur à droite */
-}
-
-.row {
-  display: flex; /*utilisation du flexbox*/
-  flex-direction: row; /*disposition en ligne*/
-  justify-content: space-between; /* Répartir l'espace disponible entre les éléments enfants */
-  align-items: center; /* Aligne les éléments enfants verticalement au centre de la ligne */
-}
 
 @media only screen and (max-width: 783px) {
 
@@ -563,42 +467,8 @@ h3 {
       padding-bottom: 1rem;
     }
   
-    .buttons-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   
-    .cancel-button {
-      background-color: #FF252526;
-      color: #FF2525;
-      font-size: 12px;
-      text-align: center;
-      height: 2.34rem;
-      width: 6rem;
-      border: none;
-      font-family: "Poppins", Helvetica;
-      font-weight: bold;
-      border-radius: 3.125em;
-      padding: 8px 16px;
-      margin-left: 18rem;
-      margin-top: 2rem;
-      }
-      .validate-button {
-        background-color: #19CE1526;
-        color: #19CE15;
-        font-size: 12px;
-        text-align: center;
-        height: 2.34rem;
-        width: 9rem;
-        border: none;
-        font-family: "Poppins", Helvetica;
-        font-weight: bold;
-        border-radius: 3.125em;
-        padding: 8px 16px;
-        margin-right: -12rem; /* Ajoutez cette ligne pour ajuster la marge droite */
-        margin-top: 2rem;
-      }
+
 }
 
 
@@ -643,7 +513,6 @@ h3 {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Styles pour les écrans de tablette et les ordinateurs portables */
   .dashboard {
     flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
     margin-top: 0; /* Pas de marge supérieure */
@@ -670,7 +539,6 @@ h3 {
   }
 }
 @media (min-width: 481px) and (max-width: 772px) {
-  /* Styles pour les écrans de tablette et les ordinateurs portables */
   .dashboard {
     flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
     margin-top: 0; /* Pas de marge supérieure */

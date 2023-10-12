@@ -1,0 +1,73 @@
+.confirmation-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 21rem;
+    height: 15rem;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    
+    .confirmation-content {
+    text-align: center;
+    margin-top: -2rem;
+    }
+    .confirmation-content h3 {
+    color: #000000;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    }
+    
+    .icon-container {
+    font-size: 40px;
+    color: #19CE15;
+    }
+    
+    .confirmation-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    .confirmation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    
+    .annuler-button {
+    background-color: #FF252526;
+    color: #FF2525;
+    height: 42px;
+    width: 100px;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-left: 1rem;
+    }
+    
+    .valider-button {
+    background-color: #19CE1526;
+    color: #19CE15;
+    border: none;
+    font-family: "Poppins", Helvetica;
+    font-weight: bold;
+    height: 42px;
+    width: 100px;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-left: 8px;
+    }
+  

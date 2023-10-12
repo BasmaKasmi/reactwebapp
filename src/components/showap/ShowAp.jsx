@@ -1,119 +1,95 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './ShowAp.css';
-import status from '../../assets/statusup.svg';
+import { useNavigate } from 'react-router-dom';
 import nom from '../../assets/nom.svg';
 import st from '../../assets/student.svg';
 import user from '../../assets/2 User.png';
 import SelectStudent from '../selectstudent/SelectStudent';
-
+import DeclareAp from '../declareap/DeclareAp';
 
 const ShowAp = () => {
-    const [showAp, setshowAp] = useState(false);
-    const[selectStudent, setselectStudent] = useState(false);
-    const[declareAp, setdeclareAp] = useState(false);
-    const [isAnyPopupOpen, setIsAnyPopupOpen] = useState(false);
-    const navigate = useNavigate(); // Utilisation le hook useNavigate de React Router
+  const navigate = useNavigate();
+  const [isDeclareApPopupOpen, setIsDeclareApPopupOpen] = useState(false);
+  const [selectStudent, setSelectStudent] = useState(false);
+  const [isAnyPopupOpen, setIsAnyPopupOpen] = useState(true);
+  const [searchText, setSearchText] = useState('');
 
-    const handleShowAp = () => {
-        setshowAp(true)
-      }
-      const handleCloseShowAp = () => {
-        setshowAp(false);
-      };
-      const handleSelectStudent = () => {
-        setselectStudent(true)
-      }
-      const handleCloseSelectStudent = () => {
-        setselectStudent(false);
-      };
-    
-    const handleDeclareAp = () => {
-        setdeclareAp(true)
-      }
-      const handleCloseDeclareAp = () => {
-        setdeclareAp(false);
-      };
-      // Gèrer le clic sur le bouton "Retour"
-  const handleRetourClick = () => {
-    navigate(-1); // // Utilisation la fonction navigate pour revenir à la page précédente
+  const handleCloseShowAp = () => {
+    setIsAnyPopupOpen(false);
+    setIsDeclareApPopupOpen(false);
+    setSearchText(''); 
   };
+
+  const handleOpenDeclareAp = () => {
+    setIsDeclareApPopupOpen(true);
+    setSelectStudent(false);
+  };
+  const handleCloseDeclareAp = () => {
+    setIsAnyPopupOpen(true);
+  };
+
+  const handleSearchInputChange = (e) => {
+    setSearchText(e.target.value);
+  };
+
+
+
   const handleOverlayClick = (e) => {
-    const isOverlay = e.target.classList.contains('modal-overlay');
-    const isCancel = e.target.classList.contains('cancel-button');
-  
-    if (isOverlay || isCancel) {
-      handleCloseShowAp();
-      handleCloseSelectStudent(false);
+    const isOverlay = e.target.id === 'showApModal' || e.target.classList.contains('A-button');
+    if (isOverlay) {
+      setSelectStudent(false);
+      setIsAnyPopupOpen(false);
     }
   };
-  
 
+  const data = [
+    { id: 1, title: "Sciences islamiques 1ère année", schedule: "Jeu 18h00 à 12h00" },
+    { id: 2, title: "Sciences islamiques 2éme année", schedule: "Lun 14h00 à 18h00" },
+    { id: 3, title: "Sciences islamiques 3éme année", schedule: "Lun 14h00 à 18h00" },
+    { id: 4, title: "Sciences islamiques 4éme année", schedule: "Lun 14h00 à 18h00" },
+  ];
   return (
     <div>
-            {!selectStudent && !isAnyPopupOpen && (
-            <div className="modal-overlay" onClick={handleCloseShowAp}>
-            <div className="mod-desktop">
-              <h2> Déclarer une AP </h2>
-              <div className='blok1'>
-              {/* Div pour une ligne de l'agenda */}
-              <div className="nom-row">
-                {/* Icône d'un calendrier */}
-                <img src={nom} alt='' />
-                  {/* Titre pour choisir les dates */}
-                  <h3>Rechercher par nom :</h3>
-              </div>
-               {/* Div pour l'entrée de date */}
-               <div className="nom-input" onClick={(e) => e.stopPropagation()}>
-                {/* Champ de texte pour saisir le nom d'un étudiant */}
-                <input type="text" placeholder="Saisir un nom d’étudiant" />
-                {/* Icône d'un étudiant */}
+      {(!selectStudent && isAnyPopupOpen) && (
+        <div className="mod-desktop" onClick={handleOverlayClick}>
+          <h2> Déclarer une AP </h2>
+          <div className="blok-sc">
+            <div className="nom-row">
+              <img src={nom} alt='' />
+              <h3>Rechercher par nom :</h3>
+            </div>
+            <div className="nom-input">
+              <input type="text" placeholder="Saisir un nom d’étudiant" value={searchText} onChange={handleSearchInputChange} />
+              <button className="custom-button" onClick={handleOpenDeclareAp}>
                 <img src={st} alt='' />
-              </div>
-              </div>
-              <div className="blok2">
-              <div className="ap-line">
-                <img src={user} alt='' />
-                  <h3>Rechercher par groupe :</h3>
-              </div>
-              <div className="gru-cont">
-              <div className="gr" onClick={handleSelectStudent}>
-              <h3>Sciences islamiques 1ére année</h3>
-              <div>
-              <p className='jr'>Jeu 18h00 à 12h00</p>
-              </div>
+              </button>
             </div>
-            <div className="gr" onClick={handleSelectStudent}>
-              <h3>Sciences islamiques 1ére année</h3>
-              <div>
-              <p className='jr'>Jeu 18h00 à 12h00</p>
-              </div>
+            {isDeclareApPopupOpen && <DeclareAp onCancel={handleCloseDeclareAp} />}
+
+          </div>
+          <div className="blok-g">
+            <div className="ap-line">
+              <img src={user} alt='' />
+              <h3>Rechercher par groupe :</h3>
             </div>
-            <div className="gr" onClick={handleSelectStudent}>
-              <h3>Sciences islamiques 1ére année</h3>
-              <div>
-              <p className='jr'>Jeu 18h00 à 12h00</p>
-              </div>
-            </div>
-            <div className="gr" onClick={handleSelectStudent}>
-              <h3>Sciences islamiques 1ére année</h3>
-              <div>
-              <p className='jr'>Jeu 18h00 à 12h00</p>
-              </div>
-            </div>
-              </div>
-              </div>
-            <button className="A-button">Annuler</button>
+            <div className="gru-cont">
+              {data.map((item) => (
+                <div className="gr-c" key={item.id} onClick={() => setSelectStudent(true)}>
+                  <h3>{item.title}</h3>
+                  <div>
+                    <p className='jr'>{item.schedule}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-            )}
-          {selectStudent && (
-        <div className="modal-overlay" onClick={handleOverlayClick}>
-          <SelectStudent handleOverlayClick={handleOverlayClick} />
+          <button className="c-button" onClick={handleCloseShowAp}>Annuler</button>
         </div>
+        
       )}
-    </div>
+      {selectStudent && <SelectStudent onCancel={handleOpenDeclareAp} />}
 
+    </div>
   );
 };
 

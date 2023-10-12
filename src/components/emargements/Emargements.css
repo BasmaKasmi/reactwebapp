@@ -107,70 +107,68 @@
 }
 
 .column-head h3 {
-  /* css pour le h3 à l'intérieur de .column-head */
+  /* css pour le h3 à l'dashérieur de .column-head */
   color: #FFFFFF; /* couleur du texte*/
-  font-size: 18px; /* taille de police */ 
-  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-size: 18px; 
+  font-family: "Poppins", Helvetica; 
   font-weight: bold; /* police en gras */
   margin-bottom: 0; /* margin en bas */
 }
 
 .column-head p.day {
-  color: #FFFFFF; /* couleur du texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-size: 14px; /* taille de police */ 
+  color: #FFFFFF; 
+  font-family: "Poppins", Helvetica; 
+  font-size: 14px; 
   margin: 10px;
   margin-top: 0; /* l'espace entre h3 et p */
 }
 
 .card {
-  background-color: #FFFFFF; /* Couleur de fond */
-  margin: auto; /* Centrer horizontalement */
-  margin-bottom: 16px; /* Marge en bas */
-  width: 299.5px; /* largeur */
-  height: 72px; /* hauteur*/
-  border-radius: 20px; /* bordure arrondie */
-  box-shadow: 4px 4px 20px #00000012; /* Ombre */
-  cursor: pointer; /* Curseur en forme de main */
-
+  background-color: #FFFFFF; 
+    margin: auto;
+    margin-bottom: 10px; 
+    width: 21vw; 
+    border-radius: 1.25em; 
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07); /* ombre*/
+    cursor: podasher; /* Curseur se transforme en main */
 }
 .card h3 {
-  color: #000000; /* Couleur du texte */
-  font-size: 14px; /* Taille de police */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: 600; /* police en gras (600) */
-  margin-top: 6px; /* Marge en haut */
+  color: #000000; 
+  font-size: 14px; 
+  font-family: "Poppins", Helvetica; 
+  font-weight: 600; 
+  margin-top: 6px; 
   padding-top: 15px; /* Remplissage en haut */
   margin-right: 2.6rem; /* Marge à droite */
 }
 
 .day {
-  color: #000000; /* Couleur du texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-size: 14px; /* Taille de police */
-  padding-left: 20px; /* Remplissage à gauche */
-  padding-top: 4px; /* Remplissage en haut */
-  padding-bottom: 16px; /* Remplissage en bas */
+  color: #000000; 
+  font-family: "Poppins", Helvetica; 
+  font-size: 14px; 
+  padding-left: 20px; 
+  padding-top: 4px; 
+  padding-bottom: 16px; 
 }
 
 .session {
-  color: #898989; /* Couleur du texte gris */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: 600; /* police en gras (600) */
-  font-size: 12px; /* Taille de police */
-  font-style: italic; /* style de police italique */
+  color: #898989; 
+  font-family: "Poppins", Helvetica; 
+  font-weight: 600;
+  font-size: 12px; 
+  font-style: italic; 
   padding-right: 2rem; /* Remplissage à droite */
 }
 
 /* Lorsqu'une carte (.card) est cliquée, changez la couleur de fond en #FD9340 */
-.int-block.clicked {
+.dash-block.clicked {
   background-color: #FD9340;
 }
 
 /* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
-.int-block.clicked h3,
-.int-block.clicked .day,
-.int-block.clicked .session {
+.dash-block.clicked h3,
+.dash-block.clicked .day,
+.dash-block.clicked .session {
 color: #FFFFFF;
 }
 
@@ -190,8 +188,8 @@ color: #FFFFFF;
 
 .agenda-section span {
   margin-right: 522px; /* Marge à droite de l'élément */
-  color: #000000; /* couleur du texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
+  color: #000000; 
+  font-family: "Poppins", Helvetica; 
   font-size: 14px; /* taille de la police */
   font-weight: 600; /* police en gras (600) */
 }
@@ -208,7 +206,7 @@ color: #FFFFFF;
 }
 .d-inputs input {
   text-align: center; /* Centrer le texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-family: "Poppins", Helvetica; 
   border-radius: 30px; /* bordure arrondie*/
   border: 1px solid #e5e4e3; /* bordure de 1px solide avec une couleur spécifiée */
   height: 36px; /* hauteur */
@@ -236,18 +234,18 @@ color: #FFFFFF;
   height: 60px; /*hauteur*/
   margin: auto; /*centrer horizontalement*/
   margin-top: 10px; /*marge supérieure*/
-  cursor: pointer; /* Curseur en forme de main */
+  cursor: podasher; /* Curseur en forme de main */
 }
 
 
 .c h3 {
-  color: #000000; /* couleur du texte */
+  color: #000000; 
   font-size: 14px; /* taille du texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
+  font-family: "Poppins", Helvetica; 
   font-weight: 600; /* police en gras (600) */
   margin: 8px;
   margin-left: 36px; /* marge à gauche */
-  padding: 10px; /* espace à lintérieur */
+  padding: 10px; /* espace à ldashérieur */
 }
 .row {
   display: flex; /* utilisation du flexbox */
@@ -257,11 +255,11 @@ color: #FFFFFF;
 }
 
 .status-f {
-  color: #4CAF50; /* Couleur du texte */
+  color: #4CAF50; 
   display: inline-block; /* Afficher comme un élément en ligne avec blocage */
   font-size: 14px; /* Taille de la police */
   font-weight: bold; /* police en gras */
-  padding: 4px 8px; /* Espacement interne (haut/bas gauche/droite) */
+  padding: 4px 8px; /* Espacement dasherne (haut/bas gauche/droite) */
   border-radius: 4px; /* bordure arrondie */
   margin: 8px; /* marge extérieure*/
   margin-right: 20px; /* marge à droite*/
@@ -270,11 +268,11 @@ color: #FFFFFF;
 }
 
 .status-n {
-  color: #FF2525; /* Couleur du texte */
+  color: #FF2525; 
   display: inline-block; /* Afficher comme un élément en ligne avec blocage */
   font-size: 14px; /* Taille de la police */
   font-weight: bold; /* police en gras */
-  padding: 4px 8px; /* Espacement interne (haut/bas gauche/droite) */
+  padding: 4px 8px; /* Espacement dasherne (haut/bas gauche/droite) */
   border-radius: 4px; /* bordure arrondie*/
   margin: 8px; /* marge extérieure*/
   margin-top: 6px; /* marge en haut */
@@ -309,7 +307,7 @@ color: #FFFFFF;
   .Emargements {
     display: flex;
     flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
-    padding: 0 2.77%; /* Une marge intérieure plus petite */
+    padding: 0 2.77%; /* Une marge dashérieure plus petite */
     gap: 2.77%; /* Réduire l'espace entre les colonnes */
     overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
 

@@ -1,35 +1,18 @@
 
-.co {
-  height: 100vh;
-  box-sizing: border-box;
-  border-radius: 22px; /* bordure arrondie */
-  @media (max-width: 783px) {
-    display: none;
-  }
-}
-
-.int-block .date {
-  /* Aligner la date à gauche */
-  text-align: left;
-}
-
-
-.groupesRes{
-  display: none; /* Cacher initialement */
-}
 @media screen and (max-width: 783px) {
+  .Agenda {
+    display: block;
+  }
   .groupesRes {
-    /* Afficher si la largeur est inférieure à 783px */
     display: block;
     position: fixed;
-    top: 6.5rem; /* Position depuis le haut de la fenêtre */
+    top: 6.5rem; 
     left: 0;
-    width: 100%; /* Largeur à 100% de la vue */
-    height: 100%; /* Hauteur à 100% de la vue */
-    padding: 1rem; /* Espace interne pour le contenu */
-    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
+    width: 100%; 
+    height: 100%; 
+    padding: 1rem; 
+    overflow-y: auto; 
   }
-    /* le contenu de la colonne groupesRes */
     .groupesRes .content {
       background-color: #FFFFFF;
       padding: 2rem;
@@ -41,7 +24,6 @@
       transform: translate(-50%, -50%);
       box-shadow: 4px 4px 20px #00000012;   
   }
-    /* css pour le titre */
     .groupesRes .h3 {
       font-size: 18px;
       font-weight: bold;
@@ -49,7 +31,6 @@
       text-align: center;
       margin-bottom: 1.5rem;
     }
-    /* css pour les jours de la semaine */
   .groupesRes .days-of-week {
     display: flex;
     justify-content: space-between;
@@ -65,7 +46,6 @@
     font-weight: bold;
     font-size: 16px;
   }
-    /* css pour les jours du mois */
     .groupesRes .days-of-month {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
@@ -83,7 +63,7 @@
       border-radius: 2rem;
       text-align: center;
     }
-    .groupesRes .day.saturday {
+    .groupesRes .day.samedi {
       background-image: url("../../assets/V.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -94,7 +74,7 @@
       font-weight: bold;
     }
   
-    .groupesRes .day.monday {
+    .groupesRes .day.lundi {
       background-image: url("../../assets/Pink.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -122,179 +102,9 @@
       background-color: #FD9340;
     }
     
-    /* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
     .group-card.clicked h3,
     .group-card.clicked .group-card-day {
     color: #FFFFFF;
     }
   
-}
-.groupes{
-  height: 100vh; /* hauteur de la colonne égale à la hauteur de la fenêtre */
-  box-sizing: border-box;
-  border-radius: 22px; /* bordure arrondie */
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /*Ombre*/
-  @media (max-width: 783px) {
-    display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
-  }
-}
- /* Css pour l'élément .h */
-.groupes .h {
-    /* Définition de l'image de fond */
-  background-image: url("../../assets/ractangle\ orange.svg");
-    /* Empêche la répétition de l'image de fond */
-  background-repeat: no-repeat;
-    /* Redimensionne l'image pour couvrir tout l'élément */
-  background-size: cover;
-    /* Position de l'image de fond au centre en haut */
-  background-position: center top;
-    /* Taille de la police pour le texte à l'intérieur */
-  font-size: 12px;
-    /* Arrondi des coins inférieurs gauche et droit */
-  border-radius: 0 0 30px 30px;
-    /* Hauteur de l'élément */
-  height: 54.88px;
-    /* Largeur de l'élément */
-  width: 368.55px;
-    /* Marge en bas pour l'espace entre cet élément et le suivant */
-  margin-top: -1rem;
-  margin-bottom: 2rem;
-    /* Centrage horizontal automatique dans le parent */
-  margin-left: auto;
-  margin-right: auto;
-    /* Couleur du texte à l'intérieur */
-  color: #FFFFFF;
-    /* Affichage en mode flex pour aligner les enfants en colonne */
-  display: flex;
-    /* Orientation des enfants en colonne */
-  flex-direction: column;
-    /* Centrage vertical des enfants */
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 783px) {
-    display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
-  }
-}
-
-  /* Css pour le h3 à l'intérieur de .column-head */
-.h h3 {
-  color: #FFFFFF;
-  font-size: 18px;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  margin-left: 1rem;
-  margin-right: 2rem;
-  align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.day {
-  color: #000000; /* Couleur du texte en noir */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: lighter; /* Poids de la police plus léger */
-  font-size: 0.75em; /* Taille de la police */
-  padding-left: 1.25em; /* Espace intérieur à gauche */
-  padding-top: 0.25em; /* Espace intérieur en haut */
-  padding-bottom: 1em; /* Espace intérieur en bas */
-}
-
-.session {
-  color: #898989; /* Couleur du texte en gris */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: bold; /* Poids de la police en gras */
-  font-size: 0.75em; /* Taille de la police */
-  font-style: italic; /* Style de police italique */
-  padding-right: 1.25em; /* Espace intérieur à droite */
-}
-
-/* Css pour l'élément .month-year */
-.month-year {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-  /* Css pour le h3 à l'intérieur de .month-year */
-.month-year  h3{
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 24px;
-  margin-right: 20px;
-}
-
-  /* Css pour l'image à l'intérieur de .month-year */
-.month-year img {
-  width: 26.8px;
-  height: 26.8px;
-}
-
-/* Css pour l'élément .days-of-week */
-.days-of-week {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 5px 0;
-  align-items: center;
-}
-
-  /* Css pour l'élément .day-of-week */
-.day-of-week {
-  flex: 1;
-  text-align: center;
-  color: #5f5f5f;
-  font-family: "Poppins", Helvetica;
-  font-size: 16px;
-  font-weight: 700;
-  height: 24px;
-  width: 12px;
-}
-
-  /* Css pour l'élément .days-of-month */
-.days-of-month {
-  /* Le type d'affichage en grille pour l'élément .days-of-month */
-  display: grid;
-  /* Utilisons la propriété grid-template-columns pour créer une grille avec 7 colonnes égales */
-  grid-template-columns: repeat(7, 1fr);
-  /* Spécifions l'espace entre les éléments de la grille */
-  gap: 5px;
-}
-
-   /* Css pour les éléments .day à l'intérieur de .days-of-month */
-.days-of-month .day {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 1.1rem;
-  padding: 8px 4px; /* l'espace intérieur */
-  border-radius: 20px; /* Rendre le bouton rond */
-  text-align: center;
-}
-
-  /* Css pour les jours du samedi */
-.day.saturday {
-  background-image: url("../../assets/V.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #FFFFFF;
-  border: none;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
- }
-
- /* Css pour les jours du lundi */
-.day.monday {
-  background-image: url("../../assets/Pink.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #FFFFFF;
-  border: none;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
 }
