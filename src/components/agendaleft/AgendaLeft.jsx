@@ -13,39 +13,17 @@ const AgendaLeft = ({ onCardClick }) => {
     setSelectedCards(updatedSelectedCards);
     onCardClick(updatedSelectedCards, dayType);
   };
-  
 
   const groupes = [
- {
-      id: 'card-1',
-      title: 'Sciences islamiques 1ère année',
-      date: 'Samedi 17 Dec 2022',
-      time: 'Jeu 18h00 à 12h00',
-      session: '11/32',
-      dayType: 'Lundi', 
-    },
-    {
-      id: 'card-2',
-      title: 'Sciences islamiques 2ème année',
-      date: 'Samedi 17 Dec 2022',
-      time: 'Lun 14h00 à 18h00',
-      session: '11/32',
-      dayType: 'Samedi', 
-    },
-    {
-      id: 'card-3',
-      title: 'Sciences islamiques 3ème année',
-      date: 'Samedi 19 Dec 2022',
-      time: 'Jeu 18h00 à 12h00',
-      session: '11/32',
-    },
+  {id: 'card-1', title: 'Sciences islamiques 1ère année', time: 'Lun 18h00 à 12h00', session: '11/32', dayType: 'Lundi', },
+  { id: 'card-2', title: 'Sciences islamiques 2ème année', time: 'Sam 14h00 à 18h00', session: '11/32', dayType: 'Samedi', },
+  { id: 'card-3', title: 'Sciences islamiques 3ème année', date: 'Samedi 19 Dec 2022', time: 'Jeu 18h00 à 12h00', session: '11/32',},
   ];
-  
 
   return (
     <div>
       <div className="co">
-        <div className="column-header orange-bg">
+        <div className="column-header">
           <h2>Mon agenda</h2>
         </div>
         {groupes.map((card) => (
