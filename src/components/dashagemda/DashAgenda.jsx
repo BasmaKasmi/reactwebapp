@@ -30,7 +30,7 @@ const DashAgenda = () => {
 
   return (
     <div>
-      <div className="column">
+      <div className="column-Enf">
           {/* En-tête de la colonne avec arrière-plan orange */}
         <div className="column-header orange-bg">
           <h2>Mon agenda</h2>

@@ -32,7 +32,7 @@ const DashEm = () => {
 
   return (
     <div>
-        <div className="column">
+        <div className="column-Enf">
         <div className="column-header orange-bg">
             {/* Titre de l'en-tête */}
           <h2>Mes emargements</h2>
