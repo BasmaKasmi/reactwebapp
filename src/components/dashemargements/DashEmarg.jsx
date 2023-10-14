@@ -14,8 +14,6 @@ const DashEmarg = (props) => {
     setSelectedCard(cardData); 
     setActiveCard(title);
     onCardClick(title, date);
-    
-
   };
 
   const groupes = [
@@ -26,7 +24,7 @@ const DashEmarg = (props) => {
 
   return (
     <div>
-    <div className='column'>
+    <div className="column-Enf">
         {/* En-tête de la colonne */}
           <div className="column-header orange-bg">
             <h2>Mes émargements</h2>

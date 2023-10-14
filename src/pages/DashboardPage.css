@@ -1,0 +1,21 @@
+.column
+{
+    flex-basis: 25%;
+    margin: 10px;
+}
+
+.page-content {
+    display: flex;
+}
+
+.three-columns {
+    display: flex;
+    padding: 10px;
+}
+
+@media (max-width: 1300px) {
+    .three-columns {
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+}

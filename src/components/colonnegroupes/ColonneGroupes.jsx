@@ -25,7 +25,7 @@ const ColonneGroupes = (props) => {
 
   return (
     <div>
-    <div className='column'>
+    <div className="column-Enf">
         {/* En-tête de la colonne */}
           <div className="column-header orange-bg">
             <h2>Mes groupes</h2>

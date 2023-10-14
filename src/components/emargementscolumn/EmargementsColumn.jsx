@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames'; // importation de la bibliothèque 'classnames'
-import { Link } from 'react-router-dom';
 import cldr from '../../assets/calendar.svg'; 
 import st from '../../assets/student.svg'; 
 import './EmargementsColumn.css'; 
 import Emarg2 from '../emarg2/Emarg2';
 
 const EmargementsColumn = (props) => {
-  
- 
+
    // Utilisation de l'état local pour suivre l'état de la carte active
    const [activeCard, setActiveCard] = useState(null);
    const [emargementId, setEmargementId] = useState(null);
    const { selectedCard } = props;
  
- 
    useEffect(() => {
      if (props.selectedCard) {
+      setEmargementId(null)
        setActiveCard(props.selectedCard.title); 
      }
-   }, [props.selectedCard]);
 
+   }, [props.selectedCard]);
 
   if (emargementId !== null) {
    return (
@@ -31,7 +29,6 @@ const EmargementsColumn = (props) => {
      />
    );
  }
-
 
   return (
     <div> 
