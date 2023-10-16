@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './DashEmarg.css';
+import '../dashagemda/DashAgenda.css';
 
 const DashEmarg = (props) => {
   const { onCardClick } = props;
@@ -42,7 +42,7 @@ const DashEmarg = (props) => {
                {groupes.map((groupe) => (
             <div
               key={groupe.id}
-              className={`card ${activeCard === groupe.titre ? 'clicked' : ''}`}
+              className={`card-dashboard ${activeCard === groupe.titre ? 'clicked' : ''}`}
               onClick={() => handleCardClick(groupe.titre, groupe.horaire)}
             >
               <h3>{groupe.titre}</h3>

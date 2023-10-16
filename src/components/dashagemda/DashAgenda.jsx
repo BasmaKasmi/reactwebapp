@@ -54,7 +54,7 @@ const DashAgenda = () => {
         
             {coursDate17.map((coursItem) => (
           <Link to='/agenda' key={coursItem.id}>
-            <div className="card">
+            <div className="card-dashboard">
               <h3>{coursItem.title}</h3>
               <div className='row'>
                 <p className='day'>{coursItem.day}</p>
@@ -81,7 +81,7 @@ const DashAgenda = () => {
         
         {coursDate19.map((coursItem) => (
           <Link to='/agenda' key={coursItem.id}>
-            <div className="card">
+            <div className="card-dashboard">
               <h3>{coursItem.title}</h3>
               <div className='row'>
                 <p className='day'>{coursItem.day}</p>

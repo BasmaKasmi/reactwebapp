@@ -1,12 +1,21 @@
 .column
 {
-    flex-basis: 25%;
+    flex-basis: 33%;
     margin: 10px;
 }
 
 .page-content {
     display: flex;
 }
+.card-dashboard{
+    background-color: #FFFFFF; 
+      margin-bottom: 10px; 
+      border-radius: 1.25em; 
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07); /* ombre*/
+      margin-left: 20px;
+      margin-right: 20px;
+      cursor: podasher; /* Curseur se transforme en main */
+  }
 
 .three-columns {
     display: flex;
@@ -17,5 +26,8 @@
     .three-columns {
         flex-direction: column;
         flex-basis: 100%;
+    }
+    .column{
+        width: 100%;
     }
 }

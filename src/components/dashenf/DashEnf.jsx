@@ -90,7 +90,7 @@ const DashEnf = () => {
                     Un mail de rappel doit être envoyé au prof pour lui rappeler de faire son emargement du jour
             */}
         {groupes.map((emargement) => (
-            <div className="card" key={emargement.id}>
+            <div className="card-dashboard" key={emargement.id}>
               <h3>{emargement.groupName}</h3>
               <div className='row'>
                 <p className='day'>{emargement.schedule}</p>

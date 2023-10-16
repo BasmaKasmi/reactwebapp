@@ -1,43 +1,16 @@
 import React, { useState } from 'react';
 import status from '../../assets/statusup.svg';
 import stu from '../../assets/2 User.png';
-import cldr from '../../assets/calendar.svg';
-import st from '../../assets/student.svg';
-import user from '../../assets/useredit.svg';
 import './Recap.css';
 import ShowValidation from '../showvalidation/ShowValidation';
 import ShowModal from '../showmodal/ShowModal';
 
 const Recap = () => {
   const [showModal, setShowModal] = useState(false);
-  const[showAp, setshowAp] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
   const [ai1ButtonActive, setAi1ButtonActive] = useState(false);
   const [ap1ButtonActive, setAp1ButtonActive] = useState(false);
-  const [ai2ButtonActive, setAi2ButtonActive] = useState(false);
-  const [ap2ButtonActive, setAp2ButtonActive] = useState(false);
-  const [ai3ButtonActive, setAi3ButtonActive] = useState(false);
-  const [ap3ButtonActive, setAp3ButtonActive] = useState(false);
-  const [ai4ButtonActive, setAi4ButtonActive] = useState(false);
-  const [ap4ButtonActive, setAp4ButtonActive] = useState(false);
-  const [ai5ButtonActive, setAi5ButtonActive] = useState(false);
-  const [ap5ButtonActive, setAp5ButtonActive] = useState(false);
-  
-
-
-  const [selectedDates, setSelectedDates] = useState([]);
-
-  const handleDateCardClick = (date) => {
-    // Vérifier si la date est déjà sélectionnée
-    if (selectedDates.includes(date)) {
-      // Si elle est sélectionnée, la retirer de la liste
-      setSelectedDates(selectedDates.filter(d => d !== date));
-    } else {
-      // Si elle n'est pas sélectionnée, l'ajouter à la liste
-      setSelectedDates([...selectedDates, date]);
-    }
-  };
 
   const handleClick = () => {
     setShowModal(true);
@@ -46,15 +19,6 @@ const Recap = () => {
     setShowModal(false);
   };
 
-  const handleShowAp = () => {
-    setshowAp(true)
-  }
-  const handleCloseShowAp = () => {
-    setshowAp(false);
-  };
-  const handleConfirmationClick = () => {
-    setShowConfirmation(true);
-  };
   const handleValidationClick = () => {
     setShowValidation(true);
   };
@@ -64,6 +28,15 @@ const Recap = () => {
     document.body.classList.remove('modal-open');
   };
 
+  const etudiants = [
+    { id: 1, nom: "Nom de l'étudiant", absences: 3 },
+    { id: 2, nom: "Nom de l'étudiant", absences: 3 },
+  ];
+  const boutons = [
+    { id: 'ap', texte: 'AP', active: ap1ButtonActive, setActive: setAp1ButtonActive },
+    { id: 'ai', texte: 'AI', active: ai1ButtonActive, setActive: setAi1ButtonActive }
+  ];
+  
 
   return (
     <div className='Recap'>
@@ -99,121 +72,41 @@ const Recap = () => {
         <img src={stu} alt='' />
         <h3> Nombre d’étudiants : 22 </h3>
         </div>
-        <div className='container-r'>
-        <div className={`card-s ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
+        <div className='container-re'>
+  {etudiants.map((etudiant) => (
+    <div key={etudiant.id} className={`card-s ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
+      <div className='row'>
         <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap1ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp1ButtonActive(!ap1ButtonActive);
-              setAi1ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai1ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi1ButtonActive(!ai1ButtonActive);
-              setAp1ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>    
-      <div className={`card-s ${ap2ButtonActive ? 'ap-active' : ''} ${ai2ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-          </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp2ButtonActive(!ap2ButtonActive);
-              setAi2ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai2ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi2ButtonActive(!ai2ButtonActive);
-              setAp2ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-
-      <div className={`card-s ${ap3ButtonActive ? 'ap-active' : ''} ${ai3ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
+          <h3>{etudiant.nom}</h3>
+          <p>Absence(s) : {etudiant.absences}</p>
         </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp3ButtonActive(!ap3ButtonActive);
-              setAi3ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai3ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi3ButtonActive(!ai3ButtonActive);
-              setAp3ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
+        <div className="b-container">
+  {boutons.map((bouton) => {
+    if ((bouton.id === 'ap' && ai1ButtonActive) || (bouton.id === 'ai' && ap1ButtonActive)) {
+      return null;
+    }
+    return (
+      <button
+        key={bouton.id}
+        className={`${bouton.id}-b ${bouton.active ? 'active' : ''}`}
+        onClick={() => {
+          bouton.setActive(!bouton.active);
+          boutons.forEach((autreBouton) => {
+            if (autreBouton.id !== bouton.id && autreBouton.active) {
+              autreBouton.setActive(false);
+            }
+          });
+        }}
+      >
+        {bouton.texte}
+      </button>
+    );
+  })}
+</div>
       </div>
-      <div className={`card-s ${ap4ButtonActive ? 'ap-active' : ''} ${ai4ButtonActive ? 'ai-active' : ''}`}>
-        <div className='row'>
-        <div className='col' onClick={handleClick}>
-          <h3>Nom de l'étudiant</h3>
-          <p>Absence(s) : 3</p>
-        </div>
-          <div className="b-container">
-          <button
-            className={`ap-b ${ap4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAp4ButtonActive(!ap4ButtonActive);
-              setAi4ButtonActive(false);
-              }}
-            >
-            AP 
-            </button>
-           <button
-            className={`ai-b ${ai4ButtonActive ? 'active' : ''}`}
-            onClick={() => {
-              setAi4ButtonActive(!ai4ButtonActive);
-              setAp4ButtonActive(false);
-              }}
-            >
-            AI
-            </button>
-            </div>
-          </div>
-      </div>
-      </div>
+    </div>
+  ))}
+</div>
       <div className="b-c">
         <button className="va-button" onClick={handleValidationClick}>Valider la feuille d'émargement</button>
       </div>

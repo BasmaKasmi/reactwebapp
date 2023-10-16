@@ -6,8 +6,6 @@
       display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
     }
   }
-
-
   .card-container{
     display: grid;
     column-gap: 10px;
