@@ -78,8 +78,16 @@ const Student = () => {
             Informations attendues :
                 Liste des étudiants
             */}
-        <div className='card-container'>
-        {students.map((student) => (
+        <div className='card-container'  style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
+        { /*
+            Route : Récupération de la liste des étudiants du groupe sélectionné
+            URL :
+            Informations transmises :
+                Identifiant du groupe
+            Informations attendues :
+                Liste des étudiants
+            */}
+    {students.map((student) => (
     <div key={student.id} className={`std ${ap1ButtonActive ? 'ap-active' : ''} ${ai1ButtonActive ? 'ai-active' : ''}`}>
       <div className='row'>
         <div className='col' onClick={handleClick}>
@@ -96,28 +104,33 @@ const Student = () => {
            */}
         </div>
         <div className="student-buttons">
-          {boutons.map((bouton) => (
-             <button
-             key={bouton.id}
-             className={`${bouton.id}-b ${bouton.active ? 'active' : ''}`}
-             onClick={() => {
-              bouton.setActive(!bouton.active);
-              // Désactivez les autres boutons
-              boutons.forEach((autreBouton) => {
-                if (autreBouton.id !== bouton.id && autreBouton.active) {
-                  autreBouton.setActive(false);
-                }
-              });
-            }}
-            >
-              {bouton.texte}
-              </button>
-              ))}
-        </div>
+  {boutons.map((bouton) => {
+    if ((bouton.id === 'ap' && ai1ButtonActive) || (bouton.id === 'ai' && ap1ButtonActive)) {
+      return null;
+    }
+    return (
+      <button
+        key={bouton.id}
+        className={`${bouton.id}-b ${bouton.active ? 'active' : ''}`}
+        onClick={() => {
+          bouton.setActive(!bouton.active);
+          boutons.forEach((autreBouton) => {
+            if (autreBouton.id !== bouton.id && autreBouton.active) {
+              autreBouton.setActive(false);
+            }
+          });
+        }}
+      >
+        {bouton.texte}
+      </button>
+    );
+  })}
+</div>
+
       </div>
     </div>
   ))}
-        </div>
+</div>
         </div>
         
         <div className='button-container'>

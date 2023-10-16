@@ -8,6 +8,7 @@
 .sidebar {
   background-color: #FFFFFF;
   box-sizing: border-box;
+  height: 100vh;
   transition: transform 0.02s ease;
   @media (max-width: 768px) {
     display: block;

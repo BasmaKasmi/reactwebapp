@@ -36,7 +36,7 @@ const Emarg2 = (props) => {
   const handleRetourClick = () => {
     props.setEmargementId(null);
   };
-     //  le gestionnaire d'événement onClick "modal-overlay" pour fermer la popup
+
      const handleOverlayClick = (e) => {
       const isOverlay = e.target.classList.contains('modal-overlay');
       const isCancel = e.target.classList.contains('an');
@@ -94,28 +94,34 @@ const Emarg2 = (props) => {
            */}
         </div>
         <div className="student-buttons">
-          {boutons.map((bouton) => (
-             <button
-             key={bouton.id}
-             className={`${bouton.id}-b ${bouton.active ? 'active' : ''}`}
-             onClick={() => {
-              bouton.setActive(!bouton.active);
-              // Désactivez les autres boutons
-              boutons.forEach((autreBouton) => {
-                if (autreBouton.id !== bouton.id && autreBouton.active) {
-                  autreBouton.setActive(false);
-                }
-              });
-            }}
-            >
-              {bouton.texte}
-              </button>
-              ))}
-        </div>
+  {boutons.map((bouton) => {
+    if ((bouton.id === 'ap' && ai1ButtonActive) || (bouton.id === 'ai' && ap1ButtonActive)) {
+      return null;
+    }
+    return (
+      <button
+        key={bouton.id}
+        className={`${bouton.id}-b ${bouton.active ? 'active' : ''}`}
+        onClick={() => {
+          bouton.setActive(!bouton.active);
+          boutons.forEach((autreBouton) => {
+            if (autreBouton.id !== bouton.id && autreBouton.active) {
+              autreBouton.setActive(false);
+            }
+          });
+        }}
+      >
+        {bouton.texte}
+      </button>
+    );
+  })}
+</div>
+
       </div>
     </div>
   ))}
-        </div>
+</div>
+
         <div className='butt-container'>
         <button className="fem-butt" onClick={handleValidationClick}>
           Valider la feuille d'émargement

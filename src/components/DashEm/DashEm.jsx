@@ -104,7 +104,7 @@ const DashEm = () => {
                 Liste de.s cours du prof à cette date (MAX 3 COURS)
             */}
              {groupes.map((emargement) => (
-            <div className="card" key={emargement.id}>
+            <div className="card-dashboard" key={emargement.id}>
               <h3>{emargement.groupName}</h3>
               <div className='row'>
                 <p className='day'>{emargement.schedule}</p>
