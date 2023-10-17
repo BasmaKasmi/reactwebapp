@@ -24,12 +24,9 @@ const DeclareAp =  (props)  => {
   const [selectedDates, setSelectedDates] = useState([]);
 
   const handleDateCardClick = (date) => {
-    // Vérifier si la date est déjà sélectionnée
     if (selectedDates.includes(date)) {
-      // Si elle est sélectionnée, la retirer de la liste
       setSelectedDates(selectedDates.filter(d => d !== date));
     } else {
-      // Si elle n'est pas sélectionnée, l'ajouter à la liste
       setSelectedDates([...selectedDates, date]);
     }
   };
@@ -37,10 +34,6 @@ const DeclareAp =  (props)  => {
     setdeclareAp(false);
     setCurrentPopup(null); 
   };
-
-
-
-
 
       const handleOverlayClick = (e) => {
         const isOverlay = e.target.classList.contains('modal-overlay');
@@ -59,20 +52,19 @@ const DeclareAp =  (props)  => {
         <div className="modal-overlay" onClick={handleCloseDeclareAp}>
         <div className="mod-desktop">
             <h2>Nom de l'étudiant</h2>
-            { /*
-            Route : Récupération du nom de l'étudiant
-            URL :
-            Informations transmises :
-                Identifiant de l'étudiant
-            Informations attendues (sous forme de card):
-                Nom & prénom de l'étudiant
+            {/*
+                Route : Récupération du nom de l'étudiant
+                URL :
+                Informations transmises :
+                    ID de l'étudiant
+                Informations attendues (sous forme de card):
+                    Nom & prénom de l'étudiant
             */}
             <div className="blok-sc">
             <div className="cldr-row">
               <img src={cldr} alt='' />
                 <h3>Choisir dates :</h3>
-            </div>
-               {/*
+                {/*
                     Route : Récupération de la plage de date automatiquement avec possibilité de changer
                     URL (POST) : https://base-shatibi.iela.fr/api-v1/teacher/attendance/group/student
                     Informations transmises :
@@ -103,6 +95,7 @@ const DeclareAp =  (props)  => {
                         ]
                     }
                 */}
+            </div>
             <div className="time-inputs">
             <input type="text" placeholder="01/01/2023" value={startDate} onChange={(e) => setStartDate(e.target.value)} onClick={(e) => e.stopPropagation()} />
             <input type="text" placeholder="28/01/2023" value={endDate} onChange={(e) => setEndDate(e.target.value)} onClick={(e) => e.stopPropagation()} />
@@ -115,13 +108,15 @@ const DeclareAp =  (props)  => {
             <div className="ap-line">
               <img src={user} alt='' />
                 <h3>Sélectionner les AP :</h3>
-                {/* Route : Récupération des 4 prochaines dates de cours
-                    URL :
+                {/* 
+                    Route : Récupération des prochaines date de cours de l'étudiant"
+                    URL : Idem précédente
                     Informations transmises :
-                    Identifiant du groupe
-                    identifiant de l'étudiant
+                        ID du groupe
+                        ID de l'étudiant
                     Informations attendues :
-                    Les dates prochaines date de cours au format DD/MM/AAAA*/}
+                        Les 4 prochaines dates de cours de cet étudiant au format JJ/MM/AAAA )
+                */}
             </div>
             <div className="time-cards-cont">
               {dates.map((date, index) => (

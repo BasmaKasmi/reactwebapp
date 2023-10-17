@@ -28,8 +28,7 @@ const ShowConfirmation = (props) => {
         <div className="confirmation-details">
          <p>14/01/2023</p>
          <p>21/01/2023</p>
-        </div>
-             {/* 
+           {/* 
                     Route : Récupération du nombre d'étudiants présent et absents (renseigner par le prof.)"
                     URL (POST) : https://base-shatibi.iela.fr/api-v1/teacher/attendance/group/list
                     Informations transmises :
@@ -58,6 +57,8 @@ const ShowConfirmation = (props) => {
                         ]
                     }
                 */}
+        </div>
+        
         <div className="confirmation-buttons">
           <button className="valider-button" onClick={handleConfirmationClick}>Valider</button>
           <button className="annuler-button" onClick={handleOverlayClick}>Annuler</button>

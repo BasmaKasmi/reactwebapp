@@ -41,7 +41,7 @@ const EmargementsColumn = (props) => {
         <div className="agenda-info">
           <img src={cldr} alt=''/>
           <span>Choisir dates :</span>
-              {/*
+           {/*
                 Route : Récupération de la plage de date automatiquement avec possibilité de changer
                 URL (POST) : https://base-shatibi.iela.fr/api-v1/teacher/attendance/group/student
                 Informations transmises :
@@ -79,10 +79,9 @@ const EmargementsColumn = (props) => {
         </div>
         { /*
                 Route : Récupération de la liste des émargements d'un groupe
-                URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du groupe}/attendance/list/{ID du professeur}/group
+                URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du groupe}/attendance/list/group
                 Informations transmises :
                     ID du groupe
-                    ID du professeur
                 Informations attendues :
                     Liste des émargements du groupe de semaine n-1 à semaine +3 soit 5 dates ou selon date saisies par le prof.
                 Retour = {
@@ -113,10 +112,9 @@ const EmargementsColumn = (props) => {
              </span>
              { /*
                     Route : Récupération des infos sur l'émargement
-                    URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID de l'émargement}/attendance/{ID du professeur}/status
+                    URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID de l'émargement}/attendance/status
                     Informations transmises :
                         ID de l'émargement
-                        ID du professeur
                     Informations attendues :
                         Date de l'émargement et son statut (non fait ou fait)
                     Retour = {
