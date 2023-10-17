@@ -153,16 +153,13 @@ const Dashboard = () => {
             <div className='bloc1'>
             <div className="agenda-r">
               <img src={nom} alt='' />
-              {/*
+{/*
                     Route : Recherche par nom
                     URL (POST) : https://base-shatibi.iela.fr/api-v1/teacher/find/student/information
                     Informations transmises :
-                        ID du professeur
                         Nom de l'étudiant (saisie input)
                     Attendu dans le corps de la requête :
                         {
-                            "teacher_id": 50,
-                            "year_id": 8,
                             "student_name": "Test"
                         }
                     Informations attendues :
@@ -197,11 +194,9 @@ const Dashboard = () => {
                 <h3>Rechercher par groupe :</h3>
                 </div>
                 <div className='g-cont'>
-                    {/*
+               {/*
                         Route : Récupération de la liste des groupes du prof
-                        URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du professeur}/group/list/year
-                        Informations transmises :
-                            ID du professeur
+                        URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/group/list/year
                         Informations attendues :
                             Liste des groupes du prof
                         Retour = {

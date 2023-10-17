@@ -34,9 +34,9 @@ const DashAgenda = () => {
           {/* En-tête de la colonne avec arrière-plan orange */}
         <div className="column-header orange-bg">
           <h2>Mon agenda</h2>
-           {/*
+                  {/*
 
-          Rubrique MON AGENDA :
+          Rubrique MON AGENDA : 
             - Afficher les 3 prochains cours du professeur et leur date (peuvent être sur plusieurs jours)
 
         */}
@@ -45,13 +45,42 @@ const DashAgenda = () => {
         <h1 className='date'>Samedi 17 Dec 2022</h1>
         { /*
             Route : Récupération de la/les date.s des 3 prochains cours
+            URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/attendance/next/agenda
+            Informations attendues :
+                Date.s des prochains cours
+            Retour = {
+                'status': (string) "fail" ou "success",
+                'error': (string) "" si status success, "no_request" si requête pas interprétée,
+                                                        "no_group" si pas de groupe trouvé,
+                                                        "no_attendance" si pas d'émargement trouvé,
+                'result': (array) vide si status fail, sinon {
+                    (string) date au format "yyyy-mm-dd" : [
+                        'id': (int) ID du groupe,
+                        'name': (string) description du groupe,
+                        'slot': (string) créneau du groupe,
+                        'classroom': (string) nom de la salle,
+                        'start_time': (string) heure de début au format "18h30",
+                        'end_time': (string) heure de fin au format "20h30",
+                        'session': (string) numéro de la session au format "10/35"
+                    ],
+                    (string) date au format "yyyy-mm-dd" : [
+                        etc.
+                    ],
+                    etc
+                }
+            }
+        */}
+        { /*
+            Route : Récupération de la liste de.s cours du jour
             URL : Idem précédente
             Informations transmises :
                 Identifiant du prof
+                Date du jour
+                ID du groupe
             Informations attendues :
-                Date.s des prochains cours
+                Liste de.s cours du jour
             */}
-        
+         
             {coursDate17.map((coursItem) => (
           <Link to='/agenda' key={coursItem.id}>
             <div className="card-dashboard">
@@ -66,7 +95,7 @@ const DashAgenda = () => {
                 Identifiant du prof
                 ID du groupe
                 Date du cours
-            Informations attendues (sous forme de group):
+            Informations attendues (sous forme de card):
                 Nom du groupe
                 horaire du cours
                 Numéro de la séance
@@ -78,7 +107,14 @@ const DashAgenda = () => {
         </div>
         <div className='dash-block'>
         <h1 className='date'>Samedi 19 Dec 2022</h1>
-        
+        { /*
+            Route : Récupération de la/les date.s des 3 prochains cours
+            URL : Idem précédente
+            Informations transmises :
+                Identifiant du prof
+            Informations attendues :
+                Date.s des prochains cours
+            */}
         {coursDate19.map((coursItem) => (
           <Link to='/agenda' key={coursItem.id}>
             <div className="card-dashboard">
@@ -93,7 +129,7 @@ const DashAgenda = () => {
                 Identifiant du prof
                 ID du groupe
                 Date du cours
-            Informations attendues (sous forme de group):
+            Informations attendues (sous forme de card):
                 Nom du groupe
                 horaire du cours
                 Numéro de la séance

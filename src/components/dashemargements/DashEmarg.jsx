@@ -30,7 +30,7 @@ const DashEmarg = (props) => {
             <h2>Mes émargements</h2>
           </div>
           <div className='dash-block'>
-            {/*
+           {/*
                 Route : Récupération de la liste des groupes du professeur 
                 URL : Idem précédente
                 Informations transmises :
@@ -49,16 +49,17 @@ const DashEmarg = (props) => {
               <div className='row'>
                 <p className='day'>{groupe.horaire}</p>
                 <p className='session'>{groupe.session}</p>
-                { /*
-                  Route : Récupération du nom du groupe et de son horaire
-                  URL : Idem précédente
-                  Informations transmises :
-                      Identifiant du groupe
-                  Informations attendues :
-                      Nom du groupe (h3)
-                      Horaire du groupe (p)
-                      Le numéro de la séance (11/32séances)
-                  */}
+                {/*
+                        Route : Récupération du nom du groupe et de son horaire
+                        URL : Idem précédente
+                        Informations transmises :
+                            ID du professeur
+                            ID de l'année
+                        Informations attendues :
+                            Nom du groupe (h3)
+                            Horaire du groupe (p)
+                            numéro de la séance
+                    */}
               </div>
             </div>
           ))}

@@ -47,7 +47,7 @@ const DashEm = () => {
             setSelectedDay('Jeu 18h00 à 12h00');
             }}
             >
-        {/*
+{/*
 
           Rubrique MES EMARGEMENTS : reprends les prochains cours du professeur pour la journée, il est à noter que : 
              - Un professeur peut avoir plus de 3 cours au cours d'une journée (prévoir un glissement)
@@ -59,9 +59,7 @@ const DashEm = () => {
         <h1 className='date'>Samedi 17 Dec 2022</h1>
         { /*
                 Route : Récupération de la date du jour
-                URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du professeur}/attendance/incoming
-                Informations transmises :
-                    ID du professeur
+                URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/attendance/incoming
                 Informations attendues :
                     Date du prochain cours du prof
                 Retour = {
@@ -94,8 +92,7 @@ const DashEm = () => {
                     ]
                 }
             */}
-            {/* div pour prochains cours */}
-        { /*
+       { /*
             Route : Récupération de la liste de.s prochain.s cours du professeur
             URL : Idem précédente
             Informations transmises :
@@ -110,13 +107,13 @@ const DashEm = () => {
                 <p className='day'>{emargement.schedule}</p>
                 <p className='session'>{emargement.session}</p>
                 { /*
-                Route : Récupération des infos sur l'émargement
-                URL : Idem précédente
-                Informations transmises :
+            Route : Récupération des infos sur l'émargement à venir
+            URL : Idem précédente
+            Informations transmises :
                 Identifiant du prof
                 ID du groupe
-                Date du cours
-                Informations attendues (sous forme de card):
+                Date du jour
+            Informations attendues (sous forme de card):
                 Nom du groupe
                 horaire du cours
                 Numéro de la séance

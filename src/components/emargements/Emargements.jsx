@@ -25,9 +25,7 @@ const Emargements = () => {
     <div className='grp-carte'>
 {/*
         Route : Récupération de la liste des groupes du prof
-        URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du professeur}/group/list/year
-        Informations transmises :
-            ID du professeur
+        URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/group/list/year
         Informations attendues :
             Liste des groupes
         Retour = {
@@ -52,12 +50,16 @@ const Emargements = () => {
         <h3>{group.name}</h3>
         <div>
           <p className='group-card-day'>{group.slot}</p>
-          {/* Route : Récupération du nom du cours et son horaires au format "Jeu 18h à 21h"
-                    URL : Idem précédente
-                    Informations transmises :
-                    identifiant du groupe 
-                    Informations attendues :
-                    Nom du cours sélectionné et son horaire format "Jeu 18h à 21h"*/}
+     {/*
+                Route : Récupération du nom du groupe et de son horaire
+                URL : Idem précédente
+                Informations transmises :
+                    ID du professeur
+                    ID de l'année
+                Informations attendues :
+                    Nom du groupe (h3)
+                    Horaire du groupe (p)
+            */}
         </div>
       </div>
     </Link>

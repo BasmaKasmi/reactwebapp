@@ -47,42 +47,41 @@ const ColonneGroupe2 = (props) => {
         <div className='card-container' style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
         { /*
       
-            Route : Récupération de la liste des étudiants du groupe sélectionné
-            URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du groupe}/student/list/{ID du professeur}/group
-            Informations transmises :
-                ID du groupe
-                ID du professeur
-            Informations attendues :
-                Liste des étudiants (nom + nb absence (AP+AI))
-            Retour = {
-                'status': (string) "fail" ou "success",
-                'error': (string) "" si status success, "no_request" si requête pas interprétée, "no_student" si pas d'étudiant trouvé,
-                'result': (array) vide si status fail, sinon [
-                    {
-                        'name': (string) nom et prénom de l'étudiant,
-                        'nb_ap': (int) nombre d'absences prévues (AP),
-                        'nb_ai': (int) nombre d'absences injustifiées (AI)
-                    },
-                    {
-                        etc.
-                    }
-                ]
-            }
-            */
-        }
+      Route : Récupération de la liste des étudiants du groupe sélectionné
+      URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du groupe}/student/list/group
+      Informations transmises :
+          ID du groupe
+      Informations attendues :
+          Liste des étudiants (nom + nb absence (AP+AI))
+      Retour = {
+          'status': (string) "fail" ou "success",
+          'error': (string) "" si status success, "no_request" si requête pas interprétée, "no_student" si pas d'étudiant trouvé,
+          'result': (array) vide si status fail, sinon [
+              {
+                  'name': (string) nom et prénom de l'étudiant,
+                  'nb_ap': (int) nombre d'absences prévues (AP),
+                  'nb_ai': (int) nombre d'absences injustifiées (AI)
+              },
+              {
+                  etc.
+              }
+          ]
+      }
+      */
+  }
         {students.map((student, index) => (
             <div key={index} className="nom-stu" onClick={handleClick}>
               <h3>{student.name}</h3>
               <p className='abs'>Absence(s) : {student.absences}</p>
               { /*
-           Route : Récupération des infos de l'étudiant
-           URL : Idem précédente
-           Informations transmises :
-               Identifiant de l'étudiant
-           Informations attendues (sous forme de card):
-               Nom & prénom de l'étudiant
-               Nb d'absences de l'étudiant (AP+AI)
-           */}
+            Route : Récupération des infos de l'étudiant
+            URL : Idem précédente
+            Informations transmises :
+                Identifiant de l'étudiant
+            Informations attendues (sous forme de card):
+                Nom & prénom de l'étudiant
+                Nb d'absences de l'étudiant (AP+AI)
+            */}
             </div>
           ))}
         </div>
