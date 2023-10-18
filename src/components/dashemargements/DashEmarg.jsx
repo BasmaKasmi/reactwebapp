@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../dashagemda/DashAgenda.css';
 
 const DashEmarg = (props) => {
   const { onCardClick } = props;
@@ -14,6 +13,8 @@ const DashEmarg = (props) => {
     setSelectedCard(cardData); 
     setActiveCard(title);
     onCardClick(title, date);
+    
+
   };
 
   const groupes = [
@@ -24,7 +25,7 @@ const DashEmarg = (props) => {
 
   return (
     <div>
-    <div className="column-Enf">
+    <div className='column'>
         {/* En-tête de la colonne */}
           <div className="column-header orange-bg">
             <h2>Mes émargements</h2>
@@ -42,14 +43,14 @@ const DashEmarg = (props) => {
                {groupes.map((groupe) => (
             <div
               key={groupe.id}
-              className={`card-dashboard ${activeCard === groupe.titre ? 'clicked' : ''}`}
+              className={`card ${activeCard === groupe.titre ? 'clicked' : ''}`}
               onClick={() => handleCardClick(groupe.titre, groupe.horaire)}
             >
               <h3>{groupe.titre}</h3>
               <div className='row'>
                 <p className='day'>{groupe.horaire}</p>
                 <p className='session'>{groupe.session}</p>
-                {/*
+                  {/*
                         Route : Récupération du nom du groupe et de son horaire
                         URL : Idem précédente
                         Informations transmises :

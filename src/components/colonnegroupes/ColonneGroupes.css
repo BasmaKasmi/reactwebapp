@@ -1,9 +1,88 @@
 .column {
+    height: 100vh; 
     box-sizing: border-box;
-    height: 100vh;
-    border-radius: 22px; /* bordure arrondie */
+    border-radius: 22px; 
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /*Ombre*/
-    @media (max-width: 783px) {
-      display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
+    
+  }
+  @media (max-width: 783px) {
+    .column{
+      display: none; 
+
     }
+  }
+
+  .column-head {
+    background-image: url("../../assets/ractangle\ orange.svg");
+    background-size: cover;
+    font-size: 12px;
+    height: 54.88px;
+    width: 369px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center; 
+  }
+  .column-header {
+    background-image: url("../../assets/ractangle\ orange.svg");
+    background-size: cover;
+    font-size: 12px;
+    height: 30px;
+    width: 269px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 39px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-bottom: 16px;
+    width: 18.71rem;
+    height: 4.5rem;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px #00000012;
+    cursor: pointer;
+  }
+  
+  .card h3 {
+    color: #000000;
+    font-size: 0.875rem;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    margin-top: 6px;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+  
+  .card .day {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 0.75rem;
+    padding-left: 1.3rem;
+    padding-top: 4px;
+    padding-bottom: 16px;
+  }
+  
+  .card .session {
+    color: #898989;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    font-size: 0.5rem;
+    font-style: italic;
+    padding-right: 20px;
+  }
+  
+
+  .card.clicked {
+    background-color: #FD9340;
+  }
+  
+  .card.clicked h3,
+  .card.clicked .day,
+  .card.clicked .session {
+  color: #FFFFFF;
   }

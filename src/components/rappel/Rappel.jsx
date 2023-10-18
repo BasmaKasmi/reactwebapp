@@ -77,6 +77,7 @@ const Rappel = () => {
   ))}
 </div>
 
+
       <div className="b-c">
         <button className="va-button" onClick={handleValidationClick}>Valider la feuille d'émargement</button>
       </div>

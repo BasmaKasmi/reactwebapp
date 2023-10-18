@@ -1,394 +1,87 @@
-
-
-/* cacher l'élément ayant la classe .groupes-res */
-.groupes-res {
-    display: none;
-  }
-  
-  
-  @media screen and (max-width: 783px) {
-    .groupes-res {
-      display: block;
-      position: fixed;
-      width: 90%;
-      margin: 0 auto;
-      align-items: center;
-      top: 6rem;
-      left: 5%; /* valeur en fonction de la position horizontale souhaitée */
-      right: 5%; /* valeur en fonction de la position horizontale souhaitée */
-      background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
-      white-space: nowrap;
-    }
-    .t h3{
-      display: inline-flex;
-      margin-left: -13rem;
-      color: #000000;
-      font-family: "Poppins", Helvetica;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .grp-carte{
-      display: block;
-      align-items: center;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-    .carte {
-      background-color: #ffffff;
-      border-radius: 16px;
-      box-shadow: 4px 4px 20px #00000012;
-      margin-bottom: 1rem; /*marge adaptable */
-      width: 23.3rem;  /*325px*/
-      height: 4.2rem; /*60px*/
-    }
-    .carte  h3 {
-      color: #000000;
-      font-family: "Poppins", Helvetica;
-      font-size: 14px;
-      font-weight: 600;
-      margin-right: 4rem;
-      margin-top: 1rem;
-    }
-    .carte .carte-day {
-      color: #000000;
-      font-family: "Poppins", Helvetica;
-      font-weight: 300;
-      font-size: 10px;
-      padding-right: 11.5rem;
-      padding-top: 0.25rem;
-      margin-top: -0.3rem;
-    }
-  }
-  
-  
-  
-  
-  
-  
-  
-  .column-header {
-    background-image: url("../../assets/ractangle\ orange.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    font-size: 12px;
-    height: 30px;
-    width: 269px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 39px;
-    color: #FFFFFF;
-    text-align: center;
-  }
-  
-  .column-head {
-    /* Définition de l'image d'arrière-plan et son comportement */
-    background-image: url("../../assets/ractangle\ orange.svg");
-    /* L'image ne se répète pas */
-    background-repeat: no-repeat;
-     /* L'image couvre complètement l'arrière-plan */
-    background-size: cover;
-    /* Positionnement de l'image au centre en haut de l'élément */
-    background-position: center top;
-    /* taille de la police */
-    font-size: 12px;
-    /* hauteur */
-    height: 54.88px;
-    /* largeur */
-    width: 369px;
-    /* Utilisation de flexbox pour aligner les éléments en ligne*/
-    display: flex;
-    /* disposition en colonne */
-    flex-direction: column;
-    /* Alignement horizontal au centre des éléments enfants */
-    align-items: center;
-    /* Alignement vertical au centre des éléments enfants */
-    justify-content: center; 
-  }
-  
-  .column-head h3 {
-    /* css pour le h3 à l'intérieur de .column-head */
-    color: #FFFFFF; /* couleur du texte*/
-    font-size: 18px; /* taille de police */ 
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-weight: bold; /* police en gras */
-    margin-bottom: 0; /* margin en bas */
-  }
-  
-  .column-head p.day {
-    color: #FFFFFF; /* couleur du texte */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-size: 14px; /* taille de police */ 
-    margin: 10px;
-    margin-top: 0; /* l'espace entre h3 et p */
-  }
-  
-  .card {
-    background-color: #FFFFFF; /* Couleur de fond */
-    margin: auto; /* Centrer horizontalement */
-    margin-bottom: 16px; /* Marge en bas */
-    width: 299.5px; /* largeur */
-    height: 72px; /* hauteur*/
-    border-radius: 20px; /* bordure arrondie */
-    box-shadow: 4px 4px 20px #00000012; /* Ombre */
-    cursor: pointer; /* Curseur en forme de main */
-  
-  }
-  .card h3 {
-    color: #000000; /* Couleur du texte */
-    font-size: 14px; /* Taille de police */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-weight: 600; /* police en gras (600) */
-    margin-top: 6px; /* Marge en haut */
-    padding-top: 15px; /* Remplissage en haut */
-    margin-right: 2.6rem; /* Marge à droite */
-  }
-  
-  .day {
-    color: #000000; /* Couleur du texte */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-size: 14px; /* Taille de police */
-    padding-left: 20px; /* Remplissage à gauche */
-    padding-top: 4px; /* Remplissage en haut */
-    padding-bottom: 16px; /* Remplissage en bas */
-  }
-  
-  .session {
-    color: #898989; /* Couleur du texte gris */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-weight: 600; /* police en gras (600) */
-    font-size: 12px; /* Taille de police */
-    font-style: italic; /* style de police italique */
-    padding-right: 2rem; /* Remplissage à droite */
-  }
-  
-  /* Lorsqu'une carte (.card) est cliquée, changez la couleur de fond en #FD9340 */
-  .int-block.clicked {
-    background-color: #FD9340;
-  }
-  
-  /* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
-  .int-block.clicked h3,
-  .int-block.clicked .day,
-  .int-block.clicked .session {
-  color: #FFFFFF;
-  }
-  
-  /* Crée une disposition en ligne pour les éléments contenus dans la classe .row */
-  .row {
-    display: flex; /* utilisation du flexbox */
-    flex-direction: row; /* Aligne les éléments horizontalement en ligne */
-    justify-content: space-between; /* Distribue l'espace horizontal uniformément entre les éléments */
-    align-items: center; /* Centre les éléments verticalement dans la ligne */
-  }
-  
   .agenda-info {
-    display: flex; /* utilisation du flexbox */
-    align-items: center; /* Centre les éléments verticalement dans la ligne */
-    margin-top: 18px; /* marge supérieure*/
+    display: flex;
+    align-items: center; 
+    margin-top: 18px; 
   }
   
   .agenda-info span {
-    margin-right: 522px; /* Marge à droite de l'élément */
-    color: #000000; /* couleur du texte */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-size: 14px; /* taille de la police */
-    font-weight: 600; /* police en gras (600) */
+    margin-right: 522px; 
+    color: #000000; 
+    font-family: "Poppins", Helvetica; 
+    font-size: 0.875rem;
+    font-weight: 600; 
   }
   
   .agenda-info img {
-    margin-left: 45px; /* Marge à gauche */
+    margin-left: 45px; 
   }
-  
   .d-inputs{
-      display: flex; /* utilisation du flexbox */
-      flex-direction: row; /* disposition en ligne */
-      margin-top: 10px; /* marge en haut */
+      display: flex; 
+      flex-direction: row;
+      margin-top: 10px;
   
   }
   .d-inputs input {
-    text-align: center; /* Centrer le texte */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    border-radius: 30px; /* bordure arrondie*/
-    border: 1px solid #e5e4e3; /* bordure de 1px solide avec une couleur spécifiée */
-    height: 36px; /* hauteur */
-    margin: 2px 2px 8px 46px; /* Marge extérieure : haut, droite, bas, gauche */
-    width: 200px; /* largeur */
-    margin-top: 10px; /* Marge supplémentaire en haut */
+    text-align: center;
+    font-family: "Poppins", Helvetica; 
+    border-radius: 30px; 
+    border: 1px solid #e5e4e3; 
+    height: 2.25rem;
+    margin: 2px 2px 8px 46px; 
+    width: 12.5rem; 
+    margin-top: 10px; 
   }
   .d-inputs input + input {
-    margin-left: 2rem; /* la valeur de marge selon vos préférences */
+    margin-left: 2rem; 
   }
   
   .d-inputs img {
-    width: 30px; /*largeur*/
-    height: 30px; /*hauteur*/
-    margin-left: 20px; /*marge à gauche*/
-    margin-top: 12px; /*marge supérieure*/
+    width: 1.875rem; 
+    height: 1.875rem; 
+    margin-left: 20px;
+    margin-top: 12px;
   }
   
   
   .c {
-    background-color: #ffffff; /*couleur du fond*/
-    border-radius: 16px; /*bordure arrondie*/
-    box-shadow: 4px 4px 20px #00000012; /* ombre*/
-    width: 568px; /*largeur*/
-    height: 60px; /*hauteur*/
-    margin: auto; /*centrer horizontalement*/
-    margin-top: 10px; /*marge supérieure*/
-    cursor: pointer; /* Curseur en forme de main */
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px #00000012; 
+    width: 35.5rem;
+    height: 3.75rem;
+    margin: auto; 
+    margin-top: 10px; 
+    cursor: pointer; 
   }
   
   
   .c h3 {
-    color: #000000; /* couleur du texte */
-    font-size: 14px; /* taille du texte */
-    font-family: "Poppins", Helvetica; /* Police de caractères */
-    font-weight: 600; /* police en gras (600) */
+    color: #000000; 
+    font-size: 0.875rem; 
+    font-family: "Poppins", Helvetica; 
+    font-weight: 600; 
     margin: 8px;
-    margin-left: 36px; /* marge à gauche */
-    padding: 10px; /* espace à lintérieur */
+    margin-left: 36px;
+    padding: 10px; 
   }
-  .row {
-    display: flex; /* utilisation du flexbox */
-    flex-direction: row; /* disposition en ligne */
-    justify-content: space-between; /* Aligne les éléments enfants avec un espacement égal entre eux */
-    align-items: center; /* Centre les éléments enfants verticalement dans le conteneur */
-  }
-  
   .status-f {
-    color: #4CAF50; /* Couleur du texte */
-    display: inline-block; /* Afficher comme un élément en ligne avec blocage */
-    font-size: 14px; /* Taille de la police */
-    font-weight: bold; /* police en gras */
-    padding: 4px 8px; /* Espacement interne (haut/bas gauche/droite) */
-    border-radius: 4px; /* bordure arrondie */
-    margin: 8px; /* marge extérieure*/
-    margin-right: 20px; /* marge à droite*/
-    margin-top: 6px; /* marge en haut */
-    text-transform: uppercase; /* Conversion du texte en majuscules */
+    color: #4CAF50; 
+    font-size: 0.875rem; 
+    font-weight: bold; 
+    padding: 4px 8px; 
+    border-radius: 4px;
+    margin: 8px; 
+    margin-right: 20px;
+    text-transform: uppercase;
   }
   
   .status-n {
-    color: #FF2525; /* Couleur du texte */
-    display: inline-block; /* Afficher comme un élément en ligne avec blocage */
-    font-size: 14px; /* Taille de la police */
-    font-weight: bold; /* police en gras */
-    padding: 4px 8px; /* Espacement interne (haut/bas gauche/droite) */
-    border-radius: 4px; /* bordure arrondie*/
-    margin: 8px; /* marge extérieure*/
-    margin-top: 6px; /* marge en haut */
-    margin-right: 20px; /* marge à droite */
-    text-transform: uppercase; /* Conversion du texte en majuscules */
-  }
-  
-  /* Propriété "display" définie sur "none", ce qui masque l'élément */
-  .hide {
-    display: none;
-  }
-  /* Les écrans de largeur maximale de 783px */
-  @media screen and (min-width: 783px) {
-    /* Masque l'élément .co lorsque la largeur d'écran est inférieure à 783px */
-    .co {
-      display: block;
-      width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
-      margin-top: 0; /* Réinitialiser la marge supérieure */
-      margin-left: 0; /* Réinitialiser la marge gauche */
-    }
-  
-    /* Affiche l'élément .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
-    .groupes {
-      display: block;
-      width: 100%; /* Largeur de 100% pour occuper toute la largeur de l'écran */
-      margin-top: 1rem; /* Ajoutez une marge supérieure pour séparer les deux colonnes */
-      margin-left: 0; /* Réinitialiser la marge gauche */
-    }
-  }
-  @media (min-width: 769px) and (max-width: 1024px) {
-  
-    .Emargements {
-      display: flex;
-      flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
-      padding: 0 2.77%; /* Une marge intérieure plus petite */
-      gap: 2.77%; /* Réduire l'espace entre les colonnes */
-      overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
-  
-    }
-  
-    .Emargements .co {
-      display: block;
-      width: 30rem; /* la largeur*/
-      margin-top: 1rem; /* Réinitialiser la marge supérieure */
-      margin-left: 0; /* Réinitialiser la marge gauche */
-      max-height: 22rem;
-      overflow-y: auto;
-    }
-    .co .card{
-      width: 26rem;
-    }
-    .co .card h3{
-      margin-right: 9.4rem;
-    }
-  
-    /* .groupes sous .co lorsque la largeur d'écran est inférieure à 783px */
-    .Emargements .groupes {
-      display: block;
-      position: relative;
-      background-color: #FFFFFF;
-      max-height: 24rem;
-      margin-top: 15rem;
-      width: 30rem; /* Largeur de 100% pour occuper toute la largeur de l'écran */
-      margin-left: auto; /* Réinitialiser la marge gauche */
-    }
-    .agenda-info {
-      display: flex; /* utilisation du flexbox */
-      align-items: center; /* Centre les éléments verticalement dans la ligne */
-    }
-    
-    .agenda-info span {
-      margin-right: 20rem;
-    }
-    
-    .agenda-info img {
-      margin-left: 1.8rem; /* Marge à gauche */
-    }
-    .d-inputs {
-      margin-top: 10px;
-      margin-left: 1rem;
-    }
-  
-    .d-inputs input {
-      width: 10rem; /* Largeur de 100% pour occuper toute la largeur du conteneur parent */
-      margin: 2px 0 8px 0; /* Réinitialiser la marge */
-    }
-  
-    .d-inputs input + input {
-      margin-left: 1rem; /* Réinitialiser la marge entre les éléments */
-    }
-  
-    .d-inputs img {
-      margin-left: 1rem; /* Réinitialiser la marge à gauche */
-      margin-top: 0.3rem; /* Ajuster la marge supérieure */
-    }
-  
-    .c {
-      width: 26rem; /* Largeur de 100% pour occuper toute la largeur du conteneur parent */
-      margin-top: 10px;
-    }
-  
-    .c h3 {
-      font-size: 12px; /* Ajuster la taille de la police */
-      margin-left: 0; /* Réinitialiser la marge à gauche */
-    }
-  
-    .row {
-      flex-direction: column; /* Mettre en colonne les éléments dans .row */
-      align-items: flex-start; /* Aligner les éléments à gauche */
-    }
-  
-    .status-f,
-    .status-n {
-      margin-right: 0; /* Réinitialiser la marge à droite */
-      margin-top: 10px; /* Ajuster la marge supérieure */
-    }
+    color: #FF2525; 
+    font-size: 0.875rem; 
+    font-weight: bold; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    margin: 8px;
+    margin-right: 20px; 
+    text-transform: uppercase;
   }

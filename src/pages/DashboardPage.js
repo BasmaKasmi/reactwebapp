@@ -1,6 +1,6 @@
 // Importation des modules nécessaires
 import React from 'react';
-import './DashboardPage.css';
+import RetourButton from '../components/retourbutton/RetourButton';
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import Dashboard from '../components/dashboard/Dashboard';
@@ -22,27 +22,25 @@ const DashboardPage = () => {
       </div>
       <div className="desktop-container">
       {/* Affichage du composant Navbar */}
-      <div className="full-row" >
+      <div className="full-row" style={{height:'100px'}}>
       <Navbar />
       </div>
-      <div className="page-content">
-              <div className="column">
-                  <Sidebar />
-              </div>
-              <div className="three-columns">
-                  <div className="column">
-                      <DashEnf />
-                  </div>
-
-                  <div className="column">
-                      <DashEm />
-                  </div>
-                  <div className="column">
-                      <DashAgenda />
-                  </div>
-              </div>
+      <div className="three-columns" style={{display: 'flex', padding: '10px', maxHeight: '50vh' }}>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px'  }}>
+        <Sidebar />
+        </div>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px'}}>
+          <DashEnf />
+        </div>
+        
+        <div className="column" style={{ flexBasis: '25%', margin:'10px'}}>
+          <DashEm />
+        </div>
+        <div className="column" style={{ flexBasis: '25%', margin:'10px' }}>
+          <DashAgenda />
+        </div>
       </div>
-     </div>
+      </div>
      </div>
   )
 }

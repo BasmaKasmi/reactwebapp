@@ -1,214 +1,50 @@
 
-.co {
+.group-agenda{
   height: 100vh;
   box-sizing: border-box;
-  border-radius: 22px; /* bordure arrondie */
-  @media (max-width: 783px) {
+  margin-top: 16px;
+  border-radius: 22px; 
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 783px) {
+  .group-agenda{
     display: none;
   }
 }
 
-.int-block .date {
-  /* Aligner la date à gauche */
-  text-align: left;
-}
-
-
-.groupesRes{
-  display: none; /* Cacher initialement */
-}
-@media screen and (max-width: 783px) {
-  .groupesRes {
-    /* Afficher si la largeur est inférieure à 783px */
-    display: block;
-    position: fixed;
-    top: 6.5rem; /* Position depuis le haut de la fenêtre */
-    left: 0;
-    width: 100%; /* Largeur à 100% de la vue */
-    height: 100%; /* Hauteur à 100% de la vue */
-    padding: 1rem; /* Espace interne pour le contenu */
-    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
-  }
-    /* le contenu de la colonne groupesRes */
-    .groupesRes .content {
-      background-color: #FFFFFF;
-      padding: 2rem;
-      max-width: 40rem;
-      margin: 0 auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 4px 4px 20px #00000012;   
-  }
-    /* css pour le titre */
-    .groupesRes .h3 {
-      font-size: 18px;
-      font-weight: bold;
-      color: #000000;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    /* css pour les jours de la semaine */
-  .groupesRes .days-of-week {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .groupesRes .day-of-week {
-    flex: 1;
-    text-align: center;
-    color: #5f5f5f;
-    font-weight: bold;
-    font-size: 16px;
-  }
-    /* css pour les jours du mois */
-    .groupesRes .days-of-month {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-      color: #000000;
-      font-size: 16px;
-      font-weight: 400;
-    }
-  
-    .groupesRes .day {
-      color: #000000;
-      font-weight: lighter;
-      font-size: 0.75em;
-      padding: 8px 4px;
-      border-radius: 2rem;
-      text-align: center;
-    }
-    .groupesRes .day.saturday {
-      background-image: url("../../assets/V.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      color: #FFFFFF;
-      border: none;
-      text-align: center;
-      font-size: 16px;
-      font-weight: bold;
-    }
-  
-    .groupesRes .day.monday {
-      background-image: url("../../assets/Pink.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      color: #FFFFFF;
-      border: none;
-      text-align: center;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .grp-carte{
-      display: block;
-      align-items: center;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-    .carte {
-      background-color: #ffffff;
-      border-radius: 16px;
-      box-shadow: 4px 4px 20px #00000012;
-      margin-bottom: 1rem; /*marge adaptable */
-      width: 23.3rem;  /*325px*/
-      height: 4.2rem; /*60px*/
-    }
-    .carte.clicked {
-      background-color: #FD9340;
-    }
-    
-    /* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
-    .carte.clicked h3,
-    .carte.clicked .carte-day {
-    color: #FFFFFF;
-    }
-  
-}
-
-.group-agenda{
-  height: 100vh; /* hauteur de la colonne égale à la hauteur de la fenêtre */
-  box-sizing: border-box;
-  margin-top: 16px;
-  border-radius: 22px; /* bordure arrondie */
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); /*Ombre*/
-  @media (max-width: 783px) {
-    display: none; /* Si la largeur de l'écran est inférieure à 783px, masquer la colonne */
-  }
-}
- /* Css pour l'élément .h */
 .h {
-    /* Définition de l'image de fond */
   background-image: url("../../assets/ractangle\ orange.svg");
-    /* Empêche la répétition de l'image de fond */
-  background-repeat: no-repeat;
-    /* Redimensionne l'image pour couvrir tout l'élément */
   background-size: cover;
-    /* Position de l'image de fond au centre en haut */
   background-position: center top;
-    /* Taille de la police pour le texte à l'intérieur */
-  font-size: 12px;
-    /* Arrondi des coins inférieurs gauche et droit */
+  font-size: 0.75rem;
   border-radius: 0 0 30px 30px;
-    /* Hauteur de l'élément */
   height: 54.88px;
-    /* Largeur de l'élément */
   width: 368.55px;
-    /* Marge en bas pour l'espace entre cet élément et le suivant */
   margin-top: -1rem;
   margin-bottom: 2rem;
-    /* Centrage horizontal automatique dans le parent */
   margin-left: auto;
   margin-right: auto;
-    /* Couleur du texte à l'intérieur */
   color: #FFFFFF;
-    /* Affichage en mode flex pour aligner les enfants en colonne */
   display: flex;
-    /* Orientation des enfants en colonne */
   flex-direction: column;
-    /* Centrage vertical des enfants */
   justify-content: center;
   align-items: center;
 }
 
-  /* Css pour le h3 à l'intérieur de .column-head */
 .h h3 {
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "Poppins", Helvetica;
   font-weight: bold;
   margin-left: 1rem;
   margin-right: 2rem;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.day {
-  color: #000000; /* Couleur du texte en noir */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: lighter; /* Poids de la police plus léger */
-  font-size: 0.75em; /* Taille de la police */
-  padding-left: 1.25em; /* Espace intérieur à gauche */
-  padding-top: 0.25em; /* Espace intérieur en haut */
-  padding-bottom: 1em; /* Espace intérieur en bas */
-}
 
-.session {
-  color: #898989; /* Couleur du texte en gris */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: bold; /* Poids de la police en gras */
-  font-size: 0.75em; /* Taille de la police */
-  font-style: italic; /* Style de police italique */
-  padding-right: 1.25em; /* Espace intérieur à droite */
-}
-
-/* Css pour l'élément .month-year */
 .month-year {
   display: flex;
   flex-direction: row;
@@ -216,18 +52,16 @@
   align-items: center;
 }
 
-  /* Css pour le h3 à l'intérieur de .month-year */
 .month-year  h3{
   color: #000000;
   font-family: "Poppins", Helvetica;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 24px;
   margin-right: 20px;
 }
 
-  /* Css pour l'image à l'intérieur de .month-year */
 .month-year img {
   width: 26.8px;
   height: 26.8px;
@@ -242,39 +76,30 @@
   align-items: center;
 }
 
-  /* Css pour l'élément .day-of-week */
 .day-of-week {
   flex: 1;
   text-align: center;
   color: #5f5f5f;
   font-family: "Poppins", Helvetica;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
-  height: 24px;
-  width: 12px;
 }
 
-  /* Css pour l'élément .days-of-month */
 .days-of-month {
-  /* Le type d'affichage en grille pour l'élément .days-of-month */
   display: grid;
-  /* Utilisons la propriété grid-template-columns pour créer une grille avec 7 colonnes égales */
   grid-template-columns: repeat(7, 1fr);
-  /* Spécifions l'espace entre les éléments de la grille */
   gap: 5px;
 }
 
-   /* Css pour les éléments .day à l'intérieur de .days-of-month */
 .days-of-month .day {
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 1.1rem;
   padding: 8px 4px; /* l'espace intérieur */
-  border-radius: 20px; /* Rendre le bouton rond */
+  border-radius: 20px;
   text-align: center;
 }
 
-  /* Css pour les jours du samedi */
 .day.saturday {
   background-image: url("../../assets/V.svg");
   background-repeat: no-repeat;
@@ -282,11 +107,10 @@
   color: #FFFFFF;
   border: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
  }
 
- /* Css pour les jours du lundi */
 .day.monday {
   background-image: url("../../assets/Pink.svg");
   background-repeat: no-repeat;
@@ -294,6 +118,6 @@
   color: #FFFFFF;
   border: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
 }

@@ -23,7 +23,7 @@ const Emargements = () => {
     {/* Crée un conteneur pour les cartes */}
     <div className='group-cards'>
     <div className='grp-carte'>
-{/*
+    {/*
         Route : Récupération de la liste des groupes du prof
         URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/group/list/year
         Informations attendues :
@@ -50,7 +50,7 @@ const Emargements = () => {
         <h3>{group.name}</h3>
         <div>
           <p className='group-card-day'>{group.slot}</p>
-     {/*
+                   {/*
                 Route : Récupération du nom du groupe et de son horaire
                 URL : Idem précédente
                 Informations transmises :

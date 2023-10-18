@@ -1,8 +1,7 @@
 
 .groupes-res {
-  display: none; /* l'élément est masqué (non affiché) */
+  display: none; 
 }
-/* la largeur est maximale de 783px */
 @media screen and (max-width: 783px) {
   .groupes-res {
     display: block;
@@ -11,9 +10,9 @@
     margin: 0 auto;
     align-items: center;
     top: 6rem;
-    left: 5%; /* valeur en fonction de la position horizontale souhaitée */
-    right: 5%; /* valeur en fonction de la position horizontale souhaitée */
-    background-color: #fff; /* Couleur d'arrière-plan facultative pour le contraste */
+    left: 5%; 
+    right: 5%; 
+    background-color: #fff; 
     white-space: nowrap;
   }
   .t h3{
@@ -36,8 +35,8 @@
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 4px 4px 20px #00000012;
-    margin-bottom: 1rem; /*marge adaptable */
-    width: 19rem;  /*325px*/
+    margin-bottom: 1rem; 
+    width: 19rem;  
     height: 4.2rem; 
   }
   .group-card  h3 {
@@ -59,194 +58,5 @@
   }
 }
 
-.column-head {
-  background-image: url("../../assets/ractangle\ orange.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  font-size: 12px;
-  border-radius: 0 0 30px 30px;
-  height: 54.88px;
-  width: 368.55px;
-  margin-bottom: 27px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #FFFFFF;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-
-}
 
 
-
-.column-header {
-  background-image: url("../../assets/ractangle\ orange.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  font-size: 12px;
-  height: 30px;
-  width: 269px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 39px;
-  color: #FFFFFF;
-  text-align: center;
-}
-
-
-
-
-.card {
-  background-color: #FFFFFF; 
-    margin-bottom: 10px; 
-    width: 21vw; 
-    border-radius: 1.25em; 
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07); /* ombre*/
-    cursor: pointer; /* Curseur se transforme en main */
-}
-
-h3 {
-  color: #000000; /* Couleur du texte */
-  font-size: 14px; /* Taille de police */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: 600; /* police en gras (600) */
-  margin-top: 6px; /* Marge en haut */
-  padding-top: 15px; /* Remplissage en haut */
-  margin-right: 2.6rem; /* Marge à droite */
-}
-
-
-/* Lorsqu'une carte (.card) est cliquée, changez la couleur de fond en #FD9340 */
-.card.clicked {
-  background-color: #FD9340;
-}
-
-/* Lorsqu'une carte (.card) est cliquée, changez la couleur du texte à blanc */
-.card.clicked h3,
-.card.clicked .day,
-.card.clicked .session {
-color: #FFFFFF;
-}
-
-/* Crée une disposition en ligne pour les éléments contenus dans la classe .row */
-.row {
-  display: flex; /* utilisation du flexbox */
-  flex-direction: row; /* Aligne les éléments horizontalement en ligne */
-  justify-content: space-between; /* Distribue l'espace horizontal uniformément entre les éléments */
-  align-items: center; /* Centre les éléments verticalement dans la ligne */
-}
-.nom-stu {
-  background-color: #FFFFFF; /* couleur du fond */
-  margin: auto; /* Centrer horizontalement */
-  margin-bottom: 1rem; /* marge inférieure */
-  width: 20rem; /* largeur */
-  height: 4.2rem; /* hauteur */
-  margin-left: 15.5px; /* marge à gauche*/
-  margin-right: 16.5px; /* marge à droite */
-  border-radius: 1.4rem; /* Bordure arrondie*/
-  box-shadow: 4px 4px 20px #00000012; /* ombre */
-  cursor: pointer; /* curseur de la souris */
-}
-.nom-stu + .nom-stu {
-  margin-left: 4px; /* Espace entre les éléments */
-}
-.nom-stu h3 {
-  color: #000000; /* couleur du texte */
-  font-size: 14px; /* taille de la police */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-weight: 600; /* police en gras(600) */
-  margin-top: -0.1rem; /* marge supérieure */
-  padding-left: 1.25rem; /* marge à gauche */
-  padding-top: 0,9375rem; /* espacement supérieur */
-  margin-right: 9rem; /* marge à droite */
-}
-
-.nom-stu .abs {
-  color: #000000; /* couleur du texte */
-  font-family: "Poppins", Helvetica; /* Police de caractères */
-  font-size: 14px; /* taille de la police */
-  font-weight: 300;
-  padding-left: 1.25rem; /* marge à gauche */
-  padding-top: 0.25rem; /* espacement supérieure */
-  padding-bottom: 1rem; /* espacement en bas */
-  margin-right: 10.5rem; /* marge à droite */
-}
-
-.hide {
-  display: none;
-}
-@media screen and (min-width: 783px) {
-  .co {
-    display: block;
-    width: 100%; 
-    margin-top: 0; /* Réinitialiser la marge supérieure */
-    margin-left: 0; /* Réinitialiser la marge gauche */
-  }
-
-  .groupes {
-    display: block;
-    width: 100%; 
-    margin-top: 1rem; /* Ajoutez une marge supérieure pour séparer les deux colonnes */
-    margin-left: 0; /* Réinitialiser la marge gauche */
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-
-  .Emargements {
-    display: flex;
-    flex-direction: column; /* Disposition en colonne pour les tablettes et ordinateurs portables */
-    padding: 0 2.77%; /* Une marge intérieure plus petite */
-    gap: 2.77%; /* Réduire l'espace entre les colonnes */
-    overflow-y: auto; /* Activation de la barre de défilement verticale si le contenu dépasse */
-
-  }
-
-  .Emargements .co {
-    display: block;
-    width: 30rem; 
-    margin-top: 1rem; /* Réinitialiser la marge supérieure */
-    margin-left: 0; /* Réinitialiser la marge gauche */
-    max-height: 22rem;
-    overflow-y: auto;
-  }
-  .co .card{
-    width: 26rem;
-  }
-  .co .card h3{
-    margin-right: 9.4rem;
-  }
-
-  .Emargements .groupes {
-    display: block;
-    position: relative;
-    background-color: #FFFFFF;
-    max-height: 24rem;
-    margin-top: 15rem;
-    width: 30rem; /* Largeur de 100% pour occuper toute la largeur de l'écran */
-    margin-left: auto; /* Réinitialiser la marge gauche */
-  }
-  .groupes .card-container{
-    display: block;
-    flex-direction: column;
-
-  }
-
-  .card-container .nom-stu {
-    margin: auto; /* Centrer horizontalement */
-    margin-bottom: 1rem; /* marge inférieure */
-    width: 26rem; /* largeur */
-    height: 4.5rem; /* hauteur */
-  }
-  .nom-stu h3 {
-    font-size: 14px; /* taille de la police */
-    margin-right: 14rem;
-  }
-  
-  .nom-stu .abs {
-    font-size: 14px; /* taille de la police */
-    margin-right: 16rem;
-  }
-
-}

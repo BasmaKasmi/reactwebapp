@@ -22,7 +22,7 @@ const Groupes = () => {
     {/* Crée un conteneur pour les cartes */}
     <div className='group-cards'>
     <div className='grp-carte'>
-{/* Route : Récupération de la liste des groupes du professeur (session en cours)
+  {/* Route : Récupération de la liste des groupes du professeur (session en cours)
         URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/group/list/year
         Informations attendues :
         La liste des groupes du professeur sous forme de card (nom du cours et son horaire)
@@ -48,7 +48,7 @@ const Groupes = () => {
         <h3>{group.name}</h3>
         <div>
           <p className='group-card-day'>{group.slot}</p>
-          {/* Route : Récupération du nom du cours et son horaires au format "Jeu 18h à 21h"
+     {/* Route : Récupération du nom du cours et son horaires au format "Jeu 18h à 21h"
                     URL : Idem précédente
                     Informations transmises :
                     identifiant du groupe 

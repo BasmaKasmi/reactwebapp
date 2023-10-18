@@ -1,8 +1,7 @@
 // Colonne Emargements non fait
 
 import React, { useState } from 'react';
-import './DashEnf.css';
-import { Link } from 'react-router-dom';
+ import { Link } from 'react-router-dom';
 
 
 const DashEnf = () => {
@@ -11,12 +10,7 @@ const DashEnf = () => {
 
 
   const groupes = [
-    {
-      id: 1,
-      groupName: 'Sciences islamiques 2ème année',
-      schedule: 'Jeu 18h00 à 12h00',
-      session: '11/32',
-    },
+    {id: 1, groupName: 'Sciences islamiques 2ème année', schedule: 'Jeu 18h00 à 12h00', session: '11/32'},
   ];
 
   return (
@@ -36,9 +30,9 @@ const DashEnf = () => {
             setSelectedDay('Jeu 18h00 à 12h00');
             }}
             >
-              {/*
-              
-              EMARGEMENT NON FAIT : reprends les émargements du professeur qui n'ont pas été faits : 
+          {/*
+
+          EMARGEMENT NON FAIT : reprends les émargements du professeur qui n'ont pas été faits : 
              - Les émargements peuvent être de jours différents et/ou de cours différents
 
         */}
@@ -46,9 +40,7 @@ const DashEnf = () => {
         <h1 className='date'>Jeudi 8 Dec 2022</h1>
         { /*
                 Route : Récupération de la date de.s émargement.s non fait.s
-                URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/{ID du professeur}/attendance/no/validate
-                Informations transmises :
-                    ID du professeur
+                URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/attendance/no/validate
                 Informations attendues :
                     Date de l'émargement passé et non validé par le professeur (sous forme de card 'nom du cours et son horaire')
                 Retour = {
@@ -78,7 +70,7 @@ const DashEnf = () => {
                     ]
                 }
             */}
-            { /*
+           { /*
                 Route : Récupération de la liste des émargements du professeur qui n'ont pas été faits
                 URL : Idem précédente
                 Informations transmises :
@@ -90,7 +82,7 @@ const DashEnf = () => {
                     Un mail de rappel doit être envoyé au prof pour lui rappeler de faire son emargement du jour
             */}
         {groupes.map((emargement) => (
-            <div className="card-dashboard" key={emargement.id}>
+            <div className="card" key={emargement.id}>
               <h3>{emargement.groupName}</h3>
               <div className='row'>
                 <p className='day'>{emargement.schedule}</p>
@@ -105,7 +97,7 @@ const DashEnf = () => {
             Informations attendues (sous forme de card):
                 Nom du groupe
                 horaire du cours
-                Numéro de la séance 
+                Numéro de la séance
             */}
               </div>
             </div>

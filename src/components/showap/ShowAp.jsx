@@ -56,7 +56,7 @@ const ShowAp = () => {
           <div className="blok-sc">
             <div className="nom-row">
               <img src={nom} alt='' />
-               {/*
+                              {/*
                     Route : Recherche par nom
                     URL (POST) : https://base-shatibi.iela.fr/api-v1/teacher/find/student/information
                     Informations transmises :
@@ -126,7 +126,7 @@ const ShowAp = () => {
                   <h3>{item.title}</h3>
                   <div>
                     <p className='jr'>{item.schedule}</p>
-                    {/*
+                       {/*
                     Route : Récupération du nom du cours sélectionné et son horaires au format "Jeu 18h à 21h"
                     URL :
                     Informations transmises :

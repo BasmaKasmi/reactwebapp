@@ -10,13 +10,9 @@
 
 .groups .column-head {
   background-image: url("../../assets/ractangle\ orange.svg");
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
   font-size: 12px;
   border-radius: 0 0 30px 30px;
-  height: 54.88px;
-  width: 368.55px;
   margin-top: -1rem;
   margin-bottom: 27px;
   margin-left: auto;
@@ -29,7 +25,6 @@
 }
 
 .column-head h3 {
-  /* Styles pour le h3 à l'intérieur de .column-head */
   color: #FFFFFF;
   font-size: 18px;
   font-family: "Poppins", Helvetica;
@@ -56,18 +51,12 @@
   justify-content: space-between; 
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .button-container {
     display: flex;
     position: fixed;
     bottom: 2rem;
     margin-left: 38rem;
-    background-color: #FFFFFF; /* Définissez la couleur d'arrière-plan souhaitée */
-    z-index: 100; /* Assurez-vous que les boutons sont au-dessus du contenu */
+    background-color: #FFFFFF; 
 
 }
 .fem-button {
@@ -124,158 +113,5 @@
   }
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.std {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 4px 4px 20px #00000012;
-  height: 60px;
-  width: 332px;
-  padding: 7px;
-  margin-left: 10px;
-  margin-right: 10px;
-  cursor: pointer;
-  @media screen and (max-width: 1000px) {
-    max-width: 100%;
-  }
-}
-
-
-.std + .std {
-  margin-left: 4px; /* spacing value */
-  margin-bottom: 10px;
-}
-
-
-.std h4 {
-  color: #000000;
-  font-size: 14px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 600;
-}
-
-.std p {
-  color: #000000; /* Couleur du texte pour le span */
-  font-family: "Poppins", Helvetica;
-  font-size: 12px; /* Taille de police pour le span */
-  margin-left: 0.1rem;
-
-}
-
-.student-buttons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.student-buttons button {
-  background-color: #FF252526;
-  border-radius: 30px; /* le rayon de bordure pour obtenir la forme souhaitée */
-  font-weight: bold;
-  border: none;
-  height: 35px;
-  width:35px;
-  color: red;
-  text-align: center;
-  font-size: 16px; /* la taille de la police pour diminuer la taille du texte */
-  font-weight: bold;
-}
-.student-buttons
-.ap-bu.active,
-.ai-bu.active {
-  background-color: #FF2525;
-  color: #fff;
-}
-
-/* Pour les cartes avec AP actif */
-.std.ap-active {
-background-color: #FF252526;
-color: #000000; /* Couleur du texte */
-}
-
-/* Pour les cartes avec AI actif */
-.std.ai-active {
-background-color: #FF252526;
-color: #000000; /* Couleur du texte */
-}
-
-  .confirmation-card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 21rem;
-  height: 15rem;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  }
-  
-  .confirmation-content {
-  text-align: center;
-  margin-top: -2rem;
-  }
-  .confirmation-content h3 {
-  color: #000000;
-  font-family: "Poppins-SemiBold", Helvetica;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  }
-  
-  .icon-container {
-  font-size: 40px;
-  color: #19CE15;
-  }
-  
-  .confirmation-details {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  }
-  
-  .confirmation-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  }
-  
-  .annuler-button {
-  background-color: #FF252526;
-  color: #FF2525;
-  height: 42px;
-  width: 100px;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-left: 1rem;
-  }
-  
-  .valider-button {
-  background-color: #19CE1526;
-  color: #19CE15;
-  border: none;
-  font-family: "Poppins", Helvetica;
-  font-weight: bold;
-  height: 42px;
-  width: 100px;
-  border-radius: 50px;
-  padding: 8px 16px;
-  margin-left: 8px;
-  }
 
  

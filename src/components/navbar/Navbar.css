@@ -23,7 +23,7 @@
   .navbar-left {
     color: #ffffff;
     font-weight: bold;
-    padding: 15px;
+    margin: 10px 50px 20px; /* Margin for the left section of the navigation bar */
   }
   
   .navbar-left h1 {
@@ -42,6 +42,7 @@
   .navbar-left p {
     border: 0px none;
     height: 18px;
+    width: 701px;
     color: #ffffff;
     font-family: "Poppins", Helvetica;
     font-size: 14px;

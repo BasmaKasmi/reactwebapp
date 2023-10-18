@@ -3,7 +3,7 @@
   background-repeat: no-repeat; 
   background-size: cover; 
   background-position: center top; 
-  font-size: 5vw;    
+  font-size: 1.125rem;    
   width: 16.8125em; 
   margin-left: auto; 
   margin-right: auto; 
@@ -14,7 +14,7 @@
 .dash-block h1 {
   color: #000000; 
   font-family: "Poppins", Helvetica;
-  font-size: 1vw; 
+  font-size: 1.125rem; 
   font-weight: 600; 
   margin-left: 1.75em; 
   margin-bottom: 11px;
@@ -26,6 +26,7 @@
 
 .card {
   background-color: #FFFFFF; 
+  margin: auto;
   margin-bottom: 10px; 
   width: 21vw; 
   border-radius: 1.25em; 
@@ -34,7 +35,7 @@
 
 h3 {
   color: #000000; 
-  font-size: 1.6vw;
+  font-size: 1rem;
   font-family: "Poppins", Helvetica;
   font-weight: 600; 
   margin-top: 0.375em;
@@ -46,9 +47,9 @@ h3 {
   color: #000000; 
   font-family: "Poppins", Helvetica; 
   font-weight: lighter; 
-  font-size: 1.2vw;
-  padding-left: 1.25em; 
-  padding-top: 0.25em; 
+  font-size: 0.75rem;
+  padding-left: 1.25rem; 
+  padding-top: 0.25rem; 
   padding-bottom: 1em; 
 }
 
@@ -68,7 +69,6 @@ h3 {
   align-items: center; 
 }
 
- 
   .emargement-validation-desktop {
     display: flex;
     justify-content: center;

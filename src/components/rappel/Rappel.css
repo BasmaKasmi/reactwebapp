@@ -143,6 +143,7 @@
       color: #fff;
     }
     
+    
 /* Pour les cartes avec AP actif */
 .card-s.ap-active {
   background-color: #FF252526;
@@ -154,6 +155,10 @@
   background-color: #FF252526;
   color: #000000; /* Couleur du texte */
 }
+.active-card {
+  background-color: #FF252526;
+}
+
 .b-c {
   display: block;
   align-items: center;

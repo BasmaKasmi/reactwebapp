@@ -35,14 +35,6 @@ const DeclareAp =  (props)  => {
     setCurrentPopup(null); 
   };
 
-      const handleOverlayClick = (e) => {
-        const isOverlay = e.target.classList.contains('modal-overlay');
-        const isCancel = e.target.classList.contains('cancel-button');
-      
-        if (isOverlay || isCancel) {
-          handleCloseDeclareAp(false);
-        }
-      };
       const dates = ['01/02/2023', '17/02/2023', '13/07/2023', '15/07/2023'];
 
 
@@ -64,7 +56,8 @@ const DeclareAp =  (props)  => {
             <div className="cldr-row">
               <img src={cldr} alt='' />
                 <h3>Choisir dates :</h3>
-                {/*
+            </div>
+               {/*
                     Route : Récupération de la plage de date automatiquement avec possibilité de changer
                     URL (POST) : https://base-shatibi.iela.fr/api-v1/teacher/attendance/group/student
                     Informations transmises :
@@ -95,7 +88,6 @@ const DeclareAp =  (props)  => {
                         ]
                     }
                 */}
-            </div>
             <div className="time-inputs">
             <input type="text" placeholder="01/01/2023" value={startDate} onChange={(e) => setStartDate(e.target.value)} onClick={(e) => e.stopPropagation()} />
             <input type="text" placeholder="28/01/2023" value={endDate} onChange={(e) => setEndDate(e.target.value)} onClick={(e) => e.stopPropagation()} />
@@ -108,7 +100,7 @@ const DeclareAp =  (props)  => {
             <div className="ap-line">
               <img src={user} alt='' />
                 <h3>Sélectionner les AP :</h3>
-                {/* 
+                 {/* 
                     Route : Récupération des prochaines date de cours de l'étudiant"
                     URL : Idem précédente
                     Informations transmises :

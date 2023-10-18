@@ -115,6 +115,9 @@
     width: 332px; /*332px*/
     cursor: pointer;
   }
+  .time-card h3{
+    font-size: 0.875rem;
+  }
   .time-card.selected {
     background-color: #FF252526;
   }

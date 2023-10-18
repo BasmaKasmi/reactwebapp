@@ -11,7 +11,6 @@ import classNames from 'classnames';
 
 
 const Dashboard = () => {
-  // Utilisation de useState pour gérer l'état local du composant.
   const[showAp, setshowAp] = useState(false); 
   const [isEmargementValide, setIsEmargementValide] = useState(false); // Pour suivre si l'émargement est validé ou non 
 
@@ -57,6 +56,7 @@ const Dashboard = () => {
                 Liste des émargements non faits (statut "non validé") (date et heure du cours < date et heure actuelle (+2h au minimum))
                 Un mail de rappel doit être envoyé au prof pour lui rappeler de faire son emargement du jour
             */}
+
             <div className="entry-cont">
             {groupes.map((coursItem) => (
               <Link to={`/rappel`} key={coursItem.id}>
@@ -153,7 +153,7 @@ const Dashboard = () => {
             <div className='bloc1'>
             <div className="agenda-r">
               <img src={nom} alt='' />
-{/*
+              {/*
                     Route : Recherche par nom
                     URL (POST) : https://base-shatibi.iela.fr/api-v1/teacher/find/student/information
                     Informations transmises :
@@ -194,7 +194,7 @@ const Dashboard = () => {
                 <h3>Rechercher par groupe :</h3>
                 </div>
                 <div className='g-cont'>
-               {/*
+                   {/*
                         Route : Récupération de la liste des groupes du prof
                         URL (GET) : https://base-shatibi.iela.fr/api-v1/teacher/group/list/year
                         Informations attendues :
@@ -223,7 +223,7 @@ const Dashboard = () => {
                         <div>
                           <p className='d'>{groupe.schedule}</p>
                         </div>
-                        {/*
+                          {/*
                     Route : Récupération du nom du cours sélectionné et son horaires au format "Jeu 18h à 21h"
                     URL :
                     Informations transmises :

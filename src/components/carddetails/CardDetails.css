@@ -140,7 +140,7 @@
           font-size: 12px; /* Taille de la police de 12 pixels */
           font-weight: bold; /* Police en gras */
           text-transform: uppercase; /* Transformation du texte en majuscules */
-          margin-left: 8rem;
+          margin-left: 12rem;
           margin-top: 0.2rem;
 
           } 
@@ -153,7 +153,7 @@
             font-size: 12px; /* Taille de la police de 12 pixels */
             font-weight: bold; /* Police en gras */
             text-transform: uppercase; /* Transformation du texte en majuscules */
-            margin-left: 7rem;
+            margin-left: 10rem;
             margin-top: 0.2rem;
           }
         };

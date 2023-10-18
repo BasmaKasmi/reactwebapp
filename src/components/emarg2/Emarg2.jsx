@@ -68,7 +68,7 @@ const Emarg2 = (props) => {
           {/* Affiche le jour sélectionné */}
           {selectedCard && <p className='day'>{date}</p>}
         </div>
-        <div className='card-container'  style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
+        <div className='card-container'>
         { /*
             Route : Récupération de la liste des étudiants du groupe sélectionné
             URL :

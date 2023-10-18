@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
-import './DashEm.css';
 import { Link } from 'react-router-dom';
-
-// importation de l'icone de validation
 import iconeValidation from '../../assets/valid.svg'; 
 import classNames from 'classnames'; 
-
-
-// Définition du Dashboard
 
 const DashEm = () => {
   // Utilisation de useState pour gérer l'état local du composant.
@@ -15,24 +9,17 @@ const DashEm = () => {
   const [selectedDay, setSelectedDay] = useState(''); 
     const [isEmargementValide, setIsEmargementValide] = useState(false); 
 
-  //lorsque l'utilisateur clique sur un bouton de validation
   const validerEmargement = () => {
     setIsEmargementValide(true);
   };
 
-
   const groupes = [
-    {
-      id: 1,
-      groupName: 'Sciences islamiques 2ème année',
-      schedule: 'Jeu 18h00 à 12h00',
-      session: '11/32',
-    },
+    {id: 1, groupName: 'Sciences islamiques 2ème année', schedule: 'Jeu 18h00 à 12h00', session: '11/32'},
   ];
 
   return (
     <div>
-        <div className="column-Enf">
+        <div className="column">
         <div className="column-header orange-bg">
             {/* Titre de l'en-tête */}
           <h2>Mes emargements</h2>
@@ -47,7 +34,7 @@ const DashEm = () => {
             setSelectedDay('Jeu 18h00 à 12h00');
             }}
             >
-{/*
+       {/*
 
           Rubrique MES EMARGEMENTS : reprends les prochains cours du professeur pour la journée, il est à noter que : 
              - Un professeur peut avoir plus de 3 cours au cours d'une journée (prévoir un glissement)
@@ -92,7 +79,7 @@ const DashEm = () => {
                     ]
                 }
             */}
-       { /*
+        { /*
             Route : Récupération de la liste de.s prochain.s cours du professeur
             URL : Idem précédente
             Informations transmises :
@@ -101,7 +88,7 @@ const DashEm = () => {
                 Liste de.s cours du prof à cette date (MAX 3 COURS)
             */}
              {groupes.map((emargement) => (
-            <div className="card-dashboard" key={emargement.id}>
+            <div className="card" key={emargement.id}>
               <h3>{emargement.groupName}</h3>
               <div className='row'>
                 <p className='day'>{emargement.schedule}</p>
@@ -119,11 +106,12 @@ const DashEm = () => {
                 Numéro de la séance
             */}
               </div>
+              <div className={classNames('emargement-validation-desktop', { 'hide-validation': !isEmargementValide })}>
+                <img src={iconeValidation} alt="Emargement validé" />
+             </div>
             </div>
           ))}
-        <div className={classNames('emargement-validation-desktop', { 'hide-validation': !isEmargementValide })}>
-          <img src={iconeValidation} alt="Emargement validé" />
-        </div>
+       
         </div>
         </Link>
       </div>
