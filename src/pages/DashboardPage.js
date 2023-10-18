@@ -13,11 +13,7 @@ const DashboardPage = () => {
   return (
     <div>
       <div className="nav-emarg-container">
-      {/* Affichage du composant NavEmarg */}
         <Navbar />
-        {/* Affichage du composant RetourButton */}
-        <Sidebar />
-        {/* Affichage du composant Dashboard */}
         <Dashboard />
       </div>
       <div className="desktop-container">

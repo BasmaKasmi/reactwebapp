@@ -18,7 +18,7 @@
     height: 60%;
     top: 1.8rem;
     border-radius: 16px;
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -57,24 +57,20 @@
 }
 
 
-.toggle {
-  display: none;
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) {
+  .toggle {
     display: block;
-    position: absolute;
     align-items: center;
     height: 40px;
     width: 40px;
     background-color: transparent;
     box-shadow: 4px 4px 20px #00000012;
     border: none;
-    top: 2rem;
     color: #000000;
     font-size: 24px;
     cursor: pointer;
     border-radius: 16px;
-    z-index: 1000;
-    margin-left: 21.4rem; 
   }
 }
 
@@ -96,21 +92,7 @@
 }
 
 
-@media (max-width: 768px) {
-  .sidebar-title {
-    display: none; /* Hide the title in mobile view */
-  }
 
-  .sidebar-small-title{
-    display: block; 
-    position: absolute;
-    font-family: "Poppins", Helvetica;
-    font-size: 28px;
-    font-weight: 700;
-    top: 2.4rem;
-  }
-
-}
 
 .sidebar-menu {
   list-style: none;
